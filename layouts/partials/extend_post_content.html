@@ -1,6 +1,3 @@
 {{- if (eq .Kind "page") }}
-{{ .Content }}
 {{ partial "disclaimer.html" . }}
-{{- else }}
-{{ .Content }}
 {{- end }}

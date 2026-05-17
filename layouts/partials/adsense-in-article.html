@@ -1,4 +1,4 @@
-{{- $adsense := or site.Site.Params.adsense site.Params.adsense }}
+{{- $adsense := site.Params.adsense }}
 {{- with $adsense }}
 {{- if and .publisherId .adSlotInArticle }}
 <div class="adsense-in-article">

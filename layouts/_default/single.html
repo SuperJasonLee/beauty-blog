@@ -39,8 +39,10 @@
     {{- $content := .Content }}
     {{- $ad := partial "adsense-in-article.html" . }}
     {{- if and $ad (ge (len (findRE "</p>" $content)) 3) }}
-      {{- $pattern := `(?s)(.*?</p>.*?</p>.*?</p>)` }}
-      {{- replaceRE $pattern (printf "${1}%s" $ad) $content 1 | safeHTML }}
+      {{- $parts := split $content "</p>" }}
+      {{- $before := delimit (first 3 $parts) "</p>" }}
+      {{- $after := delimit (after 3 $parts) "</p>" }}
+      {{- $before | safeHTML }}</p>{{ $ad | safeHTML }}{{ $after | safeHTML }}
     {{- else if not (.Param "disableAnchoredHeadings") }}
       {{- partial "anchored_headings.html" $content -}}
     {{- else }}
