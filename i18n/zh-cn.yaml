@@ -1,0 +1,42 @@
+- id: skip_to_content
+  translation: "跳转到主要内容"
+
+- id: disclaimer
+  translation: "免责声明：本文仅供参考，不构成医疗建议。整形美容手术有其风险和适应症，请在做出任何医疗决定前咨询合格的执业医师。个体情况不同，效果可能存在差异。"
+
+- id: search_placeholder
+  translation: "搜索文章..."
+
+- id: prev_page
+  translation: "上一页"
+
+- id: next_page
+  translation: "下一页"
+
+- id: read_time
+  translation:
+    one : "1 分钟"
+    other: "{{ .Count }} 分钟"
+
+- id: words
+  translation: 
+    one: "字"
+    other: "{{ .Count }} 字"
+
+- id: toc
+  translation: "目录"
+
+- id: translations
+  translation: "语言"
+
+- id: home
+  translation: "主页"
+
+- id: edit_post
+  translation: "编辑"
+
+- id: code_copy
+  translation: "复制"
+
+- id: code_copied
+  translation: "已复制！"

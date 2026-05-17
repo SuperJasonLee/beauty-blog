@@ -1,0 +1,24 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "hugo --minify",
+    "dev": "hugo server -D",
+    "search-index": "npx pagefind --site public",
+    "build:full": "npm run build && npm run search-index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.14",
+    "postcss-cli": "^11.0.1"
+  },
+  "dependencies": {
+    "pagefind": "^1.5.2"
+  }
+}

@@ -1,0 +1,118 @@
+baseURL: 'https://zhengxingzhishi.com/'
+defaultContentLanguage: zh-cn
+defaultContentLanguageInSubdir: false
+theme: PaperMod
+
+enableRobotsTXT: true
+canonifyURLs: true
+
+params:
+  images:
+    - /images/site-feature.png
+
+  socialIcons:
+    - name: rss
+      url: /index.xml
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 2
+
+languages:
+  zh-cn:
+    contentDir: content/zh-cn
+    locale: zh-cn
+    label: 中文
+    weight: 1
+    title: 整形美容知识百科
+    description: 专业、可靠的整形美容知识科普平台，涵盖面部整形、身体塑形、皮肤美容等项目的术前术后知识。
+    params:
+      homeInfoParams:
+        Title: 欢迎来到整形美容知识百科
+        Content: 我们致力于提供专业、客观、循证的整形美容知识，帮助求美者做出明智的决策。
+    taxonomies:
+      category: categories
+      tag: tags
+    menu:
+      main:
+        - identifier: home
+          name: 首页
+          url: /
+          weight: 1
+        - identifier: posts
+          name: 文章
+          url: /posts/
+          weight: 2
+        - identifier: categories
+          name: 分类
+          url: /categories/
+          weight: 3
+        - identifier: tags
+          name: 标签
+          url: /tags/
+          weight: 4
+        - identifier: archives
+          name: 归档
+          url: /archives/
+          weight: 5
+        - identifier: about
+          name: 关于
+          url: /about/
+          weight: 6
+
+  en:
+    contentDir: content/en
+    locale: en
+    label: English
+    weight: 2
+    title: Aesthetic Medicine Knowledge Base
+    description: Professional, reliable aesthetic medicine knowledge platform covering facial surgery, body contouring, skin care and more.
+    params:
+      homeInfoParams:
+        Title: Welcome to Aesthetic Medicine Knowledge Base
+        Content: We are dedicated to providing professional, objective, evidence-based knowledge about aesthetic medicine to help you make informed decisions.
+    taxonomies:
+      category: categories
+      tag: tags
+    menu:
+      main:
+        - identifier: home
+          name: Home
+          url: /en/
+          weight: 1
+        - identifier: posts
+          name: Articles
+          url: /en/posts/
+          weight: 2
+        - identifier: categories
+          name: Categories
+          url: /en/categories/
+          weight: 3
+        - identifier: tags
+          name: Tags
+          url: /en/tags/
+          weight: 4
+        - identifier: archives
+          name: Archives
+          url: /en/archives/
+          weight: 5
+        - identifier: about
+          name: About
+          url: /en/about/
+          weight: 6
+
+sitemap:
+  changefreq: weekly
+  filename: sitemap.xml
+  priority: 0.5
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+buildDrafts: false

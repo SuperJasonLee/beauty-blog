@@ -1,0 +1,4 @@
+<div class="alert-box {{ .Get 0 }}">
+  <strong>{{ if eq (.Get 0) "warning" }}⚠️ 注意{{ else if eq (.Get 0) "tip" }}💡 提示{{ else }}ℹ️ 信息{{ end }}：</strong>
+  {{ .Inner | markdownify }}
+</div>

@@ -1,0 +1,42 @@
+- id: skip_to_content
+  translation: "Skip to main content"
+
+- id: disclaimer
+  translation: "Disclaimer: This article is for informational purposes only and does not constitute medical advice. Aesthetic surgery carries risks and requires appropriate indications. Please consult a qualified physician before making any medical decisions. Individual results may vary."
+
+- id: search_placeholder
+  translation: "Search articles..."
+
+- id: prev_page
+  translation: "Prev"
+
+- id: next_page
+  translation: "Next"
+
+- id: read_time
+  translation:
+    one : "1 min"
+    other: "{{ .Count }} min"
+
+- id: words
+  translation:
+    one : "word"
+    other: "{{ .Count }} words"
+
+- id: toc
+  translation: "Table of Contents"
+
+- id: translations
+  translation: "Languages"
+
+- id: home
+  translation: "Home"
+
+- id: edit_post
+  translation: "Edit"
+
+- id: code_copy
+  translation: "copy"
+
+- id: code_copied
+  translation: "copied!"

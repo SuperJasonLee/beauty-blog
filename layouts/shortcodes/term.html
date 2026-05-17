@@ -1,0 +1,3 @@
+{{ $term := .Get 0 }}
+{{ $definition := .Inner | markdownify }}
+<dfn>{{ $term }}</dfn>：{{ $definition }}
