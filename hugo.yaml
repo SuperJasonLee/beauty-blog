@@ -10,6 +10,11 @@ params:
   images:
     - /images/site-feature.png
 
+  adsense:
+    publisherId: ca-pub-2476380839387091
+    adSlotInArticle: "8115895407"    # 在 AdSense 后台创建「文章内嵌」广告单元后填入 data-ad-slot
+    adSlotInList: "9680487424"       # 在 AdSense 后台创建「列表广告」广告单元后填入 data-ad-slot
+
   socialIcons:
     - name: rss
       url: /index.xml

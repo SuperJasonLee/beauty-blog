@@ -1,0 +1,15 @@
+{{- with site.Params.adsense }}
+{{- if and .publisherId .adSlotInList }}
+<div class="adsense-in-list">
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-format="fluid"
+     data-ad-layout-key="-f9+5a+6n-f1+54"
+     data-ad-client="{{ .publisherId }}"
+     data-ad-slot="{{ .adSlotInList }}"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+{{- end }}
+{{- end }}
