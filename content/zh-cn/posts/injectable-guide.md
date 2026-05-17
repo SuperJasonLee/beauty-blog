@@ -5,7 +5,7 @@ description: "肉毒素和玻尿酸是两种最常见的注射美容项目。它
 categories: ["皮肤美容"]
 tags: ["注射美容", "肉毒素", "玻尿酸", "填充剂"]
 draft: false
-featuredImage: ""
+featuredImage: "/images/posts/injectable-guide.png"
 author: "整形美容知识百科"
 ---
 

@@ -1,3 +1,23 @@
+{{- if not .IsHome -}}
+{{- $breadcrumbLen := len .Ancestors -}}
+{{- if gt $breadcrumbLen 0 -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{{ range $i, $p := .Ancestors.Reverse }}
+    {
+      "@type": "ListItem",
+      "position": {{ add $i 1 }},
+      "name": {{ $p.Title }},
+      "item": "{{ $p.Permalink }}"
+    }{{ if lt (add $i 1) $breadcrumbLen }},{{ end }}{{ end }}
+  ]
+}
+</script>
+{{- end }}
+{{- end -}}
+
 {{ if .IsHome }}
 <script type="application/ld+json">
 {
@@ -5,7 +25,7 @@
   "@type": "WebSite",
   "name": {{ site.Title }},
   "url": {{ site.Home.Permalink }},
-  "description": {{ site.Params.description | plainify | truncate 180 | safeHTML }},
+  "description": {{ .Description | default site.Language.Params.description | plainify | truncate 180 | safeHTML }},
   "inLanguage": "{{ site.Language.Lang }}",
   "publisher": {
     "@type": "Organization",

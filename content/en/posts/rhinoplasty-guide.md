@@ -5,7 +5,7 @@ description: "Rhinoplasty is one of the most technically demanding facial surger
 categories: ["Facial Surgery"]
 tags: ["rhinoplasty", "nose job", "implants", "recovery"]
 draft: false
-featuredImage: ""
+featuredImage: "/images/posts/en-rhinoplasty-guide.png"
 author: "Aesthetic Medicine Knowledge Base"
 ---
 

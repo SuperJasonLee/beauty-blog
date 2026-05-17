@@ -1,5 +1,6 @@
 ---
 title: "About Us"
+description: "Learn about Aesthetic Medicine Knowledge Base - our mission to provide professional, evidence-based aesthetic medicine education and resources."
 summary: "Learn about Aesthetic Medicine Knowledge Base"
 ---
 

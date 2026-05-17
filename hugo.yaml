@@ -7,8 +7,12 @@ enableRobotsTXT: true
 canonifyURLs: true
 
 params:
+  description: 专业、可靠的整形美容知识科普平台，涵盖面部整形、身体塑形、皮肤美容等项目的术前术后知识。
   images:
     - /images/site-feature.png
+
+  social:
+    twitter: beautyknowledge
 
   adsense:
     publisherId: ca-pub-2476380839387091
@@ -30,7 +34,7 @@ params:
 languages:
   zh-cn:
     contentDir: content/zh-cn
-    locale: zh-cn
+    locale: zh_CN
     label: 中文
     weight: 1
     title: 整形美容知识百科
@@ -71,7 +75,7 @@ languages:
 
   en:
     contentDir: content/en
-    locale: en
+    locale: en_US
     label: English
     weight: 2
     title: Aesthetic Medicine Knowledge Base

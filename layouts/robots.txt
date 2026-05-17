@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: {{ "/sitemap.xml" | absURL }}
+Sitemap: {{ "/zh-cn/sitemap.xml" | absURL }}
+Sitemap: {{ "/en/sitemap.xml" | absURL }}

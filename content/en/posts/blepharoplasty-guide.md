@@ -5,7 +5,7 @@ description: "Blepharoplasty is one of the most popular cosmetic surgeries. This
 categories: ["Facial Surgery"]
 tags: ["blepharoplasty", "eyelid surgery", "double eyelid", "preparation"]
 draft: false
-featuredImage: ""
+featuredImage: "/images/posts/en-blepharoplasty-guide.png"
 author: "Aesthetic Medicine Knowledge Base"
 ---
 

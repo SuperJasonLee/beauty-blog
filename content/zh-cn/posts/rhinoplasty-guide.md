@@ -5,7 +5,7 @@ description: "鼻整形手术是面部整形中技术要求最高的手术之一
 categories: ["面部整形"]
 tags: ["鼻整形", "隆鼻", "假体", "术后护理"]
 draft: false
-featuredImage: ""
+featuredImage: "/images/posts/rhinoplasty-guide.png"
 author: "整形美容知识百科"
 ---
 

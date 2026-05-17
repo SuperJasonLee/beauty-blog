@@ -5,7 +5,7 @@ description: "双眼皮手术（重睑术）是目前最受欢迎的整形手术
 categories: ["面部整形"]
 tags: ["双眼皮", "重睑术", "眼部整形", "术前准备"]
 draft: false
-featuredImage: ""
+featuredImage: "/images/posts/blepharoplasty-guide.png"
 author: "整形美容知识百科"
 ---
 
