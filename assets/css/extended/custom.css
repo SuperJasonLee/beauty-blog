@@ -72,3 +72,53 @@
   text-align: center;
   overflow: hidden;
 }
+
+/* Mobile header fix - prevent menu overlap */
+@media (max-width: 768px) {
+  .header-nav {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 var(--gap);
+  }
+
+  .logo {
+    justify-content: space-between;
+    padding: 0.5rem 0;
+  }
+
+  .logo a {
+    font-size: 20px;
+    flex-shrink: 1;
+    min-width: 0;
+  }
+
+  .logo a span,
+  .logo a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #menu {
+    width: 100%;
+    padding: 0.5rem 0;
+    margin: 0;
+    border-top: 1px solid var(--border);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  #menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  #menu li {
+    flex-shrink: 0;
+  }
+
+  #menu a {
+    padding: 0.3rem 0.5rem;
+    font-size: 14px;
+  }
+}
