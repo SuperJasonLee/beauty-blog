@@ -68,10 +68,14 @@ languages:
           name: 归档
           url: /archives/
           weight: 5
+        - identifier: privacy
+          name: 隐私政策
+          url: /privacy/
+          weight: 6
         - identifier: about
           name: 关于
           url: /about/
-          weight: 6
+          weight: 7
 
   en:
     contentDir: content/en
@@ -109,10 +113,14 @@ languages:
           name: Archives
           url: /en/archives/
           weight: 5
+        - identifier: privacy
+          name: Privacy
+          url: /en/privacy/
+          weight: 6
         - identifier: about
           name: About
           url: /en/about/
-          weight: 6
+          weight: 7
 
 sitemap:
   changefreq: weekly

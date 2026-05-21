@@ -34,7 +34,7 @@ summary: "了解整形美容知识百科"
 
 如有任何问题或建议，欢迎通过以下方式联系我们：
 
-- 邮箱：contact@example.com
+- 邮箱：lidongxuan1991@gmail.com
 
 ---
 

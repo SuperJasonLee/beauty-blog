@@ -34,7 +34,7 @@ All content on this website is for informational and educational purposes only a
 
 For questions or suggestions, please contact us:
 
-- Email: contact@example.com
+- Email: lidongxuan1991@gmail.com
 
 ---
 
