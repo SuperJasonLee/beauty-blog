@@ -14,10 +14,20 @@ params:
   social:
     twitter: beautyknowledge
 
+  author:
+    name: 整形美容知识百科
+    email: lidongxuan1991@gmail.com
+    url: "https://beauty-blog.cloud-ip.cc/about/"
+
+  schema:
+    logo: "https://beauty-blog.cloud-ip.cc/images/site-feature.png"
+    sameAs:
+      - "https://github.com/SuperJasonLee/beauty-blog"
+
   adsense:
     publisherId: ca-pub-2476380839387091
-    adSlotInArticle: "8115895407"    # 在 AdSense 后台创建「文章内嵌」广告单元后填入 data-ad-slot
-    adSlotInList: "9680487424"       # 在 AdSense 后台创建「列表广告」广告单元后填入 data-ad-slot
+    adSlotInArticle: "8115895407"
+    adSlotInList: "9680487424"
 
   socialIcons:
     - name: rss

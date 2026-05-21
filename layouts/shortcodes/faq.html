@@ -1,0 +1,41 @@
+{{- $items := split (.Inner | chomp) "\n" -}}
+{{- $qa := slice -}}
+{{- range $items -}}
+  {{- $trimmed := . | strings.TrimSpace -}}
+  {{- if hasPrefix $trimmed "- **" -}}
+    {{- $parts := split $trimmed "**" -}}
+    {{- $q := trim (index $parts 0) "- ** " -}}
+    {{- $rest := index $parts 2 -}}
+    {{- if $rest -}}
+      {{- $a := $rest | strings.TrimPrefix ":" | strings.TrimPrefix "：" | strings.TrimSpace -}}
+      {{- $qa = $qa | append (dict "q" $q "a" $a) -}}
+<div class="faq-item">
+  <details>
+    <summary><strong>{{ $q }}</strong></summary>
+    <p>{{ $a | markdownify }}</p>
+  </details>
+</div>
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if gt (len $qa) 0 -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{- range $i, $item := $qa }}
+    {
+      "@type": "Question",
+      "name": {{ $item.q }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ $item.a }}
+      }
+    }{{ if lt (add $i 1) (len $qa) }},{{ end }}
+    {{- end }}
+  ]
+}
+</script>
+{{- end -}}

@@ -49,6 +49,16 @@ All surgeries carry risks. Make your decision only after fully understanding the
 - **Weeks 1-2**: Most swelling resolves, can resume normal social activities
 - **Months 1-3**: Results become more natural and stable
 
+## Frequently Asked Questions
+
+{{< faq >}}
+- **How long do blepharoplasty results last?** Incisional double eyelid surgery is typically permanent, though aging may affect results over time. Suture methods usually last 3-5 years.
+- **Is the procedure painful?** The surgery is performed under local anesthesia. Patients feel no pain during the procedure. Mild swelling and discomfort afterward can be managed with cold compresses.
+- **When can I wear makeup after surgery?** It's recommended to wait at least 2 weeks before applying eye makeup to avoid infection and wound irritation.
+- **Can failed blepharoplasty be revised?** Yes. Revision surgery is typically performed 6 months after the initial procedure, once the tissues have fully healed.
+- **Can I combine canthoplasty with blepharoplasty?** Yes. Many patients choose to have both procedures simultaneously for enhanced eye contour results.
+{{< /faq >}}
+
 ## References
 
 1. Chinese Society of Plastic Surgery. Clinical Guidelines for Blepharoplasty

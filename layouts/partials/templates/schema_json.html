@@ -1,3 +1,22 @@
+{{- /* Organization schema on every page */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": {{ site.Title }},
+  "url": {{ site.Home.Permalink }},
+  "logo": "{{ (site.Params.schema.logo | default "/images/site-feature.png") | absURL }}",
+  "email": "{{ site.Params.author.email }}",
+  "description": {{ site.Language.Params.description | plainify | truncate 200 }},
+  "sameAs": {{ site.Params.schema.sameAs | default slice | jsonify | safeJS }},
+  "founder": {
+    "@type": "Person",
+    "name": {{ site.Params.author.name | default site.Title }}
+  }
+}
+</script>
+
+{{- /* BreadcrumbList for non-home pages */}}
 {{- if not .IsHome -}}
 {{- $breadcrumbLen := len .Ancestors -}}
 {{- if gt $breadcrumbLen 0 -}}
@@ -18,6 +37,7 @@
 {{- end }}
 {{- end -}}
 
+{{- /* WebSite schema on homepage */}}
 {{ if .IsHome }}
 <script type="application/ld+json">
 {
@@ -28,8 +48,15 @@
   "description": {{ .Description | default site.Language.Params.description | plainify | truncate 180 | safeHTML }},
   "inLanguage": "{{ site.Language.Lang }}",
   "publisher": {
-    "@type": "Organization",
-    "name": {{ site.Title }}
+    "@id": "{{ site.Home.Permalink }}#organization"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ site.Home.Permalink }}search/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
   }
 }
 </script>
@@ -51,35 +78,43 @@
   "articleBody": {{ .Content | safeJS | htmlUnescape | plainify | truncate 5000 }},
   "wordCount" : "{{ .WordCount }}",
   "inLanguage": "{{ site.Language.Lang }}",
-  {{ if .Params.cover.image -}}
-  "image": {{- if (ne .Params.cover.relative true) -}}{{ .Params.cover.image | absURL }}{{- else -}}{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}{{- end}},
-  {{- else }}
-    {{- $images := partial "templates/_funcs/get-page-images" . -}}
-    {{- with index $images 0 -}}
-  "image": {{ .Permalink }},
+  {{- if .Params.cover.image }}
+    {{- if (ne .Params.cover.relative true) }}
+  "image": { "@type": "ImageObject", "url": "{{ .Params.cover.image | absURL }}" },
+    {{- else }}
+  "image": { "@type": "ImageObject", "url": "{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}" },
     {{- end }}
-  {{- end -}}
+  {{- else }}
+    {{- $images := partial "templates/_funcs/get-page-images" . }}
+    {{- with index $images 0 }}
+  "image": { "@type": "ImageObject", "url": "{{ .Permalink }}" },
+    {{- end }}
+  {{- end }}
   "datePublished": {{ .PublishDate }},
   "dateModified": {{ .Lastmod }},
   "author": {
     "@type": "Person",
-    "name": {{ .Params.author | default site.Params.author | default site.Title }}
+    "name": {{ .Params.author | default site.Params.author.name | default site.Title }},
+    "url": "{{ site.Params.author.url | absURL }}"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": {{ .Permalink | safeHTML }}
   },
   "publisher": {
-    "@type": "Organization",
-    "name": {{ site.Title }}
+    "@id": "{{ site.Home.Permalink }}#organization"
   },
   "about": {
     "@type": "Thing",
     "name": "{{ if eq site.Language.Lang "en" }}Aesthetic Medicine{{ else }}整形美容{{ end }}",
-    "description": "{{ if eq site.Language.Lang "en" }}Aesthetic Medicine Knowledge Popularization{{ else }}整形美容知识科普{{ end }}"
+    "description": "{{ if eq site.Language.Lang "en" }}Aesthetic medicine knowledge and plastic surgery information{{ else }}整形美容知识与手术科普{{ end }}"
   },
   "medicalAudience": "{{ if eq site.Language.Lang "en" }}Patient{{ else }}患者{{ end }}",
-  "relevantSpecialty": "{{ if eq site.Language.Lang "en" }}Plastic Surgery{{ else }}整形外科{{ end }}"
+  "relevantSpecialty": "{{ if eq site.Language.Lang "en" }}Plastic Surgery{{ else }}整形外科{{ end }}",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".post-header h1", ".post-description", ".post-content"]
+  }
 }
 </script>
 {{- end -}}

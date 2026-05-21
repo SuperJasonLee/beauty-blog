@@ -1,4 +1,12 @@
 <meta name="google-site-verification" content="KNeph-DlbM2z78osJ4V0LySFUJQJTPcbfDuxYADz9Bo" />
+<meta name="author" content="{{ site.Params.author.name | default site.Title }}" />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+{{- with site.Params.schema.sameAs }}
+  {{- range . }}
+<link rel="me" href="{{ . }}" />
+  {{- end }}
+{{- end }}
 
 {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
 {{- partial "adsense-head.html" . }}

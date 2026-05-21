@@ -31,6 +31,9 @@
   {{- range .GetTerms "tags" | first 6 }}
     <meta property="article:tag" content="{{ .Page.Title | plainify }}">
   {{- end }}
+  {{- with .Params.author | default site.Params.author.name }}
+    <meta property="article:author" content="{{ . }}">
+  {{- end }}
 {{- else }}
   <meta property="og:type" content="website">
 {{- end }}
