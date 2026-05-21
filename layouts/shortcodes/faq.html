@@ -4,7 +4,7 @@
   {{- $trimmed := . | strings.TrimSpace -}}
   {{- if hasPrefix $trimmed "- **" -}}
     {{- $parts := split $trimmed "**" -}}
-    {{- $q := trim (index $parts 0) "- ** " -}}
+    {{- $q := trim (index $parts 1) " " -}}
     {{- $rest := index $parts 2 -}}
     {{- if $rest -}}
       {{- $a := $rest | strings.TrimPrefix ":" | strings.TrimPrefix "：" | strings.TrimSpace -}}
