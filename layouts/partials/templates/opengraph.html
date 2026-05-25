@@ -38,18 +38,25 @@
   <meta property="og:type" content="website">
 {{- end }}
 
+{{- $ogImage := "" }}
 {{- if .Params.cover.image -}}
   {{- if (ne .Params.cover.relative true) }}
-    <meta property="og:image" content="{{ .Params.cover.image | absURL }}">
+    {{- $ogImage = .Params.cover.image | absURL }}
   {{- else}}
-    <meta property="og:image" content="{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}">
+    {{- $ogImage = (path.Join .RelPermalink .Params.cover.image ) | absURL }}
   {{- end}}
+{{- else if .Params.featuredImage -}}
+  {{- $ogImage = .Params.featuredImage | absURL }}
 {{- else }}
   {{- with partial "_funcs/get-page-images" . }}
-    {{- range . | first 6 }}
-      <meta property="og:image" content="{{ .Permalink }}">
+    {{- range . | first 1 }}
+      {{- $ogImage = .Permalink }}
     {{- end }}
   {{- end }}
+{{- end }}
+{{- if $ogImage }}
+  <meta property="og:image" content="{{ $ogImage }}">
+  <meta name="twitter:image" content="{{ $ogImage }}">
 {{- end }}
 
 {{- with .Params.audio }}
