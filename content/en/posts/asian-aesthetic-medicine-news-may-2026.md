@@ -12,7 +12,7 @@ lastReviewed: "2026-05-27"
 medicalAudience: "Patient"
 ---
 
-{{< medical-disclaimer >}}
+{{< medical-disclaimer />}}
 
 May 2026 brings multiple transformative developments to Asia's aesthetic medicine industry. From tightening regulations to international academic conferences, here are the most important industry updates this month.
 

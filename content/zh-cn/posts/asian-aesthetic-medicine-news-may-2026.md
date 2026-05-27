@@ -12,7 +12,7 @@ lastReviewed: "2026-05-27"
 medicalAudience: "Patient"
 ---
 
-{{< medical-disclaimer >}}
+{{< medical-disclaimer />}}
 
 2026年5月，亚洲医疗美容行业迎来多重变革。从监管政策收紧到国际学术盛会，从市场格局重塑到技术突破，以下是本月最值得关注的行业动态。
 

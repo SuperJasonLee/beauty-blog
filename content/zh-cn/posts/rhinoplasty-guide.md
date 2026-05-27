@@ -14,7 +14,7 @@ lastReviewed: "2026-05-27"
 medicalAudience: "Patient"
 ---
 
-{{< medical-disclaimer >}}
+{{< medical-disclaimer />}}
 
 鼻部位于面部中央，对整体面部美学的平衡至关重要。根据美国整形外科学会（ASPS）2024年统计数据，鼻整形手术（Rhinoplasty）在美国美容手术中排名第三，年手术量约35万例[^1]。在中国，鼻整形同样是面部整形中最受欢迎的手术之一。
 

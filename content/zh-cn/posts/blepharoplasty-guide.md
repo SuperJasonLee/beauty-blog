@@ -14,7 +14,7 @@ lastReviewed: "2026-05-27"
 medicalAudience: "Patient"
 ---
 
-{{< medical-disclaimer >}}
+{{< medical-disclaimer />}}
 
 双眼皮手术，医学上称为重睑术（Blepharoplasty），是全球最常见的美容外科手术之一。根据美国整形外科学会（ASPS）2024年统计数据，眼睑整形手术在美国美容手术中排名前五，年手术量超过32万例[^1]。
 
