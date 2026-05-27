@@ -7,7 +7,7 @@ categories: ["Industry News"]
 tags: ["aesthetic news", "AI plastic surgery", "industry trends", "aesthetic medicine"]
 keywords: ["AI plastic surgery", "2026 aesthetic trends", "global plastic surgery", "aesthetic medicine regulation"]
 draft: false
-featuredImage: "/images/site-feature.png"
+featuredImage: "/images/posts/aesthetic-news-card.jpg"
 author: "Beauty-Blog Medical Review Board"
 lastReviewed: "2026-05-27"
 medicalAudience: "Patient"

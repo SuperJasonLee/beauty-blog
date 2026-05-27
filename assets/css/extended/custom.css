@@ -181,3 +181,100 @@
   align-items: center;
   gap: 0.5em;
 }
+
+/* ===== Card Grid Layout for List Pages ===== */
+.post-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5em;
+  margin: 1.5em 0;
+}
+
+.post-card {
+  background: var(--entry);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.post-card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.post-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.post-card:hover .post-card-image img {
+  transform: scale(1.05);
+}
+
+.post-card-content {
+  padding: 1.2em;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card-header {
+  margin-bottom: 0.5em;
+}
+
+.post-card-title {
+  font-size: 1.15em;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.post-card-title a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.post-card-title a:hover {
+  color: var(--secondary);
+}
+
+.post-card-summary {
+  flex: 1;
+  margin-bottom: 0.8em;
+}
+
+.post-card-summary p {
+  font-size: 0.9em;
+  color: var(--secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.post-card-footer {
+  font-size: 0.8em;
+  color: var(--secondary);
+  border-top: 1px solid var(--border);
+  padding-top: 0.8em;
+}
+
+/* Responsive: single column on mobile */
+@media (max-width: 768px) {
+  .post-card-grid {
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+
+  .post-card-image {
+    height: 180px;
+  }
+}
