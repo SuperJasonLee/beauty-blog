@@ -1,13 +1,19 @@
 ---
 title: "2026年5月21日医美资讯：趋势演变、安全警示与行业扩张"
 date: 2026-05-21
+lastmod: 2026-05-27
 description: "今日热点：BBL改名重新崛起、AI生成面容推动整形激增、犹他州成为美国整形新热点、纽约中部医美扩张、安全监管持续加强。"
 categories: ["行业资讯"]
 tags: ["医美资讯", "整形趋势", "BBL", "面部提升", "AI整形", "医美安全", "行业动态"]
+keywords: ["BBL改名", "AI整形", "2026整形趋势", "医美安全", "臀部脂肪移植", "面部提升"]
 draft: false
 featuredImage: "/images/posts/may-2026-news/image-1.jpg"
-author: "整形美容知识百科"
+author: "Beauty-Blog 医学审核团队"
+lastReviewed: "2026-05-27"
+medicalAudience: "Patient"
 ---
+
+{{< medical-disclaimer />}}
 
 2026年5月21日，全球整形美容行业迎来新一轮重要动态。从手术技术演变和区域趋势，到安全调查和行业扩张，以下是最新资讯综述。
 
@@ -85,5 +91,12 @@ author: "整形美容知识百科"
 ---
 
 *本文基于 Google News 2026年5月医美资讯整理，仅供参考。具体医疗决策请咨询执业医师。*
+
+## 参考资料
+
+[^1]: Allure Magazine. These Will Be the Biggest Plastic Surgery Trends of 2026. 2026.
+[^2]: South Florida Reporter. The Algorithmic Scalpel: How AI-Generated Faces Fuel a Radical Global Surge in Plastic Surgery. 2026-05.
+[^3]: American Society of Plastic Surgeons. 2024 Plastic Surgery Statistics Report. [plasticsurgery.org](https://www.plasticsurgery.org/news/plastic-surgery-statistics)
+[^4]: FDA. Safety Communication: Radiofrequency Microneedling Devices. 2025.
 
 {{< figure src="/images/posts/may-2026-news/image-4.jpg" title="现代医美机构将先进技术与人文关怀相结合" >}}

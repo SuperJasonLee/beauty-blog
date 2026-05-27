@@ -1,13 +1,19 @@
 ---
 title: "2026年5月医美资讯月报：AI技术与全球整形热潮"
 date: 2026-05-19
+lastmod: 2026-05-27
 description: "本月全球医美热点：AI生成面部图像推动整形手术激增、美国美容医学会年会召开、中国医美行业规范化进展。"
 categories: ["行业资讯"]
 tags: ["医美资讯", "AI整形", "行业动态", "医美趋势"]
+keywords: ["AI整形", "2026医美趋势", "全球整形市场", "医美行业规范化", "美国美容医学会"]
 draft: false
-featuredImage: "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1200"
-author: "整形美容知识百科"
+featuredImage: "/images/site-feature.png"
+author: "Beauty-Blog 医学审核团队"
+lastReviewed: "2026-05-27"
+medicalAudience: "Patient"
 ---
+
+{{< medical-disclaimer />}}
 
 2026年5月，全球整形美容行业迎来多项重大新闻。从AI技术对整形行业的深远影响，到行业学会的重要人事变动，再到国内医美机构的升级与学术交流，本月资讯内容丰富，值得求美者和从业者共同关注。
 

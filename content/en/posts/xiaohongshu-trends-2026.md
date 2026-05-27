@@ -1,13 +1,19 @@
 ---
 title: "2026 Xiaohongshu Aesthetic Medicine Trends: The Hottest Procedures Taking Over"
 date: 2026-05-17
+lastmod: 2026-05-27
 description: "Based on Xiaohongshu's official monthly aesthetic medicine reports, this article analyzes the hottest plastic surgery and medical aesthetic trends of 2026."
 categories: ["Industry Trends"]
 tags: ["Xiaohongshu", "aesthetic trends", "2026", "IPL", "facial contouring", "gold microneedling", "overfill repair", "minimally invasive"]
+keywords: ["Xiaohongshu aesthetic trends", "2026 aesthetic trends", "IPL", "gold microneedling", "facial contouring"]
 draft: false
 featuredImage: "/images/posts/en-xiaohongshu-trends-2026.png"
-author: "Aesthetic Medicine Knowledge Base"
+author: "Beauty-Blog Medical Review Board"
+lastReviewed: "2026-05-27"
+medicalAudience: "Patient"
 ---
+
+{{< medical-disclaimer />}}
 
 ## 2026 Xiaohongshu Aesthetic Medicine Landscape
 

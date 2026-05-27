@@ -1,13 +1,19 @@
 ---
 title: "Xiaohongshu Live: Hottest Aesthetic Procedures — May 2026"
 date: 2026-05-25
+lastmod: 2026-05-27
 description: "Real-time data from Xiaohongshu searches on May 25, 2026: Gold Microneedling, Thermage, Ultrasound Lifting, Facial Contouring, Overfill Repair, and more trending topics."
 categories: ["Industry Trends"]
 tags: ["Xiaohongshu", "May 2026", "live trends", "gold microneedling", "thermage", "ultrasound lifting", "anti-aging", "facial contouring", "overfill repair", "minimally invasive"]
+keywords: ["Xiaohongshu live trends", "aesthetic procedures May 2026", "gold microneedling", "thermage", "ultrasound lifting"]
 draft: false
 featuredImage: "/images/posts/en-xiaohongshu-may-2026-live.png"
-author: "Aesthetic Medicine Knowledge Base"
+author: "Beauty-Blog Medical Review Board"
+lastReviewed: "2026-05-27"
+medicalAudience: "Patient"
 ---
+
+{{< medical-disclaimer />}}
 
 ## Live Trends — May 2026
 

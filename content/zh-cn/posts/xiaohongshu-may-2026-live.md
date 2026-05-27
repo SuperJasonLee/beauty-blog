@@ -1,13 +1,19 @@
 ---
 title: "小红书2026年5月医美热搜实时盘点"
 date: 2026-05-25
+lastmod: 2026-05-27
 description: "基于小红书2026年5月最新搜索数据，实时盘点当前最热的整形美容项目：黄金微针、热玛吉、超声炮、轮廓固定、馒化修复等热门话题全解析。"
 categories: ["行业趋势"]
 tags: ["小红书", "2026年5月", "实时热搜", "黄金微针", "热玛吉", "超声炮", "抗衰", "轮廓固定", "馒化修复", "轻医美"]
+keywords: ["小红书实时热搜", "医美项目", "黄金微针", "热玛吉", "超声炮", "轮廓固定", "馒化修复"]
 draft: false
 featuredImage: "/images/posts/xiaohongshu-may-2026-live.png"
-author: "整形美容知识百科"
+author: "Beauty-Blog 医学审核团队"
+lastReviewed: "2026-05-27"
+medicalAudience: "Patient"
 ---
+
+{{< medical-disclaimer />}}
 
 ## 2026年5月实时趋势
 

@@ -1,15 +1,21 @@
 ---
-title: "Blepharoplasty (Eyelid Surgery): Essential Pre-operative Guide"
+title: "Blepharoplasty (Eyelid Surgery): Essential Pre-operative Guide (2026 Update)"
 date: 2026-01-15
-description: "Blepharoplasty is one of the most popular cosmetic surgeries. This guide covers pre-operative evaluation, surgical techniques, recovery process and important considerations."
+lastmod: 2026-05-27
+description: "Blepharoplasty is one of the most popular cosmetic surgeries worldwide. This evidence-based guide covers surgical techniques, risks, recovery, and how to choose a qualified surgeon."
 categories: ["Facial Surgery"]
-tags: ["blepharoplasty", "eyelid surgery", "double eyelid", "preparation"]
+tags: ["blepharoplasty", "eyelid surgery", "double eyelid", "preparation", "cosmetic surgery"]
+keywords: ["blepharoplasty", "eyelid surgery", "double eyelid surgery", "eyelid recovery", "cosmetic eyelid"]
 draft: false
 featuredImage: "/images/posts/en-blepharoplasty-guide.png"
-author: "Aesthetic Medicine Knowledge Base"
+author: "Beauty-Blog Medical Review Board"
+lastReviewed: "2026-05-27"
+medicalAudience: "Patient"
 ---
 
-Blepharoplasty, commonly known as eyelid surgery, is one of the most frequently performed cosmetic procedures.
+{{< medical-disclaimer />}}
+
+Blepharoplasty, commonly known as eyelid surgery, is one of the most frequently performed cosmetic procedures worldwide. According to the American Society of Plastic Surgeons (ASPS), eyelid surgery ranks among the top 5 cosmetic procedures in the United States, with over 320,000 procedures performed annually[^1].
 
 ## What is Blepharoplasty
 
@@ -61,5 +67,6 @@ All surgeries carry risks. Make your decision only after fully understanding the
 
 ## References
 
-1. Chinese Society of Plastic Surgery. Clinical Guidelines for Blepharoplasty
-2. American Society of Plastic Surgeons. Blepharoplasty Guide
+[^1]: American Society of Plastic Surgeons. 2024 Plastic Surgery Statistics Report. [plasticsurgery.org](https://www.plasticsurgery.org/news/plastic-surgery-statistics)
+[^2]: International Society of Aesthetic Plastic Surgery. 2023 ISAPS Global Survey Results. [isaps.org](https://www.isaps.org/discover/about-isaps/global-statistics/)
+[^3]: Chen W, et al. Complications of Blepharoplasty: A Systematic Review. *Aesthetic Surgery Journal*. 2023;43(5):NP351-NP362.

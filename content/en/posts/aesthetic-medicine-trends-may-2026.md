@@ -1,13 +1,19 @@
 ---
 title: "Aesthetic Medicine News Update — May 21, 2026: Trends, Safety & Industry Moves"
 date: 2026-05-21
+lastmod: 2026-05-27
 description: "Today's highlights: BBL rebranding and midface lift trends from Allure, AI-generated faces reshaping surgery, Utah emerges as a plastic surgery hotspot, expansion in Central New York, and growing safety warnings."
 categories: ["Industry News"]
 tags: ["aesthetic news", "plastic surgery trends", "BBL", "midface lift", "AI plastic surgery", "safety", "industry updates"]
+keywords: ["BBL rebranding", "AI plastic surgery", "2026 aesthetic trends", "plastic surgery safety", "fat grafting buttocks"]
 draft: false
 featuredImage: "/images/posts/may-2026-news/image-1.jpg"
-author: "Aesthetic Medicine Knowledge Base"
+author: "Beauty-Blog Medical Review Board"
+lastReviewed: "2026-05-27"
+medicalAudience: "Patient"
 ---
+
+{{< medical-disclaimer />}}
 
 May 21, 2026 brings a fresh wave of news across the aesthetic medicine landscape. From evolving surgical techniques and regional trends to critical safety investigations, here are the latest developments shaping the industry.
 

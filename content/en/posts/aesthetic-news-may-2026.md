@@ -1,13 +1,19 @@
 ---
 title: "Aesthetic Medicine News Roundup — May 2026: AI, Global Trends & Industry Insights"
 date: 2026-05-19
+lastmod: 2026-05-27
 description: "This month's highlights: AI-generated faces driving plastic surgery surge, Aesthetic MEET 2026, global surgery boom returns stateside, and regulatory progress in China."
 categories: ["Industry News"]
 tags: ["aesthetic news", "AI plastic surgery", "industry trends", "aesthetic medicine"]
+keywords: ["AI plastic surgery", "2026 aesthetic trends", "global plastic surgery", "aesthetic medicine regulation"]
 draft: false
-featuredImage: "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1200"
-author: "Aesthetic Medicine Knowledge Base"
+featuredImage: "/images/site-feature.png"
+author: "Beauty-Blog Medical Review Board"
+lastReviewed: "2026-05-27"
+medicalAudience: "Patient"
 ---
+
+{{< medical-disclaimer />}}
 
 May 2026 has brought several significant developments in the global aesthetic medicine industry. From the profound impact of AI technology on plastic surgery to leadership changes at major societies and facility upgrades in China, this month's news offers valuable insights for both practitioners and patients.
 

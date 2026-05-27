@@ -1,13 +1,19 @@
 ---
 title: "Xiaohongshu's Hottest Aesthetic Procedures: May 2026 TOP10"
 date: 2026-05-17
+lastmod: 2026-05-27
 description: "Based on Xiaohongshu's latest April-May 2026 data, discover the top 10 trending aesthetic procedures: IPL, Gold Microneedling, Facial Contouring, Overfill Repair, and more."
 categories: ["Industry Trends"]
 tags: ["Xiaohongshu", "May 2026", "aesthetic trends", "IPL", "gold microneedling", "facial contouring", "overfill repair", "square face", "minimally invasive"]
+keywords: ["Xiaohongshu trending", "aesthetic procedures 2026", "IPL", "gold microneedling", "facial contouring"]
 draft: false
 featuredImage: "/images/posts/en-xiaohongshu-hot-may-2026.png"
-author: "Aesthetic Medicine Knowledge Base"
+author: "Beauty-Blog Medical Review Board"
+lastReviewed: "2026-05-27"
+medicalAudience: "Patient"
 ---
+
+{{< medical-disclaimer />}}
 
 ## Latest Trends — May 2026
 

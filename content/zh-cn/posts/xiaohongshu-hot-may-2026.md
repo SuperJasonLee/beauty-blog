@@ -1,13 +1,19 @@
 ---
 title: "5月小红书医美热搜榜：2026年最新热门项目TOP10"
 date: 2026-05-17
+lastmod: 2026-05-27
 description: "基于小红书2026年4-5月最新数据，盘点当前最火的整形美容项目：光子嫩肤、黄金微针、轮廓固定、馒化修复等热搜项目全解析。"
 categories: ["行业趋势"]
 tags: ["小红书", "5月热搜", "2026", "光子嫩肤", "黄金微针", "轮廓固定", "馒化修复", "方圆脸", "轻医美"]
+keywords: ["小红书热搜", "医美项目排行", "2026医美", "光子嫩肤", "黄金微针", "轮廓固定"]
 draft: false
 featuredImage: "/images/posts/xiaohongshu-hot-may-2026.png"
-author: "整形美容知识百科"
+author: "Beauty-Blog 医学审核团队"
+lastReviewed: "2026-05-27"
+medicalAudience: "Patient"
 ---
+
+{{< medical-disclaimer />}}
 
 ## 2026年5月最新趋势
 

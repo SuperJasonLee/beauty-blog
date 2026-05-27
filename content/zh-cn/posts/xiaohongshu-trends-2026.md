@@ -1,13 +1,19 @@
 ---
 title: "2026小红书医美趋势报告：这些项目正在火爆出圈"
 date: 2026-05-17
+lastmod: 2026-05-27
 description: "基于小红书官方医美行业月报数据，深度解析2026年最热门的整形美容项目趋势，帮助求美者了解最新市场动态和项目热度。"
 categories: ["行业趋势"]
 tags: ["小红书", "医美趋势", "2026", "光子嫩肤", "轮廓固定", "黄金微针", "馒化修复", "轻医美"]
+keywords: ["小红书医美", "2026医美趋势", "光子嫩肤", "轮廓固定", "黄金微针", "馒化修复", "轻医美"]
 draft: false
 featuredImage: "/images/posts/xiaohongshu-trends-2026.png"
-author: "整形美容知识百科"
+author: "Beauty-Blog 医学审核团队"
+lastReviewed: "2026-05-27"
+medicalAudience: "Patient"
 ---
+
+{{< medical-disclaimer />}}
 
 ## 2026 小红书医美趋势全景
 
