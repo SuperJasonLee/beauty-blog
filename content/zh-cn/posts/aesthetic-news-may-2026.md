@@ -7,7 +7,7 @@ categories: ["行业资讯"]
 tags: ["医美资讯", "AI整形", "行业动态", "医美趋势"]
 keywords: ["AI整形", "2026医美趋势", "全球整形市场", "医美行业规范化", "美国美容医学会"]
 draft: false
-featuredImage: "/images/posts/aesthetic-news-card.jpg"
+featuredImage: "/images/posts/aesthetic-news-may-2026-featured.jpg"
 author: "Beauty-Blog 医学审核团队"
 lastReviewed: "2026-05-27"
 medicalAudience: "Patient"
