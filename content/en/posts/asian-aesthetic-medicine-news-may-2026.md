@@ -6,7 +6,7 @@ categories: ["Industry News"]
 tags: ["aesthetic news", "Asia", "May 2026", "regulation", "botulinum toxin", "Allergan", "Japan aesthetic", "Thailand aesthetic"]
 keywords: ["Asian aesthetic medicine news", "China aesthetic 2026", "aesthetic regulation", "botulinum toxin approval", "Japan cosmetic surgery", "Allergan summit", "live streaming aesthetic"]
 draft: false
-featuredImage: "/images/site-feature.png"
+featuredImage: "/images/posts/en-asian-aesthetic-medicine-news-may-2026.png"
 author: "Beauty-Blog Medical Review Board"
 lastReviewed: "2026-05-27"
 medicalAudience: "Patient"
