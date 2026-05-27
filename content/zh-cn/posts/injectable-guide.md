@@ -7,7 +7,7 @@ categories: ["皮肤美容"]
 tags: ["注射美容", "肉毒素", "玻尿酸", "填充剂", "非手术"]
 keywords: ["肉毒素", "玻尿酸", "注射美容", "肉毒素和玻尿酸区别", "非手术美容", "面部填充", "除皱"]
 draft: false
-featuredImage: "/images/posts/injectable-guide.png"
+featuredImage: "/images/posts/injectable-guide-featured.jpg"
 author: "医学审核团队"
 reviewer: "执业医师审核"
 lastReviewed: "2026-05-27"
@@ -20,6 +20,8 @@ medicalAudience: "Patient"
 
 ## 肉毒素 vs 玻尿酸：核心区别
 
+![注射美容对比](/images/posts/injectable-guide-1.jpg)
+
 | 对比项 | 肉毒素（Botulinum Toxin） | 玻尿酸（Hyaluronic Acid） |
 |--------|--------|--------|
 | **作用原理** | 阻断神经肌肉信号传导，放松过度收缩的肌肉 | 填充凹陷区域，增加组织容积和水分 |
@@ -31,6 +33,8 @@ medicalAudience: "Patient"
 
 ## 肉毒素的常见应用
 
+![肉毒素注射](/images/posts/injectable-guide-2.jpg)
+
 1. **眉间纹**（川字纹）— 最常见的肉毒素注射部位
 2. **额纹**（抬头纹）
 3. **鱼尾纹**（眼周皱纹）
@@ -40,6 +44,8 @@ medicalAudience: "Patient"
 7. **露龈笑矫正**
 
 ## 玻尿酸的常见应用
+
+![玻尿酸填充](/images/posts/injectable-guide-3.jpg)
 
 1. **鼻唇沟**（法令纹填充）
 2. **唇部填充**（丰唇）
