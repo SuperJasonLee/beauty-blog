@@ -7,7 +7,7 @@ categories: ["面部整形"]
 tags: ["鼻整形", "隆鼻", "假体", "术后护理", "面部整形"]
 keywords: ["鼻整形", "隆鼻手术", "假体隆鼻", "自体软骨隆鼻", "鼻综合", "鼻整形材料", "鼻整形风险"]
 draft: false
-featuredImage: "/images/posts/rhinoplasty-guide.png"
+featuredImage: "/images/posts/rhinoplasty-guide-featured.jpg"
 author: "医学审核团队"
 reviewer: "执业医师审核"
 lastReviewed: "2026-05-27"
@@ -17,6 +17,8 @@ medicalAudience: "Patient"
 {{< medical-disclaimer />}}
 
 鼻部位于面部中央，对整体面部美学的平衡至关重要。根据美国整形外科学会（ASPS）2024年统计数据，鼻整形手术（Rhinoplasty）在美国美容手术中排名第三，年手术量约35万例[^1]。在中国，鼻整形同样是面部整形中最受欢迎的手术之一。
+
+![鼻整形手术示意图](/images/posts/rhinoplasty-guide-1.jpg)
 
 ## 鼻整形手术概述
 
@@ -43,6 +45,8 @@ medicalAudience: "Patient"
 - **鼻尖塑形**：自体耳软骨或鼻中隔软骨为首选
 - **鼻背抬高**：硅胶、膨体或肋软骨均可
 
+![鼻整形假体材料对比](/images/posts/rhinoplasty-guide-2.jpg)
+
 ## 术前评估要点
 
 1. **面部比例分析**：鼻额角（120-130°为理想）、鼻唇角（90-95°为理想）、鼻长（面部长度的1/3）
@@ -62,6 +66,8 @@ medicalAudience: "Patient"
 3. **塑形**：根据设计方案雕刻假体或移植软骨
 4. **缝合**：精细缝合切口
 5. **固定**：使用医用胶带和夹板固定鼻部
+
+![鼻整形手术过程](/images/posts/rhinoplasty-guide-3.jpg)
 
 ## 术后护理要点
 
