@@ -15,9 +15,9 @@ params:
     twitter: beautyknowledge
 
   author:
-    name: 整形美容知识百科
-    email: lidongxuan1991@gmail.com
-    url: "https://beauty-blog.cloud-ip.cc/about/"
+    name: Beauty-Blog 医学审核团队
+    email: editor@beauty-blog.cloud-ip.cc
+    url: "https://beauty-blog.cloud-ip.cc/pages/about/"
 
   schema:
     logo: "https://beauty-blog.cloud-ip.cc/images/site-feature.png"
@@ -47,8 +47,8 @@ languages:
     locale: zh_CN
     label: 中文
     weight: 1
-    title: 整形美容知识百科
-    description: 专业、可靠的整形美容知识科普平台，涵盖面部整形、身体塑形、皮肤美容等项目的术前术后知识。
+    title: 整形美容知识百科 - 由执业医师审核的医美知识平台
+    description: 由执业医师审核的整形美容知识科普平台，提供基于循证医学的面部整形、身体塑形、皮肤美容等项目指南。
     params:
       homeInfoParams:
         Title: 欢迎来到整形美容知识百科
@@ -86,14 +86,18 @@ languages:
           name: 关于
           url: /about/
           weight: 7
+        - identifier: disclaimer
+          name: 免责声明
+          url: /pages/disclaimer/
+          weight: 8
 
   en:
     contentDir: content/en
     locale: en_US
     label: English
     weight: 2
-    title: Aesthetic Medicine Knowledge Base
-    description: Professional, reliable aesthetic medicine knowledge platform covering facial surgery, body contouring, skin care and more.
+    title: Aesthetic Medicine Knowledge Base - Medical Review Board
+    description: Physician-reviewed aesthetic medicine platform. Evidence-based guides on facial surgery, body contouring, and skin care. Citing data from ISAPS, ASPS, and AAFPRS.
     params:
       homeInfoParams:
         Title: Welcome to Aesthetic Medicine Knowledge Base
@@ -131,6 +135,10 @@ languages:
           name: About
           url: /en/about/
           weight: 7
+        - identifier: disclaimer
+          name: Disclaimer
+          url: /en/pages/disclaimer/
+          weight: 8
 
 sitemap:
   changefreq: weekly

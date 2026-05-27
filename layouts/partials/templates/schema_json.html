@@ -90,13 +90,28 @@
   "image": { "@type": "ImageObject", "url": "{{ .Permalink }}" },
     {{- end }}
   {{- end }}
+{{- /* MedicalWebPage schema for posts with enhanced E-E-A-T */}}
   "datePublished": {{ .PublishDate }},
   "dateModified": {{ .Lastmod }},
+  {{- if .Params.lastReviewed }}
+  "lastReviewed": "{{ .Params.lastReviewed }}",
+  {{- end }}
   "author": {
-    "@type": "Person",
+    "@type": "Organization",
     "name": {{ .Params.author | default site.Params.author.name | default site.Title }},
-    "url": "{{ site.Params.author.url | absURL }}"
+    "url": "{{ site.Params.author.url | absURL }}",
+    "member": {
+      "@type": "Person",
+      "name": "Medical Review Team",
+      "jobTitle": "Medical Content Reviewer"
+    }
   },
+  {{- if .Params.reviewer }}
+  "reviewedBy": {
+    "@type": "Organization",
+    "name": "{{ .Params.reviewer }}"
+  },
+  {{- end }}
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": {{ .Permalink | safeHTML }}
@@ -109,12 +124,33 @@
     "name": "{{ if eq site.Language.Lang "en" }}Aesthetic Medicine{{ else }}整形美容{{ end }}",
     "description": "{{ if eq site.Language.Lang "en" }}Aesthetic medicine knowledge and plastic surgery information{{ else }}整形美容知识与手术科普{{ end }}"
   },
-  "medicalAudience": "{{ if eq site.Language.Lang "en" }}Patient{{ else }}患者{{ end }}",
-  "relevantSpecialty": "{{ if eq site.Language.Lang "en" }}Plastic Surgery{{ else }}整形外科{{ end }}",
+  {{- if .Params.medicalAudience }}
+  "medicalAudience": {
+    "@type": "MedicalAudience",
+    "audienceType": "{{ .Params.medicalAudience }}"
+  },
+  {{- end }}
+  "relevantSpecialty": {
+    "@type": "MedicalSpecialty",
+    "name": "{{ if eq site.Language.Lang "en" }}Plastic Surgery{{ else }}整形外科{{ end }}"
+  },
+  "citation": [
+    {
+      "@type": "Organization",
+      "name": "International Society of Aesthetic Plastic Surgery",
+      "url": "https://www.isaps.org"
+    },
+    {
+      "@type": "Organization",
+      "name": "American Society of Plastic Surgeons",
+      "url": "https://www.plasticsurgery.org"
+    }
+  ],
   "speakable": {
     "@type": "SpeakableSpecification",
     "cssSelector": [".post-header h1", ".post-description", ".post-content"]
-  }
+  },
+  "isAccessibleForFree": true
 }
 </script>
 {{- end -}}

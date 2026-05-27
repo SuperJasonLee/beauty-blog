@@ -17,6 +17,20 @@
     <span>
         <a href="/index.xml" aria-label="RSS 订阅" title="RSS 订阅">RSS</a>
     </span>
+
+    {{- print " · "}}
+    <span>
+        <a href="/pages/disclaimer/" aria-label="医疗免责声明" title="医疗免责声明">免责声明</a>
+        {{- print " · "}}
+        <a href="/pages/about/" aria-label="关于我们" title="关于我们">关于我们</a>
+        {{- print " · "}}
+        <a href="/pages/privacy/" aria-label="隐私政策" title="隐私政策">隐私政策</a>
+    </span>
+
+    <br>
+    <span class="medical-notice">
+        ⚕️ 本站内容仅供教育参考，不构成医疗建议。请咨询有资质的医疗专业人士。
+    </span>
 </footer>
 {{- end }}
 
