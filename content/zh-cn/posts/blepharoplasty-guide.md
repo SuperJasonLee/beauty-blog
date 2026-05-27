@@ -7,7 +7,7 @@ categories: ["面部整形"]
 tags: ["双眼皮", "重睑术", "眼部整形", "术前准备", "整形手术"]
 keywords: ["双眼皮手术", "重睑术", "埋线双眼皮", "切开双眼皮", "眼部整形", "术前准备", "双眼皮恢复", "双眼皮风险"]
 draft: false
-featuredImage: "/images/posts/blepharoplasty-guide.png"
+featuredImage: "/images/posts/blepharoplasty-guide-featured.jpg"
 author: "医学审核团队"
 reviewer: "执业医师审核"
 lastReviewed: "2026-05-27"
@@ -23,6 +23,8 @@ medicalAudience: "Patient"
 双眼皮手术是通过手术方法在上眼睑形成一条皮肤皱褶，使眼睛看起来更大、更有神采。在亚洲人群中，双眼皮手术（重睑术）是最受欢迎的面部整形手术，据国际整形外科学会（ISAPS）统计，亚洲地区占全球眼睑整形手术量的60%以上[^2]。
 
 ## 常见手术方式
+
+{{< figure src="/images/posts/blepharoplasty-guide-1.jpg" title="双眼皮手术方式示意图" >}}
 
 ### 埋线法
 
@@ -62,6 +64,8 @@ medicalAudience: "Patient"
 
 ## 恢复过程
 
+{{< figure src="/images/posts/blepharoplasty-guide-2.jpg" title="双眼皮手术恢复过程" >}}
+
 - **术后1-3天**：肿胀高峰期，需要冷敷，可能有轻微疼痛
 - **术后4-7天**：肿胀逐渐消退，一般第7天拆线
 - **术后1-2周**：大部分肿胀消退，可正常社交
@@ -69,6 +73,8 @@ medicalAudience: "Patient"
 - **术后6个月**：最终效果呈现
 
 ## 术后护理要点
+
+{{< figure src="/images/posts/blepharoplasty-guide-3.jpg" title="双眼皮术后护理" >}}
 
 - 保持伤口清洁干燥，遵医嘱使用抗生素眼膏
 - 避免剧烈运动和重体力劳动至少2周
