@@ -1,0 +1,4 @@
+<div class="medical-disclaimer">
+  <strong>⚕️ 医疗免责声明：</strong>
+  {{ if .Inner }}{{ .Inner | markdownify }}{{ else }}本文内容仅供教育和信息参考，不构成医疗建议。任何医疗决定请咨询有资质的专业医疗人员。手术有风险，请充分了解后再做决定。{{ end }}
+</div>

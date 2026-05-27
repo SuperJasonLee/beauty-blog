@@ -15,21 +15,33 @@
     {{- end }}
 
     <span>
-        <a href="/index.xml" aria-label="RSS 订阅" title="RSS 订阅">RSS</a>
+        <a href="/index.xml" aria-label="RSS" title="RSS">RSS</a>
     </span>
 
     {{- print " · "}}
     <span>
+        {{- if eq site.Language.Lang "en" }}
+        <a href="/pages/disclaimer/" aria-label="Medical Disclaimer" title="Medical Disclaimer">Disclaimer</a>
+        {{- print " · "}}
+        <a href="/pages/about/" aria-label="About Us" title="About Us">About</a>
+        {{- print " · "}}
+        <a href="/pages/privacy/" aria-label="Privacy Policy" title="Privacy Policy">Privacy</a>
+        {{- else }}
         <a href="/pages/disclaimer/" aria-label="医疗免责声明" title="医疗免责声明">免责声明</a>
         {{- print " · "}}
         <a href="/pages/about/" aria-label="关于我们" title="关于我们">关于我们</a>
         {{- print " · "}}
         <a href="/pages/privacy/" aria-label="隐私政策" title="隐私政策">隐私政策</a>
+        {{- end }}
     </span>
 
     <br>
     <span class="medical-notice">
+        {{- if eq site.Language.Lang "en" }}
+        ⚕️ Content is for educational reference only. Not medical advice. Consult a qualified healthcare professional.
+        {{- else }}
         ⚕️ 本站内容仅供教育参考，不构成医疗建议。请咨询有资质的医疗专业人士。
+        {{- end }}
     </span>
 </footer>
 {{- end }}
