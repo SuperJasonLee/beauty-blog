@@ -7,7 +7,7 @@ categories: ["行业趋势"]
 tags: ["小红书", "2026年5月", "实时热搜", "黄金微针", "热玛吉", "超声炮", "抗衰", "轮廓固定", "馒化修复", "轻医美"]
 keywords: ["小红书实时热搜", "医美项目", "黄金微针", "热玛吉", "超声炮", "轮廓固定", "馒化修复"]
 draft: false
-featuredImage: "/images/posts/xiaohongshu-may-2026-live.png"
+featuredImage: "/images/posts/xiaohongshu-may-2026-live-featured.jpg"
 author: "Beauty-Blog 医学审核团队"
 lastReviewed: "2026-05-27"
 medicalAudience: "Patient"

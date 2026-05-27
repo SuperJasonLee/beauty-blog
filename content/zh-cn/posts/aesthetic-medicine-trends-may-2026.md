@@ -7,7 +7,7 @@ categories: ["行业资讯"]
 tags: ["医美资讯", "整形趋势", "BBL", "面部提升", "AI整形", "医美安全", "行业动态"]
 keywords: ["BBL改名", "AI整形", "2026整形趋势", "医美安全", "臀部脂肪移植", "面部提升"]
 draft: false
-featuredImage: "/images/posts/may-2026-news/image-1.jpg"
+featuredImage: "/images/posts/aesthetic-medicine-trends-may-2026-featured.jpg"
 author: "Beauty-Blog 医学审核团队"
 lastReviewed: "2026-05-27"
 medicalAudience: "Patient"

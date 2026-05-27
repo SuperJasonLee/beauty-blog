@@ -7,7 +7,7 @@ categories: ["行业趋势"]
 tags: ["小红书", "医美趋势", "2026", "光子嫩肤", "轮廓固定", "黄金微针", "馒化修复", "轻医美"]
 keywords: ["小红书医美", "2026医美趋势", "光子嫩肤", "轮廓固定", "黄金微针", "馒化修复", "轻医美"]
 draft: false
-featuredImage: "/images/posts/xiaohongshu-trends-2026.png"
+featuredImage: "/images/posts/xiaohongshu-trends-2026-featured.jpg"
 author: "Beauty-Blog 医学审核团队"
 lastReviewed: "2026-05-27"
 medicalAudience: "Patient"
