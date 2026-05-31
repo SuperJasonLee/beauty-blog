@@ -25,7 +25,7 @@ Xiaohongshu (小红书/XHS), China's largest lifestyle sharing platform, publish
 
 ### 1. IPL (Intense Pulsed Light) — The Evergreen Champion
 
-![IPL photorejuvenation treatment in a modern aesthetic clinic](images/posts/en-xiaohongshu-trends-2026/ipl_treatment.jpg)
+![IPL photorejuvenation treatment in a modern aesthetic clinic](/images/posts/en-xiaohongshu-trends-2026/ipl_treatment.jpg)
 
 Heat Index: 702K+
 
@@ -33,7 +33,7 @@ IPL photon rejuvenation remains the most popular aesthetic medicine topic on Xia
 
 ### 2. Gold Microneedling — #1 Procedure Search
 
-![Gold microneedling RF device with fractional tip](images/posts/en-xiaohongshu-trends-2026/gold_microneedling.jpg)
+![Gold microneedling RF device with fractional tip](/images/posts/en-xiaohongshu-trends-2026/gold_microneedling.jpg)
 
 Heat Index: 1.87M
 
@@ -41,7 +41,7 @@ Gold microneedling has surged to the #1 procedure search term. Users are most in
 
 ### 3. Facial Contouring — Dominating Social Topics
 
-![Facial contouring dermal filler injection procedure](images/posts/en-xiaohongshu-trends-2026/facial_contouring.jpg)
+![Facial contouring dermal filler injection procedure](/images/posts/en-xiaohongshu-trends-2026/facial_contouring.jpg)
 
 Topic Views: 1.65 Billion
 
@@ -71,7 +71,7 @@ Searches for "how to fix tear trough depression" surged 113.5%. Anti-aging deman
 
 ## ⚠️ Emerging Pain Point: Overfill Repair
 
-![Overfill repair treatment with hyaluronidase filler dissolution](images/posts/en-xiaohongshu-trends-2026/overfill_repair.jpg)
+![Overfill repair treatment with hyaluronidase filler dissolution](/images/posts/en-xiaohongshu-trends-2026/overfill_repair.jpg)
 
 "Overfill repair," "overfilled face," and "post-overfill syndrome" — all three related terms entered the search TOP 20. Years of excessive filler use have created a backlash, with consumers seeking "regret remedies." Clinics that position around "repair," "natural look," and "anti-fake face" will capture this high-value demographic.
 
@@ -101,7 +101,7 @@ Minimally invasive procedures (injectables, energy-based devices) continue domin
 
 ### The Surging Male Aesthetic Market
 
-![Male patient receiving aesthetic treatment in a modern clinic](images/posts/en-xiaohongshu-trends-2026/male_aesthetic.jpg)
+![Male patient receiving aesthetic treatment in a modern clinic](/images/posts/en-xiaohongshu-trends-2026/male_aesthetic.jpg)
 
 Men contributed 53.65% of market growth in 2025, with average spending 2.75x that of women. Top male-preferred procedures include hair transplantation, anti-aging, and under-eye bag removal — an untapped blue ocean.
 

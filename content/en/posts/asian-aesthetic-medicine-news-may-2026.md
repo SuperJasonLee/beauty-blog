@@ -6,7 +6,7 @@ categories: ["Industry News"]
 tags: ["aesthetic news", "Asia", "May 2026", "regulation", "botulinum toxin", "Allergan", "Japan aesthetic", "Thailand aesthetic"]
 keywords: ["Asian aesthetic medicine news", "China aesthetic 2026", "aesthetic regulation", "botulinum toxin approval", "Japan cosmetic surgery", "Allergan summit", "live streaming aesthetic"]
 draft: false
-featuredImage: "/images/posts/en-asian-aesthetic-medicine-news-may-2026.png"
+featuredImage: "/images/posts/asian-aesthetic-medicine-news-may-2026-featured.jpg"
 author: "Beauty-Blog Medical Review Board"
 lastReviewed: "2026-05-27"
 medicalAudience: "Patient"
@@ -64,6 +64,8 @@ In early 2026, Imeik Technology announced that its exclusively imported **Korean
 
 **Market Data**: According to ISAPS, global botulinum toxin treatments reached 8.878 million cases in 2023, ranking first among non-surgical procedures[^5]. China's botulinum toxin market is projected to exceed RMB 10 billion in 2026.
 
+![Botox injection treatment for upper face wrinkles](/images/posts/asian-aesthetic-medicine-news-may-2026/botox_treatment.jpg)
+
 ---
 
 ## 5. Japan Surpasses Korea as Asia's Second-Largest Aesthetic Market
@@ -73,6 +75,8 @@ According to Japanese research institutions[^6]:
 - **Japan's aesthetic medicine market is valued at approximately ¥594 billion** (~RMB 29.6 billion)
 - Japan has surpassed Korea to become Asia's second-largest aesthetic market
 - **Working men** are driving Japan's aesthetic medicine growth
+
+![Yoshiki Ginza Clinic — one of Tokyo's leading aesthetic medicine clinics](/images/posts/asian-aesthetic-medicine-news-may-2026/japan_clinic.jpg)
 
 **Trend Analysis**: Japan's market growth is driven by:
 1. Increased male acceptance of aesthetic procedures
@@ -91,6 +95,8 @@ Thailand is becoming an emerging power in Asia's aesthetic medicine landscape[^7
 
 > The rise of **T-Beauty** signals a diversification of Asian aesthetics beyond the traditional dominance of Korean-style surgery.
 
+![Aura Bangkok Clinic — a top aesthetic destination in Thailand with multiple branches nationwide](/images/posts/asian-aesthetic-medicine-news-may-2026/thailand_clinic.png)
+
 ---
 
 ## 7. Global Dermal Fillers Market Continues Growth
@@ -103,6 +109,8 @@ According to Fortune Business Insights[^8]:
 | 2026 Projected Size | $5.45 billion |
 | 2034 Projected Size | $9.91 billion |
 | CAGR | 7.8% |
+
+![Dermal filler injection for cheek and chin augmentation — before and after](/images/posts/asian-aesthetic-medicine-news-may-2026/dermal_filler.jpg)
 
 The Asia-Pacific region holds a significant share of the dermal fillers market, with China and Korea as primary growth engines.
 

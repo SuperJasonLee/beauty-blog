@@ -64,6 +64,8 @@ medicalAudience: "Patient"
 
 **市场数据**：据ISAPS统计，2023年全球肉毒素治疗次数达887.8万例，位居非手术项目第一[^5]。中国肉毒素市场预计2026年规模将突破100亿元。
 
+![肉毒素注射治疗眉间纹](/images/posts/asian-aesthetic-medicine-news-may-2026/botox_treatment.jpg)
+
 ---
 
 ## 5. 日本超越韩国，成为亚洲第二大医美市场
@@ -73,6 +75,8 @@ medicalAudience: "Patient"
 - **日本美容医疗行业市场规模约5940亿日元**（约合人民币296亿元）
 - 日本已超越韩国，成为亚洲第二大医美市场
 - **职场男性**成为日本医美增长的新驱动力
+
+![银座吉木诊所——东京领先的医美机构之一](/images/posts/asian-aesthetic-medicine-news-may-2026/japan_clinic.jpg)
 
 **趋势分析**：日本医美市场的增长主要得益于：
 1. 男性医美接受度提升（"メンズエステ"文化普及）
@@ -91,6 +95,8 @@ medicalAudience: "Patient"
 
 > **T-Beauty**概念的兴起，标志着亚洲医美市场从"韩式整形"一枝独秀，走向多元化发展。
 
+![Aura Bangkok Clinic——泰国顶级医美连锁机构](/images/posts/asian-aesthetic-medicine-news-may-2026/thailand_clinic.png)
+
 ---
 
 ## 7. 全球皮肤填充剂市场持续增长
@@ -103,6 +109,8 @@ medicalAudience: "Patient"
 | 2026年预计规模 | 54.5亿美元 |
 | 2034年预计规模 | 99.1亿美元 |
 | 复合年增长率 | 7.8% |
+
+![玻尿酸填充剂注射面部轮廓前后对比](/images/posts/asian-aesthetic-medicine-news-may-2026/dermal_filler.jpg)
 
 亚太地区在真皮填充剂市场中占据重要份额，中国和韩国是主要增长引擎。
 

@@ -31,7 +31,7 @@ medicalAudience: "Patient"
 
 黄金微针连续多月位居小红书品项搜索TOP1。用户最关注"效果对比图"和"5代技术"。结合2026年4月数据，光电抗衰项目整体热度持续走高，黄金微针作为微创抗衰的代表，搜索量和笔记互动率双双攀升。
 
-![黄金微针RF治疗过程](images/posts/en-xiaohongshu-hot-may-2026/gold_rf_treatment.jpg)
+![黄金微针RF治疗过程](/images/posts/en-xiaohongshu-hot-may-2026/gold_rf_treatment.jpg)
 
 **用户关注点：** 技术原理、安全性、五代 vs 四代区别
 
@@ -41,7 +41,7 @@ medicalAudience: "Patient"
 
 光子嫩肤（IPL）是小红书医美领域最稳定的流量入口。"水光和光子嫩肤哪个更值得"搜索量同比增长30.52%。2026年4月舆情报告显示，光电类项目在轻医美中占比持续扩大，用户从"要不要做"转向"选哪个更好"的深度决策阶段。
 
-![IPL光子嫩肤治疗](images/posts/en-xiaohongshu-hot-may-2026/ipl_treatment.jpg)
+![IPL光子嫩肤治疗](/images/posts/en-xiaohongshu-hot-may-2026/ipl_treatment.jpg)
 
 **内容方向：** 1-7天对比图、功效解析、性价比对比
 
@@ -49,7 +49,7 @@ medicalAudience: "Patient"
 
 "轮廓固定"及其衍生词（"轮廓流畅的重要性"、"外轮廓流畅"、"内轮廓提升"）占据医美热搜场景TOP10中4席。用户审美从单一部位转向整体面部协调。
 
-![面部轮廓填充前后对比](images/posts/en-xiaohongshu-hot-may-2026/facial_contour.jpg)
+![面部轮廓填充前后对比](/images/posts/en-xiaohongshu-hot-may-2026/facial_contour.jpg)
 
 2026年1月月报特别提到：无论审美潮流如何变化（幼态脸、高智感脸、方圆脸），底层逻辑始终是"面部折叠度"带来的平整与流畅。
 
@@ -63,7 +63,7 @@ medicalAudience: "Patient"
 
 "馒化修复"、"馒化"、"馒化脸"三个关键词全部进入搜索TOP20。过去几年的过度填充热潮正在引发"反噬"，求美者开始寻找修复方案。这是一个高客单价的蓝海市场。
 
-![唇部过度填充修复前后对比](images/posts/en-xiaohongshu-hot-may-2026/overfill_repair.jpg)
+![唇部过度填充修复前后对比](/images/posts/en-xiaohongshu-hot-may-2026/overfill_repair.jpg)
 
 **核心需求：** 自然感、拒绝假面、溶解酶/修复手术
 
@@ -79,13 +79,13 @@ medicalAudience: "Patient"
 
 眼周年轻化需求持续升温。眼袋、泪沟、卧蚕等细分项目的搜索量全面增长，"眼袋泪沟太重了有什么方法"搜索增长28.12%。
 
-![眼袋手术前后对比](images/posts/en-xiaohongshu-hot-may-2026/eye_bag_surgery.jpg)
+![眼袋手术前后对比](/images/posts/en-xiaohongshu-hot-may-2026/eye_bag_surgery.jpg)
 
 ### 第9名：超声炮/热玛吉 — 国产设备崛起
 
 2026年4月NMPA密集批准国产抗衰设备：普门科技聚焦超声皮肤治疗仪获批三类证（国内第二款）、乐普医疗赛乐提射频皮肤治疗仪获批三类证。国产超声+射频双赛道加速替代进口。
 
-![热玛吉紧肤治疗效果对比](images/posts/en-xiaohongshu-hot-may-2026/thermage_treatment.jpg)
+![热玛吉紧肤治疗效果对比](/images/posts/en-xiaohongshu-hot-may-2026/thermage_treatment.jpg)
 
 ### 第10名：肉毒素/玻尿酸 — 注射项目基本盘稳固
 
@@ -108,7 +108,7 @@ medicalAudience: "Patient"
 
 2026年4月，国家卫健委等三部门联合印发《2026年国家随机监督抽查计划》：
 
-![医美机构医生面诊咨询](images/posts/en-xiaohongshu-hot-may-2026/consultation.jpg)
+![医美机构医生面诊咨询](/images/posts/en-xiaohongshu-hot-may-2026/consultation.jpg)
 - 50%医疗美容机构将被抽查
 - 20%内设医美科室的医疗机构接受检查
 - 北京朝阳发布全国首个医美广告合规指引

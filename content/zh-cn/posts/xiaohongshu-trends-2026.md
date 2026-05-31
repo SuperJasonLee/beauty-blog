@@ -29,7 +29,7 @@ medicalAudience: "Patient"
 
 光子嫩肤（IPL）依然是小红书平台上热度最高的医美项目，连续多月霸榜。"水光和光子嫩肤哪个更值得"搜索量同比增长30.52%，说明求美者在决策前倾向于"价比三家"。
 
-![IPL光子嫩肤治疗仪器](images/posts/en-xiaohongshu-trends-2026/ipl_treatment.jpg)
+![IPL光子嫩肤治疗仪器](/images/posts/en-xiaohongshu-trends-2026/ipl_treatment.jpg)
 
 内容方向建议：术后对比图、1-7天恢复记录、不同皮肤类型的适用分析。
 
@@ -39,7 +39,7 @@ medicalAudience: "Patient"
 
 黄金微针已跃升为小红书品项搜索TOP1。用户最关注的是"效果对比图"和"5代技术"，对技术原理和安全性的关注度显著增长。"黄金微针功效与副作用"搜索量同步攀升，说明求美者既追求效果，也重视安全认知。
 
-![黄金微针RF治疗设备](images/posts/en-xiaohongshu-trends-2026/gold_microneedling.jpg)
+![黄金微针RF治疗设备](/images/posts/en-xiaohongshu-trends-2026/gold_microneedling.jpg)
 
 ### 3. 轮廓固定 — 场景热搜断层领跑
 
@@ -47,7 +47,7 @@ medicalAudience: "Patient"
 
 "轮廓固定"以绝对优势领跑医美场景热搜，其衍生词（"轮廓流畅的重要性"、"外轮廓流畅"、"内轮廓提升"）占据TOP10中的4席。求美者追求整体面部的紧致与流畅，审美从单一部位转向整体协调。
 
-![面部轮廓固定填充注射治疗](images/posts/en-xiaohongshu-trends-2026/facial_contouring.jpg)
+![面部轮廓固定填充注射治疗](/images/posts/en-xiaohongshu-trends-2026/facial_contouring.jpg)
 
 ### 4. 水光针 / 胶原蛋白 — 刚需大盘
 
@@ -75,7 +75,7 @@ medicalAudience: "Patient"
 
 "馒化修复"、"馒化"、"馒化脸"三个相关词全部进入搜索TOP20。过去几年的过度填充导致了现在的"反噬"，求美者正在寻找"后悔药"。机构和医生如果能打出"修复"、"拒绝假面"、"自然高级感"的牌，将精准收割这批高客单价用户。
 
-![馒化修复透明质酸酶溶解治疗](images/posts/en-xiaohongshu-trends-2026/overfill_repair.jpg)
+![馒化修复透明质酸酶溶解治疗](/images/posts/en-xiaohongshu-trends-2026/overfill_repair.jpg)
 
 ---
 
@@ -105,7 +105,7 @@ medicalAudience: "Patient"
 
 2025年男性贡献了53.65%的市场增量，客单价是女性的2.75倍。男性最偏好的项目包括植发、抗衰、去眼袋等，这是一个不可忽视的蓝海市场。
 
-![男性医美治疗场景](images/posts/en-xiaohongshu-trends-2026/male_aesthetic.jpg)
+![男性医美治疗场景](/images/posts/en-xiaohongshu-trends-2026/male_aesthetic.jpg)
 
 ---
 
