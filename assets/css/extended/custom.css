@@ -195,14 +195,8 @@
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--border);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
-}
-
-.post-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .post-card-image {
