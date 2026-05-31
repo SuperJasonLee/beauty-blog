@@ -267,6 +267,11 @@
   padding-top: 0.8em;
 }
 
+/* Theme transition */
+html, body, .main, .header, .footer {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 /* Responsive: single column on mobile */
 @media (max-width: 768px) {
   .post-card-grid {
