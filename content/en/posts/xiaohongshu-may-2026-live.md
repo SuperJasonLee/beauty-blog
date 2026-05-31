@@ -7,7 +7,7 @@ categories: ["Industry Trends"]
 tags: ["Xiaohongshu", "May 2026", "live trends", "gold microneedling", "thermage", "ultrasound lifting", "anti-aging", "facial contouring", "overfill repair", "minimally invasive"]
 keywords: ["Xiaohongshu live trends", "aesthetic procedures May 2026", "gold microneedling", "thermage", "ultrasound lifting"]
 draft: false
-featuredImage: "/images/posts/en-xiaohongshu-may-2026-live.png"
+featuredImage: "/images/posts/en-xiaohongshu-may-2026-live/shanghai_no9.jpg"
 author: "Beauty-Blog Medical Review Board"
 lastReviewed: "2026-05-27"
 medicalAudience: "Patient"
@@ -25,6 +25,8 @@ This article is based on real-time Xiaohongshu search data from May 25, 2026, co
 
 ### #1: Gold Microneedling — Doctor-Recommended Anti-Aging King
 
+![5th generation gold RF microneedling treatment device](images/posts/en-xiaohongshu-may-2026-live/microneedling_device.jpg)
+
 **Reference:** Dr. Dai Tingting of Shanghai No.9 Hospital — "3 Aesthetic Procedures Even Doctors Can't Skip" — 2,649 likes, 2,648 saves
 
 Gold microneedling continues its dominance. Multiple Shanghai No.9 Hospital doctors rank it as their #1 "must-do" procedure. Core strengths: minimally invasive + anti-aging + skin texture improvement in one treatment.
@@ -32,6 +34,8 @@ Gold microneedling continues its dominance. Multiple Shanghai No.9 Hospital doct
 **May keywords:** 5th-gen gold microneedling, gold microneedling + IPL combos, post-treatment care
 
 ### #2: Thermage / Ultrasound Lifting — Photo-Electric Duo
+
+![Thermage skin tightening treatment before and after](images/posts/en-xiaohongshu-may-2026-live/thermage_ultrasound.jpg)
 
 **Reference:** Dr. Zhou Shuangbai of Shanghai No.9 Hospital — "2026's Most Popular Anti-Aging Procedures" — 141 likes
 
@@ -69,6 +73,8 @@ Four related terms ("importance of smooth contours," "outer contour," "inner con
 
 ### #6: Overfill Repair — The Price of Over-Treatment
 
+![Facial overfill syndrome before and after hyaluronidase treatment](images/posts/en-xiaohongshu-may-2026-live/overfill_syndrome.jpg)
+
 **Reference:** "It took 6 years of de-puffing to understand" — 127 likes
 "Overfill Repair 2026: Introducing 'Wall Face' Repair" — 11 likes
 "Did the 'Foam Face' Rejuvenate After Facial Liposuction?" (May 22, 2026)
@@ -87,11 +93,15 @@ Cost-effectiveness is the high-frequency keyword of May 2026. Users no longer as
 
 ### #8: Periorbital Surgery (Blepharoplasty + Eye Bags)
 
+![Under-eye bag rejuvenation surgery pre and post operative](images/posts/en-xiaohongshu-may-2026-live/periorbital_surgery.jpg)
+
 **Reference:** "Aesthetic Procedures You Won't Regret" — 440 likes (Apr 24, 2026)
 
 Periorbital procedures remain a high-engagement category on XHS. Notable May trend: **male blepharoplasty** content is growing — Gen Z males discussing summer vacation eyelid surgery.
 
 ### #9: 2026 Aesthetic Shift — From Impulse to Informed Decisions
+
+![Patient consultation with aesthetic medicine doctor](images/posts/en-xiaohongshu-may-2026-live/doctor_consultation.jpg)
 
 **Reference:** Intopia — "2026 Aesthetic Shift: From Impulse Consumption to Informed Decisions" (May 13, 2026)
 

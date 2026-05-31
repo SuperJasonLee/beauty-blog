@@ -7,7 +7,7 @@ categories: ["Industry Trends"]
 tags: ["Xiaohongshu", "May 2026", "aesthetic trends", "IPL", "gold microneedling", "facial contouring", "overfill repair", "square face", "minimally invasive"]
 keywords: ["Xiaohongshu trending", "aesthetic procedures 2026", "IPL", "gold microneedling", "facial contouring"]
 draft: false
-featuredImage: "/images/posts/en-xiaohongshu-hot-may-2026.png"
+featuredImage: "/images/posts/en-xiaohongshu-hot-may-2026/aesthetic_clinic.jpg"
 author: "Beauty-Blog Medical Review Board"
 lastReviewed: "2026-05-27"
 medicalAudience: "Patient"
@@ -27,6 +27,8 @@ Data sources: Xiaohongshu Official Aesthetic Medicine Monthly Reports, April 202
 
 ### #1: Gold Microneedling — Undisputed Leader
 
+![Gold RF microneedling treatment session](images/posts/en-xiaohongshu-hot-may-2026/gold_rf_treatment.jpg)
+
 Heat Index: 187.49w+
 
 Gold microneedling has held the #1 XHS search spot for consecutive months. Users focus on "before/after comparison images" and "5th generation technology." April 2026 data shows photo-electric anti-aging projects overall continue rising, with gold microneedling leading as the minimally invasive anti-aging champion.
@@ -35,6 +37,8 @@ Gold microneedling has held the #1 XHS search spot for consecutive months. Users
 
 ### #2: IPL Photofacial — The Evergreen
 
+![IPL photofacial treatment in a medical aesthetic clinic](images/posts/en-xiaohongshu-hot-may-2026/ipl_treatment.jpg)
+
 Heat Index: 70.2w+ (March), sustained high through April-May
 
 IPL (photofacial) is the steadiest traffic gateway in XHS aesthetic medicine. Searches for "IPL vs hydrafacial — which is better?" grew 30.52% YoY. The April 2026 sentiment report shows photo-electric procedures expanding their share in the minimally invasive sector, as users shift from "should I do it?" to "which one is better for me?"
@@ -42,6 +46,8 @@ IPL (photofacial) is the steadiest traffic gateway in XHS aesthetic medicine. Se
 **Content direction:** 1-7 day comparison charts, efficacy analysis, cost-benefit comparison
 
 ### #3: Facial Contouring — 1.65 Billion Topic Views
+
+![Facial contouring before and after cheek enhancement](images/posts/en-xiaohongshu-hot-may-2026/facial_contour.jpg)
 
 "Facial contouring" and its derivatives ("importance of smooth contours," "outer contour lift," "inner contour lift") occupy 4 of the top 10 XHS aesthetic search scenarios. User aesthetics have shifted from single features to overall facial harmony.
 
@@ -54,6 +60,8 @@ The January 2026 report noted: regardless of aesthetic trends (baby face, high-i
 This trend has driven growth in jawline slimming, facial liposuction, and contour injection searches.
 
 ### #5: Overfill Repair — The "Face Builder's Remorse"
+
+![Lip filler overfill correction before and after](images/posts/en-xiaohongshu-hot-may-2026/overfill_repair.jpg)
 
 "Overfill repair," "overfilled," and "overfilled face" all entered the search TOP20. Years of overfilling are now creating a "backlash" as users seek corrective treatments. This is a high-ticket blue ocean market.
 
@@ -69,9 +77,13 @@ Users have shifted from searching "what is collagen" to searching specific brand
 
 ### #8: Under-Eye Bag Surgery — Search Up 53.78%
 
+![Under-eye bag rejuvenation surgery before and after](images/posts/en-xiaohongshu-hot-may-2026/eye_bag_surgery.jpg)
+
 Periorbital rejuvenation continues heating up. Searches for under-eye bags, tear troughs, and eye brightening are all up. "My eye bags and tear troughs are too heavy — any solution?" grew 28.12%.
 
 ### #9: Ultrasonic Lifting / Thermage — Domestic Devices Rising
+
+![Thermage skin tightening treatment result comparison](images/posts/en-xiaohongshu-hot-may-2026/thermage_treatment.jpg)
 
 In April 2026, China's NMPA approved multiple domestic anti-aging devices: Pulsen's focused ultrasound skin treatment device (second domestic approval), Lepu Medical's radiofrequency skin treatment device. Domestic ultrasonic + RF devices are accelerating to replace imports.
 
@@ -93,6 +105,8 @@ Injectable treatments (Botox + HA fillers) remain the core of minimally invasive
 ---
 
 ## ⚠️ Regulatory Tightening — April 2026
+
+![Doctor-patient consultation in an aesthetic medicine clinic](images/posts/en-xiaohongshu-hot-may-2026/consultation.jpg)
 
 China's National Health Commission and two other ministries jointly issued the "2026 National Random Supervision and Inspection Plan":
 - 50% of medical aesthetic institutions will be inspected
