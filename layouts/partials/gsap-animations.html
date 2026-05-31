@@ -1,0 +1,184 @@
+{{- if not (site.Params.disableGSAP | default false) }}
+<script>
+if (typeof gsap !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+
+  let mm = gsap.matchMedia();
+
+  mm.add("(prefers-reduced-motion: no-preference)", () => {
+    const isList = document.body.classList.contains("list");
+    const isSingle = !isList && document.querySelector(".post-single");
+    const isMobile = window.innerWidth < 768;
+
+    // ===== A. Navigation auto-hide (desktop only) =====
+    if (!isMobile) {
+      const header = document.querySelector(".header");
+      if (header) {
+        ScrollTrigger.create({
+          onUpdate: (self) => {
+            const scrollY = window.scrollY;
+            if (scrollY > 50 && self.direction === 1) {
+              gsap.to(header, { y: "-100%", duration: 0.3, ease: "power2.out", overwrite: "auto" });
+            } else if (self.direction === -1) {
+              gsap.to(header, { y: "0%", duration: 0.3, ease: "power2.out", overwrite: "auto" });
+            }
+          }
+        });
+      }
+    }
+
+    // ===== B. Menu hover effect =====
+    document.querySelectorAll("#menu a").forEach(link => {
+      link.addEventListener("mouseenter", function() {
+        gsap.to(this, { color: "var(--secondary)", duration: 0.2, ease: "power2.out" });
+      });
+      link.addEventListener("mouseleave", function() {
+        gsap.to(this, { color: "var(--primary)", duration: 0.3, ease: "power2.out" });
+      });
+    });
+
+    // ===== C. Card grid scroll entrance (list pages) =====
+    if (isList) {
+      ScrollTrigger.batch(".post-card", {
+        start: "top 90%",
+        once: true,
+        onEnter: (batch) => {
+          gsap.fromTo(batch,
+            { y: 60, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.6, ease: "power2.out", stagger: isMobile ? 0.05 : 0.1, overwrite: true }
+          );
+        }
+      });
+    }
+
+    // ===== D. Card hover enhancement (list pages) =====
+    if (isList) {
+      document.querySelectorAll(".post-card").forEach(card => {
+        card.addEventListener("mouseenter", function() {
+          gsap.to(this, { y: -6, boxShadow: "0 12px 32px rgba(0,0,0,0.15)", duration: 0.3, ease: "power2.out", overwrite: "auto" });
+        });
+        card.addEventListener("mouseleave", function() {
+          gsap.to(this, { y: 0, boxShadow: "none", duration: 0.3, ease: "power2.out", overwrite: "auto" });
+        });
+      });
+    }
+
+    // ===== E. Article title elastic entrance (single page) =====
+    if (isSingle) {
+      const title = document.querySelector(".post-single .post-title");
+      if (title) {
+        gsap.from(title, { y: -30, opacity: 0, scale: 0.95, duration: 0.8, ease: "back.out(1.7)", delay: 0.1 });
+      }
+    }
+
+    // ===== F. Featured image fade-in (single page) =====
+    if (isSingle) {
+      const coverImg = document.querySelector(".post-single .entry-cover img");
+      if (coverImg) {
+        gsap.fromTo(coverImg, { scale: 1.08, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.8, ease: "power2.out", delay: 0.2 });
+      }
+    }
+
+    // ===== G. Content paragraphs scroll entrance (single page) =====
+    if (isSingle) {
+      const contentEl = document.querySelector(".post-single .post-content");
+      if (contentEl) {
+        const elements = contentEl.querySelectorAll("p, h2, h3, h4, .post-content > ul, .post-content > ol, .post-content > blockquote");
+        if (elements.length) {
+          ScrollTrigger.batch(elements, {
+            start: "top 85%",
+            once: true,
+            onEnter: (batch) => {
+              gsap.fromTo(batch,
+                { y: 24, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.5, ease: "power1.out", stagger: isMobile ? 0.03 : 0.06, overwrite: true }
+              );
+            }
+          });
+        }
+      }
+    }
+
+    // ===== H. Article images scroll reveal (single page) =====
+    if (isSingle) {
+      const contentImgs = document.querySelectorAll(".post-single .post-content img");
+      if (contentImgs.length) {
+        ScrollTrigger.batch(contentImgs, {
+          start: "top 85%",
+          once: true,
+          onEnter: (batch) => {
+            gsap.fromTo(batch,
+              { scale: 0.95, opacity: 0 },
+              { scale: 1, opacity: 1, duration: 0.7, ease: "power2.out", overwrite: true }
+            );
+          }
+        });
+      }
+    }
+
+    // ===== I. Tags staggered entrance (single page) =====
+    if (isSingle) {
+      const tagItems = document.querySelectorAll(".post-tags li");
+      if (tagItems.length) {
+        ScrollTrigger.batch(tagItems, {
+          start: "top 95%",
+          once: true,
+          onEnter: (batch) => {
+            gsap.fromTo(batch,
+              { y: 16, opacity: 0 },
+              { y: 0, opacity: 1, duration: 0.4, ease: "power2.out", stagger: 0.05, overwrite: true }
+            );
+          }
+        });
+      }
+    }
+
+    // ===== J. Footer fade-in =====
+    const footer = document.querySelector(".footer");
+    if (footer) {
+      ScrollTrigger.create({
+        trigger: footer,
+        start: "top 95%",
+        once: true,
+        onEnter: () => {
+          gsap.fromTo(footer, { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" });
+        }
+      });
+    }
+
+    // ===== K. Back to top button GSAP enhancement =====
+    const topLink = document.getElementById("top-link");
+    if (topLink) {
+      let isVisible = false;
+      window.onscroll = function() {
+        const scrollThreshold = window.innerHeight;
+        const shouldShow = document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold;
+        if (shouldShow && !isVisible) {
+          isVisible = true;
+          topLink.classList.remove("hidden");
+          gsap.fromTo(topLink, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2)", overwrite: true });
+        } else if (!shouldShow && isVisible) {
+          isVisible = false;
+          gsap.to(topLink, { scale: 0, opacity: 0, duration: 0.2, ease: "power2.in", overwrite: true, onComplete: () => {
+            topLink.classList.add("hidden");
+            gsap.set(topLink, { clearProps: "all" });
+          }});
+        }
+      };
+
+      topLink.addEventListener("click", function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        if (window.history.pushState) {
+          history.replaceState(null, null, " ");
+        }
+      });
+    }
+
+    return () => {
+      ScrollTrigger.getAll().forEach(t => t.kill());
+    };
+  });
+}
+</script>
+{{- end }}
