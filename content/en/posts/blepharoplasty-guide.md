@@ -7,7 +7,7 @@ categories: ["Facial Surgery"]
 tags: ["blepharoplasty", "eyelid surgery", "double eyelid", "preparation", "cosmetic surgery"]
 keywords: ["blepharoplasty", "eyelid surgery", "double eyelid surgery", "eyelid recovery", "cosmetic eyelid"]
 draft: false
-featuredImage: "/images/posts/en-blepharoplasty-guide.png"
+featuredImage: "/images/posts/blepharoplasty-guide-featured.jpg"
 author: "Beauty-Blog Medical Review Board"
 lastReviewed: "2026-05-27"
 medicalAudience: "Patient"

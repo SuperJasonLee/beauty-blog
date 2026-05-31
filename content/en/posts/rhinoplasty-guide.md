@@ -7,7 +7,7 @@ categories: ["Facial Surgery"]
 tags: ["rhinoplasty", "nose job", "implants", "recovery", "facial surgery"]
 keywords: ["rhinoplasty", "nose job", "nose implant", "rhinoplasty recovery", "nose surgery risks"]
 draft: false
-featuredImage: "/images/posts/en-rhinoplasty-guide.png"
+featuredImage: "/images/posts/rhinoplasty-guide-featured.jpg"
 author: "Beauty-Blog Medical Review Board"
 lastReviewed: "2026-05-27"
 medicalAudience: "Patient"
