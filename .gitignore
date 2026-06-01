@@ -3,3 +3,7 @@ node_modules/
 resources/
 .hugo_build.*
 web-articles/
+.env
+scripts/crawl-eye-surgery-news/.venv/
+scripts/crawl-eye-surgery-news/__pycache__/
+data/crawled/

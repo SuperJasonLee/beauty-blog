@@ -7,7 +7,8 @@
     "build": "hugo --minify",
     "dev": "hugo server -D",
     "search-index": "npx pagefind --site public",
-    "build:full": "npm run build && npm run search-index"
+    "build:full": "npm run build && npm run search-index",
+    "crawl:eye-news": "cd scripts/crawl-eye-surgery-news && python run.py"
   },
   "keywords": [],
   "author": "",
