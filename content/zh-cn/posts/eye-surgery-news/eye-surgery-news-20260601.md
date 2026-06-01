@@ -1,11 +1,15 @@
 ---
 title: "眼部整形深度解析：最新技术趋势与临床实践指南"
 date: 2026-06-01
-draft: false
+lastmod: 2026-06-01
 description: "基于最新学术研究和行业动态，深度分析眼部整形领域的技术创新、安全规范和患者关怀要点。"
 tags: ["眼部整形", "技术趋势", "临床指南", "安全规范"]
 categories: ["眼部整形"]
-image: "/images/eye-surgery-news/eye-surgery-news-20260601-cover.jpg"
+keywords: ["眼部整形", "眼睑成形术", "眼整形技术", "眼部整形安全", "眼整形医生选择"]
+featuredImage: "/images/eye-surgery-news/eye-surgery-news-20260601-cover.jpg"
+author: "Beauty-Blog 医学审核团队"
+lastReviewed: "2026-06-01"
+medicalAudience: "Patient"
 translations: ["/en/posts/eye-surgery-news/eye-surgery-news-20260601"]
 ---
 

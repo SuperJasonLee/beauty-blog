@@ -1,11 +1,15 @@
 ---
 title: "Eye Plastic Surgery: Deep Analysis of Latest Trends and Clinical Practice"
 date: 2026-06-01
-draft: false
+lastmod: 2026-06-01
 description: "Comprehensive analysis of technological innovation, safety standards, and patient care in eye plastic surgery based on latest research."
 tags: ["eye surgery", "technology trends", "clinical guide", "safety standards"]
 categories: ["Eye Surgery"]
-image: "/images/eye-surgery-news/eye-surgery-news-20260601-cover.jpg"
+keywords: ["eye plastic surgery", "blepharoplasty", "eyelid surgery", "eye surgery safety", "eye surgeon selection"]
+featuredImage: "/images/eye-surgery-news/eye-surgery-news-20260601-cover.jpg"
+author: "Beauty-Blog 医学审核团队"
+lastReviewed: "2026-06-01"
+medicalAudience: "Patient"
 translations: ["/zh-cn/posts/eye-surgery-news/eye-surgery-news-20260601"]
 ---
 
