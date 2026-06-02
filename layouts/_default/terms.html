@@ -36,18 +36,16 @@
 </div>
 {{- end }}
 
-<ul class="terms-tags">
+<div class="tag-cloud">
     {{- $type := .Type }}
     {{- range $key, $value := .Data.Terms.Alphabetical }}
     {{- $name := .Name }}
     {{- $count := .Count }}
     {{- with site.GetPage (printf "/%s/%s" $type $name) }}
-    <li>
-        <a href="{{ .Permalink }}">{{ .LinkTitle }} <sup><strong><sup>{{ $count }}</sup></strong></sup> </a>
-    </li>
+    <a href="{{ .Permalink }}" class="tag-cloud-item" data-count="{{ $count }}">{{ .LinkTitle }}<sup>{{ $count }}</sup></a>
     {{- end }}
     {{- end }}
-</ul>
+</div>
 
 {{- if eq .Type "tags" }}</div>{{- end }}
 {{- end }}

@@ -270,6 +270,33 @@ if (typeof gsap !== 'undefined') {
       }
     }
 
+    // ===== M. Tag cloud stagger entrance + hover (/tags/ terms page) =====
+    const tagCloud = document.querySelector('.tag-cloud');
+    if (tagCloud) {
+      const items = tagCloud.querySelectorAll('.tag-cloud-item');
+      if (items.length) {
+        ScrollTrigger.batch(items, {
+          start: 'top 90%',
+          once: true,
+          onEnter: (batch) => {
+            gsap.fromTo(batch,
+              { scale: 0.85, opacity: 0, y: 16 },
+              { scale: 1, opacity: 1, y: 0, duration: 0.5, ease: 'power2.out', stagger: isMobile ? 0.03 : 0.06, overwrite: true }
+            );
+          }
+        });
+
+        items.forEach(item => {
+          item.addEventListener('mouseenter', function() {
+            gsap.to(this, { scale: 1.15, backgroundColor: 'var(--tertiary)', borderColor: 'var(--secondary)', duration: 0.25, ease: 'power2.out', overwrite: 'auto' });
+          });
+          item.addEventListener('mouseleave', function() {
+            gsap.to(this, { scale: 1, backgroundColor: 'var(--entry)', borderColor: 'var(--border)', duration: 0.3, ease: 'power2.out', overwrite: 'auto' });
+          });
+        });
+      }
+    }
+
     return () => {
       ScrollTrigger.getAll().forEach(t => t.kill());
       const nc = document.getElementById('nebula-container');

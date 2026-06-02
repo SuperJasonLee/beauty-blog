@@ -302,3 +302,58 @@ html, body, .main, .header, .footer {
   pointer-events: none;
   will-change: transform;
 }
+
+/* ===== Tag Cloud for /tags/ Page ===== */
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6em;
+  padding: 2em 0;
+}
+
+.tag-cloud-item {
+  display: inline-block;
+  padding: 0.35em 0.9em;
+  border-radius: 999px;
+  background: var(--entry);
+  border: 1px solid var(--border);
+  color: var(--primary);
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.tag-cloud-item sup {
+  margin-left: 0.3em;
+  font-size: 0.65em;
+  opacity: 0.6;
+}
+
+.tag-cloud-item[data-count="1"] {
+  font-size: clamp(0.85rem, 2.2vw, 1rem);
+}
+.tag-cloud-item[data-count="2"] {
+  font-size: clamp(1.05rem, 3vw, 1.3rem);
+}
+.tag-cloud-item[data-count="3"] {
+  font-size: clamp(1.2rem, 3.8vw, 1.6rem);
+}
+
+@media (max-width: 768px) {
+  .tag-cloud {
+    gap: 0.4em;
+    padding: 1.2em 0;
+  }
+  .tag-cloud-item[data-count="1"] {
+    font-size: 0.85rem;
+  }
+  .tag-cloud-item[data-count="2"] {
+    font-size: 1rem;
+  }
+  .tag-cloud-item[data-count="3"] {
+    font-size: 1.15rem;
+  }
+}
