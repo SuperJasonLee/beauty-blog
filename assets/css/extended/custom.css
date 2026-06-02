@@ -199,6 +199,14 @@
   flex-direction: column;
 }
 
+[data-theme="dark"] .post-card {
+  background: rgba(10, 10, 26, 0.7);
+}
+
+[data-theme="light"] .post-card {
+  background: rgba(255, 255, 255, 0.7);
+}
+
 .post-card-image {
   width: 100%;
   height: 200px;
@@ -269,6 +277,20 @@ html, body, .main, .header, .footer {
 .header {
   position: relative;
   z-index: 1;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+[data-theme="dark"] .header {
+  background: rgba(5, 5, 16, 0.25);
+  --primary: #ffffff;
+  --secondary: #a0a0b0;
+}
+
+[data-theme="light"] .header {
+  background: rgba(255, 255, 255, 0.2);
+  --primary: #1a1a2e;
+  --secondary: #505070;
 }
 
 /* Responsive: single column on mobile */
@@ -283,7 +305,7 @@ html, body, .main, .header, .footer {
   }
 }
 
-/* ===== Nebula Background for Tags Page ===== */
+/* ===== Nebula Background (site-wide) ===== */
 #nebula-container {
   position: fixed;
   top: 0;
@@ -294,11 +316,37 @@ html, body, .main, .header, .footer {
   pointer-events: none;
   opacity: 0;
   background: radial-gradient(ellipse at 50% 40%, #12102a 0%, #0a0a1a 40%, #050510 100%);
-  transition: opacity 1.5s ease;
+  transition: opacity 0.3s ease;
+}
+
+[data-theme="light"] #nebula-container {
+  background: radial-gradient(ellipse at 50% 40%, #d4c9e6 0%, #e8e0f0 40%, #f5f0fa 100%);
 }
 
 #nebula-container.active {
   opacity: 1;
+}
+
+/* Semi-transparent overlay for readability on nebula */
+.main {
+  position: relative;
+  z-index: 1;
+}
+
+.main::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+[data-theme="dark"] .main::before {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="light"] .main::before {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .nebula-particle {

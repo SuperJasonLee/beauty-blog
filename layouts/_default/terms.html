@@ -1,7 +1,5 @@
 {{- define "main" }}
 
-{{- if eq .Type "tags" }}<div id="nebula-container"></div><div class="page-content" style="position: relative; z-index: 1;">{{- end }}
-
 {{- if .Title }}
 <header class="page-header">
     {{- partial "breadcrumbs.html" . }}
@@ -47,5 +45,4 @@
     {{- end }}
 </div>
 
-{{- if eq .Type "tags" }}</div>{{- end }}
 {{- end }}

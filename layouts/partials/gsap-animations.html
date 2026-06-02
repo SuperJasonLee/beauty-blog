@@ -175,99 +175,97 @@ if (typeof gsap !== 'undefined') {
       });
     }
 
-    // ===== L. Nebula particle animation (tags page only) =====
-    if (isList && window.location.pathname.startsWith('/tags/')) {
-      const container = document.getElementById('nebula-container');
-      if (container) {
-        container.classList.add('active');
+    // ===== L. Nebula particle animation =====
+    const container = document.getElementById('nebula-container');
+    if (container) {
+      container.classList.add('active');
 
-        const particleCount = isMobile ? 60 : 150;
-        const particles = [];
-        const driftTweens = [];
-        const repelling = [];
+      const particleCount = isMobile ? 60 : 150;
+      const particles = [];
+      const driftTweens = [];
+      const repelling = [];
 
-        function startDrift(el) {
-          return gsap.to(el, {
-            x: (Math.random() - 0.5) * 200,
-            y: (Math.random() - 0.5) * 200,
-            duration: 4 + Math.random() * 4,
-            ease: 'sine.inOut',
-            repeat: -1,
-            yoyo: true
-          });
-        }
-
-        for (let i = 0; i < particleCount; i++) {
-          const p = document.createElement('span');
-          p.className = 'nebula-particle';
-
-          const size = 2 + Math.random() * 4;
-          const hue = 200 + Math.random() * 120;
-          const sat = 60 + Math.random() * 40;
-          const lit = 50 + Math.random() * 30;
-          const alpha = 0.3 + Math.random() * 0.5;
-          const color = `hsla(${hue},${sat}%,${lit}%,${alpha})`;
-
-          p.style.width = size + 'px';
-          p.style.height = size + 'px';
-          p.style.background = color;
-          p.style.boxShadow = `0 0 ${size * 3}px ${color}`;
-          p.style.left = Math.random() * 100 + '%';
-          p.style.top = Math.random() * 100 + '%';
-
-          container.appendChild(p);
-          particles.push(p);
-          driftTweens.push(startDrift(p));
-          repelling.push(false);
-        }
-
-        // Mouse repulsion with throttle
-        let moveTick = 0;
-        container.addEventListener('mousemove', (e) => {
-          const now = Date.now();
-          if (now - moveTick < 40) return;
-          moveTick = now;
-
-          const vw = window.innerWidth;
-          const vh = window.innerHeight;
-          const mx = (e.clientX / vw) * 100;
-          const my = (e.clientY / vh) * 100;
-
-          for (let i = 0; i < particles.length; i++) {
-            if (repelling[i]) continue;
-
-            const el = particles[i];
-            const gsapCache = el._gsap;
-            const cx = parseFloat(el.style.left) + (gsapCache.x || 0);
-            const cy = parseFloat(el.style.top) + (gsapCache.y || 0);
-            const dx = cx - mx;
-            const dy = cy - my;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-
-            if (dist < 16 && dist > 0.5) {
-              repelling[i] = true;
-              driftTweens[i].kill();
-
-              const strength = (16 - dist) / 16 * 40;
-              const angle = Math.atan2(dy, dx);
-              const tx = cx + Math.cos(angle) * strength;
-              const ty = cy + Math.sin(angle) * strength;
-
-              gsap.to(el, {
-                x: tx - parseFloat(el.style.left),
-                y: ty - parseFloat(el.style.top),
-                duration: 0.5,
-                ease: 'power2.out',
-                overwrite: 'all',
-                onComplete: () => {
-                  repelling[i] = false;
-                  driftTweens[i] = startDrift(el);
-                }
-              });
-            }
-          }
+      function startDrift(el) {
+        return gsap.to(el, {
+          x: (Math.random() - 0.5) * 200,
+          y: (Math.random() - 0.5) * 200,
+          duration: 4 + Math.random() * 4,
+          ease: 'sine.inOut',
+          repeat: -1,
+          yoyo: true
         });
       }
+
+      for (let i = 0; i < particleCount; i++) {
+        const p = document.createElement('span');
+        p.className = 'nebula-particle';
+
+        const size = 2 + Math.random() * 4;
+        const hue = 200 + Math.random() * 120;
+        const sat = 60 + Math.random() * 40;
+        const lit = 50 + Math.random() * 30;
+        const alpha = 0.3 + Math.random() * 0.5;
+        const color = `hsla(${hue},${sat}%,${lit}%,${alpha})`;
+
+        p.style.width = size + 'px';
+        p.style.height = size + 'px';
+        p.style.background = color;
+        p.style.boxShadow = `0 0 ${size * 3}px ${color}`;
+        p.style.left = Math.random() * 100 + '%';
+        p.style.top = Math.random() * 100 + '%';
+
+        container.appendChild(p);
+        particles.push(p);
+        driftTweens.push(startDrift(p));
+        repelling.push(false);
+      }
+
+      // Mouse repulsion with throttle
+      let moveTick = 0;
+      container.addEventListener('mousemove', (e) => {
+        const now = Date.now();
+        if (now - moveTick < 40) return;
+        moveTick = now;
+
+        const vw = window.innerWidth;
+        const vh = window.innerHeight;
+        const mx = (e.clientX / vw) * 100;
+        const my = (e.clientY / vh) * 100;
+
+        for (let i = 0; i < particles.length; i++) {
+          if (repelling[i]) continue;
+
+          const el = particles[i];
+          const gsapCache = el._gsap;
+          const cx = parseFloat(el.style.left) + (gsapCache.x || 0);
+          const cy = parseFloat(el.style.top) + (gsapCache.y || 0);
+          const dx = cx - mx;
+          const dy = cy - my;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+
+          if (dist < 16 && dist > 0.5) {
+            repelling[i] = true;
+            driftTweens[i].kill();
+
+            const strength = (16 - dist) / 16 * 40;
+            const angle = Math.atan2(dy, dx);
+            const tx = cx + Math.cos(angle) * strength;
+            const ty = cy + Math.sin(angle) * strength;
+
+            gsap.to(el, {
+              x: tx - parseFloat(el.style.left),
+              y: ty - parseFloat(el.style.top),
+              duration: 0.5,
+              ease: 'power2.out',
+              overwrite: 'all',
+              onComplete: () => {
+                repelling[i] = false;
+                driftTweens[i] = startDrift(el);
+              }
+            });
+          }
+        }
+      });
     }
 
     // ===== M. Tag cloud stagger entrance + hover (/tags/ terms page) =====
