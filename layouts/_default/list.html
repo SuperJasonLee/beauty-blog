@@ -4,6 +4,9 @@
 {{- partial "index_profile.html" . }}
 {{- else }}
 
+{{- if eq .Type "tags" }}<div id="nebula-container"></div>{{- end }}
+<div class="page-content" style="position: relative; z-index: 1;">
+
 {{- if not .IsHome | and .Title }}
 <header class="page-header">
   {{- partial "breadcrumbs.html" . }}
@@ -116,6 +119,7 @@
 </footer>
 {{- end }}
 
+</div>
 {{- end }}
 
 {{- end }}
