@@ -266,6 +266,11 @@ html, body, .main, .header, .footer {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.header {
+  position: relative;
+  z-index: 1;
+}
+
 /* Responsive: single column on mobile */
 @media (max-width: 768px) {
   .post-card-grid {
