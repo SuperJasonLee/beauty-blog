@@ -8,7 +8,7 @@
     "dev": "hugo server -D",
     "search-index": "npx pagefind --site public",
     "build:full": "npm run build && npm run search-index",
-    "crawl:eye-news": "cd scripts/crawl-eye-surgery-news && python run.py"
+    "crawl:eye-news": "cd scripts/crawl-eye-surgery-news && .venv/bin/python run.py"
   },
   "keywords": [],
   "author": "",

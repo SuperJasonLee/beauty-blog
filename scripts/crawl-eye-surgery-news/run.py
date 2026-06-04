@@ -36,7 +36,10 @@ def run_pipeline():
     logger.info("[Step 3/3] Generating bilingual posts...")
     from post_generator import main as generate_posts
 
-    posts = generate_posts(str(json_path), image_url_map)
+    # image_url_map is intentionally not passed: image_downloader mutates the
+    # json in place with local image paths, and post_generator.main() reads
+    # the updated json. Passing the map would raise TypeError (extra arg).
+    posts = generate_posts(str(json_path))
     logger.info(f"[Step 3/3] Done: {len(posts)} posts generated")
 
     logger.info("=" * 60)

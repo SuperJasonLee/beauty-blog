@@ -10,4 +10,4 @@ data/crawled/
 logs/
 scripts/daily-publish/.env
 scripts/daily-publish/.disabled
-scripts/daily-publish/.bak
+**/*.bak

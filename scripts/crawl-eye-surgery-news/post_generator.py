@@ -2,6 +2,7 @@
 
 import json
 import logging
+import shutil
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -9,9 +10,40 @@ from typing import Optional
 
 ZH_DIR = Path(__file__).resolve().parent.parent.parent / "content" / "zh-cn" / "posts" / "eye-surgery-news"
 EN_DIR = Path(__file__).resolve().parent.parent.parent / "content" / "en" / "posts" / "eye-surgery-news"
+STATIC_IMAGES_DIR = Path(__file__).resolve().parent.parent.parent / "static" / "images" / "eye-surgery-news"
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s", handlers=[logging.StreamHandler(sys.stdout)])
 logger = logging.getLogger(__name__)
+
+
+def ensure_cover_image(slug: str) -> Optional[str]:
+    """Ensure a cover image exists for the given slug.
+
+    v1 behavior (no fresh cover synthesis):
+    1. If {slug}-cover.jpg already exists, return its public path.
+    2. Otherwise copy the most-recent existing *-cover.jpg in the
+       same directory and return the new path. This guarantees the
+       featuredImage URL resolves, even if every post ends up
+       pointing at the same underlying image (acceptable for v1).
+    3. If no existing cover at all, return None and let the frontmatter
+       fall back to whatever the template provides.
+    """
+    STATIC_IMAGES_DIR.mkdir(parents=True, exist_ok=True)
+    target = STATIC_IMAGES_DIR / f"{slug}-cover.jpg"
+    public_path = f"/images/eye-surgery-news/{slug}-cover.jpg"
+
+    if target.exists():
+        logger.info(f"Cover exists: {target.name}")
+        return public_path
+
+    existing = sorted(STATIC_IMAGES_DIR.glob("*-cover.jpg"), key=lambda p: p.stat().st_mtime, reverse=True)
+    if existing:
+        shutil.copy(existing[0], target)
+        logger.info(f"No fresh cover synthesized; copied {existing[0].name} → {target.name}")
+        return public_path
+
+    logger.warning(f"No cover image available in {STATIC_IMAGES_DIR}; post will lack featuredImage")
+    return None
 
 
 def extract_key_topics(articles: list[dict]) -> dict:
@@ -43,9 +75,9 @@ def extract_key_topics(articles: list[dict]) -> dict:
     return topics
 
 
-def build_zh_post(articles: list[dict], date_str: str, slug: str) -> str:
+def build_zh_post(articles: list[dict], date_str: str, slug: str, cover_path: Optional[str] = None) -> str:
     topics = extract_key_topics(articles)
-    
+
     title = f"眼部整形深度解析：最新技术趋势与临床实践指南"
     description = "基于最新学术研究和行业动态，深度分析眼部整形领域的技术创新、安全规范和患者关怀要点。"
 
@@ -124,20 +156,26 @@ def build_zh_post(articles: list[dict], date_str: str, slug: str) -> str:
     frontmatter = f"""---
 title: "{title}"
 date: {date_str}
+lastmod: {date_str}
 draft: true
 description: "{description}"
 tags: ["眼部整形", "技术趋势", "临床指南", "安全规范"]
 categories: ["眼部整形"]
-image: "/images/eye-surgery-news/eye-surgery-news-20260601-cover.jpg"
+keywords: ["眼部整形", "眼睑成形术", "眼整形技术", "眼部整形安全", "眼整形医生选择"]
+author: "Beauty-Blog 医学审核团队"
+reviewer: "执业医师审核"
+lastReviewed: "{date_str}"
+medicalAudience: "Patient"
+{('featuredImage: "' + cover_path + '"') if cover_path else '# featuredImage: (no cover available)'}
 translations: ["/en/posts/eye-surgery-news/{slug}"]
 ---"""
 
     return f"{frontmatter}\n\n{body}"
 
 
-def build_en_post(articles: list[dict], date_str: str, slug: str) -> str:
+def build_en_post(articles: list[dict], date_str: str, slug: str, cover_path: Optional[str] = None) -> str:
     topics = extract_key_topics(articles)
-    
+
     title = f"Eye Plastic Surgery: Deep Analysis of Latest Trends and Clinical Practice"
     description = "Comprehensive analysis of technological innovation, safety standards, and patient care in eye plastic surgery based on latest research."
 
@@ -216,11 +254,17 @@ Eye plastic surgery is a comprehensive discipline integrating medicine, aestheti
     frontmatter = f"""---
 title: "{title}"
 date: {date_str}
+lastmod: {date_str}
 draft: true
 description: "{description}"
 tags: ["eye surgery", "technology trends", "clinical guide", "safety standards"]
 categories: ["Eye Surgery"]
-image: "/images/eye-surgery-news/eye-surgery-news-20260601-cover.jpg"
+keywords: ["eye plastic surgery", "blepharoplasty", "eyelid surgery", "eye surgery safety", "eye surgeon selection"]
+author: "Beauty-Blog 医学审核团队"
+reviewer: "执业医师审核"
+lastReviewed: "{date_str}"
+medicalAudience: "Patient"
+{('featuredImage: "' + cover_path + '"') if cover_path else '# featuredImage: (no cover available)'}
 translations: ["/zh-cn/posts/eye-surgery-news/{slug}"]
 ---"""
 
@@ -245,12 +289,20 @@ def generate_posts(crawled_json_path: Path) -> list[Path]:
     date_str = datetime.now().strftime("%Y-%m-%d")
     slug = f"eye-surgery-news-{datetime.now().strftime('%Y%m%d')}"
 
+    # Ensure a cover image exists for this slug. See ensure_cover_image() for
+    # the v1 behavior (copy most recent existing cover if no fresh one).
+    cover_path = ensure_cover_image(slug)
+    if cover_path:
+        logger.info(f"Cover path for frontmatter: {cover_path}")
+    else:
+        logger.warning("No cover path; frontmatter will be generated without featuredImage")
+
     posts = []
 
-    zh_content = build_zh_post(articles, date_str, slug)
+    zh_content = build_zh_post(articles, date_str, slug, cover_path)
     posts.append(write_post(zh_content, slug, "zh"))
 
-    en_content = build_en_post(articles, date_str, slug)
+    en_content = build_en_post(articles, date_str, slug, cover_path)
     posts.append(write_post(en_content, slug, "en"))
 
     return posts
