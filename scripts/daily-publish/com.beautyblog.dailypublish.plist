@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.beautyblog.dailypublish</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/jasonlee/money/beauty-blog/scripts/daily-publish/daily-publish.sh</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/jasonlee/money/beauty-blog</string>
+
+    <!-- 每天 12:00 触发（北京时间 = 本地时间） -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>12</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <!-- launchd 通常不自动 load PATH，需手动指定 -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>/Users/jasonlee/money/beauty-blog/logs/daily-publish/launchd-stdout.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/jasonlee/money/beauty-blog/logs/daily-publish/launchd-stderr.log</string>
+
+    <!-- 启动时不立即执行；只等 12:00 -->
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>

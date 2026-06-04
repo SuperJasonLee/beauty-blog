@@ -850,11 +850,86 @@ npm run dev
 
 ---
 
+## 11. 每日自动发布（v1：12:00 触发，5 阶段全自动）
+
+> **状态：** v1 已部署（2026-06-04）。当前**仅调度垂类新闻 pipeline**（`npm run crawl:eye-news`），其他类型 pipeline 待补。
+
+### 11.1 架构
+
+```
+┌────────────────────────────────────────────┐
+│  macOS launchd (StartCalendarInterval)     │
+│  每天 12:00 触发 com.beautyblog.dailypublish│
+└──────────────────┬─────────────────────────┘
+                   ▼
+┌────────────────────────────────────────────┐
+│  scripts/daily-publish/daily-publish.sh    │
+│  1. Kill switch check                      │
+│  2. npm run crawl:eye-news   (Stage 1-4)   │
+│  3. draft: true → false      (Stage 5)     │
+│  4. git commit (AUTO_COMMIT, default on)   │
+│  5. git push    (AUTO_PUSH, default OFF)   │
+│  6. macOS notification                     │
+└────────────────────────────────────────────┘
+                   ▼
+            logs/daily-publish/<ts>.log
+```
+
+### 11.2 关键安全机制
+
+| 机制 | 默认 | 说明 |
+|---|---|---|
+| **Kill switch** `.disabled` 文件 | OFF | `touch scripts/daily-publish/.disabled` 立即停 |
+| **Auto commit** | ON | 发布后自动 git commit（可逆） |
+| **Auto push** | **OFF** | 不会推 remote，强制人工 `git push` 触发部署——保留刹车 |
+| **.bak 备份** | ON | 翻转 draft 前备份原文件 |
+| **失败通知** | ON | 任一阶段失败 → Basso 音警告 + 日志路径 |
+
+### 11.3 安装与卸载
+
+```bash
+# 安装（macOS 一次）
+./scripts/daily-publish/install.sh
+
+# 卸载
+./scripts/daily-publish/uninstall.sh
+
+# 立即测试（不等 12:00）
+./scripts/daily-publish/daily-publish.sh
+
+# 暂停 / 恢复
+touch scripts/daily-publish/.disabled    # 暂停
+rm scripts/daily-publish/.disabled       # 恢复
+```
+
+### 11.4 已知限制（v1）
+
+1. **post_generator.py 是硬编码模板** —— 跑出来每天内容相同、只换日期。要"每日独特"需接 OpenAI API
+2. **只调一个 pipeline** —— 仅 `crawl:eye-news`（垂类新闻）。其他类型（小红书/精品指南/月度汇总）需各自新建 pipeline 脚本后再调
+3. **YMYL 风险** —— 医疗类内容跳过人工 review，AdSense/Google 2024-03 core update 对此敏感。建议保留 `.disabled` 兜底
+
+### 11.5 后续路线图
+
+- [ ] post_generator.py 接入 OpenAI gpt-4o-mini（实现真正内容合成）
+- [ ] 新建 `scripts/crawl-xhs-trends/`、`scripts/crawl-monthly-news/`
+- [ ] Telegram bot 通知（替代 macOS notification，跨设备）
+- [ ] GitHub Actions 镜像（Mac 不在线时由云端跑）
+
+### 11.6 相关文件
+
+- [`scripts/daily-publish/daily-publish.sh`](../../scripts/daily-publish/daily-publish.sh) —— 主脚本
+- [`scripts/daily-publish/com.beautyblog.dailypublish.plist`](../../scripts/daily-publish/com.beautyblog.dailypublish.plist) —— launchd 配置
+- [`scripts/daily-publish/install.sh`](../../scripts/daily-publish/install.sh) —— 安装
+- [`scripts/daily-publish/README.md`](../../scripts/daily-publish/README.md) —— 完整说明
+
+---
+
 ## 附录 A：变更日志
 
 | 日期 | 变更 | 作者 |
 |---|---|---|
 | 2026-06-04 | 初版：基于 8+ 篇历史 post + `crawl-eye-surgery-news` pipeline + image-guidelines 沉淀 | Beauty-Blog 团队 |
+| 2026-06-04 | §11 新增：每日 12:00 自动发布（v1 launchd + 5 阶段全自动 + kill switch） | Beauty-Blog 团队 |
 
 ## 附录 B：相关文档索引
 
@@ -862,6 +937,7 @@ npm run dev
 - [`docs/image-optimization-report.md`](./image-optimization-report.md) —— 图片优化记录
 - [`openspec/changes/crawl-eye-plastic-surgery-news/`](../../openspec/changes/crawl-eye-plastic-surgery-news/) —— 垂类新闻 pipeline spec
 - [`scripts/crawl-eye-surgery-news/`](../../scripts/crawl-eye-surgery-news/) —— 垂类新闻 pipeline 代码
+- [`scripts/daily-publish/`](../../scripts/daily-publish/) —— 每日 12:00 自动发布调度（v1）
 - [`layouts/partials/templates/schema_json.html`](../../layouts/partials/templates/schema_json.html) —— JSON-LD 模板
 - [`layouts/partials/templates/opengraph.html`](../../layouts/partials/templates/opengraph.html) —— OG/Twitter meta
 - [`hugo.yaml`](../../hugo.yaml) —— Hugo 全局配置

@@ -7,3 +7,7 @@ web-articles/
 scripts/crawl-eye-surgery-news/.venv/
 scripts/crawl-eye-surgery-news/__pycache__/
 data/crawled/
+logs/
+scripts/daily-publish/.env
+scripts/daily-publish/.disabled
+scripts/daily-publish/.bak
