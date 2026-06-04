@@ -850,9 +850,9 @@ npm run dev
 
 ---
 
-## 11. 每日自动发布（v1：12:00 触发，5 阶段全自动）
+## 11. 每日自动发布（12:00 触发，5 阶段全自动）
 
-> **状态：** v1 已部署（2026-06-04）。当前**仅调度垂类新闻 pipeline**（`npm run crawl:eye-news`），其他类型 pipeline 待补。
+> **状态：** 已部署（2026-06-04）。当前**仅调度垂类新闻 pipeline**（`npm run crawl:eye-news`），其他类型 pipeline 待补。
 
 ### 11.1 架构
 
@@ -902,15 +902,14 @@ touch scripts/daily-publish/.disabled    # 暂停
 rm scripts/daily-publish/.disabled       # 恢复
 ```
 
-### 11.4 已知限制（v1）
+### 11.4 设计决策（不计划扩展）
 
-1. **post_generator.py 是硬编码模板** —— 跑出来每天内容相同、只换日期。要"每日独特"需接 OpenAI API
-2. **只调一个 pipeline** —— 仅 `crawl:eye-news`（垂类新闻）。其他类型（小红书/精品指南/月度汇总）需各自新建 pipeline 脚本后再调
+1. **post_generator.py 是硬编码模板**（**有意为之**）—— 每天输出同一深度分析文章，只换日期 slug 和 E-E-A-T 字段。这样保证医学准确性 100% 可控（LLM 合成可能引入幻觉）。要"每日独特"需要修改这个决定
+2. **只调一个 pipeline** —— 仅 `crawl:eye-news`（垂类新闻）。其他类型（小红书/精品指南/月度汇总）需各自新建 pipeline 脚本
 3. **YMYL 风险** —— 医疗类内容跳过人工 review，AdSense/Google 2024-03 core update 对此敏感。建议保留 `.disabled` 兜底
 
-### 11.5 后续路线图
+### 11.5 后续路线图（可选项）
 
-- [ ] post_generator.py 接入 OpenAI gpt-4o-mini（实现真正内容合成）
 - [ ] 新建 `scripts/crawl-xhs-trends/`、`scripts/crawl-monthly-news/`
 - [ ] Telegram bot 通知（替代 macOS notification，跨设备）
 - [ ] GitHub Actions 镜像（Mac 不在线时由云端跑）

@@ -19,12 +19,15 @@ logger = logging.getLogger(__name__)
 def ensure_cover_image(slug: str) -> Optional[str]:
     """Ensure a cover image exists for the given slug.
 
-    v1 behavior (no fresh cover synthesis):
+    Strategy (intentional, not a v1 limitation):
     1. If {slug}-cover.jpg already exists, return its public path.
     2. Otherwise copy the most-recent existing *-cover.jpg in the
        same directory and return the new path. This guarantees the
-       featuredImage URL resolves, even if every post ends up
-       pointing at the same underlying image (acceptable for v1).
+       featuredImage URL resolves, even if every post points at the
+       same underlying image. We do not synthesize a fresh cover per
+       post: the post body is itself a fixed template (per project
+       decision — no LLM synthesis), so a fresh cover would add
+       operational cost without changing what readers see.
     3. If no existing cover at all, return None and let the frontmatter
        fall back to whatever the template provides.
     """
