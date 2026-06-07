@@ -9,10 +9,9 @@ categories: ["眼部整形"]
 keywords: ["眼部整形", "行业分析", "眼整形技术", "眼部整形安全", "眼部整形 2026-06-06"]
 author: "Beauty-Blog 医学审核团队"
 reviewer: "执业医师审核"
-lastReviewed: "2026-06-06"
+lastReviewed: "2026-06-07"
 medicalAudience: "Patient"
 featuredImage: "/images/eye-surgery-news/eye-surgery-news-20260606-cover.jpg"
-lastReviewed: "2026-06-07"
 translations: ["/en/posts/eye-surgery-news/eye-surgery-news-20260606"]
 ---
 

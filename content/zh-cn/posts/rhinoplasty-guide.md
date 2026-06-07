@@ -14,7 +14,6 @@ lastReviewed: "2026-05-27"
 medicalAudience: "Patient"
 translations:
   - "/en/posts/rhinoplasty-guide"
-draft: false
 ---
 
 {{< medical-disclaimer />}}

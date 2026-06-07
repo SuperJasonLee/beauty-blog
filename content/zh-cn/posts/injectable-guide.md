@@ -14,7 +14,6 @@ lastReviewed: "2026-05-27"
 medicalAudience: "Patient"
 translations:
   - "/en/posts/injectable-guide"
-draft: false
 ---
 
 {{< medical-disclaimer />}}
