@@ -8,8 +8,11 @@ keywords: ["Asian aesthetic medicine news", "China aesthetic 2026", "aesthetic r
 draft: false
 featuredImage: "/images/posts/asian-aesthetic-medicine-news-may-2026-featured.jpg"
 author: "Beauty-Blog Medical Review Board"
+reviewer: "Licensed Physician Review"
 lastReviewed: "2026-05-27"
 medicalAudience: "Patient"
+translations:
+  - "/zh-cn/posts/asian-aesthetic-medicine-news-may-2026"
 ---
 
 {{< medical-disclaimer />}}
@@ -144,13 +147,31 @@ For consumers, choosing qualified institutions, verifying product credentials, a
 
 ---
 
+## Frequently Asked Questions
+
+{{< faq >}}
+- **Is the Allergan summit relevant to patients?** The summit is industry-focused, but it reflects how global aesthetics leaders (manufacturers, regulators, clinicians) are coordinating on training and standards — which over time affects the products and protocols available to patients[^1].
+- **What does the new VAT Law mean for aesthetic consumers?** The 2026 VAT Law and its implementation regulations[^2][^3] primarily affect business taxation, not consumer pricing directly — but compliance costs can flow through the supply chain.
+- **Why is the "strictest livestream e-commerce regulation" relevant to aesthetic medicine?** The 2025 SAMR livestream rules[^4] cover food and "three categories + one medical device" (drugs, health supplements, cosmetics, medical devices). Aesthetic-related products that are classified under these categories are now subject to the new rules[^5].
+- **Is Huons BP botulinum toxin available in China?** It was approved for market launch in China in early 2026 under registration certificate SJ20260001[^6][^7], introducing a new competitor in the Chinese botulinum toxin market.
+- **Will Japan surpass Korea in aesthetic medicine?** Multiple reports describe Japan closing the gap with Korea in 2026, with the change partly attributed to Korea's duty-free policy adjustment ending in early 2026[^8][^9]. The "aesthetic capital" title is becoming more competitive.
+{{< /faq >}}
+
+---
+
 ## References
 
-[^1]: China News Service. Allergan Aesthetics Summit Convenes Industry Leaders. 2026-05-21.
-[^2]: State Tax Administration. PRC Value-Added Tax Law Implementation Regulations. 2026-01-01.
-[^3]: OFweek Medical Technology. Strictest Regulations Hit Aesthetic Medicine Industry. 2026-05.
-[^4]: TMTPost. Aesthetic Medicine's Most Fierce Competition Begins in 2026. 2026.
-[^5]: International Society of Aesthetic Plastic Surgery. 2023 ISAPS Global Survey. [isaps.org](https://www.isaps.org/discover/about-isaps/global-statistics/)
-[^6]: TMTPost. Japan Surpasses Korea in Aesthetic Medicine Market. 2026.
-[^7]: Arokago. Thailand's T-Beauty Boom Signals Rise of New Asian Aesthetics Powerhouse. 2026.
-[^8]: Fortune Business Insights. Dermal Fillers Market Size, Share & Growth Report [2034]. 2026.
+[^1]: PR Newswire / Xinhua Net. 2026 Allergan Aesthetics Summit Convenes Industry Leaders. 2026-05-20. <https://www.prnasia.com/story/533789-1.shtml>
+[^2]: State Tax Administration. PRC Value-Added Tax Law Implementation Regulations. 2025-12-25 (effective 2026-01-01). <https://www.gov.cn/zhengce/zhengceku/202512/content_7053153.htm>
+[^3]: Ministry of Finance. Announcement on VAT Preferential Policy Transition Matters after VAT Law Implementation. 2026-02-03. <https://www.mof.gov.cn/jrttts/202602/t20260203_3983175.htm>
+[^4]: State Administration for Market Regulation. Live E-commerce Operator Implementation of Food Safety Subject Responsibility Supervision and Management Provisions. 2025-12-28 (effective 2026-03-20). <https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2026/art_2ac47420b5064685b0e4a6b558af28df.html>
+[^5]: PharmNet. Livestream Promotion Restricted! Strict New Regulations for Online Marketing of Three Categories and One Medical Device. 2026-05-18. <https://news.pharmnet.com.cn/news/2026/05/18/620186.html>
+[^6]: CN-Healthcare. National Medical Products Administration Notice on Issuing the Prescription Drug Online Retail Compliance Guide. 2026-05-25. <https://www.cn-healthcare.com/article/20260525/wap-content-787988.html>
+[^7]: Sina Finance. IMEIK's Exclusive Distribution of Korean Huons BP Botulinum Toxin Product Approved for Market Launch by China NMPA. 2026-01-08. <https://finance.sina.com.cn/roll/2026-01-08/doc-inhfreqm6514541.shtml>
+[^8]: YaoZhi Data. Botulinum Toxin Type A Registration Certificate SJ20260001 – Huons BioPharma. <https://db.yaozh.com/jinkou/a5eSa2hjbmVjnGpmmJyblQ.html>
+[^9]: International Society of Aesthetic Plastic Surgery. ISAPS Global Statistics. <https://www.isaps.org/discover/about-isaps/global-statistics/>
+[^10]: 36Kr. "Cosmetic Surgery Capital" to Change Hands Due to Workplace Male Demand. 2026-02-15. <https://m.36kr.com/p/3364238950336518>
+[^11]: Francombe A. Is Thailand the World's Next Big Beauty Capital? Vogue, 2026-01-30. <https://www.vogue.com/article/is-thailand-the-worlds-next-big-beauty-capital>
+[^12]: Asai Strategy Institute. Japan-Korea Cosmetic Medicine: What's the Difference? Re-examining Value Beyond "Cheapness" in 2026 When Duty-Free Ends. 2026-02-05. <https://asai-strategy.com/knowledge/cosmetic_surgery_japankorea/>
+[^13]: South China Morning Post. Move over K-beauty, Thailand is the next big thing in aesthetics. 2026-05-17. <https://www.scmp.com/week-asia/health-environment/article/3353848/move-over-k-beauty-thailand-next-big-thing-aesthetics>
+[^14]: Fortune Business Insights. Dermal Fillers Market Size, Share, Growth | Global Report [2034]. 2025. <https://www.fortunebusinessinsights.com/industry-reports/dermal-fillers-market-100939>

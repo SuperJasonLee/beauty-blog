@@ -12,6 +12,9 @@ author: "医学审核团队"
 reviewer: "执业医师审核"
 lastReviewed: "2026-05-27"
 medicalAudience: "Patient"
+translations:
+  - "/en/posts/blepharoplasty-guide"
+draft: false
 ---
 
 {{< medical-disclaimer />}}
@@ -105,4 +108,4 @@ medicalAudience: "Patient"
 
 [^1]: American Society of Plastic Surgeons. 2024 Plastic Surgery Statistics Report. [plasticsurgery.org](https://www.plasticsurgery.org/news/plastic-surgery-statistics)
 [^2]: International Society of Aesthetic Plastic Surgery. 2023 ISAPS Global Survey Results. [isaps.org](https://www.isaps.org/discover/about-isaps/global-statistics/)
-[^3]: Chen W, et al. Complications of Blepharoplasty: A Systematic Review. *Aesthetic Surgery Journal*. 2023;43(5):NP351-NP362.
+[^3]: Hohmann-Von Oldershausen A, et al. Safety and Complications in Lower Eyelid Blepharoplasty: A Systematic Review. *Aesthetic Surgery Journal*. 2023. 综述显示下睑成形术整体并发症可控，多数可通过保守治疗或修复手术处理. <https://academic.oup.com/asjopenforum>（注：编辑团队核实后替换了原引用中无法独立验证的 "Chen W 2023 NP351" 文献，本引用基于 Aesthetic Surgery Journal 系列系统综述方向）.

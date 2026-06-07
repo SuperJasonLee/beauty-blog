@@ -742,6 +742,12 @@ npm run dev
 - [ ] `npm run build:full` 构建成功（含 pagefind 索引）
 - [ ] RSS feed 已更新
 
+**自动审查（必跑）：**
+- [ ] `npm run audit:posts:errors` 退出码为 0（无 ERROR 级别问题）
+- [ ] `npm run audit:posts` 输出 JSON 报告，WARNING 数 ≤ baseline（`logs/audit-baseline-*.json`）
+- [ ] 引用完整性：所有数据/百分比/人名都有脚注 URL 或标注"编辑团队观察"
+- [ ] 规则参考：见 [`scripts/audit-posts.py`](../scripts/audit-posts.py) 顶部 docstring
+
 **发布：**
 - [ ] 提交 Google Search Console（已自动，verify 通过 commit `936fefd`）
 - [ ] commit message 格式：`post: <title> (zh/en)` 或 `feat: add <category> <title>`

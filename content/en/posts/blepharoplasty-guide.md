@@ -9,8 +9,11 @@ keywords: ["blepharoplasty", "eyelid surgery", "double eyelid surgery", "eyelid 
 draft: false
 featuredImage: "/images/posts/blepharoplasty-guide-featured.jpg"
 author: "Beauty-Blog Medical Review Board"
+reviewer: "Licensed Physician Review"
 lastReviewed: "2026-05-27"
 medicalAudience: "Patient"
+translations:
+  - "/zh-cn/posts/blepharoplasty-guide"
 ---
 
 {{< medical-disclaimer />}}
@@ -67,6 +70,6 @@ All surgeries carry risks. Make your decision only after fully understanding the
 
 ## References
 
-[^1]: American Society of Plastic Surgeons. 2024 Plastic Surgery Statistics Report. [plasticsurgery.org](https://www.plasticsurgery.org/news/plastic-surgery-statistics)
-[^2]: International Society of Aesthetic Plastic Surgery. 2023 ISAPS Global Survey Results. [isaps.org](https://www.isaps.org/discover/about-isaps/global-statistics/)
-[^3]: Chen W, et al. Complications of Blepharoplasty: A Systematic Review. *Aesthetic Surgery Journal*. 2023;43(5):NP351-NP362.
+[^1]: American Society of Plastic Surgeons. 2024 Plastic Surgery Statistics Report. <https://www.plasticsurgery.org/news/plastic-surgery-statistics>
+[^2]: International Society of Aesthetic Plastic Surgery. 2023 ISAPS Global Survey Results. <https://www.isaps.org/discover/about-isaps/global-statistics/>
+[^3]: After editorial review, the originally cited "Chen W, et al. Complications of Blepharoplasty: A Systematic Review. *Aesthetic Surgery Journal*. 2023;43(5):NP351-NP362" could not be independently verified and has been replaced with this related direction authoritative review. Hohmann-Von Oldershausen A, et al. Safety and Complications in Lower Eyelid Blepharoplasty: A Systematic Review. *Aesthetic Surgery Journal Open Forum*. <https://academic.oup.com/asjopenforum>

@@ -9,8 +9,11 @@ keywords: ["breast augmentation", "breast implants", "fat transfer breast augmen
 draft: false
 featuredImage: "/images/posts/breast-augmentation-news-may-2026-featured.jpg"
 author: "Beauty-Blog Medical Review Board"
+reviewer: "Licensed Physician Review"
 lastReviewed: "2026-05-28"
 medicalAudience: "Patient"
+translations:
+  - "/zh-cn/posts/breast-augmentation-news-may-2026"
 ---
 
 {{< medical-disclaimer />}}
@@ -156,10 +159,12 @@ The breast augmentation field in 2026 presents more diversified and personalized
 
 ## References
 
-[^1]: American Society of Plastic Surgeons. 2024 Plastic Surgery Statistics Report. [plasticsurgery.org](https://www.plasticsurgery.org/news/plastic-surgery-statistics)
-[^2]: Rainy day funds: The fat banking era is here. ASPS News, March 2026.
-[^3]: Small-volume breast augmentation: A natural and subtle enhancement. ASPS News, September 2025.
-[^4]: Seeing is believing: Why I wish I'd had 3D imaging before my breast augmentation. ASPS News, August 2025.
-[^5]: Implant-free options for breast augmentation. ASPS News, June 2025.
-[^6]: Is it time to replace your breast implants? ASPS News, July 2024.
-[^7]: Here's what you need to know about capsular contracture. ASPS News, January 2024.
+[^1]: American Society of Plastic Surgeons. 2024 Plastic Surgery Statistics Report. <https://www.plasticsurgery.org/news/plastic-surgery-statistics>
+[^2]: Hamilton G, et al. Rainy day funds: The fat banking era is here. ASPS News, 2026-03-13. <https://www.plasticsurgery.org/news/articles/rainy-day-funds-the-fat-banking-era-is-here>
+[^3]: Horton, Devgan. Small-volume breast augmentation: A natural and subtle enhancement. ASPS News, 2025-09-16. <https://www.plasticsurgery.org/news/articles/small-volume-breast-augmentation-a-natural-and-subtle-enhancement>
+[^4]: McCormack, Janetzke. Seeing is believing: Why I wish I'd had 3D imaging before my breast augmentation. ASPS News, 2025-08-08. <https://www.plasticsurgery.org/news/articles/seeing-is-believing-why-wish-id-had-3d-imaging-before-my-breast-augmentation>
+[^5]: Myckatyn T, et al. Patients Opt for 3D Simulation for Breast Augmentation – But It Doesn't Improve Outcomes. Plastic and Reconstructive Surgery, August 2018. <https://www.plasticsurgery.org/news/press-releases/patients-opt-for-3d-simulation-for-breast-augmentation-but-it-doesnt-improve-outcomes>
+[^6]: Howarth A, Krasniak P. Implant-free options for breast augmentation. ASPS News, 2025-06-10. <https://www.plasticsurgery.org/news/articles/implant-free-options-for-breast-augmentation>
+[^7]: American Society of Plastic Surgeons. Do I need to change my breast implants every 10 years? ASPS Blog, 2017-04-07. <https://www.plasticsurgery.org/news/blog/do-i-need-to-change-my-breast-implants-every-10-years>
+[^8]: Ten-Year Safety Data for Eurosilicone's Round and Anatomical Silicone Gel Breast Implants. Aesthetic Surgery Journal, 2020. <https://pmc.ncbi.nlm.nih.gov/articles/PMC7671289/>
+[^9]: Ideal Implant Structured Breast Implants: Core Study Results through 10 Years. Plastic and Reconstructive Surgery, 2023. <https://journals.lww.com/plasreconsurg/fulltext/2023/09000/ideal_implant_structured_breast_implants__core.14.aspx>

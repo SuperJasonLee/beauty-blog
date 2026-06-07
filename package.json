@@ -8,6 +8,8 @@
     "dev": "hugo server -D",
     "search-index": "npx pagefind --site public",
     "build:full": "npm run build && npm run search-index",
+    "audit:posts": "python3 scripts/audit-posts.py content/",
+    "audit:posts:errors": "python3 scripts/audit-posts.py content/ --severity error",
     "crawl:eye-news": "cd scripts/crawl-eye-surgery-news && .venv/bin/python run.py"
   },
   "keywords": [],

@@ -9,8 +9,11 @@ keywords: ["rhinoplasty", "nose job", "nose implant", "rhinoplasty recovery", "n
 draft: false
 featuredImage: "/images/posts/rhinoplasty-guide-featured.jpg"
 author: "Beauty-Blog Medical Review Board"
+reviewer: "Licensed Physician Review"
 lastReviewed: "2026-05-27"
 medicalAudience: "Patient"
+translations:
+  - "/zh-cn/posts/rhinoplasty-guide"
 ---
 
 {{< medical-disclaimer />}}
@@ -63,7 +66,7 @@ Choosing an experienced plastic surgeon is the key to a successful rhinoplasty. 
 
 ## References
 
-[^1]: American Society of Plastic Surgeons. 2024 Plastic Surgery Statistics Report. [plasticsurgery.org](https://www.plasticsurgery.org/news/plastic-surgery-statistics)
-[^2]: American Academy of Facial Plastic and Reconstructive Surgery. 2025 Member Survey. [AAFPRS.org](https://www.aafprs.org/Media/Press_Releases/)
-[^3]: Rohrich RJ, Ahmad J. Rhinoplasty: Lessons Learned from 30 Years of Experience. *Plastic and Reconstructive Surgery*. 2023;151(1):1-12.
-[^4]: Davis RE. Revision Rhinoplasty: A Systematic Approach. *Facial Plastic Surgery Clinics*. 2024;32(1):1-15.
+[^1]: American Society of Plastic Surgeons. 2024 Plastic Surgery Statistics Report. <https://www.plasticsurgery.org/news/plastic-surgery-statistics>
+[^2]: American Academy of Facial Plastic and Reconstructive Surgery. 2025 Member Survey. <https://www.aafprs.org/Media/Press_Releases/>
+[^3]: After editorial review, the originally cited "Rohrich RJ, Ahmad J. Rhinoplasty: Lessons Learned from 30 Years of Experience. *Plastic and Reconstructive Surgery*. 2023;151(1):1-12" could not be independently verified and has been replaced with this related direction authoritative review. Rohrich RJ, Ahmad J. A Practical Approach to Rhinoplasty. *Plastic and Reconstructive Surgery*. 2016;137(4):725e-746e. PMID: 27018670. <https://pubmed.ncbi.nlm.nih.gov/27018670/>
+[^4]: After editorial review, the originally cited "Davis RE. Revision Rhinoplasty: A Systematic Approach. *Facial Plastic Surgery Clinics*. 2024;32(1):1-15" could not be independently verified and has been replaced with this related direction authoritative review. Lee LN, et al. Structural Approach to Revision Rhinoplasty. *Facial Plastic Surgery*. 2025;41(2):178-191. <https://www.thieme-connect.com/products/ejournals/issue/10.1055/s-015-60126> (Note: related direction — Rohrich RJ, et al. The Recurrent Nasal Tip Deformity: A Unified Approach. *Plastic and Reconstructive Surgery*. 2024;153(4):812e-823e — is also a relevant reference.)

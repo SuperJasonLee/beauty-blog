@@ -12,6 +12,9 @@ author: "医学审核团队"
 reviewer: "执业医师审核"
 lastReviewed: "2026-05-27"
 medicalAudience: "Patient"
+translations:
+  - "/en/posts/injectable-guide"
+draft: false
 ---
 
 {{< medical-disclaimer />}}
@@ -90,5 +93,5 @@ medicalAudience: "Patient"
 
 [^1]: International Society of Aesthetic Plastic Surgery. 2023 ISAPS Global Survey Results. [isaps.org](https://www.isaps.org/discover/about-isaps/global-statistics/)
 [^2]: American Academy of Facial Plastic and Reconstructive Surgery. 2025 AAFPRS Survey. [AAFPRS.org](https://www.aafprs.org/Media/Press_Releases/)
-[^3]: Carruthers JDA, et al. Consensus Recommendations for Combined Aesthetic Procedures. *Dermatologic Surgery*. 2023;49(1):1-8.
-[^4]: Urdiales-Gálvez F, et al. Vascular Complications with Dermal Fillers. *Aesthetic Surgery Journal*. 2024;44(2):178-191.
+[^3]: 编辑团队核实后替换了原引用中无法独立验证的 "Carruthers JDA 2023 Dermatologic Surgery 49(1):1-8" 文献。相关方向权威综述可参考：Signorini M, et al. Global Aesthetics Consensus: Avoidance and Management of Complications from Hyaluronic Acid Dermal Fillers. *Plastic and Reconstructive Surgery – Global Open*. 2016;4(12):e1150. <https://pmc.ncbi.nlm.nih.gov/articles/PMC5242215/>
+[^4]: 编辑团队核实后替换了原引用中无法独立验证的 "Urdiales-Gálvez F 2024 ASJ 44(2):178-191" 文献。相关方向权威共识可参考：Urdiales-Gálvez F, et al. Preventing the Complications Associated with the Use of Dermal Fillers in Facial Aesthetic Procedures: An Expert Group Consensus Report. *Aesthetic Plastic Surgery*. 2017;41(3):667-677. PMID: 28585778. <https://pubmed.ncbi.nlm.nih.gov/28585778/>

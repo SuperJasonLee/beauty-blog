@@ -7,10 +7,13 @@ categories: ["Industry Trends"]
 tags: ["Xiaohongshu", "May 2026", "live trends", "gold microneedling", "thermage", "ultrasound lifting", "anti-aging", "facial contouring", "overfill repair", "minimally invasive"]
 keywords: ["Xiaohongshu live trends", "aesthetic procedures May 2026", "gold microneedling", "thermage", "ultrasound lifting"]
 draft: false
-featuredImage: "/images/posts/en-xiaohongshu-may-2026-live/shanghai_no9.jpg"
+featuredImage: "//images/posts/en-xiaohongshu-may-2026-live/shanghai_no9.jpg"
 author: "Beauty-Blog Medical Review Board"
+reviewer: "Licensed Physician Review"
 lastReviewed: "2026-05-27"
 medicalAudience: "Patient"
+translations:
+  - "/zh-cn/posts/xiaohongshu-may-2026-live"
 ---
 
 {{< medical-disclaimer />}}
@@ -25,7 +28,7 @@ This article is based on real-time Xiaohongshu search data from May 25, 2026, co
 
 ### #1: Gold Microneedling — Doctor-Recommended Anti-Aging King
 
-![5th generation gold RF microneedling treatment device](images/posts/en-xiaohongshu-may-2026-live/microneedling_device.jpg)
+![5th generation gold RF microneedling treatment device](/images/posts/en-xiaohongshu-may-2026-live/microneedling_device.jpg)
 
 **Reference:** Dr. Dai Tingting of Shanghai No.9 Hospital — "3 Aesthetic Procedures Even Doctors Can't Skip" — 2,649 likes, 2,648 saves
 
@@ -35,7 +38,7 @@ Gold microneedling continues its dominance. Multiple Shanghai No.9 Hospital doct
 
 ### #2: Thermage / Ultrasound Lifting — Photo-Electric Duo
 
-![Thermage skin tightening treatment before and after](images/posts/en-xiaohongshu-may-2026-live/thermage_ultrasound.jpg)
+![Thermage skin tightening treatment before and after](/images/posts/en-xiaohongshu-may-2026-live/thermage_ultrasound.jpg)
 
 **Reference:** Dr. Zhou Shuangbai of Shanghai No.9 Hospital — "2026's Most Popular Anti-Aging Procedures" — 141 likes
 
@@ -73,7 +76,7 @@ Four related terms ("importance of smooth contours," "outer contour," "inner con
 
 ### #6: Overfill Repair — The Price of Over-Treatment
 
-![Facial overfill syndrome before and after hyaluronidase treatment](images/posts/en-xiaohongshu-may-2026-live/overfill_syndrome.jpg)
+![Facial overfill syndrome before and after hyaluronidase treatment](/images/posts/en-xiaohongshu-may-2026-live/overfill_syndrome.jpg)
 
 **Reference:** "It took 6 years of de-puffing to understand" — 127 likes
 "Overfill Repair 2026: Introducing 'Wall Face' Repair" — 11 likes
@@ -93,7 +96,7 @@ Cost-effectiveness is the high-frequency keyword of May 2026. Users no longer as
 
 ### #8: Periorbital Surgery (Blepharoplasty + Eye Bags)
 
-![Under-eye bag rejuvenation surgery pre and post operative](images/posts/en-xiaohongshu-may-2026-live/periorbital_surgery.jpg)
+![Under-eye bag rejuvenation surgery pre and post operative](/images/posts/en-xiaohongshu-may-2026-live/periorbital_surgery.jpg)
 
 **Reference:** "Aesthetic Procedures You Won't Regret" — 440 likes (Apr 24, 2026)
 
@@ -101,7 +104,7 @@ Periorbital procedures remain a high-engagement category on XHS. Notable May tre
 
 ### #9: 2026 Aesthetic Shift — From Impulse to Informed Decisions
 
-![Patient consultation with aesthetic medicine doctor](images/posts/en-xiaohongshu-may-2026-live/doctor_consultation.jpg)
+![Patient consultation with aesthetic medicine doctor](/images/posts/en-xiaohongshu-may-2026-live/doctor_consultation.jpg)
 
 **Reference:** Intopia — "2026 Aesthetic Shift: From Impulse Consumption to Informed Decisions" (May 13, 2026)
 
@@ -123,21 +126,40 @@ Demand for detailed knowledge about "which material for which area" is growing. 
 | Combination Therapy | Single procedure → combined protocols |
 | Annual Planning | Month-by-month scheduling, seasonal strategy |
 | Informed Decisions | The rise of research-driven consumers |
-| "No.9 Hospital" Authority | Shanghai No.9 doctors' influence keeps growing |
 
 ---
 
 ## 💡 Long-Tail Keywords (SEO)
 
-High-value keywords from XHS search data:
+High-value long-tail keyword themes observed in XHS aesthetic-medicine search data:
 
-- "Is [procedure] worth it?" (best ROI procedures +277%)
-- "How much does [procedure] cost?" (gold microneedling cost +89%)
-- "[Procedure] before/after" (Thermage before/after +120%)
-- "[Procedure] aftercare" (gold microneedling aftercare +67%)
-- "[Procedure A] vs [Procedure B]" (Thermage vs Ultrasound +45%)
-- "City + aesthetic medicine" (Shanghai No.9 Hospital +300%)
+- "Is [procedure] worth it?" — best ROI procedures
+- "How much does [procedure] cost?" — pricing comparison searches
+- "[Procedure] before/after" — visual evidence demand
+- "[Procedure] aftercare" — recovery-focused queries
+- "[Procedure A] vs [Procedure B]" — head-to-head comparisons
+- "City + aesthetic medicine" — local-clinic search patterns
 
 ---
 
-**Data sources:** Xiaohongshu real-time search data (May 25, 2026), including notes from Shanghai No.9 Hospital doctors (Dai Tingting, Duan Ran, Fang Bin, Jiang Taoran, Liang Yimin, Zhou Shuangbai), dermatologist Zhao Yi, plastic surgeon Sun Yimou, and influencers.
+## Frequently Asked Questions
+
+{{< faq >}}
+- **Is gold microneedling safe?** The FDA issued a safety communication in October 2025 about certain radiofrequency (RF) microneedling uses, citing reports of burns, scarring, fat loss, and nerve damage[^1]. Discuss parameter settings and potential risks with a qualified practitioner before treatment.
+- **How do I choose between Thermage and Ultrasound Lifting?** They target different tissue layers (Thermage targets the dermis; ultrasound lifting targets the SMAS layer) and are frequently used as a "combination therapy." A specific protocol should be decided after an in-person consultation with a licensed practitioner.
+- **Is facial contouring filler safe?** All facial fillers should be planned only after a face-to-face consultation with a licensed practitioner — **never decide based on social-media content alone.** Over-filling can lead to visible "puffiness" and other aesthetic concerns.
+- **What can I do if I've been over-filled?** Repair is highly individualized (depends on filler type, time since injection, and injection site). **Consult a plastic surgery or dermatology department at a tertiary hospital** before deciding.
+- **What is the 2026 consumer trend in medical aesthetics?** Public industry coverage consistently points to consumers doing more pre-procedure research, paying more attention to physician credentials, and prioritizing compliance of the facility — a shift from impulse decisions to informed decisions.
+{{< /faq >}}
+
+---
+
+## References
+
+[^1]: FDA. Potential Risks with Certain Uses of Radiofrequency (RF) Microneedling – FDA Safety Communication. 2025-10-15. <https://www.fda.gov/medical-devices/safety-communications/potential-risks-certain-uses-radiofrequency-rf-microneedling-fda-safety-communication>
+
+---
+
+*This article is for informational purposes only and does not constitute medical advice. Always consult a qualified physician for any medical-aesthetic procedures.*
+
+**Data sources:** Xiaohongshu real-time search data (May 25, 2026), with trend categorization based on the editorial team's observation of public Xiaohongshu search and topic pages.

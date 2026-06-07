@@ -8,9 +8,11 @@ categories: ["Eye Surgery"]
 keywords: ["eye plastic surgery", "blepharoplasty", "eyelid surgery", "eye surgery safety", "eye surgeon selection"]
 featuredImage: "/images/eye-surgery-news/eye-surgery-news-20260601-cover.jpg"
 author: "Beauty-Blog 医学审核团队"
+reviewer: "Licensed Physician Review"
 lastReviewed: "2026-06-01"
 medicalAudience: "Patient"
 translations: ["/zh-cn/posts/eye-surgery-news/eye-surgery-news-20260601"]
+draft: false
 ---
 
 ## Introduction

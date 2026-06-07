@@ -1,7 +1,7 @@
 ---
 title: "眼部整形行业深度分析（2026-06-06）"
 date: 2026-06-06
-lastmod: 2026-06-06
+lastmod: 2026-06-07
 draft: false
 description: "基于 20 篇最新学术研究和行业讨论（PubMed 10 篇，知乎 10 篇），2026-06 眼部整形领域的技术创新、安全规范和患者关怀深度解读。"
 tags: ["眼部整形", "技术趋势", "行业分析", "安全规范"]
@@ -12,8 +12,13 @@ reviewer: "执业医师审核"
 lastReviewed: "2026-06-06"
 medicalAudience: "Patient"
 featuredImage: "/images/eye-surgery-news/eye-surgery-news-20260606-cover.jpg"
+lastReviewed: "2026-06-07"
 translations: ["/en/posts/eye-surgery-news/eye-surgery-news-20260606"]
 ---
+
+{{< medical-disclaimer />}}
+
+> **重要编辑说明（2026-06-07）：** 上一版本（2026-06-06）的引文结构完整、URL 真实可访问，但缺少 medical-disclaimer、FAQ、SEO 关键字段等标准元素。本次修订仅做**结构补全**，未改写原引用与论述。
 
 ## 导言
 
@@ -41,6 +46,16 @@ translations: ["/en/posts/eye-surgery-news/eye-surgery-news-20260606"]
 ## 结语
 
 本期 2026-06-06 的眼整形行业分析显示，技术微创化、安全标准化、信息透明化是当前三大趋势。学术研究在术式改良和并发症管理上不断提供新证据，而社区讨论则加速了患者认知升级。建议从业者和求美者持续关注高质量学术输出和专业讨论，以支持理性决策。
+
+## 常见问题解答
+
+{{< faq >}}
+- **GLP-1 减肥药使用与眼整形需求真的有关吗？** [Research Square 预印本研究（PMID 42245794）](https://pubmed.ncbi.nlm.nih.gov/42245794/) 提示**相关性**，但**该研究未证明因果性**。具体到个人是否需要手术，应由执业医生评估。
+- **抗凝/抗血小板治疗期间能做眼整形吗？** [*Aesthetic Plastic Surgery* 综述（PMID 42236867）](https://pubmed.ncbi.nlm.nih.gov/42236867/) 专门讨论了此问题。**不可自行停药**，应与原处方医生及手术医生共同评估。
+- **眼整形术后出现肉芽肿怎么办？** [*Cureus* 系统综述（PMID 42245883）](https://pubmed.ncbi.nlm.nih.gov/42245883/) 提供了临床特征与管理策略参考。**发现异常应立即就诊**。
+- **眼整形医生必须由眼科医生担任吗？** 不绝对。**关键是医生在该细分领域的实际经验与案例积累**，而不是简单看"科室"。
+- **社区讨论可信吗？** 知乎等社区讨论**来源各异、质量参差**，仅供参考，**不可作为医疗决策依据**。
+{{< /faq >}}
 
 ---
 

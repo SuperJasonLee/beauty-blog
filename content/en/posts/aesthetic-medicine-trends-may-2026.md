@@ -9,8 +9,11 @@ keywords: ["BBL rebranding", "AI plastic surgery", "2026 aesthetic trends", "pla
 draft: false
 featuredImage: "/images/posts/may-2026-news/image-1.jpg"
 author: "Beauty-Blog Medical Review Board"
+reviewer: "Licensed Physician Review"
 lastReviewed: "2026-05-27"
 medicalAudience: "Patient"
+translations:
+  - "/zh-cn/posts/aesthetic-medicine-trends-may-2026"
 ---
 
 {{< medical-disclaimer />}}

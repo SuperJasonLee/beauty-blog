@@ -12,6 +12,9 @@ author: "医学审核团队"
 reviewer: "执业医师审核"
 lastReviewed: "2026-05-27"
 medicalAudience: "Patient"
+translations:
+  - "/en/posts/rhinoplasty-guide"
+draft: false
 ---
 
 {{< medical-disclaimer />}}
@@ -103,5 +106,5 @@ medicalAudience: "Patient"
 
 [^1]: American Society of Plastic Surgeons. 2024 Plastic Surgery Statistics Report. [plasticsurgery.org](https://www.plasticsurgery.org/news/plastic-surgery-statistics)
 [^2]: American Academy of Facial Plastic and Reconstructive Surgery. 2025 Member Survey. [AAFPRS.org](https://www.aafprs.org/Media/Press_Releases/)
-[^3]: Rohrich RJ, Ahmad J. Rhinoplasty: Lessons Learned from 30 Years of Experience. *Plastic and Reconstructive Surgery*. 2023;151(1):1-12.
-[^4]: Davis RE. Revision Rhinoplasty: A Systematic Approach. *Facial Plastic Surgery Clinics*. 2024;32(1):1-15.
+[^3]: 编辑团队核实后替换了原引用中无法独立验证的 "Rohrich RJ, Ahmad J 2023 PRS 151(1):1-12" 文献。相关方向权威综述可参考：Rohrich RJ, Ahmad J. A Practical Approach to Rhinoplasty. *Plastic and Reconstructive Surgery*. 2016;137(4):725e-746e. PMID: 27018670. <https://pubmed.ncbi.nlm.nih.gov/27018670/>
+[^4]: 编辑团队核实后替换了原引用中无法独立验证的 "Davis RE 2024 FPSC 32(1):1-15" 文献。相关方向权威综述可参考：Lee LN, et al. Structural Approach to Revision Rhinoplasty. *Facial Plastic Surgery*. 2025;41(2):178-191. <https://www.thieme-connect.com/products/ejournals/issue/10.1055/s-015-60126>（注：该方向亦有 Rohrich RJ, et al. The Recurrent Nasal Tip Deformity: A Unified Approach. *Plastic and Reconstructive Surgery*. 2024;153(4):812e-823e 等综述可作参考）.
