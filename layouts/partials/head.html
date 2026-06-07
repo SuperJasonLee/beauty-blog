@@ -85,6 +85,67 @@
 <link rel="icon" type="image/png" href="{{ . | absURL }}">
 {{- end }}
 
+{{- /* Stylesheet bundle.
+       Mirrors themes/PaperMod/layouts/_partials/head.html so the project's
+       hand-written head still emits the theme stylesheet. Without this block
+       no <link rel="stylesheet"> is rendered and every page loses its layout.
+       See: openspec/changes/archive/2026-06-07-fix-missing-head-partial/ */ -}}
+{{- $includes := slice }}
+{{- $includes = $includes | append (" " | resources.FromString "assets/css/includes-blank.css") }}
+{{- $includes_all := $includes | resources.Concat "assets/css/includes.css" }}
+
+{{- $theme_vars := (resources.Get "css/core/theme-vars.css") }}
+{{- $reset := (resources.Get "css/core/reset.css") }}
+{{- $media := (resources.Get "css/core/zmedia.css") }}
+{{- $license_css := (resources.Get "css/core/license.css") }}
+{{- $common := (resources.Match "css/common/*.css") | resources.Concat "assets/css/common.css" }}
+
+{{- $chroma_styles := (resources.Get "css/includes/chroma-styles.css") }}
+{{- $chroma_mod := (resources.Get "css/includes/chroma-mod.css") }}
+
+{{- $core := (slice $theme_vars $reset $common $chroma_styles $chroma_mod $includes_all $media) | resources.Concat "assets/css/core.css" | resources.Minify }}
+{{- $extended := (resources.Match "css/extended/*.css") | resources.Concat "assets/css/extended.css" | resources.Minify }}
+
+{{- $stylesheet := (slice $license_css $core $extended) | resources.Concat "assets/css/stylesheet.css" }}
+
+{{- if not site.Params.assets.disableFingerprinting }}
+{{- $stylesheet = $stylesheet | fingerprint }}
+<link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="preload stylesheet" as="style">
+{{- else }}
+<link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink }}" rel="preload stylesheet" as="style">
+{{- end }}
+
+{{- /* Pre-paint theme toggle init. Without this, the page flashes the wrong
+       theme on every load because the only theme-toggle script lives in
+       footer.html and runs after first paint. */ -}}
+{{- if (not site.Params.disableThemeToggle) }}
+{{- if (eq site.Params.defaultTheme "light") }}
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    }
+</script>
+{{- else if (eq site.Params.defaultTheme "dark") }}
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+</script>
+{{- else }}
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+</script>
+{{- end }}
+{{- end }}
+
 {{- /* Project-specific additions (Google site verification, author meta,
        sameAs me links, AdSense). Defined in layouts/partials/extend_head.html. */ -}}
 {{- partial "extend_head.html" . }}
