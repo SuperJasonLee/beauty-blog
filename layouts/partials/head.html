@@ -1,0 +1,90 @@
+{{- /*
+  Head partial. Hand-written to match PaperMod's standard head.html while
+  relying only on the project's own layouts/ and hugo.yaml config. The
+  PaperMod git submodule is intentionally not initialized, so we cannot
+  fall through to themes/PaperMod/layouts/partials/head.html.
+
+  See: openspec/changes/fix-missing-head-partial/
+*/ -}}
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+{{- $title := "" }}
+{{- if .IsHome }}
+  {{- $title = site.Title }}
+{{- else }}
+  {{- $title = printf "%s | %s" .Title site.Title }}
+{{- end }}
+<title>{{ $title }}</title>
+
+{{- $description := "" }}
+{{- with .Description }}
+  {{- $description = . }}
+{{- else }}
+  {{- with .Summary }}
+    {{- $description = . | plainify | chomp }}
+  {{- end }}
+{{- end }}
+{{- if not $description }}
+  {{- with site.Params.description }}
+    {{- $description = . }}
+  {{- end }}
+{{- end }}
+{{- if not $description }}
+  {{- with site.Params.subtitle }}
+    {{- $description = . }}
+  {{- end }}
+{{- end }}
+{{- with $description }}
+<meta name="description" content="{{ . }}">
+{{- end }}
+
+{{- $canonical := .Permalink }}
+<link rel="canonical" href="{{ $canonical }}">
+
+{{- $ogImage := "" }}
+{{- with .Params.featuredImage }}
+  {{- $ogImage = . | absURL }}
+{{- else }}
+  {{- with index site.Params.images 0 }}
+    {{- $ogImage = . | absURL }}
+  {{- end }}
+{{- end }}
+
+<meta property="og:title" content="{{ $title }}">
+{{- with $description }}
+<meta property="og:description" content="{{ . }}">
+{{- end }}
+<meta property="og:type" content="{{- if .IsHome }}website{{- else }}article{{- end }}">
+<meta property="og:url" content="{{ $canonical }}">
+{{- with $ogImage }}
+<meta property="og:image" content="{{ . }}">
+{{- end }}
+{{- with site.Title }}
+<meta property="og:site_name" content="{{ . }}">
+{{- end }}
+{{- with .Language.Lang }}
+<meta property="og:locale" content="{{ . | upper | replaceRE "-" "_" }}">
+{{- end }}
+
+<meta name="twitter:card" content="{{- if $ogImage }}summary_large_image{{- else }}summary{{- end }}">
+<meta name="twitter:title" content="{{ $title }}">
+{{- with $description }}
+<meta name="twitter:description" content="{{ . }}">
+{{- end }}
+{{- with $ogImage }}
+<meta name="twitter:image" content="{{ . }}">
+{{- end }}
+{{- with site.Params.social.twitter }}
+<meta name="twitter:creator" content="{{ . }}">
+<meta name="twitter:site" content="{{ . }}">
+{{- end }}
+
+{{- with index site.Params.images 0 }}
+<link rel="icon" type="image/png" href="{{ . | absURL }}">
+{{- end }}
+
+{{- /* Project-specific additions (Google site verification, author meta,
+       sameAs me links, AdSense). Defined in layouts/partials/extend_head.html. */ -}}
+{{- partial "extend_head.html" . }}

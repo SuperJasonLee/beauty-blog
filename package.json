@@ -10,6 +10,8 @@
     "build:full": "npm run build && npm run search-index",
     "audit:posts": "python3 scripts/audit-posts.py content/",
     "audit:posts:errors": "python3 scripts/audit-posts.py content/ --severity error",
+    "audit:images": "python3 scripts/audit-dup-covers.py",
+    "audit:images:strict": "python3 scripts/audit-dup-covers.py --strict",
     "crawl:eye-news": "cd scripts/crawl-eye-surgery-news && .venv/bin/python run.py"
   },
   "keywords": [],

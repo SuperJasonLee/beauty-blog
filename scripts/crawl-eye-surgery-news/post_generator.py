@@ -16,17 +16,23 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(me
 logger = logging.getLogger(__name__)
 
 
-def ensure_cover_image(slug: str) -> Optional[str]:
+def ensure_cover_image(slug: str, fallback_cover: Optional[str] = None) -> Optional[str]:
     """Ensure a cover image exists for the given slug.
 
-    Strategy (intentional, not a v1 limitation):
-    1. If {slug}-cover.jpg already exists, return its public path.
-    2. Otherwise copy the most-recent existing *-cover.jpg in the
-       same directory and return the new path. This guarantees the
-       featuredImage URL resolves, even if every post points at the
-        same underlying image.
-     3. If no existing cover at all, return None and let the frontmatter
-       fall back to whatever the template provides.
+    Contract (changed 2026-06-07 — silent copy is no longer allowed):
+    1. If {slug}-cover.jpg already exists in STATIC_IMAGES_DIR, return its
+       public path. No copy occurs.
+    2. Otherwise, if ``fallback_cover`` is provided and exists on disk,
+       copy that file to {slug}-cover.jpg and return the new public path.
+       No sibling *-cover.jpg is touched.
+    3. Otherwise, raise ``RuntimeError``. Silently copying a sibling
+       *-cover.jpg is forbidden — that was the root cause of the
+       2026-06-06 cover being byte-identical to the 2026-06-01 cover.
+
+    To skip cover synthesis entirely (e.g. for a post that genuinely does
+    not want a featured image), wrap the call in try/except and pass the
+    resulting exception up to the caller, which can then omit featuredImage
+    from the frontmatter.
     """
     STATIC_IMAGES_DIR.mkdir(parents=True, exist_ok=True)
     target = STATIC_IMAGES_DIR / f"{slug}-cover.jpg"
@@ -36,14 +42,24 @@ def ensure_cover_image(slug: str) -> Optional[str]:
         logger.info(f"Cover exists: {target.name}")
         return public_path
 
-    existing = sorted(STATIC_IMAGES_DIR.glob("*-cover.jpg"), key=lambda p: p.stat().st_mtime, reverse=True)
-    if existing:
-        shutil.copy(existing[0], target)
-        logger.info(f"No fresh cover synthesized; copied {existing[0].name} → {target.name}")
+    if fallback_cover is not None:
+        fallback_path = Path(fallback_cover)
+        if not fallback_path.is_absolute():
+            fallback_path = (Path(__file__).resolve().parent.parent.parent / fallback_cover).resolve()
+        if not fallback_path.exists():
+            raise FileNotFoundError(
+                f"fallback_cover does not exist: {fallback_path}"
+            )
+        shutil.copy(fallback_path, target)
+        logger.info(f"Copied fallback_cover {fallback_path.name} → {target.name}")
         return public_path
 
-    logger.warning(f"No cover image available in {STATIC_IMAGES_DIR}; post will lack featuredImage")
-    return None
+    raise RuntimeError(
+        f"No cover image for slug '{slug}' and no fallback_cover provided. "
+        f"Refusing to silently copy a sibling cover (this caused the 2026-06-06 "
+        f"duplicate-cover bug). Pass fallback_cover=... or synthesize a cover "
+        f"before calling this function."
+    )
 
 
 def extract_key_topics(articles: list[dict]) -> dict:
@@ -422,12 +438,12 @@ def generate_posts(crawled_json_path: Path) -> list[Path]:
     slug = f"eye-surgery-news-{datetime.now().strftime('%Y%m%d')}"
 
     # Ensure a cover image exists for this slug. See ensure_cover_image() for
-    # the v1 behavior (copy most recent existing cover if no fresh one).
+    # the post-2026-06-07 contract: it raises RuntimeError if neither a
+    # fresh cover nor an explicit fallback_cover is available. If you want
+    # a graceful no-cover path here, wrap the call in try/except and omit
+    # featuredImage from the frontmatter.
     cover_path = ensure_cover_image(slug)
-    if cover_path:
-        logger.info(f"Cover path for frontmatter: {cover_path}")
-    else:
-        logger.warning("No cover path; frontmatter will be generated without featuredImage")
+    logger.info(f"Cover path for frontmatter: {cover_path}")
 
     posts = []
 
