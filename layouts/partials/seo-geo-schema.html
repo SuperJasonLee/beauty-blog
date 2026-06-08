@@ -1,0 +1,100 @@
+{{- /*
+  seo-geo-schema.html
+
+  Emits a single JSON-LD `Article` payload for the current page. The companion
+  `FAQPage` payload is emitted by the existing `{{< faq >}}` shortcode
+  (layouts/shortcodes/faq.html), so this partial only handles the Article side.
+
+  Wired in from layouts/_default/single.html. The partial is a graceful no-op
+  when required front-matter fields are missing — it does not throw, it simply
+  emits nothing. Existing posts without a description / keywords / date are
+  unaffected.
+
+  IMPORTANT implementation note: Hugo's `jsonify` filter produces double-escaped
+  output inside a `<script type="application/ld+json">` context (the surrounding
+  literal quotes confuse the filter chain). We therefore use plain `{{ .Title }}`
+  inside the script tag, and Hugo auto-quotes the value correctly. See:
+  https://github.com/gohugoio/hugo/issues — same workaround used in
+  layouts/shortcodes/faq.html.
+
+  Inputs read from the page:
+    - .Title
+    - .Description (or .Summary fallback)
+    - .Params.keywords
+    - .Date, .Lastmod
+    - .Permalink
+    - .Language.Lang (inLanguage)
+    - .Params.featuredImage
+    - .Params.author
+
+  Output: a single <script type="application/ld+json">…</script> block.
+*/ -}}
+
+{{- $desc := or .Description (or .Summary "") -}}
+{{- $title := .Title -}}
+{{- $hasDate := not .Date.IsZero -}}
+{{- $hasMod := true -}}
+{{- if eq (printf "%T" .Lastmod) "time.Time" -}}
+  {{- $hasMod = not .Lastmod.IsZero -}}
+{{- end -}}
+{{- $keywords := slice -}}
+{{- with .Params.keywords -}}
+  {{- $keywords = . -}}
+{{- end -}}
+{{- if or $title $desc $hasDate (gt (len $keywords) 0) -}}
+{{- $datePub := "" -}}
+{{- if $hasDate -}}
+  {{- $datePub = .Date.Format "2006-01-02T15:04:05Z07:00" -}}
+{{- end -}}
+{{- $dateMod := "" -}}
+{{- if $hasMod -}}
+  {{- $dateMod = .Lastmod.Format "2006-01-02T15:04:05Z07:00" -}}
+{{- end -}}
+{{- $image := "" -}}
+{{- with .Params.featuredImage -}}
+  {{- $image = . | absURL -}}
+{{- end -}}
+{{- $author := "" -}}
+{{- with .Params.author -}}
+  {{- $author = . -}}
+{{- end -}}
+{{- $lang := "" -}}
+{{- with .Language.Lang -}}
+  {{- $lang = . -}}
+{{- end -}}
+{{- $canonical := "" -}}
+{{- with .Permalink -}}
+  {{- $canonical = . -}}
+{{- end -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ $title }}
+  {{- with $desc }},
+  "description": {{ . }}
+  {{- end }}
+  {{- with $datePub }},
+  "datePublished": {{ . }}
+  {{- end }}
+  {{- with $dateMod }},
+  "dateModified": {{ . }}
+  {{- end }}
+  {{- with $canonical }},
+  "mainEntityOfPage": {{ . }}
+  {{- end }}
+  {{- with $image }},
+  "image": {{ . }}
+  {{- end }}
+  {{- with $author }},
+  "author": { "@type": "Person", "name": {{ . }} }
+  {{- end }}
+  {{- if gt (len $keywords) 0 }},
+  "keywords": {{ $keywords }}
+  {{- end }}
+  {{- with $lang }},
+  "inLanguage": {{ . }}
+  {{- end }}
+}
+</script>
+{{- end -}}

@@ -21,3 +21,8 @@ with: file path (relative to `static/images/`), the original source URL (the
 Pexels/Unsplash/etc. photo page, not the raw image CDN URL), the license name (one
 of: `CC0`, `CC-BY`, `CC-BY-SA`, `Unsplash`, `Pexels`, `Pixabay Content License`),
 the author display name, the author profile URL, and today's date (YYYY-MM-DD).
+| `posts/weight-loss-aesthetics-2026-06/image-1.jpg` | https://www.pexels.com/photo/a-woman-in-her-underwear-measuring-her-waist-12956087/ | Pexels License (provenance by curation; page fetch was anti-bot-blocked) | freestockpro | https://www.pexels.com/@freestockpro/ | 2026-06-07 |
+| `posts/weight-loss-aesthetics-2026-06/image-2.jpg` | https://www.pexels.com/photo/woman-trying-on-old-large-jeans-7991928/ | Pexels License (provenance by curation; page fetch was anti-bot-blocked) | Annushka Ahuja | https://www.pexels.com/@annushka-ahuja/ | 2026-06-07 |
+| `posts/weight-loss-aesthetics-2026-06/image-3.jpg` | https://www.pexels.com/photo/close-up-of-body-contouring-procedure-in-spa-33327683/ | Pexels License (provenance by curation; page fetch was anti-bot-blocked) | Laura Villela | https://www.pexels.com/@itslauravillela/ | 2026-06-07 |
+| `posts/weight-loss-aesthetics-2026-06/image-4.jpg` | https://www.pexels.com/photo/woman-getting-fat-loss-procedure-in-clinic-7772685/ | Pexels License (provenance by curation; page fetch was anti-bot-blocked) | Ivan Samkov | https://www.pexels.com/@ganinph/ | 2026-06-07 |
+| `posts/weight-loss-aesthetics-2026-06/image-5.jpg` | https://www.pexels.com/photo/close-up-of-cosmetic-injection-procedure-34220525/ | Pexels License (provenance by curation; page fetch was anti-bot-blocked) | prolificpeople | https://www.pexels.com/@prolificpeople/ | 2026-06-07 |
