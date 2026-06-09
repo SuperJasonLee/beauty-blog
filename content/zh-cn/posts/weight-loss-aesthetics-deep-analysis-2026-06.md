@@ -16,7 +16,7 @@ translations:
   - "/en/posts/weight-loss-aesthetics-deep-analysis-2026-06"
 ---
 
-{{< figure src="/images/posts/weight-loss-aesthetics-2026-06/image-1.jpg" title="GLP-1 减重时代的医美需求结构正在重塑" >}}
+{{< figure src="/images/posts/weight-loss-aesthetics-2026-06/image-2.jpg" title="GLP-1 减重时代的医美需求结构正在重塑" >}}
 
 {{< medical-disclaimer />}}
 
@@ -42,7 +42,7 @@ translations:
 
 Massarwa 等在 *Plastic and Reconstructive Surgery Global Open* 上报告的"真皮悬吊 + 腺体重塑"乳房上提技术，针对产后减重（postbariatric）患者常见的乳房下垂与体积缺失问题提出系统化方案[^14]。Tuan 等在 *Aesthetic Plastic Surgery* 上报告 100 例前瞻性研究，验证 VASER 辅助的穿支保留吸脂在全腹壁整形中的安全性和美学效果[^19]。Burciaga-Soto 等在 *Hernia* 杂志上提出的三瓣螺旋脐重建术（trisquel neoumbilicoplasty），则专门服务于一类被忽视的患者群体——腹壁重建或大幅减重后脐部缺失/异常的患者[^18][^19]。
 
-{{< figure src="/images/posts/weight-loss-aesthetics-2026-06/image-2.jpg" title="减重后的形体雕塑：术者需综合考虑皮肤冗余、肌肉松弛与脂肪分布" >}}
+{{< figure src="/images/posts/weight-loss-aesthetics-2026-06/image-3.jpg" title="减重后的形体雕塑：术者需综合考虑皮肤冗余、肌肉松弛与脂肪分布" >}}
 
 ## 非侵入式塑形：从"减脂"到"紧致 + 重塑"
 

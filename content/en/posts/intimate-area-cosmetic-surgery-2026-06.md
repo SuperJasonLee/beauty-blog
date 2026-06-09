@@ -16,7 +16,7 @@ translations:
   - "/posts/intimate-area-cosmetic-surgery-2026-06"
 ---
 
-{{< figure src="/images/posts/intimate-area-2026-06/image-1.jpg" title="Intimate-area consultation: thorough patient-physician communication is the core of pre-operative assessment" >}}
+{{< figure src="/images/posts/intimate-area-2026-06/image-2.jpg" title="Intimate-area consultation: thorough patient-physician communication is the core of pre-operative assessment" >}}
 
 {{< medical-disclaimer />}}
 
@@ -38,7 +38,7 @@ Dönmez and colleagues, in *Revista da Associação Médica Brasileira* (2026), 
 
 Favorito, in a 2026 review in *International Brazilian Journal of Urology* titled "Clitoris Anatomy Applied to Aesthetic, Reconstructive and Transgender Surgery," provides a systematic anatomical foundation for the safety of clitoral hood reduction and clitoris-related procedures[^10]. González-Isaza and colleagues' 2026 case report in *Cureus* notes that when "recurrent labia minora hypertrophy" appears post-operatively, clinicians need to differentiate uncommon but important complications such as localized vulvar micro-lymphatic imbalance[^9][^10].
 
-{{< figure src="/images/posts/intimate-area-2026-06/image-2.jpg" title="Intimate-area consultation: thorough patient-physician communication is the core of pre-operative assessment" >}}
+{{< figure src="/images/posts/intimate-area-2026-06/image-3.jpg" title="Intimate-area consultation: thorough patient-physician communication is the core of pre-operative assessment" >}}
 
 ## Vaginoplasty and post-partum repair: the function vs aesthetic boundary
 
@@ -48,7 +48,7 @@ Goldman and colleagues, in *Journal of Robotic Surgery* (2025), compare operativ
 
 Post-partum repair (perineal / vaginal rejuvenation post-partum) is another mainstream indication for vaginoplasty. El Danaf, in *Aesthetic Plastic Surgery* (2026), "Labia Majora Lipofilling During Body Contouring," notes that when vaginoplasty is combined with abdominoplasty or body contouring, labia majora fat grafting requires particular attention to complication management[^12].
 
-{{< figure src="/images/posts/intimate-area-2026-06/image-3.jpg" title="OB-GYN clinical setting: pelvic-floor functional assessment should be a mandatory pre-op item" >}}
+{{< figure src="/images/posts/intimate-area-2026-06/image-4.jpg" title="OB-GYN clinical setting: pelvic-floor functional assessment should be a mandatory pre-op item" >}}
 
 ## Reconstructive surgery: from buried penis to gender-affirming
 
@@ -58,7 +58,7 @@ Kokura and colleagues, in *IJU Case Reports* (2026), "Madelung Disease of the Sc
 
 Raquepo and colleagues' 2026 study validates the value of multi-disciplinary team (MDT) collaboration in gender-affirming surgery from a peri-operative management and early-discharge safety perspective — endocrinology, psychiatry, and urology/plastic surgery joint assessment is critical to reducing post-operative complications and psychological crisis.
 
-{{< figure src="/images/posts/intimate-area-2026-06/image-4.jpg" title="Specialist consultation: reconstructive intimate-area surgery requires MDT participation" >}}
+{{< figure src="/images/posts/intimate-area-2026-06/image-5.jpg" title="Specialist consultation: reconstructive intimate-area surgery requires MDT participation" >}}
 
 ## Regulation, safety, and ethics
 
@@ -67,8 +67,6 @@ Ethical and regulatory discussion on intimate-area cosmetic surgery continued to
 The ACOG Committee Opinion explicitly classifies female genital cosmetic surgery as a procedure that "requires strict indication assessment and confirmed informed consent"[^2], and emphasizes that pre-operative psychological assessment (including body dysmorphic disorder screening) is critical for reducing "post-operative dissatisfaction" and "repeat surgery" risk. ASPS 2024 statistics, while not breaking out "intimate-area" as a separate category, show growth in both reconstructive and cosmetic female external genital procedures[^22].
 
 In the Chinese-language discourse, Zhihu columnists broadly focus on the practical issue of "physician / clinic selection": [^20][^21][^22] systematically catalog pre-operative assessment points, post-operative outcome tracking, and "secondary repair" risks from a patient perspective. It is worth reminding readers that, when facing marketing language promising "one procedure to solve all problems," patients should prioritize licensed physicians with multidisciplinary backgrounds in gynecology, urology, or plastic surgery, and proactively request to review surgical volume, complication rates, and post-operative follow-up records.
-
-{{< figure src="/images/posts/intimate-area-2026-06/image-5.jpg" title="Telehealth / remote consultation: post-operative follow-up and cross-region communication are critical" >}}
 
 ## Frequently Asked Questions
 

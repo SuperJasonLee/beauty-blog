@@ -16,7 +16,7 @@ translations:
   - "/posts/weight-loss-aesthetics-deep-analysis-2026-06"
 ---
 
-{{< figure src="/images/posts/weight-loss-aesthetics-2026-06/image-1.jpg" title="GLP-1 weight-loss era is reshaping the medical-aesthetics demand curve" >}}
+{{< figure src="/images/posts/weight-loss-aesthetics-2026-06/image-2.jpg" title="GLP-1 weight-loss era is reshaping the medical-aesthetics demand curve" >}}
 
 {{< medical-disclaimer />}}
 
@@ -42,7 +42,7 @@ Post-massive-weight-loss body contouring is a 2026 academic and clinical hot spo
 
 Massarwa and colleagues, in *Plastic and Reconstructive Surgery Global Open*, describe a "dermal suspension + parenchymal reshaping" mastopexy technique that targets breast ptosis and volume loss in postbariatric patients[^14]. Tuan and colleagues, in a 100-patient prospective study in *Aesthetic Plastic Surgery*, validate the safety and aesthetic outcomes of VASER-assisted perforator-preserving liposuction in full abdominoplasty[^19]. Burciaga-Soto and colleagues, in *Hernia*, propose the trisquel neoumbilicoplasty — a three-flap spiral reconstruction specifically for patients with absent or distorted umbilicus after abdominal-wall reconstruction or massive weight loss[^18][^19].
 
-{{< figure src="/images/posts/weight-loss-aesthetics-2026-06/image-2.jpg" title="Post-MWL body contouring requires combined assessment of skin laxity, muscle separation, and fat distribution" >}}
+{{< figure src="/images/posts/weight-loss-aesthetics-2026-06/image-3.jpg" title="Post-MWL body contouring requires combined assessment of skin laxity, muscle separation, and fat distribution" >}}
 
 ## Non-invasive body contouring: from fat reduction to tightening + remodeling
 

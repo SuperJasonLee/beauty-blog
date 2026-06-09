@@ -67,8 +67,6 @@ In early 2026, Imeik Technology announced that its exclusively imported **Korean
 
 **Market Data**: According to ISAPS, global botulinum toxin treatments reached 8.878 million cases in 2023, ranking first among non-surgical procedures[^5]. China's botulinum toxin market is projected to exceed RMB 10 billion in 2026.
 
-![Botox injection treatment for upper face wrinkles](/images/posts/asian-aesthetic-medicine-news-may-2026/botox_treatment.jpg)
-
 ---
 
 ## 5. Japan Surpasses Korea as Asia's Second-Largest Aesthetic Market
