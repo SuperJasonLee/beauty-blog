@@ -38,7 +38,7 @@ Dönmez 等在 *Revista da Associação Médica Brasileira* 2026 年发表的研
 
 Favorito 在 *International Brazilian Journal of Urology* 2026 年发表的"阴蒂解剖学在美学、修复与跨性别手术中的应用"综述，则为阴蒂包皮缩减（clitoral hood reduction）与阴蒂相关手术的安全性提供了系统化的解剖学基础[^10]。González-Isaza 等在 *Cureus* 2026 年的病例报告则提示，术后出现"复发性小阴唇肥大"样表现时，需要鉴别微淋巴管失衡等少见但重要的并发症[^9][^10]。
 
-{{< figure src="/images/posts/intimate-area-2026-06/image-1.jpg" title="私密整形咨询：充分的医患沟通是术前评估的核心环节" >}}
+{{< figure src="/images/posts/intimate-area-2026-06/image-2.jpg" title="私密整形咨询：充分的医患沟通是术前评估的核心环节" >}}
 
 ## 阴道紧缩与产后修复：功能 vs 美学的边界
 

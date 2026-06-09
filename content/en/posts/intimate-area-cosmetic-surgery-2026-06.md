@@ -38,7 +38,7 @@ Dönmez and colleagues, in *Revista da Associação Médica Brasileira* (2026), 
 
 Favorito, in a 2026 review in *International Brazilian Journal of Urology* titled "Clitoris Anatomy Applied to Aesthetic, Reconstructive and Transgender Surgery," provides a systematic anatomical foundation for the safety of clitoral hood reduction and clitoris-related procedures[^10]. González-Isaza and colleagues' 2026 case report in *Cureus* notes that when "recurrent labia minora hypertrophy" appears post-operatively, clinicians need to differentiate uncommon but important complications such as localized vulvar micro-lymphatic imbalance[^9][^10].
 
-{{< figure src="/images/posts/intimate-area-2026-06/image-1.jpg" title="Intimate-area consultation: thorough patient-physician communication is the core of pre-operative assessment" >}}
+{{< figure src="/images/posts/intimate-area-2026-06/image-2.jpg" title="Intimate-area consultation: thorough patient-physician communication is the core of pre-operative assessment" >}}
 
 ## Vaginoplasty and post-partum repair: the function vs aesthetic boundary
 
