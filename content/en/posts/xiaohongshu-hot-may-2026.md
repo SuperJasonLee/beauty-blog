@@ -40,7 +40,7 @@ Gold microneedling has held the #1 XHS search spot for consecutive months. Users
 
 ### #2: IPL Photofacial — The Evergreen
 
-![IPL photofacial treatment in a medical aesthetic clinic](/images/posts/en-xiaohongshu-hot-may-2026/ipl_treatment.jpg)
+![IPL photofacial treatment in a medical aesthetic clinic](/images/posts/en-xiaohongshu-trends-2026/ipl_treatment.jpg)
 
 Heat Index: 70.2w+ (March), sustained high through April-May
 

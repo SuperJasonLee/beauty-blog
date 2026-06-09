@@ -45,7 +45,7 @@ translations:
 
 光子嫩肤（IPL）是小红书医美领域最稳定的高频话题。第三方分析[^4]显示，2026 年 2 月小红书"光子嫩肤"相关搜索热度达 81.5 万次；"光子嫩肤功效"搜索同比增长 23.24%，"术后注意事项"增长 21.99%[^4]。
 
-![IPL光子嫩肤治疗](/images/posts/en-xiaohongshu-hot-may-2026/ipl_treatment.jpg)
+![IPL光子嫩肤治疗](/images/posts/en-xiaohongshu-trends-2026/ipl_treatment.jpg)
 
 **编辑团队整理的常见内容方向：**
 - 1-7 天对比图
