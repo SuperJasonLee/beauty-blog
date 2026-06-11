@@ -16,7 +16,7 @@ translations:
   - "/en/posts/intimate-plastic-surgery-deep-analysis-2026-06"
 ---
 
-{{< figure src="/images/posts/intimate-plastic-surgery-2026-06/image-1.jpg" title="私密整形正在从"小众话题"转变为全球整形外科增速最快的亚专科之一" >}}
+{{< figure src="/images/posts/intimate-plastic-surgery-2026-06/image-1.jpg" title='私密整形正在从"小众话题"转变为全球整形外科增速最快的亚专科之一' >}}
 
 {{< medical-disclaimer />}}
 
