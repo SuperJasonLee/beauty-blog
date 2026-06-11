@@ -6,7 +6,7 @@ description: "2026 intimate plastic surgery deep dive: labiaplasty, vaginoplasty
 categories: ["Industry News"]
 tags: ["intimate surgery", "labiaplasty", "vaginoplasty", "male genital surgery", "intimate regulation", "genital aesthetics"]
 keywords: ["intimate plastic surgery", "labiaplasty", "vaginoplasty", "penile enlargement", "intimate safety", "labiaplasty", "vaginoplasty", "intimate laser"]
-draft: true
+draft: false
 featuredImage: "/images/posts/intimate-plastic-surgery-2026-06/image-1.jpg"
 author: "Beauty-Blog Medical Review Board"
 reviewer: "Licensed Physician Review"
