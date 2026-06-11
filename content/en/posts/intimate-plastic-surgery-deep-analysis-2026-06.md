@@ -16,7 +16,7 @@ translations:
   - "/en/posts/intimate-plastic-surgery-deep-analysis-2026-06"
 ---
 
-{{< figure src="/images/posts/intimate-plastic-surgery-2026-06/image-1.jpg" title="Intimate surgery is transitioning from a niche topic to the fastest-growing subspecialty in cosmetic surgery" >}}
+{{< figure src="/images/posts/intimate-plastic-surgery-2026-06/image-2.jpg" title="Intimate surgery is transitioning from a niche topic to the fastest-growing subspecialty in cosmetic surgery" >}}
 
 {{< medical-disclaimer />}}
 
