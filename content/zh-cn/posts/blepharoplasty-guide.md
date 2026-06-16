@@ -8,7 +8,7 @@ tags: ["双眼皮", "重睑术", "眼部整形", "术前准备", "整形手术"]
 keywords: ["双眼皮手术", "重睑术", "埋线双眼皮", "切开双眼皮", "眼部整形", "术前准备", "双眼皮恢复", "双眼皮风险"]
 draft: false
 featuredImage: "/images/posts/blepharoplasty-guide-featured.jpg"
-author: "医学审核团队"
+author: "美知医美 医学审核团队"
 reviewer: "执业医师审核"
 lastReviewed: "2026-05-27"
 medicalAudience: "Patient"

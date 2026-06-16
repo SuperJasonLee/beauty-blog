@@ -7,7 +7,7 @@ tags: ["眼部整形", "技术趋势", "临床指南", "安全规范"]
 categories: ["眼部整形"]
 keywords: ["眼部整形", "眼睑成形术", "眼整形技术", "眼部整形安全", "眼整形医生选择"]
 featuredImage: "/images/eye-surgery-news/eye-surgery-news-20260601-cover.jpg"
-author: "Beauty-Blog 医学审核团队"
+author: "美知医美 医学审核团队"
 reviewer: "执业医师审核"
 lastReviewed: "2026-06-07"
 medicalAudience: "Patient"

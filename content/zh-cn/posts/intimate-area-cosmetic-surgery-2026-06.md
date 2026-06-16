@@ -8,7 +8,7 @@ tags: ["私密整形", "labiaplasty", "阴唇整形", "阴道紧缩", "vaginopla
 keywords: ["私密整形", "labiaplasty", "阴道紧缩", "vaginoplasty", "性别确认手术", "埋没阴茎", "ACOG 委员会意见", "ASPS 2024"]
 draft: false
 featuredImage: "/images/posts/intimate-area-2026-06/image-1.jpg"
-author: "Beauty-Blog 医学审核团队"
+author: "美知医美 医学审核团队"
 reviewer: "执业医师审核"
 lastReviewed: "2026-06-09"
 medicalAudience: "Patient"

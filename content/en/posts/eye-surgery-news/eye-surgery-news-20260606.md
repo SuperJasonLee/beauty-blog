@@ -7,7 +7,7 @@ description: "In-depth analysis of 20 recent articles on eye plastic surgery inn
 tags: ["eye surgery", "surgical techniques", "industry analysis", "patient safety"]
 categories: ["Eye Surgery"]
 keywords: ["eye plastic surgery", "blepharoplasty", "eyelid surgery", "oculoplastic trends", "eye surgery 2026-06-06"]
-author: "Beauty-Blog 医学审核团队"
+author: "美知医美 医学审核团队"
 reviewer: "执业医师审核"
 lastReviewed: "2026-06-06"
 medicalAudience: "Patient"

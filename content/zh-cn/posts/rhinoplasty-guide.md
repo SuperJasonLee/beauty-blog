@@ -8,7 +8,7 @@ tags: ["鼻整形", "隆鼻", "假体", "术后护理", "面部整形"]
 keywords: ["鼻整形", "隆鼻手术", "假体隆鼻", "自体软骨隆鼻", "鼻综合", "鼻整形材料", "鼻整形风险"]
 draft: false
 featuredImage: "/images/posts/rhinoplasty-guide-featured.jpg"
-author: "医学审核团队"
+author: "美知医美 医学审核团队"
 reviewer: "执业医师审核"
 lastReviewed: "2026-05-27"
 medicalAudience: "Patient"

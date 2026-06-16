@@ -8,7 +8,7 @@ tags: ["医美资讯", "亚洲医美", "2026年5月", "行业监管", "肉毒素
 keywords: ["亚洲医美新闻", "中国医美2026", "医美监管新政", "肉毒素获批", "日本美容医疗", "艾尔建峰会", "直播电商医美"]
 draft: false
 featuredImage: "/images/posts/asian-aesthetic-medicine-news-may-2026/botox_treatment.jpg"
-author: "Beauty-Blog 医学审核团队"
+author: "美知医美 医学审核团队"
 reviewer: "执业医师审核"
 lastReviewed: "2026-06-07"
 medicalAudience: "Patient"

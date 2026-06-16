@@ -8,7 +8,7 @@ tags: ["注射美容", "肉毒素", "玻尿酸", "填充剂", "非手术"]
 keywords: ["肉毒素", "玻尿酸", "注射美容", "肉毒素和玻尿酸区别", "非手术美容", "面部填充", "除皱"]
 draft: false
 featuredImage: "/images/posts/injectable-guide-featured.jpg"
-author: "医学审核团队"
+author: "美知医美 医学审核团队"
 reviewer: "执业医师审核"
 lastReviewed: "2026-05-27"
 medicalAudience: "Patient"

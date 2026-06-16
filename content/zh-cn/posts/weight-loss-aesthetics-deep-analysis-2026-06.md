@@ -8,7 +8,7 @@ tags: ["减肥医美", "GLP-1", "大幅减重", "形体雕塑", "腹壁整形", 
 keywords: ["减肥 医美", "GLP-1 减重", "司美格鲁肽", "腹壁整形", "post-MWL 手术", "非侵入式塑形", "FDA 监管", "ASPS 2024"]
 draft: false
 featuredImage: "/images/posts/weight-loss-aesthetics-2026-06/image-1.jpg"
-author: "Beauty-Blog 医学审核团队"
+author: "美知医美 医学审核团队"
 reviewer: "执业医师审核"
 lastReviewed: "2026-06-07"
 medicalAudience: "Patient"

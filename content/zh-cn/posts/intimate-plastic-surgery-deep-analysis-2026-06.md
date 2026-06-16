@@ -8,7 +8,7 @@ tags: ["私密整形", "小阴唇成形", "阴道紧缩", "男性生殖整形", 
 keywords: ["私密整形", "小阴唇成形", "阴道紧缩术", "男性生殖器整形", "私密整形安全", "labiaplasty", "vaginoplasty", "私密激光"]
 draft: false
 featuredImage: "/images/posts/intimate-plastic-surgery-2026-06/image-1.jpg"
-author: "Beauty-Blog 医学审核团队"
+author: "美知医美 医学审核团队"
 reviewer: "执业医师审核"
 lastReviewed: "2026-06-11"
 medicalAudience: "Patient"

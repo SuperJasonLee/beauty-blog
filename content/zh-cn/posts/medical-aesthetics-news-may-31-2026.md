@@ -8,7 +8,7 @@ tags: ["医美行业分析", "GLP-1", "医美监管", "细胞疗法", "医美AI"
 keywords: ["2026年医美行业趋势", "GLP-1减肥药监管", "细胞疗法价格", "医美人工智能", "医美合规化", "轻医美市场", "医美消费者行为"]
 draft: false
 featuredImage: "/images/posts/medical-aesthetics-2026-05-31/consultation.jpg"
-author: "Beauty-Blog 医学审核团队"
+author: "美知医美 医学审核团队"
 reviewer: "执业医师审核"
 lastReviewed: "2026-06-07"
 medicalAudience: "Patient"

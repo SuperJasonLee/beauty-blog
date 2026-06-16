@@ -8,7 +8,7 @@ tags: ["小红书", "2026年5月", "医美话题", "黄金微针", "热玛吉", 
 keywords: ["小红书医美话题", "医美项目", "黄金微针", "热玛吉", "超声炮", "轮廓固定", "馒化修复"]
 draft: false
 featuredImage: "/images/posts/xiaohongshu-may-2026-live-featured.jpg"
-author: "Beauty-Blog 医学审核团队"
+author: "美知医美 医学审核团队"
 reviewer: "执业医师审核"
 lastReviewed: "2026-06-07
 ⚠️ 本文中此前版本含无法独立核实的具体博主名称、点赞数与搜索百分比，已在 2026-06-07 重写。如需引用具体数据，请独立核实。"

@@ -8,7 +8,7 @@ tags: ["隆胸", "假体隆胸", "自体脂肪隆胸", "整形趋势", "2026年"
 keywords: ["隆胸手术", "隆胸假体", "自体脂肪隆胸", "隆胸趋势", "2026年隆胸", "脂肪银行", "小容量隆胸"]
 draft: false
 featuredImage: "/images/posts/breast-augmentation-news-may-2026-featured.jpg"
-author: "医学审核团队"
+author: "美知医美 医学审核团队"
 reviewer: "执业医师审核"
 lastReviewed: "2026-06-07"
 medicalAudience: "Patient"

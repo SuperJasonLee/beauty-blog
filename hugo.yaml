@@ -7,15 +7,15 @@ enableRobotsTXT: true
 canonifyURLs: true
 
 params:
-  description: 专业、可靠的整形美容知识科普平台，涵盖面部整形、身体塑形、皮肤美容等项目的术前术后知识。
+  description: 美知医美 - 专业、可靠的整形美容知识科普平台，涵盖面部整形、身体塑形、皮肤美容等项目的术前术后知识。提供医美、整形、美容、护肤等专业指南。
   images:
     - /images/site-feature.png
 
   social:
-    twitter: beautyknowledge
+    twitter: aestheticwise
 
   author:
-    name: Beauty-Blog 医学审核团队
+    name: 美知医美 医学审核团队
     email: editor@beauty-blog.cloud-ip.cc
     url: "https://beauty-blog.cloud-ip.cc/pages/about/"
 
@@ -23,6 +23,8 @@ params:
     logo: "https://beauty-blog.cloud-ip.cc/images/site-feature.png"
     sameAs:
       - "https://github.com/SuperJasonLee/beauty-blog"
+    name: "美知医美"
+    alternateName: "AestheticWise"
 
   adsense:
     publisherId: ca-pub-2476380839387091
@@ -47,8 +49,8 @@ languages:
     locale: zh_CN
     label: 中文
     weight: 1
-    title: 整形美容知识百科 - 由执业医师审核的医美知识平台
-    description: 由执业医师审核的整形美容知识科普平台，提供基于循证医学的面部整形、身体塑形、皮肤美容等项目指南。
+    title: 美知医美 - 由执业医师审核的医美知识平台
+    description: 美知医美 - 由执业医师审核的整形美容知识科普平台，提供基于循证医学的面部整形、身体塑形、皮肤美容等项目指南。专注医美、整形、美容、护肤知识科普。
     params:
       homeInfoParams:
         Title: 欢迎来到整形美容知识百科
@@ -96,8 +98,8 @@ languages:
     locale: en_US
     label: English
     weight: 2
-    title: Aesthetic Medicine Knowledge Base - Medical Review Board
-    description: Physician-reviewed aesthetic medicine platform. Evidence-based guides on facial surgery, body contouring, and skin care. Citing data from ISAPS, ASPS, and AAFPRS.
+    title: AestheticWise - Physician-Reviewed Aesthetic Medicine Platform
+    description: AestheticWise - Physician-reviewed aesthetic medicine platform. Evidence-based guides on facial surgery, body contouring, and skin care. Citing data from ISAPS, ASPS, and AAFPRS. Your trusted source for aesthetic medicine knowledge.
     params:
       homeInfoParams:
         Title: Welcome to Aesthetic Medicine Knowledge Base
