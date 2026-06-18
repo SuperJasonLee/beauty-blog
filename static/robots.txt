@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+Allow: /en/
+Allow: /zh-cn/
+Allow: /posts/
+Allow: /pages/
+Allow: /categories/
+Allow: /tags/
+Allow: /archives/
+Allow: /search/
+
+# Sitemap location
+Sitemap: https://beauty-blog.cloud-ip.cc/sitemap.xml
+
+# Crawl delay for polite crawling
+Crawl-delay: 1
+
+# Disallow admin and technical paths
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /xmlrpc.php
+Disallow: /*.json$
+Disallow: /api/
