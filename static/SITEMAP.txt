@@ -1,0 +1,27 @@
+# AestheticWise Knowledge Base
+
+Welcome to AestheticWise (美知医美) — your trusted source for physician-reviewed aesthetic medicine information.
+
+## What We Cover
+
+Our editorial team provides comprehensive, evidence-based articles on:
+
+- **Facial Surgery**: Rhinoplasty, blepharoplasty, facelift techniques, facial contouring
+- **Breast Surgery**: Augmentation, lift, reduction, revision, fat transfer
+- **Body Contouring**: Liposuction, abdominoplasty, post-weight-loss procedures
+- **Injectables & Skin**: Botox, dermal fillers, laser treatments, RF microneedling
+- **Hair Restoration**: Transplantation techniques, medical therapies
+- **Industry News**: Regulatory updates, market trends, technology innovations
+
+## Our Promise
+
+Every article is reviewed by licensed physicians and cites authoritative sources including PubMed-indexed journals, ASPS, ISAPS, and FDA communications. We do not publish sponsored content or accept payment for favorable coverage.
+
+## Site Map
+
+- [Articles](/en/posts/) — All our latest articles
+- [Categories](/en/categories/) — Browse by topic
+- [Tags](/en/tags/) — Find articles by specific topics
+- [Archives](/en/archives/) — Browse by date
+- [About](/en/about/) — Learn about our mission and team
+- [Privacy Policy](/en/privacy/) — How we handle your data
