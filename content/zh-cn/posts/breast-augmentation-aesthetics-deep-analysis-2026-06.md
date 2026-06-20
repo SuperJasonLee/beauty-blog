@@ -38,7 +38,7 @@ translations:
 
 中文社区同样在积极讨论假体选择。[^4][^5] 等知乎专栏从求美者视角对比了曼托（Mentor）、娜琦丽（Natrelle）、傲诺拉（ALLURA）等主流品牌的材质差异、手感对比与长期随访数据，为求美者提供了实用的选择参考。
 
-{{< figure src="/images/posts/breast-augmentation-aesthetics-2026-06/image-2.jpg" title="假体材料革新：纳米纹理面技术显著降低包膜挛缩风险" >}}
+{{< figure src="/images/posts/breast-augmentation-aesthetics-2026-06/image-3.jpg" title="假体材料革新：纳米纹理面技术显著降低包膜挛缩风险" >}}
 
 ## 自体脂肪移植隆胸：脂肪银行与标准化流程
 
@@ -56,7 +56,7 @@ translations:
 
 但复合隆胸对术者技术要求更高，需要同时掌握假体植入与脂肪移植两项技术，且手术时间与费用相应增加。[^1][^2] 等行业资料指出，选择复合隆胸的求美者应优先选择具备脂肪移植与假体植入双重资质的整形外科医师。
 
-{{< figure src="/images/posts/breast-augmentation-aesthetics-2026-06/image-3.jpg" title="复合隆胸：假体提供形态，脂肪覆盖边缘，实现自然触感" >}}
+{{< figure src="/images/posts/breast-augmentation-aesthetics-2026-06/image-4.jpg" title="复合隆胸：假体提供形态，脂肪覆盖边缘，实现自然触感" >}}
 
 ## 术后管理与安全趋势
 
@@ -68,7 +68,7 @@ translations:
 
 **BIA-ALCL 风险管理**：乳房假体相关间变性大细胞淋巴瘤（BIA-ALCL）的长期风险管理仍是 2026 年的安全焦点。纳米纹理面假体的 BIA-ALCL 发生率已降至约 1/100,000，但患者仍应在术前充分知情同意[^2]。
 
-{{< figure src="/images/posts/breast-augmentation-aesthetics-2026-06/image-4.jpg" title="术后管理精细化：循证医学框架下的并发症预防与长期随访" >}}
+{{< figure src="/images/posts/breast-augmentation-aesthetics-2026-06/image-5.jpg" title="术后管理精细化：循证医学框架下的并发症预防与长期随访" >}}
 
 ## 常见问题解答
 

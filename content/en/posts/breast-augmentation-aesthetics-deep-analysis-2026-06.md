@@ -38,7 +38,7 @@ The primary advantage of nanotextured surfaces is reduced capsular contracture. 
 
 The Chinese-language community is actively discussing implant selection. [^4][^5] and other Zhihu contributors compare Mentor, Natrelle, and ALLURA implants on material composition, tactile feel, and long-term follow-up data, providing practical guidance for prospective patients.
 
-{{< figure src="/images/posts/breast-augmentation-aesthetics-2026-06/image-2.jpg" title="Implant innovation: nanotextured surfaces significantly reduce capsular contracture risk" >}}
+{{< figure src="/images/posts/breast-augmentation-aesthetics-2026-06/image-3.jpg" title="Implant innovation: nanotextured surfaces significantly reduce capsular contracture risk" >}}
 
 ## Autologous fat transfer: fat banking and standardized workflows
 
@@ -56,7 +56,7 @@ The core logic: implants provide volume and shape; fat overlays implant edges an
 
 Hybrid augmentation demands higher surgical skill, requiring mastery of both implant placement and fat grafting. [^1][^2] note that patients should prioritize surgeons with dual credentials in fat grafting and implant surgery.
 
-{{< figure src="/images/posts/breast-augmentation-aesthetics-2026-06/image-3.jpg" title="Hybrid augmentation: implants provide shape, fat covers edges for a natural feel" >}}
+{{< figure src="/images/posts/breast-augmentation-aesthetics-2026-06/image-4.jpg" title="Hybrid augmentation: implants provide shape, fat covers edges for a natural feel" >}}
 
 ## Post-operative management and safety trends
 
@@ -68,7 +68,7 @@ In 2026, post-operative management and complication prevention in breast augment
 
 **BIA-ALCL risk management:** Long-term management of breast implant-associated anaplastic large cell lymphoma (BIA-ALCL) remains a 2026 safety focus. The BIA-ALCL incidence rate with nanotextured implants has dropped to approximately 1 in 100,000, but patients should still receive thorough pre-operative informed consent[^2].
 
-{{< figure src="/images/posts/breast-augmentation-aesthetics-2026-06/image-4.jpg" title="Refined post-op care: evidence-based complication prevention and long-term follow-up" >}}
+{{< figure src="/images/posts/breast-augmentation-aesthetics-2026-06/image-5.jpg" title="Refined post-op care: evidence-based complication prevention and long-term follow-up" >}}
 
 ## Frequently Asked Questions
 
