@@ -61,7 +61,7 @@ def download_images_from_article(article: dict, date_str: str, counter_start: in
 
 
 def process_crawled_file(json_path: Path) -> dict:
-    articles = json.loads(json_path.read_text())
+    articles = json.loads(json_path.read_text(encoding="utf-8"))
     date_str = datetime.now().strftime("%Y%m%d")
     counter = 1
     url_map = {}
@@ -73,7 +73,7 @@ def process_crawled_file(json_path: Path) -> dict:
             if img_url in article["content_markdown"]:
                 url_map[img_url] = local
 
-    json_path.write_text(json.dumps(articles, ensure_ascii=False, indent=2))
+    json_path.write_text(json.dumps(articles, ensure_ascii=False, indent=2), encoding="utf-8")
     logger.info(f"Processed {len(articles)} articles, downloaded {counter - 1} images")
     return url_map
 

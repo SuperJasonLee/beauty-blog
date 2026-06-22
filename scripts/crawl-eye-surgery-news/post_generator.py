@@ -8,9 +8,9 @@ from datetime import datetime
 from pathlib import Path
 from typing import Optional
 
-ZH_DIR = Path(__file__).resolve().parent.parent.parent / "content" / "zh-cn" / "posts" / "eye-surgery-news"
-EN_DIR = Path(__file__).resolve().parent.parent.parent / "content" / "en" / "posts" / "eye-surgery-news"
-STATIC_IMAGES_DIR = Path(__file__).resolve().parent.parent.parent / "static" / "images" / "eye-surgery-news"
+ZH_DIR = Path(__file__).resolve().parent.parent.parent / "content" / "zh-cn" / "posts"
+EN_DIR = Path(__file__).resolve().parent.parent.parent / "content" / "en" / "posts"
+STATIC_IMAGES_DIR = Path(__file__).resolve().parent.parent.parent / "static" / "images" / "posts" / "eye-surgery-2026-06"
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s", handlers=[logging.StreamHandler(sys.stdout)])
 logger = logging.getLogger(__name__)
@@ -36,7 +36,7 @@ def ensure_cover_image(slug: str, fallback_cover: Optional[str] = None) -> Optio
     """
     STATIC_IMAGES_DIR.mkdir(parents=True, exist_ok=True)
     target = STATIC_IMAGES_DIR / f"{slug}-cover.jpg"
-    public_path = f"/images/eye-surgery-news/{slug}-cover.jpg"
+    public_path = f"/images/posts/eye-surgery-2026-06/{slug}-cover.jpg"
 
     if target.exists():
         logger.info(f"Cover exists: {target.name}")
@@ -283,7 +283,7 @@ reviewer: "执业医师审核"
 lastReviewed: "{date_str}"
 medicalAudience: "Patient"
 {('featuredImage: "' + cover_path + '"') if cover_path else '# featuredImage: (no cover available)'}
-translations: ["/en/posts/eye-surgery-news/{slug}"]
+translations: ["/en/posts/{slug}"]
 ---"""
 
     return f"{frontmatter}\n\n{body}"
@@ -413,7 +413,7 @@ reviewer: "执业医师审核"
 lastReviewed: "{date_str}"
 medicalAudience: "Patient"
 {('featuredImage: "' + cover_path + '"') if cover_path else '# featuredImage: (no cover available)'}
-translations: ["/zh-cn/posts/eye-surgery-news/{slug}"]
+translations: ["/zh-cn/posts/{slug}"]
 ---"""
 
     return f"{frontmatter}\n\n{body}"
@@ -423,19 +423,19 @@ def write_post(content: str, slug: str, language: str) -> Path:
     out_dir = ZH_DIR if language == "zh" else EN_DIR
     out_dir.mkdir(parents=True, exist_ok=True)
     filepath = out_dir / f"{slug}.md"
-    filepath.write_text(content)
+    filepath.write_text(content, encoding="utf-8")
     logger.info(f"Wrote {language} post: {filepath}")
     return filepath
 
 
 def generate_posts(crawled_json_path: Path) -> list[Path]:
-    articles = json.loads(crawled_json_path.read_text())
+    articles = json.loads(crawled_json_path.read_text(encoding="utf-8"))
     if not articles:
         logger.warning("No articles to generate posts from")
         return []
 
     date_str = datetime.now().strftime("%Y-%m-%d")
-    slug = f"eye-surgery-news-{datetime.now().strftime('%Y%m%d')}"
+    slug = f"eye-surgery-deep-analysis-{datetime.now().strftime('%Y-%m')}"
 
     # Ensure a cover image exists for this slug. See ensure_cover_image() for
     # the post-2026-06-07 contract: it raises RuntimeError if neither a

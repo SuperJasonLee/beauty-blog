@@ -14,15 +14,15 @@ DEDUP_FILE = DATA_DIR / "crawled_urls.json"
 SOURCES = [
     {
         "name": "pubmed",
-        "command": ["opencli", "pubmed", "search", "eye plastic surgery OR blepharoplasty OR eyelid surgery", "--limit", "10", "-f", "json"],
+        "command": ["opencli", "pubmed", "search", "eye plastic surgery OR blepharoplasty OR eyelid surgery 2026", "--limit", "10", "-f", "json"],
     },
     {
         "name": "zhihu",
-        "command": ["opencli", "zhihu", "search", "眼部整形", "--limit", "10", "-f", "json"],
+        "command": ["opencli", "zhihu", "search", "眼部整形 2026", "--limit", "10", "-f", "json"],
     },
     {
         "name": "google",
-        "command": ["opencli", "web", "read", "--url", "https://www.google.com/search?q=eye+plastic+surgery+news+2024&num=10", "-f", "json"],
+        "command": ["opencli", "web", "read", "--url", "https://www.google.com/search?q=eye+plastic+surgery+news+2026&num=10", "-f", "json"],
     },
 ]
 
@@ -32,21 +32,23 @@ logger = logging.getLogger(__name__)
 
 def load_crawled_urls() -> set:
     if DEDUP_FILE.exists():
-        return set(json.loads(DEDUP_FILE.read_text()))
+        return set(json.loads(DEDUP_FILE.read_text(encoding="utf-8")))
     return set()
 
 
 def save_crawled_urls(urls: set):
-    DEDUP_FILE.write_text(json.dumps(sorted(urls), ensure_ascii=False, indent=2))
+    DEDUP_FILE.write_text(json.dumps(sorted(urls), ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def run_opencli(cmd: list[str], timeout: int = 60) -> Optional[dict]:
     try:
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
+        result = subprocess.run(cmd, capture_output=True, timeout=timeout, shell=True)
+        stdout = result.stdout.decode("utf-8", errors="replace")
+        stderr = result.stderr.decode("utf-8", errors="replace")
         if result.returncode != 0:
-            logger.warning(f"opencli returned non-zero: {result.stderr[:200]}")
+            logger.warning(f"opencli returned non-zero: {stderr[:200]}")
             return None
-        return json.loads(result.stdout)
+        return json.loads(stdout)
     except subprocess.TimeoutExpired:
         logger.warning(f"Timeout running: {' '.join(cmd)}")
     except json.JSONDecodeError:
@@ -131,7 +133,7 @@ def save_results(articles: list[dict]) -> Path:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
     out_file = DATA_DIR / f"eye_surgery_news_{ts}.json"
-    out_file.write_text(json.dumps(articles, ensure_ascii=False, indent=2))
+    out_file.write_text(json.dumps(articles, ensure_ascii=False, indent=2), encoding="utf-8")
     logger.info(f"Saved {len(articles)} articles to {out_file}")
     return out_file
 
