@@ -252,9 +252,8 @@ def build_zh_post(articles: list[dict], date_str: str, slug: str, cover_path: Op
 title: "{title}"
 date: {date_str}
 lastmod: {date_str}
-draft: true
-description: |
-  {description}
+draft: false
+description: "{description}"
 tags: ["鼻部整形", "隆鼻", "技术趋势", "行业分析", "安全规范"]
 categories: ["鼻部整形"]
 keywords: ["鼻部整形", "隆鼻", "鼻整形技术", "鼻部整形安全", "鼻部整形 {date_str}"]
@@ -393,9 +392,8 @@ The analysis of rhinoplasty developments around {date_str} reveals three dominan
 title: "{title}"
 date: {date_str}
 lastmod: {date_str}
-draft: true
-description: |
-  {description}
+draft: false
+description: "{description}"
 tags: ["rhinoplasty", "nose surgery", "surgical techniques", "industry analysis", "patient safety"]
 categories: ["Rhinoplasty"]
 keywords: ["rhinoplasty", "nose surgery", "nasal surgery", "rhinoplasty techniques", "rhinoplasty {date_str}"]
