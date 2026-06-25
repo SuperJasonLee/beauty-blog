@@ -1,0 +1,92 @@
+﻿{
+  "status": "error",
+  "total_posts": 23,
+  "errors": [
+    {
+      "file": "content\\zh-cn\\posts\\deformity-correction-deep-analysis-2026-06.md",
+      "line": null,
+      "severity": "error",
+      "rule_id": "CITE006",
+      "message": "footnote ref [^10] used but never defined"
+    },
+    {
+      "file": "content\\zh-cn\\posts\\deformity-correction-deep-analysis-2026-06.md",
+      "line": null,
+      "severity": "error",
+      "rule_id": "CITE006",
+      "message": "footnote ref [^6] used but never defined"
+    },
+    {
+      "file": "content\\zh-cn\\posts\\deformity-correction-deep-analysis-2026-06.md",
+      "line": null,
+      "severity": "error",
+      "rule_id": "CITE006",
+      "message": "footnote ref [^4] used but never defined"
+    },
+    {
+      "file": "content\\zh-cn\\posts\\deformity-correction-deep-analysis-2026-06.md",
+      "line": null,
+      "severity": "error",
+      "rule_id": "CITE006",
+      "message": "footnote ref [^5] used but never defined"
+    },
+    {
+      "file": "content\\zh-cn\\posts\\deformity-correction-deep-analysis-2026-06.md",
+      "line": null,
+      "severity": "error",
+      "rule_id": "CITE006",
+      "message": "footnote ref [^3] used but never defined"
+    },
+    {
+      "file": "content\\zh-cn\\posts\\deformity-correction-deep-analysis-2026-06.md",
+      "line": null,
+      "severity": "error",
+      "rule_id": "CITE006",
+      "message": "footnote ref [^1] used but never defined"
+    },
+    {
+      "file": "content\\zh-cn\\posts\\deformity-correction-deep-analysis-2026-06.md",
+      "line": null,
+      "severity": "error",
+      "rule_id": "CITE006",
+      "message": "footnote ref [^7] used but never defined"
+    },
+    {
+      "file": "content\\zh-cn\\posts\\deformity-correction-deep-analysis-2026-06.md",
+      "line": null,
+      "severity": "error",
+      "rule_id": "CITE006",
+      "message": "footnote ref [^8] used but never defined"
+    },
+    {
+      "file": "content\\zh-cn\\posts\\deformity-correction-deep-analysis-2026-06.md",
+      "line": null,
+      "severity": "error",
+      "rule_id": "CITE006",
+      "message": "footnote ref [^2] used but never defined"
+    },
+    {
+      "file": "content\\zh-cn\\posts\\deformity-correction-deep-analysis-2026-06.md",
+      "line": null,
+      "severity": "error",
+      "rule_id": "CITE006",
+      "message": "footnote ref [^9] used but never defined"
+    },
+    {
+      "file": "content\\zh-cn\\posts\\deformity-correction-deep-analysis-2026-06.md",
+      "line": null,
+      "severity": "error",
+      "rule_id": "FAQ001",
+      "message": "news/trend POST missing {< faq >} shortcode"
+    }
+  ],
+  "warnings": [],
+  "counts": {
+    "errors": 11,
+    "warnings": 0,
+    "by_rule": {
+      "CITE006": 10,
+      "FAQ001": 1
+    }
+  }
+}

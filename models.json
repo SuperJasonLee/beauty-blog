@@ -1,0 +1,23 @@
+{
+  "providers": {
+    "9527code": {
+      "api": "openai-completions",
+      "apiKey": "sk-ozF2qa2F7JGZ8xugbSCeuSP10BxtNhZjyYjvKpfZ2cUfXJAG",
+      "baseUrl": "https://9527code.com/v1",
+      "models": [
+        {
+          "api": "openai-completions",
+          "id": "google/gemma-4-31b-it",
+          "name": "google/gemma-4-31b-it",
+          "reasoning": true
+        },
+        {
+          "api": "openai-completions",
+          "id": "gpt-oss-120b",
+          "name": "gpt-oss-120b",
+          "reasoning": true
+        }
+      ]
+    }
+  }
+}
