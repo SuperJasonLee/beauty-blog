@@ -1,8 +1,5 @@
 # Image Credits
 
-This file tracks attribution for every image under `static/images/` that was sourced
-from a third party. Locally generated images (no third-party source) are not listed.
-
 | File | Source URL | License | Author | Author URL | Date added |
 | --- | --- | --- | --- | --- | --- |
 | `eye-surgery-news/eye-surgery-news-20260606-cover.jpg` | https://www.pexels.com/photo/macro-photography-of-human-eye-1715091/ | Pexels License | thatguycraig000 | https://www.pexels.com/@thatguycraig000/ | 2026-06-07 |
@@ -58,3 +55,9 @@ the author display name, the author profile URL, and today's date (YYYY-MM-DD).
 | `posts/facial-plastic-surgery-2026-07/image-3.jpg` | https://www.pexels.com/photo/cosmetologist-in-pink-gloves-making-injection-in-woman-face-4586711/ | Pexels License (provenance by curation; page fetch was anti-bot-blocked) | Anna Shvets | https://www.pexels.com/@shvetsa/ | 2026-07-12 |
 | `posts/facial-plastic-surgery-2026-07/image-4.jpg` | https://www.pexels.com/photo/close-up-of-cosmetic-lip-injection-procedure-34775443/ | Pexels License (provenance by curation; page fetch was anti-bot-blocked) | Farhad Irani | https://www.pexels.com/@farhadirani/ | 2026-07-12 |
 | `posts/facial-plastic-surgery-2026-07/image-5.jpg` | https://www.pexels.com/photo/a-surgeon-marking-a-patient-s-eyelid-7585312/ | Pexels License (provenance by curation; page fetch was anti-bot-blocked) | cottonbro studio | https://www.pexels.com/@cottonbro/ | 2026-07-12 |
+| `posts/breast-augmentation-aesthetics-2026-07/image-1.jpg` | https://www.pexels.com/photo/confident-woman-in-white-with-natural-light-background-31573300/ | Pexels License | Ben Hedrich | https://www.pexels.com/@ben-hedrich-1663970957/ | 2026-07-11 |
+| `posts/breast-augmentation-aesthetics-2026-07/image-2.jpg` | https://www.pexels.com/photo/a-patient-having-a-consultation-with-her-doctor-5214997/ | Pexels License | AI25.Studio | https://www.pexels.com/@ai25studioai/ | 2026-07-11 |
+| `posts/breast-augmentation-aesthetics-2026-07/image-3.jpg` | https://www.pexels.com/photo/fit-athletic-woman-in-urban-setting-in-activewear-29138804/ | Pexels License | pedro furtado | https://www.pexels.com/@pedrofurtadoo/ | 2026-07-11 |
+| `posts/breast-augmentation-aesthetics-2026-07/image-4.jpg` | https://www.pexels.com/photo/medical-imaging-of-the-brain-5723875/ | Pexels License | cottonbro studio | https://www.pexels.com/@cottonbro/ | 2026-07-11 |
+| `posts/breast-augmentation-aesthetics-2026-07/image-5.jpg` | https://www.pexels.com/photo/a-woman-having-a-facial-treatment-6663368/ | Pexels License | Arina Krasnikova | https://www.pexels.com/@arina-krasnikova/ | 2026-07-11 |
+| `posts/breast-augmentation-aesthetics-2026-07/image-6.jpg` | https://www.pexels.com/photo/confident-woman-in-white-shirt-portrait-30468634/ | Pexels License | Augusto Carneiro Junior | https://www.pexels.com/@augustocarneirojr/ | 2026-07-11 |

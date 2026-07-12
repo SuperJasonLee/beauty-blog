@@ -420,7 +420,12 @@ def _strip_code_blocks(text: str) -> str:
 
 
 def audit_file(path: Path) -> list[Finding]:
-    text = path.read_text(encoding="utf-8")
+    # Try UTF-8 first, fall back to GBK for Chinese-localized files
+    try:
+        text = path.read_text(encoding="utf-8")
+    except UnicodeDecodeError:
+        text = path.read_text(encoding="gbk")
+    fields, _, body_start = parse_frontmatter(text)
     fields, _, body_start = parse_frontmatter(text)
     findings: list[Finding] = []
     findings.extend(check_frontmatter(path, text, fields))

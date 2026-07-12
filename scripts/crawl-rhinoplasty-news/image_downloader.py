@@ -10,7 +10,7 @@ from typing import Optional
 
 import httpx
 
-IMAGES_DIR = Path(__file__).resolve().parent.parent.parent / "static" / "images" / "eye-surgery-news"
+IMAGES_DIR = Path(__file__).resolve().parent.parent.parent / "static" / "images" / "rhinoplasty-news"
 IMAGE_URL_PATTERN = re.compile(r"!\[([^\]]*)\]\((https?://[^)]+)\)")
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s", handlers=[logging.StreamHandler(sys.stdout)])
@@ -21,7 +21,7 @@ def generate_filename(url: str, date: str, increment: int) -> str:
     ext = Path(url).suffix.split("?")[0][:5] or ".jpg"
     if ext not in (".jpg", ".jpeg", ".png", ".gif", ".webp"):
         ext = ".jpg"
-    return f"eye-surgery-news-{date}-{increment:03d}{ext}"
+    return f"rhinoplasty-{date}-{increment:03d}{ext}"
 
 
 def download_image(url: str, filename: str, timeout: int = 30) -> Optional[str]:
@@ -50,7 +50,7 @@ def download_images_from_article(article: dict, date_str: str, counter_start: in
         filename = generate_filename(url, date_str, counter)
         result = download_image(url, filename)
         if result:
-            downloaded[url] = f"/images/eye-surgery-news/{filename}"
+            downloaded[url] = f"/images/rhinoplasty-news/{filename}"
             counter += 1
 
     for url, local_path in downloaded.items():
@@ -61,7 +61,7 @@ def download_images_from_article(article: dict, date_str: str, counter_start: in
 
 
 def process_crawled_file(json_path: Path) -> dict:
-    articles = json.loads(json_path.read_text())
+    articles = json.loads(json_path.read_text(encoding="utf-8"))
     date_str = datetime.now().strftime("%Y%m%d")
     counter = 1
     url_map = {}
@@ -69,11 +69,11 @@ def process_crawled_file(json_path: Path) -> dict:
     for article in articles:
         article, counter = download_images_from_article(article, date_str, counter)
         for img_url in article.get("image_urls", []):
-            local = f"/images/eye-surgery-news/{generate_filename(img_url, date_str, counter)}"
+            local = f"/images/rhinoplasty-news/{generate_filename(img_url, date_str, counter)}"
             if img_url in article["content_markdown"]:
                 url_map[img_url] = local
 
-    json_path.write_text(json.dumps(articles, ensure_ascii=False, indent=2))
+    json_path.write_text(json.dumps(articles, ensure_ascii=False, indent=2), encoding="utf-8")
     logger.info(f"Processed {len(articles)} articles, downloaded {counter - 1} images")
     return url_map
 
@@ -84,8 +84,8 @@ def main(json_path: Optional[str] = None):
     if json_path:
         path = Path(json_path)
     else:
-        data_dir = Path(__file__).resolve().parent.parent.parent / "data" / "crawled" / "eye-surgery-news"
-        files = sorted(data_dir.glob("eye_surgery_news_*.json"))
+        data_dir = Path(__file__).resolve().parent.parent.parent / "data" / "crawled" / "rhinoplasty-news"
+        files = sorted(data_dir.glob("rhinoplasty_news_*.json"))
         if not files:
             logger.error("No crawled data files found")
             return {}

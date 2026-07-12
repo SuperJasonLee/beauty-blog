@@ -1,0 +1,49 @@
+{
+  "generatedBy": "openclaw-plugin-model-catalog-v1",
+  "providers": {
+    "ollama": {
+      "baseUrl": "http://0.0.0.0:11434",
+      "models": [
+        {
+          "contextWindow": 128000,
+          "cost": {
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "input": 0,
+            "output": 0
+          },
+          "id": "Maternion/fara:7b",
+          "input": [
+            "text",
+            "image"
+          ],
+          "name": "Maternion/fara:7b",
+          "params": {
+            "num_ctx": 128000
+          }
+        },
+        {
+          "contextWindow": 131072,
+          "cost": {
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "input": 0,
+            "output": 0
+          },
+          "id": "cyhsu2006/gemma4:12b",
+          "input": [
+            "text",
+            "image"
+          ],
+          "name": "cyhsu2006/gemma4:12b",
+          "reasoning": true,
+          "params": {
+            "num_ctx": 131072
+          }
+        }
+      ],
+      "apiKey": "ollama-local",
+      "api": "ollama"
+    }
+  }
+}
