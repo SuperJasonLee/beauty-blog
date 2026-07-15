@@ -14,11 +14,11 @@ DEDUP_FILE = DATA_DIR / "crawled_urls.json"
 SOURCES = [
     {
         "name": "pubmed",
-        "command": ["opencli", "pubmed", "search", "rhinoplasty OR nasal surgery OR nose augmentation OR nasal reconstruction 2026", "--limit", "10", "-f", "json"],
+        "command": ["opencli", "pubmed", "search", "aesthetic rhinoplasty OR cosmetic rhinoplasty OR rhinoplasty surgery technique 2026", "--limit", "10", "-f", "json"],
     },
     {
         "name": "zhihu",
-        "command": ["opencli", "zhihu", "search", "鼻部整形 隆鼻 2026", "--limit", "10", "-f", "json"],
+        "command": ["opencli", "zhihu", "search", "鼻部整形 隆鼻 审美 医美 2026", "--limit", "10", "-f", "json"],
     },
 ]
 

@@ -29,7 +29,7 @@ def ensure_cover_image(slug: str, fallback_cover: Optional[str] = None) -> Optio
     """
     STATIC_IMAGES_DIR.mkdir(parents=True, exist_ok=True)
     target = STATIC_IMAGES_DIR / f"{slug}-cover.jpg"
-    public_path = f"/images/posts/rhinoplasty-aesthetics-2026-06/{slug}-cover.jpg"
+    public_path = f"/images/posts/{STATIC_IMAGES_DIR.name}/{slug}-cover.jpg"
 
     if target.exists():
         logger.info(f"Cover exists: {target.name}")
