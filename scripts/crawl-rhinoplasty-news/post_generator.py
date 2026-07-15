@@ -10,7 +10,7 @@ from typing import Optional
 
 ZH_DIR = Path(__file__).resolve().parent.parent.parent / "content" / "zh-cn" / "posts"
 EN_DIR = Path(__file__).resolve().parent.parent.parent / "content" / "en" / "posts"
-STATIC_IMAGES_DIR = Path(__file__).resolve().parent.parent.parent / "static" / "images" / "posts" / "rhinoplasty-aesthetics-2026-06"
+STATIC_IMAGES_DIR = Path(__file__).resolve().parent.parent.parent / "static" / "images" / "posts" / "rhinoplasty-aesthetics-2026-07"
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s", handlers=[logging.StreamHandler(sys.stdout)])
 logger = logging.getLogger(__name__)
