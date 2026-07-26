@@ -1,0 +1,4 @@
+zh: faq=True, disclaimer=True, datetime=False, {date}=False
+  footer: *本文基于 2026 年 7 月 前后的 PubMed 学术文献、知乎专业讨论、ASPS / ISAPS / FDA 公开资料综合整理，仅供医学知识科普用途。任何医美决策，请咨询具备资质的执业医师。*
+en: faq=True, disclaimer=True, datetime=False, {date}=False
+  footer: *This analysis synthesizes PubMed-indexed literature, Zhihu professional discussions, and public mat
