@@ -16,7 +16,7 @@ translations:
   - "/en/posts/intimate-plastic-surgery-deep-analysis-2026-07"
 ---
 
-{{< figure src="/images/posts/intimate-plastic-surgery-aesthetics-2026-07/image-2.jpg" title='私密整形正在从"边缘亚专科"跃升为全球整形外科增速最快的赛道之一' >}}
+{{< figure src="/images/posts/intimate-plastic-surgery-aesthetics-2026-07/image-2.jpg" title="私密整形正在从“边缘亚专科”跃升为全球整形外科增速最快的赛道之一" >}}
 
 {{< medical-disclaimer />}}
 
@@ -41,7 +41,7 @@ translations:
 
 然而，技术的精细化与商业化扩张之间的矛盾同样突出。 的 2026 年女性主义综述尖锐地指出，小阴唇成形术的"医疗化"进程需要警惕：当"正常的人体解剖变异"被重新定义为"病理状态"时，手术的伦理正当性便需要重新审视。该文呼吁在尊重个人审美选择自主权的同时，也应保护那些因自身解剖变异而产生心理压力的群体，避免将"外观不满意"过度医疗化。
 
-{{< figure src="/images/posts/intimate-plastic-surgery-aesthetics-2026-07/image-2.jpg" title='医美咨询：专业医师在私密整形术前沟通中的关键作用不可替代' >}}
+{{< figure src="/images/posts/intimate-plastic-surgery-aesthetics-2026-07/image-2.jpg" title="医美咨询：专业医师在私密整形术前沟通中的关键作用不可替代" >}}
 
 阴道紧缩术（vaginoplasty / pelvic floor rejuvenation）方面，学术文献与临床实践之间的距离仍然显著。2026 年发表的病例报告 [^5] 提示，阴道通道完全闭锁的手术修复仍然是一项技术要求极高的手术。多位临床专家在综述中指出，将"阴道松弛"作为手术指征需要极其谨慎的评估：产后女性的盆底肌功能在规范康复训练后可恢复至接近基线，而过度依赖手术干预可能忽视了对盆底功能本身的系统评估。
 

@@ -16,7 +16,7 @@ translations:
   - "/en/posts/facial-plastic-surgery-deep-analysis-2026-07"
 ---
 
-{{< figure src="/images/posts/facial-plastic-surgery-2026-07/image-2.jpg" title='术前划线是鼻综合手术的关键环节——医生根据面部比例和骨骼结构标记手术入路与移植物位置' >}}
+{{< figure src="/images/posts/facial-plastic-surgery-2026-07/image-2.jpg" title="术前划线是鼻综合手术的关键环节——医生根据面部比例和骨骼结构标记手术入路与移植物位置" >}}
 
 {{< medical-disclaimer />}}
 
@@ -46,9 +46,9 @@ HA 填充剂的注射技术正从"浅层平铺"转向"骨膜上深层注射"（d
 
 肉毒素（botulinum toxin）在 2026 年的适应症扩展令人瞩目。除传统的眉间纹、鱼尾纹、抬头纹外，下颌线轮廓塑形（Jawline contouring）、颈部条带改善（Nefertiti lift）、以及腋下多汗症（axillary hyperhidrosis）的治疗均已获得多国监管批准或临床证据支持。中国市场的"水光针"（mesotherapy with HA）热度也在 2026 年持续，但监管层面对"水光针"作为医疗器械还是化妆品的分类争议仍未完全解决。
 
-{{< figure src="/images/posts/facial-plastic-surgery-2026-07/image-3.jpg" title='注射美容已从单纯的面部除皱扩展到全脸轮廓塑形，操作者的解剖学知识是安全的核心保障' >}}
+{{< figure src="/images/posts/facial-plastic-surgery-2026-07/image-3.jpg" title="注射美容已从单纯的面部除皱扩展到全脸轮廓塑形，操作者的解剖学知识是安全的核心保障" >}}
 
-{{< figure src="/images/posts/facial-plastic-surgery-2026-07/image-4.jpg" title='肉毒素等神经毒素注射的精确度直接决定效果自然度，面动脉分支的解剖变异是主要风险点' >}}
+{{< figure src="/images/posts/facial-plastic-surgery-2026-07/image-4.jpg" title="肉毒素等神经毒素注射的精确度直接决定效果自然度，面动脉分支的解剖变异是主要风险点" >}}
 
 ## 面部抗衰手术：拉皮、眼袋与微创联合方案
 
@@ -60,7 +60,7 @@ SMAS 拉皮手术在传统大切口拉皮的基础上，发展出多种改良术
 
 线雕（PDO/PLLA 线雕）作为介于注射和手术之间的"轻医美"项目，在 2026 年经历了市场的理性回归。学术文献指出，线雕的适应症应限定于轻中度面部松弛，且需与填充剂或肉毒素联合使用才能获得理想效果；单纯依赖线雕实现"V脸"的过度营销正在被临床证据反噬。
 
-{{< figure src="/images/posts/facial-plastic-surgery-2026-07/image-5.jpg" title='眼袋整形（blepharoplasty）术前划线：下眼袋脂肪重置和皮肤切除范围需精确标记' >}}
+{{< figure src="/images/posts/facial-plastic-surgery-2026-07/image-5.jpg" title="眼袋整形（blepharoplasty）术前划线：下眼袋脂肪重置和皮肤切除范围需精确标记" >}}
 
 ## 监管、安全与行业自律
 

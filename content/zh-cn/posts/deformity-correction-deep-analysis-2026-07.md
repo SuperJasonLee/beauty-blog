@@ -17,7 +17,7 @@ translations: ["/en/posts/deformity-correction-deep-analysis-2026-07"]
 
 {{< medical-disclaimer />}}
 
-{{< figure src="/images/posts/deformity-correction-2026-07/image-2.jpg" title='畸形矫正技术正从"标准化修复"迈向"个性化精准重建"的新时代' >}}
+{{< figure src="/images/posts/deformity-correction-2026-07/image-2.jpg" title="畸形矫正技术正从“标准化修复”迈向“个性化精准重建”的新时代" >}}
 
 2026 年 7 月发布的最新研究显示，畸形矫正（deformity correction / craniofacial reconstructive surgery）领域持续深化着"微创化""数字化""多学科协作"三大主题：颅缝早闭修复的术式精细化、牵引成骨的长期结局优化、唇腭裂序列治疗的循证升级、以及 3D 打印与 AI 技术在颅面重建中的深度渗透，共同构成了当前学科前沿的发展主线。本期分析基于 16 篇最新学术文献（PubMed），从手术技术、数字化辅助、患者预后、安全管理和就医决策等维度进行深度解读。
 

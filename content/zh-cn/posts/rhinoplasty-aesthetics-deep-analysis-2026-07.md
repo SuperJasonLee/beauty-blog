@@ -16,7 +16,7 @@ translations:
  - "/en/posts/rhinoplasty-aesthetics-deep-analysis-2026-07"
 ---
 
-{{< figure src="/images/posts/rhinoplasty-aesthetics-2026-07/image-2.jpg" title='鼻部整形技术正从"模板化"走向"个性化自然审美"的新时代' >}}
+{{< figure src="/images/posts/rhinoplasty-aesthetics-2026-07/image-2.jpg" title="鼻部整形技术正从“模板化”走向“个性化自然审美”的新时代" >}}
 
 {{< medical-disclaimer />}}
 

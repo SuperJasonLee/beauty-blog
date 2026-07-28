@@ -16,7 +16,7 @@ translations:
   - "/en/posts/plastic-surgery-subfields-deep-analysis-2026-07"
 ---
 
-{< figure src="/images/posts/plastic-surgery-subfields-2026-07/image-2.jpg" title='2026 年整形美容八大细分领域全景：技术前沿、安全动态与消费趋势深度分析' >}
+{< figure src="/images/posts/plastic-surgery-subfields-2026-07/image-2.jpg" title="2026 年整形美容八大细分领域全景：技术前沿、安全动态与消费趋势深度分析" >}
 
 {{< medical-disclaimer />}}
 
@@ -40,7 +40,7 @@ translations:
 
 中文社区层面， 等知乎讨论持续追踪眼综合（综合眼部手术）的最新动态，指出"开眼角 + 去皮去脂 + 提肌"的联合方案已成为双眼皮手术的主流模式，但消费者对"自然款双眼皮"的需求正在加速替代"网红款平行型"。
 
-{{< figure src="/images/posts/plastic-surgery-subfields-2026-07/image-2.jpg" title='眼部整形正从单一&ldquo;双眼皮手术&rdquo;向眼综合（去皮去脂+提肌+开眼角联合方案）演进' >}}
+{{< figure src="/images/posts/plastic-surgery-subfields-2026-07/image-2.jpg" title="眼部整形正从单一“双眼皮手术”向眼综合（去皮去脂+提肌+开眼角联合方案）演进" >}}
 
 ## 鼻部整形：从垫高到全鼻结构重塑
 
@@ -48,7 +48,7 @@ translations:
 
 技术层面，3D 打印导航模板和计算机术前模拟（如 VIRTSIM 虚拟现实系统）在国内三甲医院的普及率显著提升，使求美者可在术前直观预览术后效果，同时辅助医生规划移植物形态与手术入路。[^4][^5][^6] 等知乎讨论指出，"妈生鼻"审美——即保留个人面部特征的微调而非千篇一律的模板化——已成为 2026 年中文医美社区的主流诉求，倒逼医生更新手术理念。
 
-{{< figure src="/images/posts/plastic-surgery-subfields-2026-07/image-3.jpg" title='鼻综合手术正从「单一垫高」向全鼻结构重塑演进，3D导航与术前模拟是三甲医院标配' >}}
+{{< figure src="/images/posts/plastic-surgery-subfields-2026-07/image-3.jpg" title="鼻综合手术正从「单一垫高」向全鼻结构重塑演进，3D导航与术前模拟是三甲医院标配" >}}
 
 ## 唇部整形：精准注射与美学比例
 
@@ -86,7 +86,7 @@ translations:
 
 中文舆论场对私密整形的讨论持续升温， 等知乎专栏文章关注术后恢复期管理、适应症筛选与机构合规性，反映出中国消费者对该领域的认知正在从"禁忌话题"转向"可公开讨论的健康美学选择"。
 
-{{< figure src="/images/posts/plastic-surgery-subfields-2026-07/image-5.jpg" title='私密部位整形正从美学需求扩展至功能性诉求，知情同意与适应症规范化是关键' >}}
+{{< figure src="/images/posts/plastic-surgery-subfields-2026-07/image-5.jpg" title="私密部位整形正从美学需求扩展至功能性诉求，知情同意与适应症规范化是关键" >}}
 
 ## 畸形矫正：颅颌面重建与显微外科进展
 
@@ -94,7 +94,7 @@ translations:
 
 中文社区对畸形矫正的关注点多集中于唇腭裂修复的时机选择、瘢痕管理和术后心理支持，[^20][^21][^22] 等讨论持续普及"序列治疗"理念，帮助家庭做出更加科学的医疗决策。
 
-{{< figure src="/images/posts/plastic-surgery-subfields-2026-07/image-6.jpg" title='畸形矫正与颅颌面重建正经历数字化辅助时代：术前模拟、术中导航与序列治疗构成三维支撑' >}}
+{{< figure src="/images/posts/plastic-surgery-subfields-2026-07/image-6.jpg" title="畸形矫正与颅颌面重建正经历数字化辅助时代：术前模拟、术中导航与序列治疗构成三维支撑" >}}
 
 ## 监管动态与消费趋势
 

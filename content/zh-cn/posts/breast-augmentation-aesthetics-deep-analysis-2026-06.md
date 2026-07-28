@@ -16,7 +16,7 @@ translations:
   - "/en/posts/breast-augmentation-aesthetics-deep-analysis-2026-06"
 ---
 
-{{< figure src="/images/posts/breast-augmentation-aesthetics-2026-06/image-2.jpg" title='假体材料革新：纳米纹理面技术进入主流视野' >}}
+{{< figure src="/images/posts/breast-augmentation-aesthetics-2026-06/image-2.jpg" title="假体材料革新：纳米纹理面技术进入主流视野" >}}
 
 {{< medical-disclaimer />}}
 
