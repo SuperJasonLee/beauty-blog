@@ -40,7 +40,7 @@ translations:
 
 中文社区层面， 等知乎讨论持续追踪眼综合（综合眼部手术）的最新动态，指出"开眼角 + 去皮去脂 + 提肌"的联合方案已成为双眼皮手术的主流模式，但消费者对"自然款双眼皮"的需求正在加速替代"网红款平行型"。
 
-{{< figure src="/images/posts/plastic-surgery-subfields-2026-07/image-2.jpg" title='眼部整形正从单一"双眼皮手术"向眼综合（去皮去脂+提肌+开眼角联合方案）演进' >}}
+{{< figure src="/images/posts/plastic-surgery-subfields-2026-07/image-2.jpg" title='眼部整形正从单一&ldquo;双眼皮手术&rdquo;向眼综合（去皮去脂+提肌+开眼角联合方案）演进' >}}
 
 ## 鼻部整形：从垫高到全鼻结构重塑
 
@@ -48,7 +48,7 @@ translations:
 
 技术层面，3D 打印导航模板和计算机术前模拟（如 VIRTSIM 虚拟现实系统）在国内三甲医院的普及率显著提升，使求美者可在术前直观预览术后效果，同时辅助医生规划移植物形态与手术入路。[^4][^5][^6] 等知乎讨论指出，"妈生鼻"审美——即保留个人面部特征的微调而非千篇一律的模板化——已成为 2026 年中文医美社区的主流诉求，倒逼医生更新手术理念。
 
-{{< figure src="/images/posts/plastic-surgery-subfields-2026-07/image-3.jpg" title='鼻综合手术正从"单一垫高"向全鼻结构重塑演进，3D导航与术前模拟是三甲医院标配' >}}
+{{< figure src="/images/posts/plastic-surgery-subfields-2026-07/image-3.jpg" title='鼻综合手术正从「单一垫高」向全鼻结构重塑演进，3D导航与术前模拟是三甲医院标配' >}}
 
 ## 唇部整形：精准注射与美学比例
 
@@ -66,7 +66,7 @@ translations:
 - **包膜挛缩（capsular contracture）与 COVID-19**：COVID-19 相关免疫激活可能加速包膜挛缩进展，中重度挛缩的平均取出时间从术后的 8.0 年缩短至 5.0 年（HR = 2.3）；
 - **BIA-ALCL 长期安全**：BRCA 突变携带者接受预防性乳腺切除后植入假体，其 BIA-ALCL 风险需个体化评估，首次发病可出现在术后 10 年。
 
-{{< figure src="/images/posts/plastic-surgery-subfields-2026-07/image-4.jpg" title='隆胸手术正进入"数据驱动"时代：AI 辅助选择、微生物组学与干细胞脂肪移植构成三大技术前沿' >}}
+{{< figure src="/images/posts/plastic-surgery-subfields-2026-07/image-4.jpg" title="隆胸手术正进入数据驱动时代：AI 辅助选择、微生物组学与干细胞脂肪移植构成三大技术前沿" >}}
 
 ## 减肥与体雕：GLP-1 催生的新临床路径
 
