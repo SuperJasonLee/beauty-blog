@@ -1,0 +1,7 @@
+STDOUT:
+
+STDERR:
+To https://github.com/SuperJasonLee/beauty-blog.git
+   b15730b..8f6d4ea  main -> main
+
+Exit code: 0
