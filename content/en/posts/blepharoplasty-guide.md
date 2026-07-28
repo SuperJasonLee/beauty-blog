@@ -247,4 +247,4 @@ These figures typically include surgeon's fee, anesthesia, and facility costs. F
 [^2]: International Society of Aesthetic Plastic Surgery. 2023 ISAPS Global Survey Results. <https://www.isaps.org/discover/about-isaps/global-statistics/>
 [^3]: Hohmann-Von Oldershausen A, et al. Safety and Complications in Lower Eyelid Blepharoplasty: A Systematic Review. *Aesthetic Surgery Journal Open Forum*. <https://academic.oup.com/asjopenforum>
 [^4]: American Society of Plastic Surgeons. Blepharoplasty: What You Need to Know. <https://www.plasticsurgery.org/cosmetic-procedures/blepharoplasty>
-[^5]: McCord CD Jr. Blepharoplasty and periorbital surgery. *Plastic and Reconstructive Surgery*. 2021;147(3):451e-452e.
+[^5]: McCord CD Jr. Blepharoplasty and periorbital surgery. *Plastic and Reconstructive Surgery*. 2021;147(3):451e-452e. <https://pubmed.ncbi.nlm.nih.gov/?term=McCord+Blepharoplasty+periorbital+surgery>

@@ -205,8 +205,8 @@ Rhinoplasty should be performed for yourself, not to meet someone else's expecta
 [^1]: American Society of Plastic Surgeons. 2024 Plastic Surgery Statistics Report. <https://www.plasticsurgery.org/news/plastic-surgery-statistics>
 [^2]: American Academy of Facial Plastic and Reconstructive Surgery. 2025 Member Survey. <https://www.aafprs.org/Media/Press_Releases/>
 [^3]: Rohrich RJ, Ahmad J. A Practical Approach to Rhinoplasty. *Plastic and Reconstructive Surgery*. 2016;137(4):725e-746e. PMID: 27018670. <https://pubmed.ncbi.nlm.nih.gov/27018670/>
-[^4]: Lee LN, et al. Structural Approach to Revision Rhinoplasty. *Facial Plastic Surgery*. 2025;41(2):178-191.
-[^5]: Rohrich RJ, et al. The Recurrent Nasal Tip Deformity: A Unified Approach. *Plastic and Reconstructive Surgery*. 2024;153(4):812e-823e.
-[^6]: Toriumi DM. *Contemporary Rhinoplasty for the Facial Plastic Surgeon*. 4th ed. Thieme; 2020.
-[^7]: Gunter JP, Rohrich RJ, DiPasquale TS. *External Rhinoplasty*. Texas Plastic Surgery; 2009.
+[^4]: Lee LN, et al. Structural Approach to Revision Rhinoplasty. *Facial Plastic Surgery*. 2025;41(2):178-191. <https://pubmed.ncbi.nlm.nih.gov/?term=Structural+Approach+to+Revision+Rhinoplasty+Lee>
+[^5]: Rohrich RJ, et al. The Recurrent Nasal Tip Deformity: A Unified Approach. *Plastic and Reconstructive Surgery*. 2024;153(4):812e-823e. <https://pubmed.ncbi.nlm.nih.gov/?term=Recurrent+Nasal+Tip+Deformity+Unified+Approach+Rohrich>
+[^6]: Toriumi DM. *Contemporary Rhinoplasty for the Facial Plastic Surgeon*. 4th ed. Thieme; 2020. <https://www.thieme.com/books-main/plastic-surgery/product/4788-contemporary-rhinoplasty-for-the-facial-plastic-surgeon>
+[^7]: Gunter JP, Rohrich RJ, DiPasquale TS. *External Rhinoplasty*. Texas Plastic Surgery; 2009. <https://pubmed.ncbi.nlm.nih.gov/?term=Gunter+Rohrich+external+rhinoplasty>
 [^8]: American Society of Plastic Surgeons. Rhinoplasty: What You Need to Know. <https://www.plasticsurgery.org/cosmetic-procedures/rhinoplasty>

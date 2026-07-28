@@ -72,23 +72,26 @@ For patients and families, understanding the sequential and long-term nature of 
 
 ---
 
-**References:** This article references the following sources published in July 2026:
+## References
 
-- [Rotational Composite Flap Technique for Primary Incomplete Cleft Lip Nose Repair](https://pubmed.ncbi.nlm.nih.gov/42359748/) — *Annals of Plastic Surgery*, PubMed (2026)
-- [Versatility of Autologous Dermofat Grafts in Secondary Cleft Reconstructive Surgery](https://pubmed.ncbi.nlm.nih.gov/42359513/) — PubMed (2026)
-- [Single-Stage Extracranial Transnasal Repair of Frontoethmoidal Encephalomeningocele Without Coronal Incision](https://pubmed.ncbi.nlm.nih.gov/42325140/) — PubMed (2026)
+[^1]: [Rotational Composite Flap Technique for Primary Incomplete Cleft Lip Nose Repair](https://pubmed.ncbi.nlm.nih.gov/42359748/). *Annals of Plastic Surgery*, PubMed (2026).
+[^2]: [Versatility of Autologous Dermofat Grafts in Secondary Cleft Reconstructive Surgery](https://pubmed.ncbi.nlm.nih.gov/42359513/). PubMed (2026).
+[^3]: [Single-Stage Extracranial Transnasal Repair of Frontoethmoidal Encephalomeningocele Without Coronal Incision](https://pubmed.ncbi.nlm.nih.gov/42325140/). PubMed (2026).
+[^4]: [Endoscopic Versus Open Craniosynostosis Repair: A Comparative Middle Eastern Analysis](https://pubmed.ncbi.nlm.nih.gov/42257375/). PubMed (2026).
+[^5]: [Spring-assisted Cranioplasty for Sagittal Synostosis: Long-term Clinical Outcomes](https://pubmed.ncbi.nlm.nih.gov/42283861/). PubMed (2026).
+[^6]: [Isolated Sphenoid Wing Dysplasia: Reconstruction Using 3D Printing](https://pubmed.ncbi.nlm.nih.gov/42186528/). PubMed (2026).
+[^7]: [A Review of AI in Craniofacial Surgery: Clinical Applications Beyond 3D Printing](https://pubmed.ncbi.nlm.nih.gov/41773851/). PubMed (2026).
+[^8]: [The Ongoing Evolution of AI in Craniofacial Surgery: From Theory to Reality and Beyond](https://pubmed.ncbi.nlm.nih.gov/41213058/). PubMed (2026).
+[^9]: [Total Cranial Vault Remodeling Using Multidirectional Cranial Distraction Osteogenesis](https://pubmed.ncbi.nlm.nih.gov/42199254/). PubMed (2026).
+[^10]: [Anesthesiological Concepts in Pediatric Oral and Maxillofacial Surgery](https://pubmed.ncbi.nlm.nih.gov/42150547/). PubMed (2026).
+[^11]: [Evaluation and Potential Improvement of Patient Attendance at a Multidisciplinary Clinic](https://pubmed.ncbi.nlm.nih.gov/40519129/). PubMed (2026).
+
+**Additional sources:**
+
 - [Unilateral Versus Bilateral Fronto-Orbital Advancement in Unicoronal Craniosynostosis](https://pubmed.ncbi.nlm.nih.gov/42284176/) — PubMed (2026)
-- [Spring-assisted Cranioplasty for Sagittal Synostosis: Long-term Clinical Outcomes](https://pubmed.ncbi.nlm.nih.gov/42283861/) — PubMed (2026)
-- [Endoscopic Versus Open Craniosynostosis Repair: A Comparative Middle Eastern Analysis](https://pubmed.ncbi.nlm.nih.gov/42257375/) — PubMed (2026)
 - [Expert Consensus on Condylar Hyperplasia and Secondary Dento-maxillofacial Deformities](https://pubmed.ncbi.nlm.nih.gov/42243073/) — *International Journal of Oral Science*, PubMed (2026)
-- [Total Cranial Vault Remodeling Using Multidirectional Cranial Distraction Osteogenesis](https://pubmed.ncbi.nlm.nih.gov/42199254/) — PubMed (2026)
 - [A Silk Fibroin-based Hydrogel Desensitizer for Dentin Hypersensitivity](https://pubmed.ncbi.nlm.nih.gov/42189099/) — PubMed (2026)
-- [Isolated Sphenoid Wing Dysplasia: Reconstruction Using 3D Printing](https://pubmed.ncbi.nlm.nih.gov/42186528/) — PubMed (2026)
-- [Anesthesiological Concepts in Pediatric Oral and Maxillofacial Surgery](https://pubmed.ncbi.nlm.nih.gov/42150547/) — PubMed (2026)
-- [A Review of AI in Craniofacial Surgery: Clinical Applications Beyond 3D Printing](https://pubmed.ncbi.nlm.nih.gov/41773851/) — PubMed (2026)
 - [Evaluating ChatGPT in Pediatric Craniofacial Surgery Counseling](https://pubmed.ncbi.nlm.nih.gov/41773849/) — PubMed (2026)
-- [The Ongoing Evolution of AI in Craniofacial Surgery: From Theory to Reality and Beyond](https://pubmed.ncbi.nlm.nih.gov/41213058/) — PubMed (2026)
 - [Management of Middle Third Hypoplasia Using Rigid External Device](https://pubmed.ncbi.nlm.nih.gov/40839345/) — PubMed (2026)
-- [Evaluation and Potential Improvement of Patient Attendance at a Multidisciplinary Clinic](https://pubmed.ncbi.nlm.nih.gov/40519129/) — PubMed (2026)
 
 **Disclaimer:** This content is for informational purposes only and does not constitute medical advice. Please consult a qualified physician for any craniofacial reconstructive procedures.
