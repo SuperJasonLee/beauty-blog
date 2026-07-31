@@ -215,7 +215,7 @@ def save_crawled_urls(urls: set):
 
 def run_opencli(cmd: list[str], timeout: int = 60) -> Optional[object]:
     try:
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
+        result = subprocess.run(cmd, capture_output=True, text=True, encoding='utf-8', timeout=timeout)
         if result.returncode != 0:
             logger.warning(f"opencli returned non-zero: {result.stderr[:200]}")
             return None
