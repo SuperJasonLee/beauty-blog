@@ -1,20 +1,14 @@
-"""Crawler module: uses opencli to search and extract eye-surgery + upper-face aesthetics news."""
+"""Crawler module: uses opencli to search and extract weight-loss + medical-aesthetics news."""
 
 import json
 import logging
-import os
 import subprocess
 import sys
-from datetime import date, datetime, timezone
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
 
-# Ensure npm bin directory is on PATH so opencli.cmd is discoverable on Windows
-_NPM_BIN = Path(os.environ.get("APPDATA", "")) / "npm"
-if _NPM_BIN.exists() and str(_NPM_BIN) not in os.environ.get("PATH", ""):
-    os.environ["PATH"] = str(_NPM_BIN) + os.pathsep + os.environ.get("PATH", "")
-
-DATA_DIR = Path(__file__).resolve().parent.parent.parent.parent / "data" / "crawled" / "eye-surgery-news"
+DATA_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "crawled" / "weight-loss-aesthetics-news"
 DEDUP_FILE = DATA_DIR / "crawled_urls.json"
 
 SOURCES = [
@@ -22,15 +16,7 @@ SOURCES = [
         "name": "pubmed",
         "command": [
             "opencli", "pubmed", "search",
-            "blepharoplasty OR double eyelid surgery OR upper eyelid aesthetics OR brow lift 2026",
-            "--limit", "10", "-f", "json",
-        ],
-    },
-    {
-        "name": "pubmed2",
-        "command": [
-            "opencli", "pubmed", "search",
-            "Botox eyelid OR dermal filler tear trough OR upper face rejuvenation injection 2026",
+            "GLP-1 body contouring OR panniculectomy OR massive weight loss surgery",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -38,16 +24,16 @@ SOURCES = [
         "name": "zhihu",
         "command": [
             "opencli", "zhihu", "search",
-            "双眼皮 开眼角 祛眼袋 眼部整形 医美 2026",
+            "GLP-1 减重 医美 整形",
             "--limit", "10", "-f", "json",
         ],
     },
     {
         "name": "google",
         "command": [
-            "opencli", "google", "search",
-            "blepharoplasty double eyelid surgery eye plastic surgery trends 2026",
-            "--limit", "10", "-f", "json",
+            "opencli", "web", "read",
+            "--url", "https://www.google.com/search?q=GLP-1+weight+loss+aesthetic+medicine+news+2026&num=15",
+            "-f", "json",
         ],
     },
 ]
@@ -58,34 +44,28 @@ logger = logging.getLogger(__name__)
 
 def load_crawled_urls() -> set:
     if DEDUP_FILE.exists():
-        return set(json.loads(DEDUP_FILE.read_text(encoding="utf-8")))
+        return set(json.loads(DEDUP_FILE.read_text()))
     return set()
 
 
 def save_crawled_urls(urls: set):
     DEDUP_FILE.parent.mkdir(parents=True, exist_ok=True)
-    DEDUP_FILE.write_text(json.dumps(sorted(urls), ensure_ascii=False, indent=2), encoding="utf-8")
+    DEDUP_FILE.write_text(json.dumps(sorted(urls), ensure_ascii=False, indent=2))
 
 
 def run_opencli(cmd: list[str], timeout: int = 60) -> Optional[object]:
-    # On Windows opencli is a .cmd shim — call opencli.cmd directly to avoid shell=True issues
-    exe = "opencli.cmd" if sys.platform == "win32" else cmd[0]
-    full_cmd = [exe] + cmd[1:]
     try:
-        result = subprocess.run(full_cmd, capture_output=True, text=True, timeout=timeout, encoding="utf-8", errors="replace")
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
         if result.returncode != 0:
-            logger.warning(f"opencli returned non-zero ({result.returncode}): {result.stderr[:300]}")
-            return None
-        if not result.stdout or not result.stdout.strip():
-            logger.warning(f"opencli returned empty stdout for: {' '.join(full_cmd)}")
+            logger.warning(f"opencli returned non-zero: {result.stderr[:200]}")
             return None
         return json.loads(result.stdout)
     except subprocess.TimeoutExpired:
-        logger.warning(f"Timeout running: {' '.join(full_cmd)}")
-    except json.JSONDecodeError as e:
-        logger.warning(f"Invalid JSON from {' '.join(full_cmd)}: {e} — stdout[:200]: {result.stdout[:200] if 'result' in dir() else 'N/A'}")
+        logger.warning(f"Timeout running: {' '.join(cmd)}")
+    except json.JSONDecodeError:
+        logger.warning(f"Invalid JSON from: {' '.join(cmd)}")
     except Exception as e:
-        logger.warning(f"Error running {' '.join(full_cmd)}: {e}")
+        logger.warning(f"Error running opencli: {e}")
     return None
 
 
@@ -132,14 +112,18 @@ def extract_google_articles(data) -> list[dict]:
     articles = []
     if isinstance(data, list):
         for item in data:
+            saved = item.get("saved", "")
             articles.append({
-                "source_url": item.get("url") or item.get("saved", ""),
+                "source_url": item.get("url") or saved,
                 "source_name": "Google",
                 "title": item.get("title", ""),
-                "date": date.today().isoformat(),
+                "date": item.get("publish_time", "") or datetime.now(timezone.utc).strftime("%Y-%m-%d"),
                 "content_markdown": (
-                    f"**Snippet:** {item.get('snippet', '-')}\n"
-                    f"**Source:** {item.get('url', '-')}"
+                    f"**Author:** {item.get('author', '-')}\n"
+                    f"**Publish time:** {item.get('publish_time', '-')}\n"
+                    f"**Saved file:** {saved}\n"
+                    f"**Status:** {item.get('status', '-')}\n"
+                    f"**Size:** {item.get('size', '-')}"
                 ),
                 "image_urls": [],
                 "crawled_at": datetime.now(timezone.utc).isoformat(),
@@ -153,7 +137,7 @@ def crawl_source(source: dict, crawled_urls: set) -> list[dict]:
     if data is None:
         return []
 
-    if source["name"] in ("pubmed", "pubmed2"):
+    if source["name"] == "pubmed":
         articles = extract_pubmed_articles(data)
     elif source["name"] == "zhihu":
         articles = extract_zhihu_articles(data)
@@ -195,8 +179,8 @@ def crawl_all() -> list[dict]:
 def save_results(articles: list[dict]) -> Path:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-    out_file = DATA_DIR / f"eye_surgery_aesthetics_news_{ts}.json"
-    out_file.write_text(json.dumps(articles, ensure_ascii=False, indent=2), encoding="utf-8")
+    out_file = DATA_DIR / f"weight_loss_aesthetics_news_{ts}.json"
+    out_file.write_text(json.dumps(articles, ensure_ascii=False, indent=2))
     logger.info(f"Saved {len(articles)} articles to {out_file}")
     return out_file
 

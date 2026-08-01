@@ -10,11 +10,11 @@ logger = logging.getLogger(__name__)
 
 def run_pipeline():
     logger.info("=" * 60)
-    logger.info("Eye-Surgery + Upper-Face Aesthetics News Pipeline - Starting")
+    logger.info("Weight-Loss + Aesthetics News Pipeline - Starting")
     logger.info("=" * 60)
 
     # Step 1: Crawl
-    logger.info("[Step 1/3] Crawling latest eye-surgery + upper-face aesthetics news...")
+    logger.info("[Step 1/3] Crawling latest weight-loss + aesthetics news...")
     from crawler import crawl_all, save_results
 
     articles = crawl_all()
@@ -45,6 +45,8 @@ def run_pipeline():
     logger.info(f"  Images downloaded: {len(image_url_map)}")
     logger.info(f"  Posts generated: {len(posts)}")
     logger.info("=" * 60)
+    logger.info("Posts are marked as drafts. Review before publishing.")
+    logger.info("Run 'hugo server -D' to preview.")
 
 
 if __name__ == "__main__":
