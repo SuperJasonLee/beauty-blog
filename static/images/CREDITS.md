@@ -3,6 +3,11 @@
 | File | Source URL | License | Author | Author URL | Date added |
 | --- | --- | --- | --- | --- | --- |
 | `posts/eye-surgery-aesthetics-2026-07/image-1.jpg` | https://www.pexels.com/photo/close-up-of-woman-wearing-make-up-3761511/ | Pexels License (provenance by curation; page fetch was anti-bot-blocked) | RODNAE Productions | https://www.pexels.com/@rodnae/ | 2026-07-13 |
+| image-1.jpg | https://www.pexels.com/photo/a-woman-with-markings-on-her-eyelid-7585317/ | Pexels License | [cottonbro studio](https://www.pexels.com/@cottonbro/) | https://www.pexels.com/@cottonbro/ | 2026-08-01 |
+| image-2.jpg | https://www.pexels.com/photo/a-plastic-surgeon-measuring-the-patient-s-eyelids-by-using-a-caliper-7585310/ | Pexels License | [cottonbro studio](https://www.pexels.com/@cottonbro/) | https://www.pexels.com/@cottonbro/ | 2026-08-01 |
+| image-3.jpg | https://www.pexels.com/photo/extreme-close-up-photo-of-woman-s-eyes-7298683/ | Pexels License | [Kindel Media](https://www.pexels.com/@kindelmedia/) | https://www.pexels.com/@kindelmedia/ | 2026-08-01 |
+| image-4.jpg | https://www.pexels.com/photo/hands-woman-face-professional-7585314/ | Pexels License | [cottonbro studio](https://www.pexels.com/@cottonbro/) | https://www.pexels.com/@cottonbro/ | 2026-08-01 |
+| image-5.jpg | https://www.pexels.com/photo/eye-surgery-preparation-in-medical-facility-33857825/ | Pexels License | [Fernando Capetillo](https://www.pexels.com/@fernando-capetillo/) | https://www.pexels.com/@fernando-capetillo/ | 2026-08-01 |
 | `posts/eye-surgery-aesthetics-2026-07/image-2.jpg` | https://www.pexels.com/photo/close-up-photography-of-woman-4140247/ | Pexels License (provenance by curation; page fetch was anti-bot-blocked) | Guillaume Meurice | https://www.pexels.com/@guillaume-meurice/ | 2026-07-13 |
 | `posts/eye-surgery-aesthetics-2026-07/image-3.jpg` | https://www.pexels.com/photo/selective-focus-photography-of-woman-wearing-black-eyeglasses-1858175/ | Pexels License (provenance by curation; page fetch was anti-bot-blocked) | Negative Space | https://www.pexels.com/@negative_space/ | 2026-07-13 |
 | `posts/eye-surgery-aesthetics-2026-07/image-4.jpg` | https://www.pexels.com/photo/close-up-shot-of-a-woman-s-face-3758856/ | Pexels License (provenance by curation; page fetch was anti-bot-blocked) | RDNE Stock project | https://www.pexels.com/@rdne/ | 2026-07-13 |
