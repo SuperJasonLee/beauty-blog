@@ -70,8 +70,12 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 **Ask first:**
 
 - Sending emails, tweets, public posts
-- Anything that leaves the machine
+- Anything that leaves the machine (Except auto-publish JOBs)
 - Anything you're uncertain about
+
+**Exceptions (Auto-approved):**
+
+- 执行“每日医美快讯”等定时/常规发布 JOB 时，只要审计 (`audit-posts.py`) 和 Hugo 构建通过，直接自动执行 `git commit` 及 `git push` 部署远端，无需二次停顿询问。
 
 ## Group Chats
 
