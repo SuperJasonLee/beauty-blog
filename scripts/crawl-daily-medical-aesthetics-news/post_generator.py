@@ -10,15 +10,15 @@ REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 ZH_POSTS_DIR = REPO_ROOT / "content" / "zh-cn" / "posts"
 EN_POSTS_DIR = REPO_ROOT / "content" / "en" / "posts"
 
-SLUG = "daily-medical-aesthetics-news-2026-08-12"
-DATE_STR = "2026-08-12"
-LASTMOD = "2026-08-12"
+SLUG = "daily-medical-aesthetics-news-2026-08-13"
+DATE_STR = "2026-08-13"
+LASTMOD = "2026-08-13"
 
-ZH_TITLE = "每日医美快讯：2026年8月12日 行业前沿动态与学术进展"
-EN_TITLE = "Daily Medical Aesthetics Express: August 12, 2026 Industry Trends & Academic Advances"
+ZH_TITLE = "每日医美快讯：2026年8月13日 行业前沿动态与学术进展"
+EN_TITLE = "Daily Medical Aesthetics Express: August 13, 2026 Industry Trends & Academic Advances"
 
-ZH_DESC = "2026年8月12日每日医美快讯，涵盖合规监管、注射与光电技术创新、轻医美消费市场趋势及前沿临床学术研究深度解析。"
-EN_DESC = "Daily Medical Aesthetics Express for August 12, 2026: Covering regulatory compliance, injectable & energy-based tech innovations, consumer trends, and clinical research."
+ZH_DESC = "2026年8月13日每日医美快讯，涵盖合规监管、注射与光电技术创新、轻医美消费市场趋势及前沿临床学术研究深度解析。"
+EN_DESC = "Daily Medical Aesthetics Express for August 13, 2026: Covering regulatory compliance, injectable & energy-based tech innovations, consumer trends, and clinical research."
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s", handlers=[logging.StreamHandler(sys.stdout)])
 logger = logging.getLogger(__name__)
@@ -45,7 +45,7 @@ translations:
 
 {{{{< medical-disclaimer />}}}}
 
-随着轻医美技术的快速迭代与全球合规标准的不断提升，医美行业正步入以“精准化、微创化、高安全度”为核心发展导向的新阶段。根据国际美容整形外科学会与国家相关监管机构最新披露的临床数据，求美者对非手术类微创项目的接受度显著提升[^1]。本文为您梳理2026年8月12日的每日医美行业核心快讯与学术前沿动态。
+随着轻医美技术的快速迭代与全球合规标准的不断提升，医美行业正步入以“精准化、微创化、高安全度”为核心发展导向的新阶段。根据国际美容整形外科学会与国家相关监管机构最新披露的临床数据，求美者对非手术类微创项目的接受度显著提升[^1]。本文为您梳理2026年8月13日的每日医美行业核心快讯与学术前沿动态。
 
 {{{{< figure src="/images/posts/{SLUG}/image-2.jpg" title="医美专业医师正在为求美者提供定制化面部面诊与方案评估" >}}}}
 
@@ -133,7 +133,7 @@ translations:
 
 {{{{< medical-disclaimer />}}}}
 
-With rapid iterations in non-surgical technologies and rising international safety compliance standards, the medical aesthetics industry is entering a new era focused on precision, minimally invasive techniques, and patient safety. Based on clinical data published by ISAPS and regulatory agencies, patient acceptance of non-surgical aesthetic procedures has increased substantially[^1]. Below is the daily briefing for August 12, 2026.
+With rapid iterations in non-surgical technologies and rising international safety compliance standards, the medical aesthetics industry is entering a new era focused on precision, minimally invasive techniques, and patient safety. Based on clinical data published by ISAPS and regulatory agencies, patient acceptance of non-surgical aesthetic procedures has increased substantially[^1]. Below is the daily briefing for August 13, 2026.
 
 {{{{< figure src="/images/posts/{SLUG}/image-2.jpg" title="Board-certified physician providing customized aesthetic consultation and face evaluation" >}}}}
 

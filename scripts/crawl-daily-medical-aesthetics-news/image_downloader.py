@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / "daily-medical-aesthetics-news-2026-08-12"
+IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / "daily-medical-aesthetics-news-2026-08-13"
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
 PERMITTED_LICENSE_MARKERS = [
@@ -164,11 +164,11 @@ def download_one(candidate: dict, index: int, today: str) -> Optional[dict]:
     size = resize_to_budget(tmp_path, final_path)
     tmp_path.unlink(missing_ok=True)
 
-    rel_path = f"posts/daily-medical-aesthetics-news-2026-08-12/image-{index}.jpg"
-    public_path = f"/images/posts/daily-medical-aesthetics-news-2026-08-12/image-{index}.jpg"
+    rel_path = f"posts/daily-medical-aesthetics-news-2026-08-13/image-{index}.jpg"
+    public_path = f"/images/posts/daily-medical-aesthetics-news-2026-08-13/image-{index}.jpg"
 
     append_credits_row(rel_path, page_url, marker, author, author_url, today)
-    logger.info(f"  ✓ image-{index}.jpg ({size // 1024} KB) — {candidate['theme']}")
+    logger.info(f"  [OK] image-{index}.jpg ({size // 1024} KB) — {candidate['theme']}")
     return {"local_path": public_path, "page_url": page_url, "author": author, "marker": marker}
 
 
