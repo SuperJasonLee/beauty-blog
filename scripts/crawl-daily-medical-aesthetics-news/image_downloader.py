@@ -12,7 +12,8 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / "daily-medical-aesthetics-news-2026-08-13"
+SLUG = "daily-medical-aesthetics-news-2026-08-14"
+IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
 PERMITTED_LICENSE_MARKERS = [
@@ -33,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/doctor-explaining-a-treatment-plan-to-her-patient-5215024/",
-        "image_url": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?cs=srgb&dl=pexels-tima-miroshnichenko-5215024.jpg&fm=jpg",
-        "author": "Tima Miroshnichenko",
-        "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Doctor-patient consultation in aesthetic clinic",
-    },
-    {
-        "page_url": "https://www.pexels.com/photo/close-up-of-cosmetic-injection-procedure-34220525/",
-        "image_url": "https://images.pexels.com/photos/34220525/pexels-photo-34220525.jpeg?cs=srgb&dl=pexels-prolificpeople-34220525.jpg&fm=jpg",
-        "author": "prolificpeople",
-        "author_url": "https://www.pexels.com/@prolificpeople/",
-        "theme": "Cosmetic injection procedure in clinic",
-    },
-    {
-        "page_url": "https://www.pexels.com/photo/woman-getting-facial-treatment-in-a-beauty-salon-3738349/",
-        "image_url": "https://images.pexels.com/photos/3738349/pexels-photo-3738349.jpeg?cs=srgb&dl=pexels-cottonbro-3738349.jpg&fm=jpg",
-        "author": "cottonbro studio",
-        "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Facial skin rejuvenation treatment",
-    },
-    {
-        "page_url": "https://www.pexels.com/photo/modern-dermatology-clinic-interior-7089401/",
-        "image_url": "https://images.pexels.com/photos/7089401/pexels-photo-7089401.jpeg?cs=srgb&dl=pexels-pavel-danilyuk-7089401.jpg&fm=jpg",
+        "page_url": "https://www.pexels.com/photo/doctor-talking-to-a-patient-7089404/",
+        "image_url": "https://images.pexels.com/photos/7089404/pexels-photo-7089404.jpeg?cs=srgb&dl=pexels-pavel-danilyuk-7089404.jpg&fm=jpg",
         "author": "Pavel Danilyuk",
         "author_url": "https://www.pexels.com/@pavel-danilyuk/",
-        "theme": "Modern medical aesthetics clinic environment",
+        "theme": "Doctor-patient consultation and aesthetic diagnosis",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-looking-in-the-mirror-after-skincare-routine-3762879/",
-        "image_url": "https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?cs=srgb&dl=pexels-cottonbro-3762879.jpg&fm=jpg",
+        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-forehead-7581590/",
+        "image_url": "https://images.pexels.com/photos/7581590/pexels-photo-7581590.jpeg?cs=srgb&dl=pexels-cottonbro-7581590.jpg&fm=jpg",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Post-treatment patient outcome evaluation",
+        "theme": "Micro-injection procedure in facial aesthetics",
+    },
+    {
+        "page_url": "https://www.pexels.com/photo/close-up-of-cosmetic-laser-treatment-in-clinic-37078056/",
+        "image_url": "https://images.pexels.com/photos/37078056/pexels-photo-37078056.jpeg?cs=srgb&dl=pexels-kerimeveyik-37078056.jpg&fm=jpg",
+        "author": "Kerim Eveyik",
+        "author_url": "https://www.pexels.com/@kerimeveyik/",
+        "theme": "Energy-based device laser skin rejuvenation treatment",
+    },
+    {
+        "page_url": "https://www.pexels.com/photo/technology-computer-room-doctor-7088524/",
+        "image_url": "https://images.pexels.com/photos/7088524/pexels-photo-7088524.jpeg?cs=srgb&dl=pexels-mart-production-7088524.jpg&fm=jpg",
+        "author": "MART PRODUCTION",
+        "author_url": "https://www.pexels.com/@mart-production/",
+        "theme": "Modern clinical digital diagnostic workstation and AI aesthetics intelligence",
+    },
+    {
+        "page_url": "https://www.pexels.com/photo/woman-touching-her-smooth-facial-skin-3762875/",
+        "image_url": "https://images.pexels.com/photos/3762875/pexels-photo-3762875.jpeg?cs=srgb&dl=pexels-cottonbro-3762875.jpg&fm=jpg",
+        "author": "cottonbro studio",
+        "author_url": "https://www.pexels.com/@cottonbro/",
+        "theme": "Post-treatment smooth skin texture and natural beauty outcome",
     },
 ]
 
@@ -134,6 +135,9 @@ def ensure_credits_header():
 
 def append_credits_row(rel_path: str, page_url: str, license_marker: str, author: str, author_url: str, today: str):
     ensure_credits_header()
+    content = CREDITS_FILE.read_text(encoding="utf-8")
+    if f"`{rel_path}`" in content:
+        return
     row = f"| `{rel_path}` | {page_url} | {license_marker} | {author} | {author_url} | {today} |\n"
     with CREDITS_FILE.open("a", encoding="utf-8") as f:
         f.write(row)
@@ -164,8 +168,8 @@ def download_one(candidate: dict, index: int, today: str) -> Optional[dict]:
     size = resize_to_budget(tmp_path, final_path)
     tmp_path.unlink(missing_ok=True)
 
-    rel_path = f"posts/daily-medical-aesthetics-news-2026-08-13/image-{index}.jpg"
-    public_path = f"/images/posts/daily-medical-aesthetics-news-2026-08-13/image-{index}.jpg"
+    rel_path = f"posts/{SLUG}/image-{index}.jpg"
+    public_path = f"/images/posts/{SLUG}/image-{index}.jpg"
 
     append_credits_row(rel_path, page_url, marker, author, author_url, today)
     logger.info(f"  [OK] image-{index}.jpg ({size // 1024} KB) — {candidate['theme']}")
