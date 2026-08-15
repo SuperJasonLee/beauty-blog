@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-08-14"
+SLUG = "daily-medical-aesthetics-news-2026-08-15"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/doctor-talking-to-a-patient-7089404/",
-        "image_url": "https://images.pexels.com/photos/7089404/pexels-photo-7089404.jpeg?cs=srgb&dl=pexels-pavel-danilyuk-7089404.jpg&fm=jpg",
+        "page_url": "https://www.pexels.com/photo/doctor-talking-to-his-patient-7108157/",
+        "image_url": "https://images.pexels.com/photos/7108157/pexels-photo-7108157.jpeg?cs=srgb&dl=pexels-pavel-danilyuk-7108157.jpg&fm=jpg",
         "author": "Pavel Danilyuk",
         "author_url": "https://www.pexels.com/@pavel-danilyuk/",
-        "theme": "Doctor-patient consultation and aesthetic diagnosis",
+        "theme": "Doctor-patient consultation and aesthetic diagnostic assessment",
     },
     {
-        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-forehead-7581590/",
-        "image_url": "https://images.pexels.com/photos/7581590/pexels-photo-7581590.jpeg?cs=srgb&dl=pexels-cottonbro-7581590.jpg&fm=jpg",
+        "page_url": "https://www.pexels.com/photo/close-up-of-a-person-receiving-facial-injection-34220536/",
+        "image_url": "https://images.pexels.com/photos/34220536/pexels-photo-34220536.jpeg?cs=srgb&dl=pexels-prolificpeople-34220536.jpg&fm=jpg",
+        "author": "Prolific People",
+        "author_url": "https://www.pexels.com/@prolificpeople/",
+        "theme": "Precise micro-injection procedure for facial rejuvenation",
+    },
+    {
+        "page_url": "https://www.pexels.com/photo/cosmetologist-doing-a-laser-treatment-on-a-woman-s-face-7755511/",
+        "image_url": "https://images.pexels.com/photos/7755511/pexels-photo-7755511.jpeg?cs=srgb&dl=pexels-cottonbro-7755511.jpg&fm=jpg",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Micro-injection procedure in facial aesthetics",
+        "theme": "Energy-based fractional radiofrequency and laser skin treatment",
     },
     {
-        "page_url": "https://www.pexels.com/photo/close-up-of-cosmetic-laser-treatment-in-clinic-37078056/",
-        "image_url": "https://images.pexels.com/photos/37078056/pexels-photo-37078056.jpeg?cs=srgb&dl=pexels-kerimeveyik-37078056.jpg&fm=jpg",
-        "author": "Kerim Eveyik",
-        "author_url": "https://www.pexels.com/@kerimeveyik/",
-        "theme": "Energy-based device laser skin rejuvenation treatment",
+        "page_url": "https://www.pexels.com/photo/doctor-working-with-laptop-9951389/",
+        "image_url": "https://images.pexels.com/photos/9951389/pexels-photo-9951389.jpeg?cs=srgb&dl=pexels-bakytzhan-baurzhanov-9951389.jpg&fm=jpg",
+        "author": "Bakytzhan Baurzhanov",
+        "author_url": "https://www.pexels.com/@bakytzhan/",
+        "theme": "Clinical digital intelligence and AI diagnostic evaluation system",
     },
     {
-        "page_url": "https://www.pexels.com/photo/technology-computer-room-doctor-7088524/",
-        "image_url": "https://images.pexels.com/photos/7088524/pexels-photo-7088524.jpeg?cs=srgb&dl=pexels-mart-production-7088524.jpg&fm=jpg",
-        "author": "MART PRODUCTION",
-        "author_url": "https://www.pexels.com/@mart-production/",
-        "theme": "Modern clinical digital diagnostic workstation and AI aesthetics intelligence",
-    },
-    {
-        "page_url": "https://www.pexels.com/photo/woman-touching-her-smooth-facial-skin-3762875/",
-        "image_url": "https://images.pexels.com/photos/3762875/pexels-photo-3762875.jpeg?cs=srgb&dl=pexels-cottonbro-3762875.jpg&fm=jpg",
-        "author": "cottonbro studio",
-        "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Post-treatment smooth skin texture and natural beauty outcome",
+        "page_url": "https://www.pexels.com/photo/woman-smiling-with-flawless-radiant-skin-3764114/",
+        "image_url": "https://images.pexels.com/photos/3764114/pexels-photo-3764114.jpeg?cs=srgb&dl=pexels-mikhail-nilov-3764114.jpg&fm=jpg",
+        "author": "Mikhail Nilov",
+        "author_url": "https://www.pexels.com/@mikhailnilov/",
+        "theme": "Natural healthy facial skin glow and post-treatment rejuvenation outcome",
     },
 ]
 
