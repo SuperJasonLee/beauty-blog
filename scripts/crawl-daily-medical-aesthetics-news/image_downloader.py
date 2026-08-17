@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-08-15"
+SLUG = "daily-medical-aesthetics-news-2026-08-17"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,32 +34,32 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/doctor-talking-to-his-patient-7108157/",
-        "image_url": "https://images.pexels.com/photos/7108157/pexels-photo-7108157.jpeg?cs=srgb&dl=pexels-pavel-danilyuk-7108157.jpg&fm=jpg",
-        "author": "Pavel Danilyuk",
-        "author_url": "https://www.pexels.com/@pavel-danilyuk/",
+        "page_url": "https://www.pexels.com/photo/a-doctor-consulting-a-patient-7659876/",
+        "image_url": "https://images.pexels.com/photos/7659876/pexels-photo-7659876.jpeg?cs=srgb&dl=pexels-thirdman-7659876.jpg&fm=jpg",
+        "author": "Thirdman",
+        "author_url": "https://www.pexels.com/@thirdman/",
         "theme": "Doctor-patient consultation and aesthetic diagnostic assessment",
     },
     {
-        "page_url": "https://www.pexels.com/photo/close-up-of-a-person-receiving-facial-injection-34220536/",
-        "image_url": "https://images.pexels.com/photos/34220536/pexels-photo-34220536.jpeg?cs=srgb&dl=pexels-prolificpeople-34220536.jpg&fm=jpg",
-        "author": "Prolific People",
-        "author_url": "https://www.pexels.com/@prolificpeople/",
+        "page_url": "https://www.pexels.com/photo/woman-getting-lip-injection-7446681/",
+        "image_url": "https://images.pexels.com/photos/7446681/pexels-photo-7446681.jpeg?cs=srgb&dl=pexels-gustavo-fring-7446681.jpg&fm=jpg",
+        "author": "Gustavo Fring",
+        "author_url": "https://www.pexels.com/@gustavo-fring/",
         "theme": "Precise micro-injection procedure for facial rejuvenation",
     },
     {
-        "page_url": "https://www.pexels.com/photo/cosmetologist-doing-a-laser-treatment-on-a-woman-s-face-7755511/",
-        "image_url": "https://images.pexels.com/photos/7755511/pexels-photo-7755511.jpeg?cs=srgb&dl=pexels-cottonbro-7755511.jpg&fm=jpg",
-        "author": "cottonbro studio",
-        "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Energy-based fractional radiofrequency and laser skin treatment",
+        "page_url": "https://www.pexels.com/photo/client-lying-on-laser-treatment-in-hospital-7772690/",
+        "image_url": "https://images.pexels.com/photos/7772690/pexels-photo-7772690.jpeg?cs=srgb&dl=pexels-dmitriy-ganin-7772690.jpg&fm=jpg",
+        "author": "Dmitriy Ganin",
+        "author_url": "https://www.pexels.com/@ganinph/",
+        "theme": "Energy-based device and laser skin resurfacing",
     },
     {
-        "page_url": "https://www.pexels.com/photo/doctor-working-with-laptop-9951389/",
-        "image_url": "https://images.pexels.com/photos/9951389/pexels-photo-9951389.jpeg?cs=srgb&dl=pexels-bakytzhan-baurzhanov-9951389.jpg&fm=jpg",
-        "author": "Bakytzhan Baurzhanov",
-        "author_url": "https://www.pexels.com/@bakytzhan/",
-        "theme": "Clinical digital intelligence and AI diagnostic evaluation system",
+        "page_url": "https://www.pexels.com/photo/surgeons-performing-facial-surgery-in-operating-room-33903864/",
+        "image_url": "https://images.pexels.com/photos/33903864/pexels-photo-33903864.jpeg?cs=srgb&dl=pexels-dave-garcia-33903864.jpg&fm=jpg",
+        "author": "DAVE GARCIA",
+        "author_url": "https://www.pexels.com/@dave-garcia/",
+        "theme": "Advanced surgical reconstruction and ultrasonic precision rhinoplasty",
     },
     {
         "page_url": "https://www.pexels.com/photo/woman-smiling-with-flawless-radiant-skin-3764114/",
@@ -100,7 +100,7 @@ def fetch_page_license_marker(page_url: str, timeout: int = 20) -> Optional[str]
 def download_image_bytes(url: str, timeout: int = 30) -> Optional[bytes]:
     try:
         with httpx.Client(timeout=timeout, follow_redirects=True) as client:
-            resp = client.get(url, headers={"User-Agent": "Mozilla/5.0 (compatible; BeautyBlog/1.0)"})
+            resp = client.get(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
             resp.raise_for_status()
             return resp.content
     except Exception as e:
@@ -176,7 +176,7 @@ def download_one(candidate: dict, index: int, today: str) -> Optional[dict]:
     return {"local_path": public_path, "page_url": page_url, "author": author, "marker": marker}
 
 
-def process_crawled_file(json_path: Path) -> dict:
+def process_crawled_file(json_path: Optional[Path] = None) -> dict:
     today = date.today().isoformat()
     out: dict[str, str] = {}
     for i, candidate in enumerate(CURATED_CANDIDATES, start=1):
@@ -187,8 +187,8 @@ def process_crawled_file(json_path: Path) -> dict:
         if len(out) >= 5:
             break
 
-    if len(out) < 3:
-        raise RuntimeError(f"Only {len(out)} images downloaded (< 3 minimum).")
+    if len(out) < 5:
+        raise RuntimeError(f"Only {len(out)} images downloaded (< 5 minimum).")
 
     return out
 
@@ -197,12 +197,7 @@ def main(json_path: Optional[str] = None) -> dict:
     if json_path:
         path = Path(json_path)
     else:
-        data_dir = REPO_ROOT / "data" / "crawled" / "daily-medical-aesthetics-news"
-        files = sorted(data_dir.glob("daily_medical_aesthetics_news_*.json"))
-        if not files:
-            logger.error("No crawled data files found")
-            return {}
-        path = files[-1]
+        path = None
 
     return process_crawled_file(path)
 
