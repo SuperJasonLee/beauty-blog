@@ -16,7 +16,7 @@ SOURCES = [
         "name": "pubmed",
         "command": [
             "opencli", "pubmed", "search",
-            "aesthetic medicine OR hyaluronic acid OR botulinum toxin OR facial rejuvenation 2026",
+            "botulinum toxin psychodermatology OR hyaluronic acid calcium hydroxyapatite OR rhinoplasty 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -24,7 +24,7 @@ SOURCES = [
         "name": "zhihu",
         "command": [
             "opencli", "zhihu", "search",
-            "医美 快讯 行业 动态 肉毒素 玻尿酸 2026",
+            "医美 快讯 行业 动态 玻尿酸 胶原蛋白 隆鼻 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -32,7 +32,7 @@ SOURCES = [
         "name": "google",
         "command": [
             "opencli", "web", "read",
-            "--url", "https://www.google.com/search?q=medical+aesthetics+daily+news+2026&num=15",
+            "--url", "https://www.google.com/search?q=medical+aesthetics+daily+news+august+2026&num=15",
             "-f", "json",
         ],
     },

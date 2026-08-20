@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-08-19"
+SLUG = "daily-medical-aesthetics-news-2026-08-20"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/doctor-explaining-a-treatment-plan-to-her-patient-5215024/",
-        "image_url": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?cs=srgb&dl=pexels-tima-miroshnichenko-5215024.jpg&fm=jpg",
-        "author": "Tima Miroshnichenko",
-        "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Doctor-patient consultation and aesthetic diagnostic assessment",
+        "page_url": "https://www.pexels.com/photo/a-doctor-consulting-a-patient-7659876/",
+        "image_url": "https://images.pexels.com/photos/7659876/pexels-photo-7659876.jpeg?cs=srgb&dl=pexels-thirdman-7659876.jpg&fm=jpg",
+        "author": "Thirdman",
+        "author_url": "https://www.pexels.com/@thirdman/",
+        "theme": "Doctor-patient clinical consultation and holistic aesthetic evaluation",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-getting-laser-treatment-on-her-face-5069432/",
-        "image_url": "https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg?cs=srgb&dl=pexels-antoni-shkraba-5069432.jpg&fm=jpg",
-        "author": "Antoni Shkraba",
-        "author_url": "https://www.pexels.com/@shkrabaanthony/",
-        "theme": "Energy-based RF tightening and advanced laser treatment",
-    },
-    {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-his-patient-7108157/",
-        "image_url": "https://images.pexels.com/photos/7108157/pexels-photo-7108157.jpeg?cs=srgb&dl=pexels-pavel-danilyuk-7108157.jpg&fm=jpg",
-        "author": "Pavel Danilyuk",
-        "author_url": "https://www.pexels.com/@pavel-danilyuk/",
-        "theme": "Hair and scalp regenerative therapy and clinical examination",
-    },
-    {
-        "page_url": "https://www.pexels.com/photo/surgeons-performing-surgery-in-operating-room-32828947/",
-        "image_url": "https://images.pexels.com/photos/32828947/pexels-photo-32828947.jpeg?cs=srgb&dl=pexels-zeynep-ozata-32828947.jpg&fm=jpg",
-        "author": "Zeynep Özata",
-        "author_url": "https://www.pexels.com/@zeynep-ozata/",
-        "theme": "Advanced surgical reconstruction and biological scaffold implant placement",
-    },
-    {
-        "page_url": "https://www.pexels.com/photo/woman-touching-her-smooth-facial-skin-3762875/",
-        "image_url": "https://images.pexels.com/photos/3762875/pexels-photo-3762875.jpeg?cs=srgb&dl=pexels-cottonbro-studio-3762875.jpg&fm=jpg",
+        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-forehead-7581590/",
+        "image_url": "https://images.pexels.com/photos/7581590/pexels-photo-7581590.jpeg?cs=srgb&dl=pexels-cottonbro-studio-7581590.jpg&fm=jpg",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Natural healthy facial skin glow and post-treatment rejuvenation outcome",
+        "theme": "Precise upper face neuromodulator injection targeting glabellar region",
+    },
+    {
+        "page_url": "https://www.pexels.com/photo/woman-getting-facial-treatment-in-a-beauty-salon-3738349/",
+        "image_url": "https://images.pexels.com/photos/3738349/pexels-photo-3738349.jpeg?cs=srgb&dl=pexels-cottonbro-studio-3738349.jpg&fm=jpg",
+        "author": "cottonbro studio",
+        "author_url": "https://www.pexels.com/@cottonbro/",
+        "theme": "Advanced clinical facial rejuvenation and collagen biostimulation",
+    },
+    {
+        "page_url": "https://www.pexels.com/photo/surgeons-performing-facial-surgery-in-operating-room-33903864/",
+        "image_url": "https://images.pexels.com/photos/33903864/pexels-photo-33903864.jpeg?cs=srgb&dl=pexels-dave-garcia-33903864.jpg&fm=jpg",
+        "author": "DAVE GARCIA",
+        "author_url": "https://www.pexels.com/@dave-garcia/",
+        "theme": "Delicate surgical nasal and facial reconstruction in sterile operating theatre",
+    },
+    {
+        "page_url": "https://www.pexels.com/photo/woman-smiling-with-flawless-radiant-skin-3764114/",
+        "image_url": "https://images.pexels.com/photos/3764114/pexels-photo-3764114.jpeg?cs=srgb&dl=pexels-mikhail-nilov-3764114.jpg&fm=jpg",
+        "author": "Mikhail Nilov",
+        "author_url": "https://www.pexels.com/@mikhailnilov/",
+        "theme": "Radiant natural post-treatment skin complexion and youthful facial harmony",
     },
 ]
 
