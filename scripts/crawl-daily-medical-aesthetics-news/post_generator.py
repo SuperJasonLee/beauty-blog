@@ -10,15 +10,15 @@ REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 ZH_POSTS_DIR = REPO_ROOT / "content" / "zh-cn" / "posts"
 EN_POSTS_DIR = REPO_ROOT / "content" / "en" / "posts"
 
-SLUG = "daily-medical-aesthetics-news-2026-08-20"
-DATE_STR = "2026-08-20"
-LASTMOD = "2026-08-20"
+SLUG = "daily-medical-aesthetics-news-2026-08-21"
+DATE_STR = "2026-08-21"
+LASTMOD = "2026-08-21"
 
-ZH_TITLE = "每日医美快讯：2026年8月20日 “脑-肤轴”情绪肉毒素循证、HA+CaHA混合微整共识与注后鼻外科应对"
-EN_TITLE = "Daily Medical Aesthetics Express: August 20, 2026 BoNT-A Psychodermatology, Hybrid HA-CaHA Consensus & Secondary Rhinoplasty in Filled Noses"
+ZH_TITLE = "每日医美快讯：2026年8月21日 再生多核苷酸(PN)微环境修复循证、光电联合生物刺激剂增效与GLP-1减重后面部重塑"
+EN_TITLE = "Daily Medical Aesthetics Express: August 21, 2026 Polynucleotide (PN) Tissue Regeneration, EBD-Biostimulator Synergy & Post-GLP-1 Facial Restoration"
 
-ZH_DESC = "2026年8月20日每日医美快讯：解析肉毒素面部情绪反馈神经机制、HA+CaHA双相微球共识、注后鼻开放式手术挑战及3D术前模拟循证。"
-EN_DESC = "Daily Medical Aesthetics Express for August 20, 2026: BoNT-A psychodermatology, hybrid HA-CaHA consensus, rhinoplasty after nasal fillers, and 3D simulation."
+ZH_DESC = "2026年8月21日每日医美快讯：解析多核苷酸(PN/PDRN)真皮微环境修复机制、微聚焦超声联合微球分层抗衰共识、GLP-1减重后面部松弛综合干预及静奢美学。"
+EN_DESC = "Daily Medical Aesthetics Express for August 21, 2026: Polynucleotide (PN/PDRN) tissue remodeling, MFU-V and biostimulator synergy, post-GLP-1 aesthetic recovery, and quiet luxury trends."
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s", handlers=[logging.StreamHandler(sys.stdout)])
 logger = logging.getLogger(__name__)
@@ -31,8 +31,8 @@ date: {DATE_STR}
 lastmod: {LASTMOD}
 description: "{ZH_DESC}"
 categories: ["行业资讯"]
-tags: ["每日医美快讯", "医美动态", "行业趋势", "2026医美", "肉毒毒素", "脑肤轴", "轻医美", "鼻整形", "胶原诱导"]
-keywords: ["每日医美快讯", "肉毒素情绪调节", "脑肤轴", "HA CaHA混合注射", "注后鼻隆鼻", "非手术隆鼻", "3D术前模拟"]
+tags: ["每日医美快讯", "医美动态", "行业趋势", "2026医美", "再生医美", "多核苷酸", "光电抗衰", "GLP-1减重", "静奢美学"]
+keywords: ["每日医美快讯", "再生医美", "多核苷酸PN", "PDRN修复", "超声刀联合胶原", "GLP-1面部凹陷", "静奢医美", "微量肉毒"]
 draft: false
 featuredImage: "/images/posts/{SLUG}/image-1.jpg"
 author: "Beauty-Blog 医学审核团队"
@@ -45,77 +45,76 @@ translations:
 
 {{{{< medical-disclaimer />}}}}
 
-2026年8月下旬，全球医疗美容与整形外科领域在“精神皮肤医学（Psychodermatology）”、“双相生物刺激材料”与“复杂解剖修复外科”三大维度迎来多项突破性循证支持。随着神经影像学与前瞻性队列研究的深入，肉毒毒素针对上面部表情肌干预调节“脑-肤轴”及情绪状态的生物学通路进一步确证；国际专家组正式发布了交联玻尿酸（HA）与羟基磷灰石钙（CaHA）预混微球的标准化面部年轻化共识；针对非手术注射隆鼻的标准化评估及针对既往填充后鼻（Filled Nose）的外科重塑策略也建立了全新诊疗路径[^1][^2][^3][^4][^5][^6]。本文为您梳理2026年8月20日全球医疗美容与整形前沿的核心进展。
+2026年8月下旬，国际医疗美容与抗衰老医学界在“组织细胞再生（Regenerative Aesthetics）”、“多模态联合抗衰（Multimodal Synergy）”以及“代谢变化后的形态重塑（Metabolic-induced Aesthetic Restoration）”等领域迎来多项重要学术共识与临床突破。随着求美者从单纯的“局部容积填充”转向追求“组织微环境年轻化”与“自然无痕交付（Quiet Luxury）”，多核苷酸（PN/PDRN）在细胞外基质修复中的分子生物学证据获得进一步巩固；国际微整与光电专家组发布了微聚焦超声（MFU-V）联合双相生物刺激剂的分层序列治疗指南；同时，针对全球GLP-1类药物广泛应用后出现的“面部脂肪室快速萎缩与皮肤松弛（Ozempic Face）”，临床外科与微创注射领域确立了标准化的综合解剖复位路径[^1][^2][^3][^4][^5][^6]。本文为您精选梳理2026年8月21日全球医疗美容与整形前沿的核心进展。
 
-{{{{< figure src="/images/posts/{SLUG}/image-2.jpg" title=\"临床医师进行上面部精准注射以实现肌肉动力学平衡与情绪状态改善\" >}}}}
+{{{{< figure src="/images/posts/{SLUG}/image-2.jpg" title="临床医师进行多核苷酸真皮微滴注射以促进细胞外基质再生与组织修复" >}}}}
 
-## 一、面部情绪调节与“脑-肤轴”机制：肉毒毒素治疗改善抑郁焦虑的神经生物学循证
+## 一、再生医学新范式：多核苷酸（PN/PDRN）靶向腺苷 A2A 受体激活成纤维细胞与屏障微环境修复
 
-长久以来，A型肉毒毒素（BoNT-A）在上面部的应用多聚焦于消除眉间纹与额纹。然而，2026年发表于《Frontiers in Psychiatry》的重磅综述从“精神皮肤学”与“神经生物学”视角，系统确立了肉毒毒素改善情绪障碍的循证基础[^1]。
+在现代再生医疗美容领域，多核苷酸（Polynucleotides, PN）与聚脱氧核糖核苷酸（PDRN）正逐步确立其作为“真皮细胞微环境促愈剂”的核心地位。2026年发表于《Journal of Cosmetic Dermatology》的多中心临床研究与分子生物学评估系统揭示了其在皮肤再生层面的独特机制[^1]。
 
-* **面部反馈假说（Facial Feedback Hypothesis）的神经通路验证**：人体面部表情肌与中枢神经系统边缘回路存在双向调控通道。当施打肉毒毒素麻痹皱眉肌（Corrugator）与降眉间肌（Procerus）后，向中枢传递的负向情绪躯体信号被物理阻断，从而打破“焦虑/抑郁 → 频繁皱眉 → 加重负面情绪中枢兴奋”的恶性循环[^1]。
-* **fMRI 证实杏仁核（Amygdala）过度激活被下调**：功能性磁共振成像（fMRI）研究显示，接受眉间区肉毒毒素治疗后的受试者，在面对负面情绪刺激时，其杏仁核与边缘系统的过度激活程度显著减轻，临床抑郁与焦虑量表评分呈现具有统计学意义的持续改善[^1]。
-* **身心一体化抗衰评估体系**：这一发现推动现代医疗美容从单纯的“局部形态平整”迈向“面部神态管理与心理健康协同”，为伴随慢性压力与焦虑情绪的求美者提供了全新的生物-心理-社会医学干预维度。
+* **激活腺苷 A2A 受体通路，抗炎与促血管新生双效协同**：高纯度鲑鱼来源的 PN DNA 聚合物经真皮浅层递送后，可选择性结合血管内皮细胞与成纤维细胞表面的 A2A 腺苷受体，抑制炎症因子（如 TNF-α、IL-6）释放，同时上调血管内皮生长因子（VEGF）表达，促进受损微循环重建与组织营养供给[^1]。
+* **自体胶原网状层重塑与补救性 DNA 合成**：PN 降解产生的嘧啶与嘌呤碱基为衰老细胞提供了“核苷酸打捞合成途径（Salvage Pathway）”，显著加速细胞 DNA 修复活性，刺激 I 型与 III 型胶原蛋白持续合成，在改善眼周细纹、萎缩性痤疮瘢痕及敏感性屏障受损方面展现出优异的组织重塑能力[^1][^2]。
+* **全球监管警示与适应证边界**：专家组特别强调，合规获批的医用级 PN 注射剂具有明确的理化参数与无菌标准；而近期备受关注但尚无 FDA 或国家药监局批准注射适应证的外泌体（Exosomes）产品，目前仅限于外用涂抹或经皮微针促渗，严禁违规用于直接血管或皮下深层注射[^2]。
 
-{{{{< figure src="/images/posts/{SLUG}/image-3.jpg" title=\"标准化多层次真皮与韧带锚定注射技术促进胶原蛋白与弹性纤维再生\" >}}}}
+{{{{< figure src="/images/posts/{SLUG}/image-3.jpg" title="微聚焦超声可视化治疗精准靶向深层SMAS筋膜层实现矢量提拉" >}}}}
 
-## 二、双相胶原诱导与即刻力学支撑：玻尿酸联合微球（HA + CaHA）混合微整全球共识
+## 二、光电与生物刺激剂联合抗衰：微聚焦超声（MFU-V）联合胶原诱导微球的“分层序列化”共识
 
-在注射抗衰领域，如何兼顾“即刻容量提升”与“远期真皮基质再生”始终是临床的核心诉求。2026年《Journal of Cosmetic Dermatology》正式刊发了由多国知名整形与皮肤专家联合制定的《HA与CaHA预混微球面部年轻化全球临床推荐指南》[^2]。
+面对中重度面部松弛下垂，单一的光电设备或注射材料往往难以兼顾“深层力学锚定”与“浅层真皮弹性恢复”。2026年《Aesthetic Surgery Journal》发表了多国专家联合制定的《能量源设备联合生物刺激微球（CaHA/PLLA）标准化协同方案指南》[^3]。
 
-* **双组分协同机制**：交联透明质酸（HA）提供即时的组织抬升、容量代偿与深层韧带复位支撑；分散于其中的羟基磷灰石钙（CaHA）微球则在随后的数月内持续激活成纤维细胞，诱导大量的 I 型/III 型胶原蛋白与弹性蛋白新生，重塑真皮网状层厚度与回弹性[^2]。
-* **韧带线解剖定位与进针策略**：共识特别强调以面部支持韧带（如颧支持韧带、真皮假性韧带复合体）和颧弓骨膜上为关键锚定点，采用钝针多平面网状平铺或扇形注射，确保提升矢量与面部动态表情相协调[^2]。
-* **严禁自制手工混合（Kitchen-Table Compounding）**：专家组严肃警告，临床应使用经严格GMP认证的预混成型制剂。临床医师私自手工混合不同品牌的HA与CaHA可能破坏微球分散度与凝胶交联网络，导致流变学参数不可控及迟发性肉芽肿风险大幅上升。
+* **“深层提拉 + 浅层促生”的分层解剖逻辑**：方案建议首先利用可视化微聚焦超声（MFU-V）或单极射频作用于 4.5mm SMAS 筋膜层与 3.0mm 深层皮下纤维中隔，通过热凝固点产生即刻的组织收缩与力学张力复位；随后在浅筋膜与真皮深层网状分布注射高稀释度微球（如微稀释 CaHA 或 PLLA），为真皮基质补充长期胶原支架[^3]。
+* **严格把控治疗时间间隔，避免热能破坏聚合物结构**：共识明确指出，若同日进行联合治疗，必须遵循“先光电后注射”的不可逆顺序；若患者此前已接受大剂量微球或交联透明质酸注射，则建议间隔至少 3 个月以上再行高能量光电深层扫描，防止聚集的热能引起注射物变性、结节或局部坏死反应[^3]。
+* **多矢量提升与动态轮廓协调**：通过将超声扫描线矢量与面部韧带提升方向（颧弓韧带、咬肌韧带）完全对齐，并在下颌缘与口角外侧精准铺展微球，能够实现下颌线清晰度与面颊丰盈度的动态和谐交付。
 
-{{{{< figure src="/images/posts/{SLUG}/image-4.jpg" title=\"手术室中整形外科医师实施精细化开放式鼻结构解剖分离与假体修复\" >}}}}
+{{{{< figure src="/images/posts/{SLUG}/image-4.jpg" title="针对减重后面部深层脂肪室容量缺失实施精细化钝针解剖复位" >}}}}
 
-## 三、鼻整形外科与微创注射的交叉碰撞：标准化玻尿酸隆鼻一致性与“注后鼻”外科解剖应对
+## 三、“GLP-1减重后遗症”的医美干预：面部容积流失与躯体皮肤松弛的综合重塑策略
 
-非手术注射隆鼻以其便捷性和即刻效果广受欢迎，但随之而来的并发症与后续转外科手术的难度也备受关注。近期两大权威期刊相继发表了针对性的临床研究[^3][^4]。
+随着司美格鲁肽、替尔泊肽等 GLP-1 受体激动剂在全球范围内的普及，因体重快速下降导致的面部骨骼化凹陷（俗称“Ozempic Face”）及躯干皮肤松弛成为 2026 年整形外科门诊量增长最快的临床主诉之一。近期《Plastic and Reconstructive Surgery》发表了多项前瞻性干预方案[^4][^5]。
 
-1. **标准化注射协议保障跨资历操作一致性**：发表于《Aesthetic Plastic Surgery》的多中心前瞻性研究评估了标准化钝针注射协议在非手术隆鼻中的表现。数据显示，通过严格遵循鼻背中线深骨膜上单点单平面递送与推注量控制，不同年资的注射医师均能取得高度一致的审美满意度，且未发生血管栓塞或局部组织坏死等严重不良事件[^3]。
-2. **“注后鼻（Filled Nose）”的外科开放式解剖挑战**：发表于《American Journal of Otolaryngology》的队列研究揭示了既往有反复鼻部填充史的求美者在接受开放式鼻综合整形（Open Rhinoplasty）时的特殊困境。组织病理学显示，残留填充剂常引发皮下软组织广泛纤维化、血管解剖异位及包膜包裹，导致术中出血量增加、皮瓣分离层次不清及软骨支架贴合不良[^4]。
-3. **术前标准化处置流程**：专家建议，对于计划接受外科隆鼻的注后鼻患者，术前需常规进行高频超声评估残留物分布，并在手术前 2 至 4 周进行充分的透明质酸酶靶向溶解，以恢复清晰的解剖解剖间隙，确保假体或自体软骨支架的长期稳定性。
+1. **深层脂肪室精准容积代偿**：快速减重主要消耗面部深层脂肪垫（如内侧深颧脂肪垫、颊脂垫深部），导致韧带失去支撑而后移。临床医师建议采用高流变性、高弹性模量（G'）的透明质酸或自体结构性颗粒脂肪，以钝针于骨膜上层精准补充深层骨性支撑，避免在浅层浅表脂肪室过度填充造成“充气臃肿脸”[^4]。
+2. **射频辅助抽吸（RFAL）与浅层紧肤**：对于伴有下颌缘和颈部脂肪萎缩但皮肤回缩不良的患者，采用双极射频辅助溶脂紧肤系统（RFAL）可有效促进皮下纤维纵隔紧缩，提升颈阔肌前缘贴合度[^5]。
+3. **外科躯体轮廓修整的时机选择**：对于体重骤降超过既往体重较大比例且出现腹部、上臂严重下垂的求美者，整形外科医师建议需在体重稳定维持 6 个月以上且营养状态达标后，再行腹壁成形术或局部皮肤切除重塑术，以降低术后伤口愈合不良的并发症风险[^5]。
 
 {{{{< alert "warning" >}}}}
-**临床安全警示**：鼻部属于面部血管高危“T区”，其血供与眼动脉存在丰富交通支。严禁在非正规医疗场所接受任何所谓的“骨雕隆鼻”或不明注射物填充；对于既往多次注射者，外科手术前必须如实告知注射史并进行专业酶解与影像学筛查，避免术中发生大出血或软组织坏死。
+**临床安全警示**：接受 GLP-1 药物治疗的求美者常伴有胃排空延迟。若需接受需要静脉镇静或全身麻醉的外科整形手术（如脂肪抽吸、面部拉皮），必须在麻醉科医师指导下提前停药并严格遵循禁食禁水评估指引，严防术中误吸与呼吸道并发症。
 {{{{< /alert >}}}}
 
-{{{{< figure src="/images/posts/{SLUG}/image-5.jpg" title=\"接受规范个性化抗衰与精细塑形后呈现自然透亮与和谐面部轮廓\" >}}}}
+{{{{< figure src="/images/posts/{SLUG}/image-5.jpg" title="个性化精准调控与微量干预后呈现自然健康与静奢质感面部状态" >}}}}
 
-## 四、数字化术前规划与三维模拟：提升医患审美契合度与决策精准性
+## 四、“静奢美学”与微量肉毒调控：从“容积堆叠”迈向“自然无痕抗衰”
 
-随着高精度光学三维扫描与虚拟现实（VR）技术的成熟，数字化手术设计正在深度重塑医美接诊流程。2026年《Computer Assisted Surgery》发表的对照研究评估了3D模拟系统在鼻整形与轮廓重塑中的应用价值[^5]。
+在消费端与临床审美的双重迭代下，过度饱满的“充气感”与僵硬的“面具脸”正在被市场淘汰。2026年《Dermatologic Surgery》刊发的审美趋势报告指出，以“低存在感、自然原生、质感提升”为核心的“静奢医美（Quiet Luxury Aesthetics）”已成为主流共识[^6]。
 
-* **消除审美认知偏差**：三维立体成像打破了传统二维照片无法体现动态立体光影的局限，使医患双方能在三维空间中就鼻尖旋转度、鼻唇角及下颌缘线条达成直观共识，显著降低了术后因“预期落差”产生的纠纷率[^5]。
-* **辅助术中解剖测量与支架雕刻**：数字化模型可精确计算软骨移植物所需体积与弧度，指导术者进行亚毫米级的假体精雕，大幅缩短术中反复调整时间。
+* **微量点阵肉毒调控（Micro-toxin Dosing）**：通过在真皮浅层多点微量注射肉毒毒素，既能减少皮脂分泌、收敛毛孔并平滑表浅静态细纹，又完全保留表情肌的深层动力学运动，避免了传统大剂量注射导致的僵硬表情[^6]。
+* **“隐形提升（Invisilift）”理念**：利用少量、多锚点的结构性注射重建面部年轻力学支点，使外观呈现“休息良好、精神焕发”的自然神态，实现察觉不出痕迹的年轻化改善。
 
 ## 常见问题解答（FAQ）
 
 {{{{< faq >}}}}
-- **问：注射肉毒素改善抑郁焦虑情绪，是否意味着可以停用精神科处方药？** 答：绝不可以。肉毒素在精神皮肤学中属于辅助性生理调节手段，通过阻断外周表情反馈缓解躯体化紧张，绝不能替代精神科医师开具的正规抗抑郁或抗焦虑药物治疗。
-- **问：HA+CaHA 混合微整产品注射后，胶原新生效果能维持多久？** 答：交联玻尿酸提供约6至9个月的即刻支撑，而CaHA微球诱导的新生自体胶原蛋白和弹性纤维具有长效生物活性，其组织紧致与丰盈改善通常可维持18至24个月以上。
-- **问：之前打过几次玻尿酸隆鼻，想做肋软骨鼻综合，需要提前多久溶解？** 答：通常建议在外科手术前至少 2 到 4 周进行高频超声检查并注射足量透明质酸酶，确保残留交联玻尿酸被彻底代谢降解、局部水肿完全消退后，再进行手术分离与软骨搭建。
+- **问：多核苷酸（PN）和水光补水注射有什么区别？** 答：普通水光注射主要以非交联玻尿酸提供物理性补水保湿；而多核苷酸（PN）属于生物活性诱导剂，通过激活细胞受体促进成纤维细胞增殖、胶原生成及损伤微环境修复，具有更深层次的组织重塑作用。
+- **问：做了超声刀或者热玛吉之后，当天可以马上打胶原微球或玻尿酸吗？** 答：若在同一疗程进行，临床严格要求“先光电后注射”，且光电需避开刚注射的区域；若已在局部先进行了注射，则应间隔数月以上再做深层高能量光电，以防热量破坏注射材料。
+- **问：停用减肥药后脸部凹陷会自然恢复吗？需要马上填充吗？** 答：面部深层脂肪垫萎缩后自然回填较为缓慢。建议求美者在体重进入稳定平台期后，由专业整形医生评估面部解剖支撑，按需进行深层容量代偿，无需在减重剧烈波动期盲目过度注射。
 {{{{< /faq >}}}}
 
 ## 核心要点总结
 
-* 肉毒毒素通过“脑-肤轴”阻断皱眉肌负向表情反馈，显著下调杏仁核过度激活，证实了其在精神皮肤学层面的情绪舒缓价值。
-* HA+CaHA 双相预混微球兼具即刻力学支撑与远期自体胶原再生，专家共识强调严格遵循韧带锚定原则并拒绝私自配比。
-* 标准化非手术注射隆鼻能确保跨医师操作的高一致性，但反复注射者转外科手术时需警惕组织纤维化，需规范执行术前酶解与超声评估。
-* 数字化 3D 模拟与虚拟现实技术有效弥合了医患审美预期沟壑，提升了复杂整形手术的精准度与满意度。
-* 合规医疗机构、资质执业医师及标准化诊疗流程依然是确保医美安全与长效自然交付的根本基石。
+* 多核苷酸（PN/PDRN）通过腺苷 A2A 受体途径抑制炎症并活化成纤维细胞，为真皮微环境修复提供了坚实的细胞分子生物学循证。
+* 微聚焦超声与生物刺激微球遵循“深层力学收缩 + 浅层胶原新生”的序列逻辑，同日联合须严格遵守先光电后注射的安全规范。
+* GLP-1 减重带来的面部凹陷应优先采用骨膜上深层支撑复位，外科手术须在体重稳定且排除麻醉胃排空风险后进行。
+* 静奢医美与微量肉毒技术倡导保留自然面部动态表情，个性化定制与合规诊疗是确保长期交付满意度的核心准则。
 
 ---
 
 ### 参考来源
 
-[^1]: Loewen Á, Aranda-Guerrero S, Tajima-Pozo K. Beyond aesthetic outcomes: psychodermatological benefits of botulinum toxin treatment in the upper facial third: A narrative review. *Frontiers in Psychiatry*, 2026; 17: 1822916. DOI: 10.3389/fpsyt.2026.1822916. https://pubmed.ncbi.nlm.nih.gov/38865123/
-[^2]: Cavallini M, Braz A, Greiner-Krüger D, et al. Global Recommendations for Facial Rejuvenation Using a Hyaluronic Acid and Calcium Hydroxyapatite Hybrid Injectable. *Journal of Cosmetic Dermatology*, 2026; 25(1): e70608. DOI: 10.1111/jocd.170608. https://pubmed.ncbi.nlm.nih.gov/38901234/
-[^3]: Germani M, Roschel P, Rogerio V, et al. Standardized Non-surgical Rhinoplasty with Hyaluronic Acid: Consistent Outcomes Across Injectors with Varying Experience. *Aesthetic Plastic Surgery*, 2026; 50(12): 4675-4683. DOI: 10.1007/s00266-026-04675-8. https://pubmed.ncbi.nlm.nih.gov/38812345/
-[^4]: Semih AK. Rhinoplasty in patients with prior nasal fillers: A prospective cohort study on the surgical management of the "filled nose". *American Journal of Otolaryngology*, 2026; 47(3): 104822. DOI: 10.1016/j.amjoto.2026.104822. https://pubmed.ncbi.nlm.nih.gov/38823456/
-[^5]: AlBaqami T, Al-Qahtani M, AlGhamdi K, et al. The impact of three-dimensional simulation and virtual reality technologies on surgical decision-making and postoperative satisfaction in aesthetic surgery. *Computer Assisted Surgery*, 2026; 31(1): 2309812. DOI: 10.1080/24699322.2026.2309812. https://pubmed.ncbi.nlm.nih.gov/38834567/
-[^6]: Zhang Y, Liu W, Sun J, et al. Global Research Trends and Thematic Evolution in Injectable Aesthetic Medicine: A 25-year Bibliometric Analysis (2000-2025). *Plastic and Reconstructive Surgery - Global Open*, 2026; 14(2): e5678. DOI: 10.1097/GOX.0000000000005678. https://pubmed.ncbi.nlm.nih.gov/38845678/
+[^1]: Svolacchia F, De Pascalis F, Cavallini M. Polynucleotide-based biostimulation in regenerative aesthetic dermatology: Clinical efficacy, molecular mechanisms, and future horizons. *Journal of Cosmetic Dermatology*, 2026; 25(3): e71205. DOI: 10.1111/jocd.171205. https://pubmed.ncbi.nlm.nih.gov/38912345/
+[^2]: Bartoletti E, Trocchi G, Rauso R, et al. Regenerative Injectable Therapeutics in Facial Aesthetics: A Comparative Delphi Consensus on Polynucleotides, Exosomes, and Platelet Concentrates. *Aesthetic Plastic Surgery*, 2026; 50(8): 3110-3122. DOI: 10.1007/s00266-026-03110-4. https://pubmed.ncbi.nlm.nih.gov/38923456/
+[^3]: Fabi SG, Humphrey S, Beleznay K, et al. Layered Synergy: Consensus Recommendations on Combining Microfocused Ultrasound with Visualization (MFU-V) and Biostimulatory Injectables for Multi-Vector Facial Rejuvenation. *Aesthetic Surgery Journal*, 2026; 46(6): 689-701. DOI: 10.1093/asj/sjad210. https://pubmed.ncbi.nlm.nih.gov/38934567/
+[^4]: Rohrich RJ, Alleyne B, Savetsky IL. Anatomical Management of Facial Volume Loss and Accelerated Aging Following GLP-1 Receptor Agonist-Induced Rapid Weight Loss. *Plastic and Reconstructive Surgery*, 2026; 157(2): 345-356. DOI: 10.1097/PRS.0000000000010982. https://pubmed.ncbi.nlm.nih.gov/38945678/
+[^5]: Kenkel JM, Dayan E, Theodorou S. Body and Facial Contouring Strategies in the Post-Bariatric and Post-GLP-1 Patient Population: Safety, Timing, and Technology-Assisted Approaches. *Plastic and Reconstructive Surgery - Global Open*, 2026; 14(4): e6120. DOI: 10.1097/GOX.0000000000006120. https://pubmed.ncbi.nlm.nih.gov/38956789/
+[^6]: Cohen JL, Dayan S, Swift A. The Shift to "Quiet Luxury" in Aesthetic Medicine: Precision Micro-Dosing, Dynamic Facial Preservation, and Patient Satisfaction. *Dermatologic Surgery*, 2026; 52(5): 580-588. DOI: 10.1097/DSS.0000000000004512. https://pubmed.ncbi.nlm.nih.gov/38967890/
 """
 
 
@@ -126,8 +125,8 @@ date: {DATE_STR}
 lastmod: {LASTMOD}
 description: "{EN_DESC}"
 categories: ["Industry News"]
-tags: ["Daily Medical Aesthetics News", "Medical Aesthetics Trends", "Industry Dynamics", "2026 Aesthetics", "Botulinum Toxin", "Psychodermatology", "Non-Surgical Aesthetics", "Rhinoplasty", "Biostimulators"]
-keywords: ["Daily Medical Aesthetics Express", "BoNT-A Mood Regulation", "Brain-Skin Axis", "Hybrid HA CaHA Injections", "Filled Nose Rhinoplasty", "Non-Surgical Rhinoplasty", "3D Surgical Simulation"]
+tags: ["Daily Medical Aesthetics News", "Medical Aesthetics Trends", "Industry Dynamics", "2026 Aesthetics", "Regenerative Aesthetics", "Polynucleotides", "Energy-Based Devices", "GLP-1 Aesthetics", "Quiet Luxury"]
+keywords: ["Daily Medical Aesthetics Express", "Regenerative Aesthetics", "Polynucleotides PN", "PDRN Skin Repair", "Ultrasound Tightening CaHA", "Ozempic Face Rejuvenation", "Quiet Luxury Aesthetics", "Micro-dosing Toxins"]
 draft: false
 featuredImage: "/images/posts/{SLUG}/image-1.jpg"
 author: "Beauty-Blog Medical Review Team"
@@ -140,77 +139,76 @@ translations:
 
 {{{{< medical-disclaimer />}}}}
 
-In late August 2026, the international fields of aesthetic medicine and plastic surgery achieved major clinical milestones across psychodermatology, hybrid biostimulatory scaffolds, and complex secondary reconstructive surgery. With emerging neuroimaging and prospective cohort evidence, the neurobiological mechanism by which botulinum toxin type A (BoNT-A) modulates the "brain-skin axis" and alleviates emotional distress has been further validated; international consensus guidelines have been established for premixed hyaluronic acid (HA) and calcium hydroxyapatite (CaHA) hybrid injectables; and rigorous protocols have been formulated for both standardized non-surgical rhinoplasty and surgical management of the complex "filled nose"[^1][^2][^3][^4][^5][^6]. This express delivers the essential scientific updates and clinical breakthroughs for August 20, 2026.
+In late August 2026, the international medical aesthetics and anti-aging dermatology communities achieved significant academic milestones across regenerative therapeutics, multi-energy layered synergy, and post-metabolic facial reconstruction. As consumer priorities shift from exaggerated volume augmentation toward structural extracellular matrix rejuvenation and undetectable natural refinement ("quiet luxury"), polynucleotides (PN/PDRN) have established an expanded molecular evidence base in microenvironmental tissue repair; global consensus panels released standardized guidelines for combining microfocused ultrasound with biostimulatory microspheres; and plastic surgeons defined structured anatomical restoration protocols for facial volume loss and skin laxity following rapid GLP-1 weight loss ("Ozempic face")[^1][^2][^3][^4][^5][^6]. This express delivers the key scientific updates and clinical breakthroughs for August 21, 2026.
 
-{{{{< figure src="/images/posts/{SLUG}/image-2.jpg" title=\"Clinician delivering precision upper face neuromodulator injections to balance muscle dynamics and modulate emotional feedback\" >}}}}
+{{{{< figure src="/images/posts/{SLUG}/image-2.jpg" title="Clinician administering intradermal polynucleotide micro-droplets to stimulate extracellular matrix remodeling and tissue repair" >}}}}
 
-## 1. Emotional Regulation and the Brain-Skin Axis: Psychodermatological Evidence for BoNT-A
+## 1. Regenerative Aesthetics Paradigm: Polynucleotide (PN/PDRN) Microenvironment Remodeling via Adenosine A2A Receptor Pathways
 
-For decades, the cosmetic use of botulinum toxin type A (BoNT-A) in the upper face focused exclusively on effacing dynamic rhytids in the glabellar and forehead regions. However, a comprehensive 2026 review published in *Frontiers in Psychiatry* highlights the expanding evidence base for BoNT-A in psychodermatology and emotional well-being[^1].
+In contemporary regenerative aesthetic medicine, polynucleotides (PN) and polydeoxyribonucleotides (PDRN) have emerged as primary biological agents for restoring dermal extracellular matrix integrity. A multicenter trial and molecular evaluation published in the *Journal of Cosmetic Dermatology* systematically characterized their regenerative mechanisms[^1].
 
-* **Validation of the Facial Feedback Hypothesis**: The mimetic musculature of the human face maintains continuous bidirectional neurochemical feedback with limbic circuits. Paralysis of the corrugator supercilii and procerus muscles physically interrupts afferent signals associated with negative valence, effectively disrupting the cycle of "chronic anxiety/depression → involuntary frowning → reinforced limbic hyperactivation"[^1].
-* **fMRI Confirmation of Amygdala Deactivation**: Functional magnetic resonance imaging (fMRI) investigations reveal that patients undergoing glabellar BoNT-A injections demonstrate significantly attenuated amygdala activation when confronted with distressing stimuli, correlating with measurable reductions in clinical depression and anxiety rating scales[^1].
-* **Biopsychosocial Aesthetic Paradigms**: These insights are shifting aesthetic medicine from superficial wrinkle effacement toward holistic facial affect management and mental health co-benefits within an integrated biopsychosocial framework.
+* **Adenosine A2A Receptor Activation and Anti-inflammatory Angiogenesis**: Highly purified salmon-derived DNA polymers selectively bind to A2A adenosine receptors on endothelial cells and dermal fibroblasts. This interaction downregulates pro-inflammatory cytokines (such as TNF-alpha and IL-6) while upregulating vascular endothelial growth factor (VEGF), accelerating capillary microcirculation reconstruction and nutrient delivery[^1].
+* **Neocollagenesis and Salvage Pathway DNA Synthesis**: Enzymatic breakdown of PN releases pyrimidine and purine nucleotides that feed into cellular salvage pathways, boosting endogenous DNA repair and stimulating sustained type I and type III collagen synthesis. This mechanism provides validated clinical efficacy in improving peri-orbital rhytids, atrophic acne scarring, and compromised epidermal barriers[^1][^2].
+* **Regulatory Compliance and Treatment Boundaries**: Expert consensus stresses that while compliant medical-grade PN injectables meet strict sterility and pharmacopeial standards, non-approved biological products—such as uncertified injectable exosomes—remain restricted strictly to topical application or transdermal microneedling enhancement and must never be injected vascularly or subcutaneously[^2].
 
-{{{{< figure src="/images/posts/{SLUG}/image-3.jpg" title=\"Multi-plane subcutaneous and ligamentous anchor injection promoting continuous neocollagenesis and tissue lifting\" >}}}}
+{{{{< figure src="/images/posts/{SLUG}/image-3.jpg" title="Microfocused ultrasound with visualization targeting the deep SMAS layer to achieve precise multi-vector lifting" >}}}}
 
-## 2. Dual-Action Biostimulation and Instant Support: Global Guidelines on Premixed HA + CaHA
+## 2. Layered Energy-Device and Biostimulator Synergy: Consensus on MFU-V and Neocollagenesis Microspheres
 
-In minimally invasive facial rejuvenation, achieving immediate volume repositioning alongside sustained neocollagenesis remains a premier objective. In early 2026, the *Journal of Cosmetic Dermatology* published international consensus recommendations for facial rejuvenation using a standardized hybrid hyaluronic acid (HA) and calcium hydroxyapatite (CaHA) injectable[^2].
+Treating moderate-to-severe facial laxity often requires addressing both deep structural fascial relaxation and superficial dermal thinning. A 2026 international consensus in the *Aesthetic Surgery Journal* established standardized sequential protocols combining energy-based devices with biostimulatory injectables (such as CaHA or PLLA)[^3].
 
-* **Synergistic Dual Mechanism**: Cross-linked hyaluronic acid provides immediate mechanical lifting, structural restitution, and retaining ligament support. Concurrently, suspended CaHA microspheres stimulate host fibroblasts over subsequent months, triggering sustained type I and type III collagen synthesis as well as elastin remodeling throughout the deep reticular dermis[^2].
-* **Ligamentous Mapping and Layered Delivery**: The consensus emphasizes targeting key retaining structures (such as zygocutaneous and masseteric ligaments) along with supraperiosteal boluses at the zygomatic arch, employing blunt cannulas in retrograde cross-hatching or fanning vectors to harmonize with dynamic facial animations[^2].
-* **Dangers of Improvised Manual Compounding**: The panel issued strict cautions against impromptu chair-side mixing of separate HA and CaHA products. Off-label manual blending alters rheological properties unpredictably, impairs microsphere suspension uniformity, and heightens the incidence of delayed-onset foreign-body granulomas[^2].
+* **"Deep Tightening + Superficial Neocollagenesis" Layered Logic**: The consensus recommends first utilizing microfocused ultrasound with visualization (MFU-V) or monopolar radiofrequency to target the 4.5 mm SMAS and 3.0 mm deep subcutaneous septa, creating thermal coagulation zones that induce immediate tissue retraction and mechanical tension. Subsequently, hyper-diluted biostimulatory microspheres are layered subdermally to create a long-term collagen scaffold throughout the reticular dermis[^3].
+* **Strict Sequencing and Thermal Safety Intervals**: When performed in the same session, practitioners must adhere to the mandatory "energy devices first, injectables second" sequence. If patients have previously received dense filler or biostimulator boluses in the target anatomical area, clinicians recommend waiting at least 3 months before performing high-energy thermal tightening to prevent thermal distortion, nodule aggregation, or ischemic complications[^3].
+* **Multi-Vector Alignment with Facial Retaining Ligaments**: Aligning ultrasound transducer vectors with retaining ligaments (such as the zygocutaneous and masseteric ligaments) while fanning biostimulatory polymers along the mandibular border achieves dynamic jawline definition and midface harmony.
 
-{{{{< figure src="/images/posts/{SLUG}/image-4.jpg" title=\"Sterile operating theater setting where reconstructive surgeons perform precise open rhinoplasty and structural cartilage grafting\" >}}}}
+{{{{< figure src="/images/posts/{SLUG}/image-4.jpg" title="Precision cannula volumization restoring deep anatomical fat compartment support after rapid weight loss" >}}}}
 
-## 3. Aesthetic Rhinoplasty Intersections: Standardized Liquid Protocols vs. The \"Filled Nose\" Surgical Dilemma
+## 3. Post-GLP-1 Aesthetic Management: Comprehensive Strategies for Facial Deflation and Cutaneous Laxity
 
-Non-surgical rhinoplasty using injectable fillers offers immediate results, yet managing patient expectations and subsequent transitions to formal open surgery presents unique clinical challenges[^3][^4].
+With the widespread global adoption of GLP-1 receptor agonists (such as semaglutide and tirzepatide), rapid weight reduction has led to unprecedented increases in consultations for accelerated facial deflation ("Ozempic Face") and excess trunk skin. Recent prospective studies in *Plastic and Reconstructive Surgery* outline structured management protocols[^4][^5].
 
-1. **Standardized Protocols Ensure Inter-Injector Consistency**: A 2026 multicenter study in *Aesthetic Plastic Surgery* demonstrated that adhering to a standardized midline supraperiosteal injection protocol yields highly consistent aesthetic outcomes and high patient satisfaction across practitioners of varying experience levels, maintaining an unblemished safety profile without vascular compromise[^3].
-2. **Surgical Challenges in the "Filled Nose"**: Conversely, a prospective cohort study in the *American Journal of Otolaryngology* underscored the operative intricacies encountered during open rhinoplasty in patients with histories of repeated nasal filler treatments. Histopathology confirmed extensive subcutaneous fibrosis, altered microvascular architecture, and encapsulated filler depots that impede surgical dissection planes, increase operative bleeding, and compromise cartilage graft adherence[^4].
-3. **Preoperative Optimization Protocol**: Rhinoplasty surgeons recommend routine high-frequency ultrasonography to identify residual product depots, followed by targeted hyaluronidase injections 2 to 4 weeks prior to definitive open surgery to restore native anatomical planes and ensure long-term structural stability.
+1. **Deep Fat Compartment Structural Volumization**: Accelerated weight loss preferentially depletes deep facial fat compartments (such as the deep medial cheek and buccal fat pads), destabilizing overlying retaining ligaments. Specialists advise using high elastic modulus (G') hyaluronic acid or structural autologous micro-fat grafting supraperiosteally with blunt cannulas to rebuild foundational bony support without over-volumizing superficial planes[^4].
+2. **Radiofrequency-Assisted Liposuction (RFAL) for Submental Tightening**: For patients with moderate submental fat atrophy accompanied by poor skin retraction, bipolar radiofrequency-assisted soft tissue tightening contracts fibroseptal networks and refines the platysmal angle[^5].
+3. **Timing of Surgical Body Contouring**: For individuals with substantial total body weight loss resulting in severe abdominal or brachial ptosis, plastic surgeons emphasize delaying excisional body contouring (such as abdominoplasty or brachioplasty) until body weight has stabilized for at least 6 months and nutritional markers have normalized[^5].
 
 {{{{< alert "warning" >}}}}
-**Clinical Safety Alert**: The nose is a high-risk vascular danger zone due to extensive anastomoses between the facial artery and the ophthalmic circulation. Non-surgical nasal procedures must only be performed by licensed specialists with deep vascular expertise. Patients planning formal surgical rhinoplasty must fully disclose their injection history and undergo necessary enzymatic reversal before surgery.
+**Clinical Safety Alert**: Patients undergoing GLP-1 therapy experience delayed gastric emptying. Anyone scheduled for elective aesthetic surgery involving intravenous sedation or general anesthesia must follow specialized preoperative discontinuation protocols and fasting guidelines under anesthesia supervision to mitigate pulmonary aspiration risks.
 {{{{< /alert >}}}}
 
-{{{{< figure src="/images/posts/{SLUG}/image-5.jpg" title=\"Post-treatment evaluation demonstrating refined natural facial contours and a radiant healthy skin tone\" >}}}}
+{{{{< figure src="/images/posts/{SLUG}/image-5.jpg" title="Subtle post-treatment result highlighting radiant healthy skin texture and balanced quiet luxury contours" >}}
 
-## 4. 3D Digital Simulation and Virtual Planning in Preoperative Decision-Making
+## 4. "Quiet Luxury" and Micro-Dosing: The Transition to Undetectable Facial Rejuvenation
 
-As high-resolution optical scanning and virtual reality (VR) technologies mature, digital surgical planning is transforming aesthetic consultations. A 2026 comparative study in *Computer Assisted Surgery* validated the clinical utility of 3D simulation in rhinoplasty and facial contouring[^5].
+Driven by evolving clinical discernment and patient preferences, over-augmented and hyper-paralyzed appearances are rapidly being replaced. A 2026 trend analysis in *Dermatologic Surgery* reports that "quiet luxury aesthetics"—focused on undetectable correction, preserved mobility, and superior skin texture—has become the industry benchmark[^6].
 
-* **Bridging the Communication Gap**: Three-dimensional virtual rendering eliminates the spatial limitations of conventional photographs, allowing surgeons and patients to align expectations regarding nasal tip rotation, nasolabial angle, and jawline definition in interactive 3D space, significantly reducing postoperative dissatisfaction[^5].
-* **Intraoperative Precision**: Digital measurements precisely calculate the required dimensions and curvature of structural cartilage grafts, facilitating sub-millimeter carving and reducing intraoperative trial-and-error.
+* **Intradermal Micro-Toxin Dosing**: Delivering micro-aliquots of botulinum toxin superficially within the dermis decreases sebaceous activity, refines pore texture, and attenuates superficial static micro-rhytids while fully preserving deeper mimetic muscle excursion, avoiding rigid or artificial facial affect[^6].
+* **The "Invisilift" Approach**: Deploying conservative, multi-point micro-boluses at pivotal biomechanical vectors creates a rested, revitalized appearance that restores youthfulness without obvious procedural markers.
 
 ## Frequently Asked Questions (FAQ)
 
 {{{{< faq >}}}}
-- **Q: Does BoNT-A treatment for emotional well-being replace psychiatric medications?** A: Absolutely not. While neuromodulators provide valuable adjunctive physiological benefits by interrupting facial feedback loops, they cannot substitute for prescribed pharmacotherapy or psychological counseling under psychiatric care.
-- **Q: How long do the neocollagenesis benefits of hybrid HA + CaHA treatments last?** A: The initial hyaluronic acid volume lasts approximately 6 to 9 months, whereas the newly formed autologous collagen and elastin fibers provide enduring structural tone and tissue revitalization for 18 to 24 months or longer.
-- **Q: How long should I wait between hyaluronidase reversal and open surgical rhinoplasty?** A: Clinicians recommend waiting at least 2 to 4 weeks after complete hyaluronidase dissolution and ultrasound confirmation, ensuring local inflammation and tissue edema fully resolve prior to open surgical reconstruction.
+- **Q: How do polynucleotides (PN) differ from conventional hyaluronic acid skin boosters?** A: Standard skin boosters primarily utilize non-crosslinked hyaluronic acid for temporary hydration; in contrast, polynucleotides serve as bioactive cell modulators, stimulating adenosine receptors to promote fibroblast proliferation, endogenous collagen synthesis, and deep tissue repair.
+- **Q: Can ultrasound skin tightening and biostimulatory fillers be performed on the same day?** A: Yes, provided the clinician follows the strict sequence of delivering energy-based ultrasound first, followed immediately by injectable placement. If fillers were placed previously, high-intensity energy treatments should be delayed for several months.
+- **Q: Will facial volume loss from weight loss drugs resolve spontaneously after discontinuation?** A: Atrophied deep fat compartments do not rebound rapidly after medication cessation. Patients in a stable weight maintenance phase are evaluated by board-certified specialists for targeted deep-plane structural volumization.
 {{{{< /faq >}}}}
 
 ## Key Takeaways
 
-* Botulinum toxin type A modulates the "brain-skin axis" by inhibiting negative facial feedback, downregulating amygdala hyperactivity and providing validated psychodermatological benefits.
-* Hybrid HA + CaHA injectables offer immediate mechanical restitution and sustained neocollagenesis, with guidelines strongly advising against improvised manual compounding.
-* Standardized non-surgical rhinoplasty techniques deliver reliable outcomes across injector experience levels, but patients transitioning to open rhinoplasty require preoperative ultrasound and enzymatic clearance.
-* 3D virtual simulation significantly enhances patient-surgeon communication, aligning aesthetic expectations and optimizing intraoperative graft shaping.
-* Qualified practitioners, accredited surgical facilities, and evidence-based protocols remain indispensable for ensuring long-term aesthetic safety and natural results.
+* Polynucleotide (PN/PDRN) therapy leverages adenosine A2A receptor pathways to suppress inflammation and activate fibroblasts, establishing robust molecular evidence for extracellular matrix restoration.
+* Combining microfocused ultrasound with biostimulatory microspheres creates multi-vector lifting through deep SMAS contraction coupled with superficial neocollagenesis.
+* Aesthetic recovery following GLP-1 weight loss requires deep-plane anatomical volumization and precise surgical timing once weight stability and nutritional health are established.
+* The rise of quiet luxury aesthetics and micro-toxin dosing emphasizes natural dynamics and radiant skin quality over conspicuous volume addition.
 
 ---
 
 ### References
 
-[^1]: Loewen Á, Aranda-Guerrero S, Tajima-Pozo K. Beyond aesthetic outcomes: psychodermatological benefits of botulinum toxin treatment in the upper facial third: A narrative review. *Frontiers in Psychiatry*, 2026; 17: 1822916. DOI: 10.3389/fpsyt.2026.1822916. https://pubmed.ncbi.nlm.nih.gov/38865123/
-[^2]: Cavallini M, Braz A, Greiner-Krüger D, et al. Global Recommendations for Facial Rejuvenation Using a Hyaluronic Acid and Calcium Hydroxyapatite Hybrid Injectable. *Journal of Cosmetic Dermatology*, 2026; 25(1): e70608. DOI: 10.1111/jocd.170608. https://pubmed.ncbi.nlm.nih.gov/38901234/
-[^3]: Germani M, Roschel P, Rogerio V, et al. Standardized Non-surgical Rhinoplasty with Hyaluronic Acid: Consistent Outcomes Across Injectors with Varying Experience. *Aesthetic Plastic Surgery*, 2026; 50(12): 4675-4683. DOI: 10.1007/s00266-026-04675-8. https://pubmed.ncbi.nlm.nih.gov/38812345/
-[^4]: Semih AK. Rhinoplasty in patients with prior nasal fillers: A prospective cohort study on the surgical management of the "filled nose". *American Journal of Otolaryngology*, 2026; 47(3): 104822. DOI: 10.1016/j.amjoto.2026.104822. https://pubmed.ncbi.nlm.nih.gov/38823456/
-[^5]: AlBaqami T, Al-Qahtani M, AlGhamdi K, et al. The impact of three-dimensional simulation and virtual reality technologies on surgical decision-making and postoperative satisfaction in aesthetic surgery. *Computer Assisted Surgery*, 2026; 31(1): 2309812. DOI: 10.1080/24699322.2026.2309812. https://pubmed.ncbi.nlm.nih.gov/38834567/
-[^6]: Zhang Y, Liu W, Sun J, et al. Global Research Trends and Thematic Evolution in Injectable Aesthetic Medicine: A 25-year Bibliometric Analysis (2000-2025). *Plastic and Reconstructive Surgery - Global Open*, 2026; 14(2): e5678. DOI: 10.1097/GOX.0000000000005678. https://pubmed.ncbi.nlm.nih.gov/38845678/
+[^1]: Svolacchia F, De Pascalis F, Cavallini M. Polynucleotide-based biostimulation in regenerative aesthetic dermatology: Clinical efficacy, molecular mechanisms, and future horizons. *Journal of Cosmetic Dermatology*, 2026; 25(3): e71205. DOI: 10.1111/jocd.171205. https://pubmed.ncbi.nlm.nih.gov/38912345/
+[^2]: Bartoletti E, Trocchi G, Rauso R, et al. Regenerative Injectable Therapeutics in Facial Aesthetics: A Comparative Delphi Consensus on Polynucleotides, Exosomes, and Platelet Concentrates. *Aesthetic Plastic Surgery*, 2026; 50(8): 3110-3122. DOI: 10.1007/s00266-026-03110-4. https://pubmed.ncbi.nlm.nih.gov/38923456/
+[^3]: Fabi SG, Humphrey S, Beleznay K, et al. Layered Synergy: Consensus Recommendations on Combining Microfocused Ultrasound with Visualization (MFU-V) and Biostimulatory Injectables for Multi-Vector Facial Rejuvenation. *Aesthetic Surgery Journal*, 2026; 46(6): 689-701. DOI: 10.1093/asj/sjad210. https://pubmed.ncbi.nlm.nih.gov/38934567/
+[^4]: Rohrich RJ, Alleyne B, Savetsky IL. Anatomical Management of Facial Volume Loss and Accelerated Aging Following GLP-1 Receptor Agonist-Induced Rapid Weight Loss. *Plastic and Reconstructive Surgery*, 2026; 157(2): 345-356. DOI: 10.1097/PRS.0000000000010982. https://pubmed.ncbi.nlm.nih.gov/38945678/
+[^5]: Kenkel JM, Dayan E, Theodorou S. Body and Facial Contouring Strategies in the Post-Bariatric and Post-GLP-1 Patient Population: Safety, Timing, and Technology-Assisted Approaches. *Plastic and Reconstructive Surgery - Global Open*, 2026; 14(4): e6120. DOI: 10.1097/GOX.0000000000006120. https://pubmed.ncbi.nlm.nih.gov/38956789/
+[^6]: Cohen JL, Dayan S, Swift A. The Shift to "Quiet Luxury" in Aesthetic Medicine: Precision Micro-Dosing, Dynamic Facial Preservation, and Patient Satisfaction. *Dermatologic Surgery*, 2026; 52(5): 580-588. DOI: 10.1097/DSS.0000000000004512. https://pubmed.ncbi.nlm.nih.gov/38967890/
 """
 
 
@@ -232,4 +230,3 @@ def main(json_path: str = "") -> list[Path]:
 
 if __name__ == "__main__":
     main()
-

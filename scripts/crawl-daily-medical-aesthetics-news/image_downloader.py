@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-08-20"
+SLUG = "daily-medical-aesthetics-news-2026-08-21"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-consulting-a-patient-7659876/",
-        "image_url": "https://images.pexels.com/photos/7659876/pexels-photo-7659876.jpeg?cs=srgb&dl=pexels-thirdman-7659876.jpg&fm=jpg",
-        "author": "Thirdman",
-        "author_url": "https://www.pexels.com/@thirdman/",
-        "theme": "Doctor-patient clinical consultation and holistic aesthetic evaluation",
-    },
-    {
-        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-forehead-7581590/",
-        "image_url": "https://images.pexels.com/photos/7581590/pexels-photo-7581590.jpeg?cs=srgb&dl=pexels-cottonbro-studio-7581590.jpg&fm=jpg",
-        "author": "cottonbro studio",
-        "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Precise upper face neuromodulator injection targeting glabellar region",
+        "page_url": "https://www.pexels.com/photo/a-doctor-explaining-the-diagnosis-to-her-patient-5215017/",
+        "image_url": "https://images.pexels.com/photos/5215017/pexels-photo-5215017.jpeg?cs=srgb&dl=pexels-tima-miroshnichenko-5215017.jpg&fm=jpg",
+        "author": "Tima Miroshnichenko",
+        "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
+        "theme": "Doctor-patient aesthetic consultation and comprehensive facial rejuvenation evaluation",
     },
     {
         "page_url": "https://www.pexels.com/photo/woman-getting-facial-treatment-in-a-beauty-salon-3738349/",
         "image_url": "https://images.pexels.com/photos/3738349/pexels-photo-3738349.jpeg?cs=srgb&dl=pexels-cottonbro-studio-3738349.jpg&fm=jpg",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Advanced clinical facial rejuvenation and collagen biostimulation",
+        "theme": "Regenerative polynucleotide skin booster administration and extracellular matrix restoration",
     },
     {
-        "page_url": "https://www.pexels.com/photo/surgeons-performing-facial-surgery-in-operating-room-33903864/",
-        "image_url": "https://images.pexels.com/photos/33903864/pexels-photo-33903864.jpeg?cs=srgb&dl=pexels-dave-garcia-33903864.jpg&fm=jpg",
-        "author": "DAVE GARCIA",
-        "author_url": "https://www.pexels.com/@dave-garcia/",
-        "theme": "Delicate surgical nasal and facial reconstruction in sterile operating theatre",
+        "page_url": "https://www.pexels.com/photo/close-up-of-cosmetic-laser-treatment-in-clinic-37078056/",
+        "image_url": "https://images.pexels.com/photos/37078056/pexels-photo-37078056.jpeg?cs=srgb&dl=pexels-kerim-eveyik-37078056.jpg&fm=jpg",
+        "author": "Kerim Eveyik",
+        "author_url": "https://www.pexels.com/@kerimeveyik/",
+        "theme": "Energy-based device ultrasound treatment targeting deep SMAS layer and fascial tightening",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-smiling-with-flawless-radiant-skin-3764114/",
-        "image_url": "https://images.pexels.com/photos/3764114/pexels-photo-3764114.jpeg?cs=srgb&dl=pexels-mikhail-nilov-3764114.jpg&fm=jpg",
-        "author": "Mikhail Nilov",
-        "author_url": "https://www.pexels.com/@mikhailnilov/",
-        "theme": "Radiant natural post-treatment skin complexion and youthful facial harmony",
+        "page_url": "https://www.pexels.com/photo/close-up-of-cosmetic-injection-procedure-34220525/",
+        "image_url": "https://images.pexels.com/photos/34220525/pexels-photo-34220525.jpeg?cs=srgb&dl=pexels-prolific-people-34220525.jpg&fm=jpg",
+        "author": "Prolific People",
+        "author_url": "https://www.pexels.com/@prolificpeople/",
+        "theme": "Precision cannula volumization for post-weight-loss facial fat pad atrophy restoration",
+    },
+    {
+        "page_url": "https://www.pexels.com/photo/woman-touching-her-smooth-facial-skin-3762875/",
+        "image_url": "https://images.pexels.com/photos/3762875/pexels-photo-3762875.jpeg?cs=srgb&dl=pexels-cottonbro-studio-3762875.jpg&fm=jpg",
+        "author": "cottonbro studio",
+        "author_url": "https://www.pexels.com/@cottonbro/",
+        "theme": "Post-procedure radiant complexion reflecting natural undetectable quiet luxury aesthetics",
     },
 ]
 
