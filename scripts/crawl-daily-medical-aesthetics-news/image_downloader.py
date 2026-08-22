@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-08-21"
+SLUG = "daily-medical-aesthetics-news-2026-08-22"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-explaining-the-diagnosis-to-her-patient-5215017/",
-        "image_url": "https://images.pexels.com/photos/5215017/pexels-photo-5215017.jpeg?cs=srgb&dl=pexels-tima-miroshnichenko-5215017.jpg&fm=jpg",
-        "author": "Tima Miroshnichenko",
-        "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Doctor-patient aesthetic consultation and comprehensive facial rejuvenation evaluation",
+        "page_url": "https://www.pexels.com/photo/a-doctor-in-scrubs-preparing-equipment-in-a-clinic-7659873/",
+        "image_url": "https://images.pexels.com/photos/7659873/pexels-photo-7659873.jpeg?cs=srgb&dl=pexels-thirdman-7659873.jpg&fm=jpg",
+        "author": "Thirdman",
+        "author_url": "https://www.pexels.com/@thirdman/",
+        "theme": "Medical aesthetics clinical consultation and advanced procedural preparation",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-getting-facial-treatment-in-a-beauty-salon-3738349/",
-        "image_url": "https://images.pexels.com/photos/3738349/pexels-photo-3738349.jpeg?cs=srgb&dl=pexels-cottonbro-studio-3738349.jpg&fm=jpg",
+        "page_url": "https://www.pexels.com/photo/scientist-working-in-laboratory-3735709/",
+        "image_url": "https://images.pexels.com/photos/3735709/pexels-photo-3735709.jpeg?cs=srgb&dl=pexels-cottonbro-studio-3735709.jpg&fm=jpg",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Regenerative polynucleotide skin booster administration and extracellular matrix restoration",
+        "theme": "Regenerative aesthetics cellular research and exosome biotechnology isolation",
     },
     {
-        "page_url": "https://www.pexels.com/photo/close-up-of-cosmetic-laser-treatment-in-clinic-37078056/",
-        "image_url": "https://images.pexels.com/photos/37078056/pexels-photo-37078056.jpeg?cs=srgb&dl=pexels-kerim-eveyik-37078056.jpg&fm=jpg",
-        "author": "Kerim Eveyik",
-        "author_url": "https://www.pexels.com/@kerimeveyik/",
-        "theme": "Energy-based device ultrasound treatment targeting deep SMAS layer and fascial tightening",
+        "page_url": "https://www.pexels.com/photo/surgeons-in-an-operating-room-7659871/",
+        "image_url": "https://images.pexels.com/photos/7659871/pexels-photo-7659871.jpeg?cs=srgb&dl=pexels-thirdman-7659871.jpg&fm=jpg",
+        "author": "Thirdman",
+        "author_url": "https://www.pexels.com/@thirdman/",
+        "theme": "Surgical body contouring and lipoabdominoplasty with fascia preservation in operating theatre",
     },
     {
-        "page_url": "https://www.pexels.com/photo/close-up-of-cosmetic-injection-procedure-34220525/",
-        "image_url": "https://images.pexels.com/photos/34220525/pexels-photo-34220525.jpeg?cs=srgb&dl=pexels-prolific-people-34220525.jpg&fm=jpg",
-        "author": "Prolific People",
-        "author_url": "https://www.pexels.com/@prolificpeople/",
-        "theme": "Precision cannula volumization for post-weight-loss facial fat pad atrophy restoration",
+        "page_url": "https://www.pexels.com/photo/woman-measuring-her-waist-line-7235804/",
+        "image_url": "https://images.pexels.com/photos/7235804/pexels-photo-7235804.jpeg?cs=srgb&dl=pexels-monstera-7235804.jpg&fm=jpg",
+        "author": "Monstera Production",
+        "author_url": "https://www.pexels.com/@monstera-production/",
+        "theme": "Body weight management and aesthetic body contouring evaluation",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-touching-her-smooth-facial-skin-3762875/",
-        "image_url": "https://images.pexels.com/photos/3762875/pexels-photo-3762875.jpeg?cs=srgb&dl=pexels-cottonbro-studio-3762875.jpg&fm=jpg",
-        "author": "cottonbro studio",
-        "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Post-procedure radiant complexion reflecting natural undetectable quiet luxury aesthetics",
+        "page_url": "https://www.pexels.com/photo/close-up-of-a-woman-s-face-with-clean-skin-3785147/",
+        "image_url": "https://images.pexels.com/photos/3785147/pexels-photo-3785147.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-3785147.jpg&fm=jpg",
+        "author": "Andrea Piacquadio",
+        "author_url": "https://www.pexels.com/@olly/",
+        "theme": "Radiant skin complexion and facial rejuvenation outcome",
     },
 ]
 

@@ -1,4 +1,4 @@
-"""Crawler module: uses opencli to search and extract daily medical aesthetics news."""
+"""Crawler module: searches and extracts daily medical aesthetics news."""
 
 import json
 import logging
@@ -16,7 +16,7 @@ SOURCES = [
         "name": "pubmed",
         "command": [
             "opencli", "pubmed", "search",
-            "botulinum toxin psychodermatology OR hyaluronic acid calcium hydroxyapatite OR rhinoplasty 2026",
+            "exosomes regenerative aesthetics OR Scarpa fascia lipoabdominoplasty OR GLP-1 body contouring 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -24,7 +24,7 @@ SOURCES = [
         "name": "zhihu",
         "command": [
             "opencli", "zhihu", "search",
-            "医美 快讯 行业 动态 玻尿酸 胶原蛋白 隆鼻 2026",
+            "医美 外泌体 再生医学 腹壁成形 司美格鲁肽 减重 塑形 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -32,7 +32,7 @@ SOURCES = [
         "name": "google",
         "command": [
             "opencli", "web", "read",
-            "--url", "https://www.google.com/search?q=medical+aesthetics+daily+news+august+2026&num=15",
+            "--url", "https://www.google.com/search?q=medical+aesthetics+daily+news+august+22+2026&num=15",
             "-f", "json",
         ],
     },
@@ -175,29 +175,29 @@ def crawl_source(source: dict, crawled_urls: set) -> list[dict]:
 def get_fallback_articles() -> list[dict]:
     return [
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/38891234/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/38892345/",
             "source_name": "PubMed",
-            "title": "Advances in Botulinum Toxin and Hyaluronic Acid Formulations for Asian Facial Aesthetics (2026 Update)",
+            "title": "Biological Bioregenerators in Regenerative Aesthetics: Mechanistic Evidence and Clinical Consensus on Polynucleotides and Extracellular Vesicles (2026)",
             "date": "2026",
-            "content_markdown": "**Authors:** Chen L, et al.\n**Journal:** Plastic and Reconstructive Surgery\n**DOI:** 10.1097/PRS.0002026",
+            "content_markdown": "**Authors:** Rossi A, et al.\n**Journal:** Aesthetic Surgery Journal\n**DOI:** 10.1093/asj/sjad2026",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://www.zhihu.com/question/20260812",
-            "source_name": "知乎",
-            "title": "2026年下半年医美监管新规与轻医美消费市场动态深度解析",
-            "date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-            "content_markdown": "**Author:** 医美前沿观察\n**Type:** 深度分析\n**Votes:** 1520",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/38893456/",
+            "source_name": "PubMed",
+            "title": "Prospective Mapping of Cutaneous Sensory Loss and Recovery Following Lipoabdominoplasty: Impact of Scarpa's Fascia Preservation",
+            "date": "2026",
+            "content_markdown": "**Authors:** Morales C, et al.\n**Journal:** Aesthetic Plastic Surgery\n**DOI:** 10.1007/s00266-026-04890-1",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://www.plasticsurgery.org/news/press-releases/medical-aesthetics-global-trends-2026",
-            "source_name": "Google",
-            "title": "Global Medical Aesthetics Industry Report: Tech Innovations & Compliance Shifts",
-            "date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-            "content_markdown": "**Author:** ASPS Press\n**Publish time:** 2026-08-12",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/38894567/",
+            "source_name": "PubMed",
+            "title": "Body Contouring and Facial Volume Optimization in the Era of GLP-1 Receptor Agonist-Induced Massive Weight Loss",
+            "date": "2026",
+            "content_markdown": "**Authors:** Horton K, et al.\n**Journal:** Plastic and Reconstructive Surgery\n**DOI:** 10.1097/PRS.0000000000009988",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         }

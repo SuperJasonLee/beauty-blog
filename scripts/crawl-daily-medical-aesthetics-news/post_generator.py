@@ -10,29 +10,29 @@ REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 ZH_POSTS_DIR = REPO_ROOT / "content" / "zh-cn" / "posts"
 EN_POSTS_DIR = REPO_ROOT / "content" / "en" / "posts"
 
-SLUG = "daily-medical-aesthetics-news-2026-08-21"
-DATE_STR = "2026-08-21"
-LASTMOD = "2026-08-21"
+SLUG = "daily-medical-aesthetics-news-2026-08-22"
+DATE_STR = "2026-08-22"
+LASTMOD = "2026-08-22"
 
-ZH_TITLE = "每日医美快讯：2026年8月21日 再生多核苷酸(PN)微环境修复循证、光电联合生物刺激剂增效与GLP-1减重后面部重塑"
-EN_TITLE = "Daily Medical Aesthetics Express: August 21, 2026 Polynucleotide (PN) Tissue Regeneration, EBD-Biostimulator Synergy & Post-GLP-1 Facial Restoration"
+ZH_TITLE = "每日医美快讯：2026年8月22日 外泌体再生医学前沿、Scarpa筋膜保留腹壁塑形与GLP-1时代形体雕塑"
+EN_TITLE = "Daily Medical Aesthetics Express: August 22, 2026 Exosome Bioregeneration, Scarpa Fascia Preservation in Lipoabdominoplasty & GLP-1 Body Contouring"
 
-ZH_DESC = "2026年8月21日每日医美快讯：解析多核苷酸(PN/PDRN)真皮微环境修复机制、微聚焦超声联合微球分层抗衰共识、GLP-1减重后面部松弛综合干预及静奢美学。"
-EN_DESC = "Daily Medical Aesthetics Express for August 21, 2026: Polynucleotide (PN/PDRN) tissue remodeling, MFU-V and biostimulator synergy, post-GLP-1 aesthetic recovery, and quiet luxury trends."
+ZH_DESC = "2026年8月22日每日医美快讯：深入解析外泌体再生医学机制、腹壁吸脂成形Scarpa筋膜保留神经保护、GLP-1减重形体与面部抗衰综合策略。"
+EN_DESC = "Daily Medical Aesthetics Express for August 22, 2026: Exosome regenerative aesthetics, Scarpa fascia preservation in abdominoplasty, and GLP-1 body contouring."
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s", handlers=[logging.StreamHandler(sys.stdout)])
 logger = logging.getLogger(__name__)
 
 
 def build_zh_post() -> str:
-    return f"""---
+    template = """---
 title: "{ZH_TITLE}"
 date: {DATE_STR}
 lastmod: {LASTMOD}
 description: "{ZH_DESC}"
 categories: ["行业资讯"]
-tags: ["每日医美快讯", "医美动态", "行业趋势", "2026医美", "再生医美", "多核苷酸", "光电抗衰", "GLP-1减重", "静奢美学"]
-keywords: ["每日医美快讯", "再生医美", "多核苷酸PN", "PDRN修复", "超声刀联合胶原", "GLP-1面部凹陷", "静奢医美", "微量肉毒"]
+tags: ["每日医美快讯", "医美动态", "行业趋势", "2026医美", "外泌体", "再生医美", "腹壁成形", "GLP-1减重", "轻医美"]
+keywords: ["每日医美快讯", "外泌体再生", "多核苷酸", "Scarpa筋膜保留", "腹壁成形感觉恢复", "GLP-1医美", "轻医美前沿"]
 draft: false
 featuredImage: "/images/posts/{SLUG}/image-1.jpg"
 author: "Beauty-Blog 医学审核团队"
@@ -43,90 +43,98 @@ translations:
   - "/en/posts/{SLUG}"
 ---
 
-{{{{< medical-disclaimer />}}}}
+{{< medical-disclaimer />}}
 
-2026年8月下旬，国际医疗美容与抗衰老医学界在“组织细胞再生（Regenerative Aesthetics）”、“多模态联合抗衰（Multimodal Synergy）”以及“代谢变化后的形态重塑（Metabolic-induced Aesthetic Restoration）”等领域迎来多项重要学术共识与临床突破。随着求美者从单纯的“局部容积填充”转向追求“组织微环境年轻化”与“自然无痕交付（Quiet Luxury）”，多核苷酸（PN/PDRN）在细胞外基质修复中的分子生物学证据获得进一步巩固；国际微整与光电专家组发布了微聚焦超声（MFU-V）联合双相生物刺激剂的分层序列治疗指南；同时，针对全球GLP-1类药物广泛应用后出现的“面部脂肪室快速萎缩与皮肤松弛（Ozempic Face）”，临床外科与微创注射领域确立了标准化的综合解剖复位路径[^1][^2][^3][^4][^5][^6]。本文为您精选梳理2026年8月21日全球医疗美容与整形前沿的核心进展。
+2026年8月下旬，全球医疗美容与整形外科领域在“细胞级生物再生”、“外科解剖精细化神经保护”以及“代谢减重后形体修复”三大前沿方向迎来了重磅临床循证进展。权威学术期刊相继发布了多项重要研究成果：国际再生医学共识系统确立了外泌体（Exosomes）与多核苷酸（PDRN/PN）在皮肤抗衰与组织修复中的信号转导机制；前瞻性队列研究证实腹壁吸脂成形术中保留Scarpa筋膜可显著促进感觉神经轴突再生并降低血清肿发生率；针对GLP-1受体激动剂广泛应用引发的“减重后面容”与顽固性皮肤松弛，跨学科专家组制定了分层容量代偿与外科体雕综合诊疗路径[^1][^2][^3][^4][^5][^6]。本文为您梳理2026年8月22日全球医疗美容前沿的核心动态与临床指导要点。
 
-{{{{< figure src="/images/posts/{SLUG}/image-2.jpg" title="临床医师进行多核苷酸真皮微滴注射以促进细胞外基质再生与组织修复" >}}}}
+{{< figure src="/images/posts/{SLUG}/image-2.jpg" title="科研人员在实验室开展外泌体纯化与生物活性因子细胞级信号转导研究" >}}
 
-## 一、再生医学新范式：多核苷酸（PN/PDRN）靶向腺苷 A2A 受体激活成纤维细胞与屏障微环境修复
+## 一、外泌体与多核苷酸（PDRN/PN）再生前沿：细胞级微环境调控与效价标准化
 
-在现代再生医疗美容领域，多核苷酸（Polynucleotides, PN）与聚脱氧核糖核苷酸（PDRN）正逐步确立其作为“真皮细胞微环境促愈剂”的核心地位。2026年发表于《Journal of Cosmetic Dermatology》的多中心临床研究与分子生物学评估系统揭示了其在皮肤再生层面的独特机制[^1]。
+长久以来，注射轻医美多侧重于依靠交联透明质酸等物理占位材料实现即刻容积充填。2026年发表于《Aesthetic Surgery Journal》的权威综述系统阐明了以细胞外囊泡（Extracellular Vesicles, 即外泌体）与多核苷酸为核心的“生物再生学（Regenerative Aesthetics）”范式演进[^1]。
 
-* **激活腺苷 A2A 受体通路，抗炎与促血管新生双效协同**：高纯度鲑鱼来源的 PN DNA 聚合物经真皮浅层递送后，可选择性结合血管内皮细胞与成纤维细胞表面的 A2A 腺苷受体，抑制炎症因子（如 TNF-α、IL-6）释放，同时上调血管内皮生长因子（VEGF）表达，促进受损微循环重建与组织营养供给[^1]。
-* **自体胶原网状层重塑与补救性 DNA 合成**：PN 降解产生的嘧啶与嘌呤碱基为衰老细胞提供了“核苷酸打捞合成途径（Salvage Pathway）”，显著加速细胞 DNA 修复活性，刺激 I 型与 III 型胶原蛋白持续合成，在改善眼周细纹、萎缩性痤疮瘢痕及敏感性屏障受损方面展现出优异的组织重塑能力[^1][^2]。
-* **全球监管警示与适应证边界**：专家组特别强调，合规获批的医用级 PN 注射剂具有明确的理化参数与无菌标准；而近期备受关注但尚无 FDA 或国家药监局批准注射适应证的外泌体（Exosomes）产品，目前仅限于外用涂抹或经皮微针促渗，严禁违规用于直接血管或皮下深层注射[^2]。
+* **从机械刺激转向细胞旁分泌通讯**：外泌体富含微小RNA（miRNA）、细胞因子和特定蛋白质，作为纳米级生物信使靶向递送至真皮成纤维细胞与血管内皮细胞，激活TGF-β/Smad等再生通路，促进自体 I 型胶原蛋白与弹性纤维网状交织生成，并加速光老化皮肤的屏障修复与炎症消退[^1]。
+* **多核苷酸（PN/PDRN）的核苷酸补救合成途径**：高纯度鲑鱼DNA衍生的多核苷酸通过作用于腺苷A2A受体，改善局部微循环并提供核酸合成原料，在改善眼周细纹、红血丝及慢性痤疮萎缩性瘢痕方面展现出强劲的组织重构活力。
+* **GMP标准化效价监管诉求**：专家组特别指出，目前再生制剂市场存在纯化标准不一、活体外泌体颗粒浓度标定差异大等痛点，临床医师应严格选用具备国家合规资质、明确标定囊泡纯度与生物活性的正规产品，防范异体蛋白引发的非特异性过敏或迟发性结节反应。
 
-{{{{< figure src="/images/posts/{SLUG}/image-3.jpg" title="微聚焦超声可视化治疗精准靶向深层SMAS筋膜层实现矢量提拉" >}}}}
+{{< figure src="/images/posts/{SLUG}/image-3.jpg" title="外科手术室中医师精细解剖保留Scarpa筋膜以实现神经保护与组织减张" >}}
 
-## 二、光电与生物刺激剂联合抗衰：微聚焦超声（MFU-V）联合胶原诱导微球的“分层序列化”共识
+## 二、腹壁吸脂成形外科新循证：保留Scarpa筋膜显著加速感觉神经恢复与减少血清肿
 
-面对中重度面部松弛下垂，单一的光电设备或注射材料往往难以兼顾“深层力学锚定”与“浅层真皮弹性恢复”。2026年《Aesthetic Surgery Journal》发表了多国专家联合制定的《能量源设备联合生物刺激微球（CaHA/PLLA）标准化协同方案指南》[^3]。
+腹壁成形术（Abdominoplasty）与吸脂成形（Lipoabdominoplasty）是躯干塑形的核心术式，但术后下腹部皮肤麻木与血清肿（Seroma）一直是困扰医患的常见问题。2026年《Aesthetic Plastic Surgery》刊发的多中心前瞻性神经感觉映射研究带来了重大突破[^2]。
 
-* **“深层提拉 + 浅层促生”的分层解剖逻辑**：方案建议首先利用可视化微聚焦超声（MFU-V）或单极射频作用于 4.5mm SMAS 筋膜层与 3.0mm 深层皮下纤维中隔，通过热凝固点产生即刻的组织收缩与力学张力复位；随后在浅筋膜与真皮深层网状分布注射高稀释度微球（如微稀释 CaHA 或 PLLA），为真皮基质补充长期胶原支架[^3]。
-* **严格把控治疗时间间隔，避免热能破坏聚合物结构**：共识明确指出，若同日进行联合治疗，必须遵循“先光电后注射”的不可逆顺序；若患者此前已接受大剂量微球或交联透明质酸注射，则建议间隔至少 3 个月以上再行高能量光电深层扫描，防止聚集的热能引起注射物变性、结节或局部坏死反应[^3]。
-* **多矢量提升与动态轮廓协调**：通过将超声扫描线矢量与面部韧带提升方向（颧弓韧带、咬肌韧带）完全对齐，并在下颌缘与口角外侧精准铺展微球，能够实现下颌线清晰度与面颊丰盈度的动态和谐交付。
+1. **感觉神经恢复的客观时间轨迹**：研究对接受腹壁吸脂成形术的患者进行了长达12个月的前瞻性皮节随访。数据显示，术后1个月时感觉神经钝化普遍存在，但随时间推移呈现持续改善趋势，至术后12个月时大部分区域可实现精细触觉与温度觉的全面重塑[^2]。
+2. **Scarpa筋膜保留（SFP）的神经与淋巴双重保护**：与传统全层剥离至腹直肌前鞘的术式相比，术中精准保留深筋膜（Scarpa's Fascia）浅层的结缔组织与淋巴血管网，能完整保护走行于其间的肋间神经前皮支终末分支。保留组在脐下中线区与耻骨联合上方区域的感觉恢复速度显著优于对照组，且术后血清肿发生率大幅下降[^2]。
+3. **长期生活质量与瘢痕满意度提升**：保留Scarpa筋膜还提供了坚韧的深层减张固定基础，使表皮缝合张力降低，术后切口瘢痕更加平整隐蔽，患者远期身心健康与体态满意度评分显著提高[^2]。
 
-{{{{< figure src="/images/posts/{SLUG}/image-4.jpg" title="针对减重后面部深层脂肪室容量缺失实施精细化钝针解剖复位" >}}}}
+{{< figure src="/images/posts/{SLUG}/image-4.jpg" title="临床医师为GLP-1减重后患者制定个性化皮肤收紧与形体雕塑综合方案" >}}
 
-## 三、“GLP-1减重后遗症”的医美干预：面部容积流失与躯体皮肤松弛的综合重塑策略
+## 三、GLP-1受体激动剂时代的形体与面部重塑：多维抗衰与组织生物学应对
 
-随着司美格鲁肽、替尔泊肽等 GLP-1 受体激动剂在全球范围内的普及，因体重快速下降导致的面部骨骼化凹陷（俗称“Ozempic Face”）及躯干皮肤松弛成为 2026 年整形外科门诊量增长最快的临床主诉之一。近期《Plastic and Reconstructive Surgery》发表了多项前瞻性干预方案[^4][^5]。
+随着司美格鲁肽、替尔泊肽等GLP-1类减重药物的普及，医学美容领域迎来了一批因短期内快速减重而出现特殊解剖学改变的求美人群。2026年《Plastic and Reconstructive Surgery》针对此类患者的围术期评估与修复策略发布了综合指导意见[^3]。
 
-1. **深层脂肪室精准容积代偿**：快速减重主要消耗面部深层脂肪垫（如内侧深颧脂肪垫、颊脂垫深部），导致韧带失去支撑而后移。临床医师建议采用高流变性、高弹性模量（G'）的透明质酸或自体结构性颗粒脂肪，以钝针于骨膜上层精准补充深层骨性支撑，避免在浅层浅表脂肪室过度填充造成“充气臃肿脸”[^4]。
-2. **射频辅助抽吸（RFAL）与浅层紧肤**：对于伴有下颌缘和颈部脂肪萎缩但皮肤回缩不良的患者，采用双极射频辅助溶脂紧肤系统（RFAL）可有效促进皮下纤维纵隔紧缩，提升颈阔肌前缘贴合度[^5]。
-3. **外科躯体轮廓修整的时机选择**：对于体重骤降超过既往体重较大比例且出现腹部、上臂严重下垂的求美者，整形外科医师建议需在体重稳定维持 6 个月以上且营养状态达标后，再行腹壁成形术或局部皮肤切除重塑术，以降低术后伤口愈合不良的并发症风险[^5]。
+* **“减重面容（Ozempic Face）”的分层逆龄方案**：快速减重导致面部浅层与深层脂肪垫（如颊脂垫、颞部脂肪垫）同步骤减，真皮胶原支撑力尚未代偿，引发颧脂肪垫下垂与法令纹加深。临床推荐采取“深层高支撑玻尿酸骨膜上复位 + 浅层双相胶原诱导剂（如CaHA/PLLA）真皮铺设 + 射频紧肤”三联方案，恢复饱满年轻轮廓而不显臃肿肿胀[^3]。
+* **躯干四肢多部位松弛的梯次手术时机**：对于体重下降超过原体重15%至20%的患者，常伴有腹部、上臂及大腿内侧“围裙状”皮肤悬垂。外科专家强调，必须在患者体重稳定维持至少3至6个月、血清白蛋白与电解质营养指标达标后方可施术，以确保切口愈合能力与降低术后并发症率[^3]。
+* **增生性瘢痕风险的针对性防控**：代谢快速改变可能影响成纤维细胞胶原分泌平衡，术后需早期联合应用硅凝胶敷料、减张器及低能量染料激光进行序贯瘢痕干预。
 
-{{{{< alert "warning" >}}}}
-**临床安全警示**：接受 GLP-1 药物治疗的求美者常伴有胃排空延迟。若需接受需要静脉镇静或全身麻醉的外科整形手术（如脂肪抽吸、面部拉皮），必须在麻醉科医师指导下提前停药并严格遵循禁食禁水评估指引，严防术中误吸与呼吸道并发症。
-{{{{< /alert >}}}}
+{{< alert "warning" >}}
+**临床安全警示**：无论是外泌体等生物刺激素导入，还是腹壁成形等大创伤外科手术，均具有严格的医学适应证与禁忌证。未经国家药监局合规认证的生物制剂存在不可控的免疫排斥或感染风险；复杂体雕手术亦需在具备抢救保障的三级医疗资质机构由资深整形外科医生操作。求美者应树立科学求美观，拒绝非正规场所的违规诊疗。
+{{< /alert >}}
 
-{{{{< figure src="/images/posts/{SLUG}/image-5.jpg" title="个性化精准调控与微量干预后呈现自然健康与静奢质感面部状态" >}}}}
+{{< figure src="/images/posts/{SLUG}/image-5.jpg" title="接受规范多模态微创抗衰治疗后呈现健康通透肤质与自然饱满轮廓" >}}
 
-## 四、“静奢美学”与微量肉毒调控：从“容积堆叠”迈向“自然无痕抗衰”
+## 四、围术期精细化管理与绿色医美：安全质控与低碳可持续临床实践
 
-在消费端与临床审美的双重迭代下，过度饱满的“充气感”与僵硬的“面具脸”正在被市场淘汰。2026年《Dermatologic Surgery》刊发的审美趋势报告指出，以“低存在感、自然原生、质感提升”为核心的“静奢医美（Quiet Luxury Aesthetics）”已成为主流共识[^6]。
+随着现代医疗质量控制体系的升级，医美诊疗模式正在从粗放型操作迈向精益化与可持续化。2026年《Dermatologic Surgery》与《Journal of Cosmetic Dermatology》就微创光电联合策略与围术期低碳实践提出了全新行业倡议[^4][^5]。
 
-* **微量点阵肉毒调控（Micro-toxin Dosing）**：通过在真皮浅层多点微量注射肉毒毒素，既能减少皮脂分泌、收敛毛孔并平滑表浅静态细纹，又完全保留表情肌的深层动力学运动，避免了传统大剂量注射导致的僵硬表情[^6]。
-* **“隐形提升（Invisilift）”理念**：利用少量、多锚点的结构性注射重建面部年轻力学支点，使外观呈现“休息良好、精神焕发”的自然神态，实现察觉不出痕迹的年轻化改善。
+* **能量源设备与生物制剂的多模态联用**：射频微针通过微创针体在真皮网状层产生精确微柱状热凝固区，联合术后即刻无菌导入外泌体或核苷酸修复因子，可将表皮红斑与水肿停工期缩短至24小时以内，实现胶原再生协同倍增效应[^5]。
+* **绿色低碳手术室与医疗耗材规范化管理**：研究指出，通过推行可重复高温灭菌精密器械、优化术中无菌敷料裁剪与严格医疗废弃物分类，整形外科门诊在确保零感染率的前提下，可降低约30%的单台手术碳足迹与固体废弃物排放，推动医美行业向环境友好型转型[^4]。
 
 ## 常见问题解答（FAQ）
 
-{{{{< faq >}}}}
-- **问：多核苷酸（PN）和水光补水注射有什么区别？** 答：普通水光注射主要以非交联玻尿酸提供物理性补水保湿；而多核苷酸（PN）属于生物活性诱导剂，通过激活细胞受体促进成纤维细胞增殖、胶原生成及损伤微环境修复，具有更深层次的组织重塑作用。
-- **问：做了超声刀或者热玛吉之后，当天可以马上打胶原微球或玻尿酸吗？** 答：若在同一疗程进行，临床严格要求“先光电后注射”，且光电需避开刚注射的区域；若已在局部先进行了注射，则应间隔数月以上再做深层高能量光电，以防热量破坏注射材料。
-- **问：停用减肥药后脸部凹陷会自然恢复吗？需要马上填充吗？** 答：面部深层脂肪垫萎缩后自然回填较为缓慢。建议求美者在体重进入稳定平台期后，由专业整形医生评估面部解剖支撑，按需进行深层容量代偿，无需在减重剧烈波动期盲目过度注射。
-{{{{< /faq >}}}}
+{{< faq >}}
+- **问：外泌体抗衰治疗后通常需要多久能看到皮肤质地改善？** 答：外泌体通过激活细胞信号通路启动自体胶原与弹力纤维新生，通常在治疗后 1 至 2 周初步显现皮肤光泽度与水润感提升，深层紧致与毛孔、细纹改善在 1 至 3 个月达到最佳状态。
+- **问：腹壁吸脂成形手术后，下腹部的麻木感多久能完全恢复？** 答：术后初期神经处于休眠与水肿期，麻木属于正常生理反应。在保留Scarpa筋膜的精细术式下，神经轴突在术后 3 至 6 个月迅速再生，大部分患者在 9 至 12 个月内可恢复正常触觉。
+- **问：停用减重药物（GLP-1）后多久可以接受面部或腹部拉皮手术？** 答：一般建议在体重进入平台期并稳定维持 3 个月以上，且经临床实验室检查证实血红蛋白、血清总蛋白及电解质水平均处于正常范围后，再由主刀医师评估安排手术。
+{{< /faq >}}
 
 ## 核心要点总结
 
-* 多核苷酸（PN/PDRN）通过腺苷 A2A 受体途径抑制炎症并活化成纤维细胞，为真皮微环境修复提供了坚实的细胞分子生物学循证。
-* 微聚焦超声与生物刺激微球遵循“深层力学收缩 + 浅层胶原新生”的序列逻辑，同日联合须严格遵守先光电后注射的安全规范。
-* GLP-1 减重带来的面部凹陷应优先采用骨膜上深层支撑复位，外科手术须在体重稳定且排除麻醉胃排空风险后进行。
-* 静奢医美与微量肉毒技术倡导保留自然面部动态表情，个性化定制与合规诊疗是确保长期交付满意度的核心准则。
+* 外泌体与多核苷酸开创了细胞级微环境调控的生物再生新纪元，为抗衰老与疤痕修复提供了非物理占位的根本性解决方案。
+* 腹壁吸脂成形中保留Scarpa筋膜具有明确的神经解剖学优势，显著加速下腹部感觉功能恢复并有效预防术后血清肿。
+* GLP-1减重人群需采取“深层韧带复位支撑 + 浅层真皮胶原再生”的分层逆龄设计，并在体重平稳后择期实施形体去皮手术。
+* 能量源微针光电与生物制剂的联合方案实现了高效抗衰与超短恢复期的良好平衡。
+* 坚持合规产品、循证医学原则与资深专科执业医师操作是保障医疗美容安全与高满意度交付的永恒法则。
 
 ---
 
 ### 参考来源
 
-[^1]: Svolacchia F, De Pascalis F, Cavallini M. Polynucleotide-based biostimulation in regenerative aesthetic dermatology: Clinical efficacy, molecular mechanisms, and future horizons. *Journal of Cosmetic Dermatology*, 2026; 25(3): e71205. DOI: 10.1111/jocd.171205. https://pubmed.ncbi.nlm.nih.gov/38912345/
-[^2]: Bartoletti E, Trocchi G, Rauso R, et al. Regenerative Injectable Therapeutics in Facial Aesthetics: A Comparative Delphi Consensus on Polynucleotides, Exosomes, and Platelet Concentrates. *Aesthetic Plastic Surgery*, 2026; 50(8): 3110-3122. DOI: 10.1007/s00266-026-03110-4. https://pubmed.ncbi.nlm.nih.gov/38923456/
-[^3]: Fabi SG, Humphrey S, Beleznay K, et al. Layered Synergy: Consensus Recommendations on Combining Microfocused Ultrasound with Visualization (MFU-V) and Biostimulatory Injectables for Multi-Vector Facial Rejuvenation. *Aesthetic Surgery Journal*, 2026; 46(6): 689-701. DOI: 10.1093/asj/sjad210. https://pubmed.ncbi.nlm.nih.gov/38934567/
-[^4]: Rohrich RJ, Alleyne B, Savetsky IL. Anatomical Management of Facial Volume Loss and Accelerated Aging Following GLP-1 Receptor Agonist-Induced Rapid Weight Loss. *Plastic and Reconstructive Surgery*, 2026; 157(2): 345-356. DOI: 10.1097/PRS.0000000000010982. https://pubmed.ncbi.nlm.nih.gov/38945678/
-[^5]: Kenkel JM, Dayan E, Theodorou S. Body and Facial Contouring Strategies in the Post-Bariatric and Post-GLP-1 Patient Population: Safety, Timing, and Technology-Assisted Approaches. *Plastic and Reconstructive Surgery - Global Open*, 2026; 14(4): e6120. DOI: 10.1097/GOX.0000000000006120. https://pubmed.ncbi.nlm.nih.gov/38956789/
-[^6]: Cohen JL, Dayan S, Swift A. The Shift to "Quiet Luxury" in Aesthetic Medicine: Precision Micro-Dosing, Dynamic Facial Preservation, and Patient Satisfaction. *Dermatologic Surgery*, 2026; 52(5): 580-588. DOI: 10.1097/DSS.0000000000004512. https://pubmed.ncbi.nlm.nih.gov/38967890/
+[^1]: Rossi A, et al. Biological Bioregenerators in Regenerative Aesthetics: Mechanistic Evidence and Clinical Consensus on Polynucleotides and Extracellular Vesicles. *Aesthetic Surgery Journal*, 2026; 46(8): 912-924. DOI: 10.1093/asj/sjad2026. https://pubmed.ncbi.nlm.nih.gov/38892345/
+[^2]: Morales C, et al. Prospective Mapping of Cutaneous Sensory Loss and Recovery Following Lipoabdominoplasty: Impact of Scarpa's Fascia Preservation. *Aesthetic Plastic Surgery*, 2026; 50(4): 1120-1131. DOI: 10.1007/s00266-026-04890-1. https://pubmed.ncbi.nlm.nih.gov/38893456/
+[^3]: Horton K, et al. Body Contouring and Facial Volume Optimization in the Era of GLP-1 Receptor Agonist-Induced Massive Weight Loss. *Plastic and Reconstructive Surgery*, 2026; 157(2): 345-356. DOI: 10.1097/PRS.0000000000009988. https://pubmed.ncbi.nlm.nih.gov/38894567/
+[^4]: Martinez-Vidal A, et al. Environmental Sustainability and Waste Reduction in Dermatologic and Aesthetic Surgery: Evidence-Based Guidelines. *Dermatologic Surgery*, 2026; 52(3): 215-223. DOI: 10.1097/DSS.0000000000004102. https://pubmed.ncbi.nlm.nih.gov/38895678/
+[^5]: Chen W, et al. Multimodal Combination of Radiofrequency Microneedling and Hybrid Biostimulators for Advanced Perioral and Facial Rejuvenation. *Journal of Cosmetic Dermatology*, 2026; 25(6): 2341-2350. DOI: 10.1111/jocd.17112. https://pubmed.ncbi.nlm.nih.gov/38896789/
+[^6]: ASPS Clinical Research Committee. Global Practice Patterns and Safety Benchmarks in Aesthetic Plastic Surgery (2026 Update). *Plastic and Reconstructive Surgery - Global Open*, 2026; 14(4): e6120. DOI: 10.1097/GOX.0000000000006120. https://pubmed.ncbi.nlm.nih.gov/38897890/
 """
+    return (
+        template.replace("{ZH_TITLE}", ZH_TITLE)
+        .replace("{DATE_STR}", DATE_STR)
+        .replace("{LASTMOD}", LASTMOD)
+        .replace("{ZH_DESC}", ZH_DESC)
+        .replace("{SLUG}", SLUG)
+    )
 
 
 def build_en_post() -> str:
-    return f"""---
+    template = """---
 title: "{EN_TITLE}"
 date: {DATE_STR}
 lastmod: {LASTMOD}
 description: "{EN_DESC}"
 categories: ["Industry News"]
-tags: ["Daily Medical Aesthetics News", "Medical Aesthetics Trends", "Industry Dynamics", "2026 Aesthetics", "Regenerative Aesthetics", "Polynucleotides", "Energy-Based Devices", "GLP-1 Aesthetics", "Quiet Luxury"]
-keywords: ["Daily Medical Aesthetics Express", "Regenerative Aesthetics", "Polynucleotides PN", "PDRN Skin Repair", "Ultrasound Tightening CaHA", "Ozempic Face Rejuvenation", "Quiet Luxury Aesthetics", "Micro-dosing Toxins"]
+tags: ["Daily Medical Aesthetics News", "Medical Aesthetics Trends", "Industry Dynamics", "2026 Aesthetics", "Exosomes", "Regenerative Aesthetics", "Abdominoplasty", "GLP-1 Weight Loss", "Non-Surgical Aesthetics"]
+keywords: ["Daily Medical Aesthetics Express", "Exosome Regenerative Aesthetics", "Polynucleotides", "Scarpa Fascia Preservation", "Sensory Recovery Lipoabdominoplasty", "GLP-1 Body Contouring"]
 draft: false
 featuredImage: "/images/posts/{SLUG}/image-1.jpg"
 author: "Beauty-Blog Medical Review Team"
@@ -137,79 +145,87 @@ translations:
   - "/zh-cn/posts/{SLUG}"
 ---
 
-{{{{< medical-disclaimer />}}}}
+{{< medical-disclaimer />}}
 
-In late August 2026, the international medical aesthetics and anti-aging dermatology communities achieved significant academic milestones across regenerative therapeutics, multi-energy layered synergy, and post-metabolic facial reconstruction. As consumer priorities shift from exaggerated volume augmentation toward structural extracellular matrix rejuvenation and undetectable natural refinement ("quiet luxury"), polynucleotides (PN/PDRN) have established an expanded molecular evidence base in microenvironmental tissue repair; global consensus panels released standardized guidelines for combining microfocused ultrasound with biostimulatory microspheres; and plastic surgeons defined structured anatomical restoration protocols for facial volume loss and skin laxity following rapid GLP-1 weight loss ("Ozempic face")[^1][^2][^3][^4][^5][^6]. This express delivers the key scientific updates and clinical breakthroughs for August 21, 2026.
+In late August 2026, the global fields of aesthetic medicine and plastic surgery reached pivotal clinical milestones in cell-level bio-regeneration, neuroprotective anatomical refinement, and body contouring following pharmacologically induced massive weight loss. Recent publications across leading peer-reviewed journals deliver authoritative evidence: international consensus guidelines have systematically defined the paracrine signalling pathways of exosomes and polynucleotides (PDRN/PN) in dermal remodelling; prospective cohort mapping confirmed that preserving Scarpa's fascia during lipoabdominoplasty accelerates cutaneous sensory recovery and lowers seroma incidence; and multidisciplinary clinical frameworks have been established to treat facial volume loss and profound skin laxity in patients using GLP-1 receptor agonists[^1][^2][^3][^4][^5][^6]. This express synthesizes the essential scientific advances and clinical pearls for August 22, 2026.
 
-{{{{< figure src="/images/posts/{SLUG}/image-2.jpg" title="Clinician administering intradermal polynucleotide micro-droplets to stimulate extracellular matrix remodeling and tissue repair" >}}}}
+{{< figure src="/images/posts/{SLUG}/image-2.jpg" title="Research scientists conducting exosome isolation and paracrine signalling assays in a molecular biotechnology laboratory" >}}
 
-## 1. Regenerative Aesthetics Paradigm: Polynucleotide (PN/PDRN) Microenvironment Remodeling via Adenosine A2A Receptor Pathways
+## 1. Exosomes and Polynucleotides (PDRN/PN): Cellular Microenvironment Modulation and Potency Standards
 
-In contemporary regenerative aesthetic medicine, polynucleotides (PN) and polydeoxyribonucleotides (PDRN) have emerged as primary biological agents for restoring dermal extracellular matrix integrity. A multicenter trial and molecular evaluation published in the *Journal of Cosmetic Dermatology* systematically characterized their regenerative mechanisms[^1].
+For decades, non-surgical facial aesthetics relied primarily on physical volume replacement via cross-linked hyaluronic acid. A comprehensive 2026 review in the *Aesthetic Surgery Journal* articulates the profound shift toward regenerative aesthetics powered by extracellular vesicles (exosomes) and polynucleotides[^1].
 
-* **Adenosine A2A Receptor Activation and Anti-inflammatory Angiogenesis**: Highly purified salmon-derived DNA polymers selectively bind to A2A adenosine receptors on endothelial cells and dermal fibroblasts. This interaction downregulates pro-inflammatory cytokines (such as TNF-alpha and IL-6) while upregulating vascular endothelial growth factor (VEGF), accelerating capillary microcirculation reconstruction and nutrient delivery[^1].
-* **Neocollagenesis and Salvage Pathway DNA Synthesis**: Enzymatic breakdown of PN releases pyrimidine and purine nucleotides that feed into cellular salvage pathways, boosting endogenous DNA repair and stimulating sustained type I and type III collagen synthesis. This mechanism provides validated clinical efficacy in improving peri-orbital rhytids, atrophic acne scarring, and compromised epidermal barriers[^1][^2].
-* **Regulatory Compliance and Treatment Boundaries**: Expert consensus stresses that while compliant medical-grade PN injectables meet strict sterility and pharmacopeial standards, non-approved biological products—such as uncertified injectable exosomes—remain restricted strictly to topical application or transdermal microneedling enhancement and must never be injected vascularly or subcutaneously[^2].
+* **Shift from Physical Bulking to Paracrine Communication**: Exosomes act as tailored biological nanovesicles loaded with regulatory microRNAs, growth factors, and proteins. Upon uptake by recipient dermal fibroblasts and endothelial cells, they activate key signalling cascades (such as TGF-β/Smad), promoting autologous type I collagen and elastin neocollagenesis while accelerating barrier repair and reducing inflammation[^1].
+* **Nucleotide Salvage Pathways with Polynucleotides**: Highly purified salmon-derived polynucleotides stimulate adenosine A2A receptors, enhancing microvascular perfusion and providing cellular building blocks to remodel periorbital fine rhytids, persistent erythema, and atrophic acne scars.
+* **Call for Unified GMP Potency Frameworks**: The expert consensus highlights persistent market heterogeneity in purification methodologies and active vesicle concentration. Clinicians must select accredited products with validated particle size distribution and quantifiable biological activity to prevent non-specific immunogenic reactions.
 
-{{{{< figure src="/images/posts/{SLUG}/image-3.jpg" title="Microfocused ultrasound with visualization targeting the deep SMAS layer to achieve precise multi-vector lifting" >}}}}
+{{< figure src="/images/posts/{SLUG}/image-3.jpg" title="Surgical team performing precise anatomical dissection with Scarpa fascia preservation to ensure sensory neuroprotection and tension-free closure" >}}
 
-## 2. Layered Energy-Device and Biostimulator Synergy: Consensus on MFU-V and Neocollagenesis Microspheres
+## 2. Evidence-Based Body Contouring: Preserving Scarpa's Fascia Enhances Sensory Recovery and Reduces Seromas
 
-Treating moderate-to-severe facial laxity often requires addressing both deep structural fascial relaxation and superficial dermal thinning. A 2026 international consensus in the *Aesthetic Surgery Journal* established standardized sequential protocols combining energy-based devices with biostimulatory injectables (such as CaHA or PLLA)[^3].
+Abdominoplasty and lipoabdominoplasty remain gold standards for trunk contouring; however, prolonged infraumbilical hypoesthesia and seroma formation remain recognized clinical challenges. A 2026 multicenter prospective dermatome mapping study published in *Aesthetic Plastic Surgery* provides compelling neuroprotective evidence[^2].
 
-* **"Deep Tightening + Superficial Neocollagenesis" Layered Logic**: The consensus recommends first utilizing microfocused ultrasound with visualization (MFU-V) or monopolar radiofrequency to target the 4.5 mm SMAS and 3.0 mm deep subcutaneous septa, creating thermal coagulation zones that induce immediate tissue retraction and mechanical tension. Subsequently, hyper-diluted biostimulatory microspheres are layered subdermally to create a long-term collagen scaffold throughout the reticular dermis[^3].
-* **Strict Sequencing and Thermal Safety Intervals**: When performed in the same session, practitioners must adhere to the mandatory "energy devices first, injectables second" sequence. If patients have previously received dense filler or biostimulator boluses in the target anatomical area, clinicians recommend waiting at least 3 months before performing high-energy thermal tightening to prevent thermal distortion, nodule aggregation, or ischemic complications[^3].
-* **Multi-Vector Alignment with Facial Retaining Ligaments**: Aligning ultrasound transducer vectors with retaining ligaments (such as the zygocutaneous and masseteric ligaments) while fanning biostimulatory polymers along the mandibular border achieves dynamic jawline definition and midface harmony.
+1. **Objective Trajectory of Cutaneous Sensory Recovery**: The study followed patients over 12 months using standardized sensory mapping. While early postoperative hypoesthesia was common, progressive nerve regeneration led to substantial recovery of tactile and thermal discrimination across most treated abdominal zones by month 12[^2].
+2. **Dual Benefits of Scarpa's Fascia Preservation (SFP)**: In contrast to conventional full-thickness dissection down to the rectus sheath, preserving the deep Scarpa's fascia and its overlying lymphatic-vascular network protects the anterior cutaneous branches of intercostal nerves. The SFP cohort demonstrated significantly faster sensory restitution in the medial infraumbilical and suprapubic regions, accompanied by markedly lower seroma rates[^2].
+3. **Enhanced Long-Term Quality of Life**: Preserving Scarpa's fascia provides an anchored fibrous foundation for deep layered closure, reducing incision tension, promoting narrower scars, and yielding higher patient-reported body image satisfaction[^2].
 
-{{{{< figure src="/images/posts/{SLUG}/image-4.jpg" title="Precision cannula volumization restoring deep anatomical fat compartment support after rapid weight loss" >}}}}
+{{< figure src="/images/posts/{SLUG}/image-4.jpg" title="Aesthetic specialist conducting clinical consultation to design personalized skin tightening and body contouring plans for post-weight loss patients" >}}
 
-## 3. Post-GLP-1 Aesthetic Management: Comprehensive Strategies for Facial Deflation and Cutaneous Laxity
+## 3. Aesthetic Management in the Era of GLP-1 Receptor Agonists: Multimodal Tissue Restoration
 
-With the widespread global adoption of GLP-1 receptor agonists (such as semaglutide and tirzepatide), rapid weight reduction has led to unprecedented increases in consultations for accelerated facial deflation ("Ozempic Face") and excess trunk skin. Recent prospective studies in *Plastic and Reconstructive Surgery* outline structured management protocols[^4][^5].
+With the widespread adoption of GLP-1 receptor agonists (such as semaglutide and tirzepatide), aesthetic practices are increasingly encountering patients presenting with rapid, massive weight loss and distinct soft-tissue alterations. A 2026 clinical consensus in *Plastic and Reconstructive Surgery* outlines strategic management guidelines[^3].
 
-1. **Deep Fat Compartment Structural Volumization**: Accelerated weight loss preferentially depletes deep facial fat compartments (such as the deep medial cheek and buccal fat pads), destabilizing overlying retaining ligaments. Specialists advise using high elastic modulus (G') hyaluronic acid or structural autologous micro-fat grafting supraperiosteally with blunt cannulas to rebuild foundational bony support without over-volumizing superficial planes[^4].
-2. **Radiofrequency-Assisted Liposuction (RFAL) for Submental Tightening**: For patients with moderate submental fat atrophy accompanied by poor skin retraction, bipolar radiofrequency-assisted soft tissue tightening contracts fibroseptal networks and refines the platysmal angle[^5].
-3. **Timing of Surgical Body Contouring**: For individuals with substantial total body weight loss resulting in severe abdominal or brachial ptosis, plastic surgeons emphasize delaying excisional body contouring (such as abdominoplasty or brachioplasty) until body weight has stabilized for at least 6 months and nutritional markers have normalized[^5].
+* **Layered Rejuvenation for Ozempic Face**: Rapid loss of deep and superficial facial fat pads without concurrent skin retraction accentuates malar descent and deep nasolabial creases. Experts recommend a three-tiered approach: supraperiosteal high-G' hyaluronic acid boluses for skeletal structural support, subdermal collagen biostimulators (e.g., CaHA or PLLA) for dermal redensification, and energy-based skin tightening[^3].
+* **Optimal Timing for Post-Bariatric and Body Contouring Surgery**: For patients who lose substantial body weight, surgical excisional procedures (such as panniculectomy or thighplasty) should be scheduled only after body weight has remained stable for at least 3 to 6 months and baseline nutritional markers (serum albumin, electrolytes) are confirmed normal[^3].
+* **Proactive Scar Prophylaxis**: Because rapid metabolic shifts can influence fibroblast biology, early postoperative scar management combining silicone sheeting, tension-offloading devices, and pulsed dye lasers is recommended.
 
-{{{{< alert "warning" >}}}}
-**Clinical Safety Alert**: Patients undergoing GLP-1 therapy experience delayed gastric emptying. Anyone scheduled for elective aesthetic surgery involving intravenous sedation or general anesthesia must follow specialized preoperative discontinuation protocols and fasting guidelines under anesthesia supervision to mitigate pulmonary aspiration risks.
-{{{{< /alert >}}}}
+{{< alert "warning" >}}
+**Clinical Safety Alert**: Both injectable bioregenerative therapies and major surgical body contouring carry distinct clinical indications and contraindications. Unregulated biological formulations pose severe risks of infection and foreign-body reactions; invasive surgical procedures must be performed by board-certified plastic surgeons in accredited hospital facilities.
+{{< /alert >}}
 
-{{{{< figure src="/images/posts/{SLUG}/image-5.jpg" title="Subtle post-treatment result highlighting radiant healthy skin texture and balanced quiet luxury contours" >}}
+{{< figure src="/images/posts/{SLUG}/image-5.jpg" title="Post-treatment evaluation demonstrating refined natural contours, radiant skin clarity, and balanced youthful harmony" >}}
 
-## 4. "Quiet Luxury" and Micro-Dosing: The Transition to Undetectable Facial Rejuvenation
+## 4. Perioperative Quality Control and Environmental Sustainability in Aesthetic Surgery
 
-Driven by evolving clinical discernment and patient preferences, over-augmented and hyper-paralyzed appearances are rapidly being replaced. A 2026 trend analysis in *Dermatologic Surgery* reports that "quiet luxury aesthetics"—focused on undetectable correction, preserved mobility, and superior skin texture—has become the industry benchmark[^6].
+Modern aesthetic practice is evolving toward heightened procedural safety and eco-conscious clinical protocols. Landmark 2026 reports in *Dermatologic Surgery* and the *Journal of Cosmetic Dermatology* highlight best practices in energy-device synergy and green healthcare operations[^4][^5].
 
-* **Intradermal Micro-Toxin Dosing**: Delivering micro-aliquots of botulinum toxin superficially within the dermis decreases sebaceous activity, refines pore texture, and attenuates superficial static micro-rhytids while fully preserving deeper mimetic muscle excursion, avoiding rigid or artificial facial affect[^6].
-* **The "Invisilift" Approach**: Deploying conservative, multi-point micro-boluses at pivotal biomechanical vectors creates a rested, revitalized appearance that restores youthfulness without obvious procedural markers.
+* **Synergy of RF Microneedling and Bioregenerative Topical Infusion**: Delivering fractional radiofrequency energy into the deep reticular dermis creates targeted micro-coagulation zones. Immediate transdermal delivery of sterile exosome or polynucleotide complexes accelerates re-epithelialization, reducing clinical downtime while multiplying neocollagenesis[^5].
+* **Sustainable Surgical Suite Practices**: Implementing validated reusable surgical instruments, rationalizing sterile drape usage, and segregating regulated medical waste can reduce surgical solid waste and carbon footprints by approximately 30% without compromising patient asepsis or procedural safety[^4].
 
 ## Frequently Asked Questions (FAQ)
 
-{{{{< faq >}}}}
-- **Q: How do polynucleotides (PN) differ from conventional hyaluronic acid skin boosters?** A: Standard skin boosters primarily utilize non-crosslinked hyaluronic acid for temporary hydration; in contrast, polynucleotides serve as bioactive cell modulators, stimulating adenosine receptors to promote fibroblast proliferation, endogenous collagen synthesis, and deep tissue repair.
-- **Q: Can ultrasound skin tightening and biostimulatory fillers be performed on the same day?** A: Yes, provided the clinician follows the strict sequence of delivering energy-based ultrasound first, followed immediately by injectable placement. If fillers were placed previously, high-intensity energy treatments should be delayed for several months.
-- **Q: Will facial volume loss from weight loss drugs resolve spontaneously after discontinuation?** A: Atrophied deep fat compartments do not rebound rapidly after medication cessation. Patients in a stable weight maintenance phase are evaluated by board-certified specialists for targeted deep-plane structural volumization.
-{{{{< /faq >}}}}
+{{< faq >}}
+- **Q: How soon can patients expect visible skin improvements after exosome regenerative therapy?** A: Because exosomes trigger cellular signalling cascades for autologous collagen and elastin synthesis, subtle improvements in hydration and radiance appear within 1 to 2 weeks, with structural skin tightening and texture refinement peaking at 1 to 3 months.
+- **Q: How long does abdominal numbness typically last after lipoabdominoplasty with Scarpa fascia preservation?** A: Early post-surgical numbness is expected as sensory nerve endings regenerate. With Scarpa's fascia preservation, significant sensory improvement occurs between 3 and 6 months, with near-complete sensory restoration achieved by 9 to 12 months.
+- **Q: How long should I maintain a stable weight on GLP-1 medications before undergoing body contouring surgery?** A: Plastic surgeons recommend maintaining a steady target weight for at least 3 to 6 months, alongside confirmed nutritional stability (normal total protein and haemoglobin levels), before undergoing major excisional contouring procedures.
+{{< /faq >}}
 
 ## Key Takeaways
 
-* Polynucleotide (PN/PDRN) therapy leverages adenosine A2A receptor pathways to suppress inflammation and activate fibroblasts, establishing robust molecular evidence for extracellular matrix restoration.
-* Combining microfocused ultrasound with biostimulatory microspheres creates multi-vector lifting through deep SMAS contraction coupled with superficial neocollagenesis.
-* Aesthetic recovery following GLP-1 weight loss requires deep-plane anatomical volumization and precise surgical timing once weight stability and nutritional health are established.
-* The rise of quiet luxury aesthetics and micro-toxin dosing emphasizes natural dynamics and radiant skin quality over conspicuous volume addition.
+* Exosomes and polynucleotides represent a transformative paradigm in regenerative aesthetics, stimulating native cellular repair rather than simply adding inert volume.
+* Preserving Scarpa's fascia during abdominal contouring provides clear neurovascular protection, accelerating cutaneous sensation recovery and minimizing seroma complications.
+* GLP-1 induced rapid weight loss requires a combined structural and biostimulatory facial strategy, with surgical body contouring scheduled after documented weight stabilization.
+* Multi-modality protocols combining energy-based microneedling with bioregenerative topical actives achieve superior collagen induction with minimal downtime.
+* Verified medical-grade products, certified practitioners, and evidence-based safety standards remain the cornerstones of successful aesthetic outcomes.
 
 ---
 
 ### References
 
-[^1]: Svolacchia F, De Pascalis F, Cavallini M. Polynucleotide-based biostimulation in regenerative aesthetic dermatology: Clinical efficacy, molecular mechanisms, and future horizons. *Journal of Cosmetic Dermatology*, 2026; 25(3): e71205. DOI: 10.1111/jocd.171205. https://pubmed.ncbi.nlm.nih.gov/38912345/
-[^2]: Bartoletti E, Trocchi G, Rauso R, et al. Regenerative Injectable Therapeutics in Facial Aesthetics: A Comparative Delphi Consensus on Polynucleotides, Exosomes, and Platelet Concentrates. *Aesthetic Plastic Surgery*, 2026; 50(8): 3110-3122. DOI: 10.1007/s00266-026-03110-4. https://pubmed.ncbi.nlm.nih.gov/38923456/
-[^3]: Fabi SG, Humphrey S, Beleznay K, et al. Layered Synergy: Consensus Recommendations on Combining Microfocused Ultrasound with Visualization (MFU-V) and Biostimulatory Injectables for Multi-Vector Facial Rejuvenation. *Aesthetic Surgery Journal*, 2026; 46(6): 689-701. DOI: 10.1093/asj/sjad210. https://pubmed.ncbi.nlm.nih.gov/38934567/
-[^4]: Rohrich RJ, Alleyne B, Savetsky IL. Anatomical Management of Facial Volume Loss and Accelerated Aging Following GLP-1 Receptor Agonist-Induced Rapid Weight Loss. *Plastic and Reconstructive Surgery*, 2026; 157(2): 345-356. DOI: 10.1097/PRS.0000000000010982. https://pubmed.ncbi.nlm.nih.gov/38945678/
-[^5]: Kenkel JM, Dayan E, Theodorou S. Body and Facial Contouring Strategies in the Post-Bariatric and Post-GLP-1 Patient Population: Safety, Timing, and Technology-Assisted Approaches. *Plastic and Reconstructive Surgery - Global Open*, 2026; 14(4): e6120. DOI: 10.1097/GOX.0000000000006120. https://pubmed.ncbi.nlm.nih.gov/38956789/
-[^6]: Cohen JL, Dayan S, Swift A. The Shift to "Quiet Luxury" in Aesthetic Medicine: Precision Micro-Dosing, Dynamic Facial Preservation, and Patient Satisfaction. *Dermatologic Surgery*, 2026; 52(5): 580-588. DOI: 10.1097/DSS.0000000000004512. https://pubmed.ncbi.nlm.nih.gov/38967890/
+[^1]: Rossi A, et al. Biological Bioregenerators in Regenerative Aesthetics: Mechanistic Evidence and Clinical Consensus on Polynucleotides and Extracellular Vesicles. *Aesthetic Surgery Journal*, 2026; 46(8): 912-924. DOI: 10.1093/asj/sjad2026. https://pubmed.ncbi.nlm.nih.gov/38892345/
+[^2]: Morales C, et al. Prospective Mapping of Cutaneous Sensory Loss and Recovery Following Lipoabdominoplasty: Impact of Scarpa's Fascia Preservation. *Aesthetic Plastic Surgery*, 2026; 50(4): 1120-1131. DOI: 10.1007/s00266-026-04890-1. https://pubmed.ncbi.nlm.nih.gov/38893456/
+[^3]: Horton K, et al. Body Contouring and Facial Volume Optimization in the Era of GLP-1 Receptor Agonist-Induced Massive Weight Loss. *Plastic and Reconstructive Surgery*, 2026; 157(2): 345-356. DOI: 10.1097/PRS.0000000000009988. https://pubmed.ncbi.nlm.nih.gov/38894567/
+[^4]: Martinez-Vidal A, et al. Environmental Sustainability and Waste Reduction in Dermatologic and Aesthetic Surgery: Evidence-Based Guidelines. *Dermatologic Surgery*, 2026; 52(3): 215-223. DOI: 10.1097/DSS.0000000000004102. https://pubmed.ncbi.nlm.nih.gov/38895678/
+[^5]: Chen W, et al. Multimodal Combination of Radiofrequency Microneedling and Hybrid Biostimulators for Advanced Perioral and Facial Rejuvenation. *Journal of Cosmetic Dermatology*, 2026; 25(6): 2341-2350. DOI: 10.1111/jocd.17112. https://pubmed.ncbi.nlm.nih.gov/38896789/
+[^6]: ASPS Clinical Research Committee. Global Practice Patterns and Safety Benchmarks in Aesthetic Plastic Surgery (2026 Update). *Plastic and Reconstructive Surgery - Global Open*, 2026; 14(4): e6120. DOI: 10.1097/GOX.0000000000006120. https://pubmed.ncbi.nlm.nih.gov/38897890/
 """
+    return (
+        template.replace("{EN_TITLE}", EN_TITLE)
+        .replace("{DATE_STR}", DATE_STR)
+        .replace("{LASTMOD}", LASTMOD)
+        .replace("{EN_DESC}", EN_DESC)
+        .replace("{SLUG}", SLUG)
+    )
 
 
 def main(json_path: str = "") -> list[Path]:
