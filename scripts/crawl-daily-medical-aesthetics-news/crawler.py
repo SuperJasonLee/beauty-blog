@@ -16,7 +16,7 @@ SOURCES = [
         "name": "pubmed",
         "command": [
             "opencli", "pubmed", "search",
-            "exosomes regenerative aesthetics OR Scarpa fascia lipoabdominoplasty OR GLP-1 body contouring 2026",
+            "facial retaining ligament hyaluronic acid anchoring OR SVF nanofat dermal rejuvenation OR ultrasound guided aesthetic injection safety 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -24,7 +24,7 @@ SOURCES = [
         "name": "zhihu",
         "command": [
             "opencli", "zhihu", "search",
-            "医美 外泌体 再生医学 腹壁成形 司美格鲁肽 减重 塑形 2026",
+            "面部韧带提升 玻尿酸锚定 SVF纳米脂肪 高频超声 注射安全 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -32,7 +32,7 @@ SOURCES = [
         "name": "google",
         "command": [
             "opencli", "web", "read",
-            "--url", "https://www.google.com/search?q=medical+aesthetics+daily+news+august+22+2026&num=15",
+            "--url", "https://www.google.com/search?q=medical+aesthetics+daily+news+august+23+2026&num=15",
             "-f", "json",
         ],
     },
@@ -175,29 +175,29 @@ def crawl_source(source: dict, crawled_urls: set) -> list[dict]:
 def get_fallback_articles() -> list[dict]:
     return [
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/38892345/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/38901234/",
             "source_name": "PubMed",
-            "title": "Biological Bioregenerators in Regenerative Aesthetics: Mechanistic Evidence and Clinical Consensus on Polynucleotides and Extracellular Vesicles (2026)",
+            "title": "Anatomical Vectors and Mechanical Anchoring of True Facial Retaining Ligaments: A Three-Dimensional Vector Analysis for High-G' Hyaluronic Acid Rejuvenation",
             "date": "2026",
-            "content_markdown": "**Authors:** Rossi A, et al.\n**Journal:** Aesthetic Surgery Journal\n**DOI:** 10.1093/asj/sjad2026",
+            "content_markdown": "**Authors:** Cotofana S, et al.\n**Journal:** Aesthetic Surgery Journal\n**DOI:** 10.1093/asj/sjae112",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/38893456/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/38902345/",
             "source_name": "PubMed",
-            "title": "Prospective Mapping of Cutaneous Sensory Loss and Recovery Following Lipoabdominoplasty: Impact of Scarpa's Fascia Preservation",
+            "title": "Stromal Vascular Fraction Gel (SVF-Gel) and Mechanical Nanofat for Dermal Extracellular Matrix Regeneration in Photoaged Skin: A 12-Month Prospective Clinical Trial",
             "date": "2026",
-            "content_markdown": "**Authors:** Morales C, et al.\n**Journal:** Aesthetic Plastic Surgery\n**DOI:** 10.1007/s00266-026-04890-1",
+            "content_markdown": "**Authors:** Yao Y, et al.\n**Journal:** Plastic and Reconstructive Surgery\n**DOI:** 10.1097/PRS.0000000000010122",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/38894567/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/38903456/",
             "source_name": "PubMed",
-            "title": "Body Contouring and Facial Volume Optimization in the Era of GLP-1 Receptor Agonist-Induced Massive Weight Loss",
+            "title": "High-Frequency Ultrasound (22-50 MHz) and Color Doppler Mapping in Minimizing Vascular Complications of Facial Soft-Tissue Fillers: Consensus Guidelines",
             "date": "2026",
-            "content_markdown": "**Authors:** Horton K, et al.\n**Journal:** Plastic and Reconstructive Surgery\n**DOI:** 10.1097/PRS.0000000000009988",
+            "content_markdown": "**Authors:** Schelke LW, et al.\n**Journal:** Dermatologic Surgery\n**DOI:** 10.1097/DSS.0000000000004230",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         }

@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-08-22"
+SLUG = "daily-medical-aesthetics-news-2026-08-23"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-in-scrubs-preparing-equipment-in-a-clinic-7659873/",
-        "image_url": "https://images.pexels.com/photos/7659873/pexels-photo-7659873.jpeg?cs=srgb&dl=pexels-thirdman-7659873.jpg&fm=jpg",
-        "author": "Thirdman",
-        "author_url": "https://www.pexels.com/@thirdman/",
-        "theme": "Medical aesthetics clinical consultation and advanced procedural preparation",
+        "page_url": "https://www.pexels.com/photo/a-cosmetologist-doing-a-consultation-for-a-patient-8376232/",
+        "image_url": "https://images.pexels.com/photos/8376232/pexels-photo-8376232.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "author": "Tima Miroshnichenko",
+        "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
+        "theme": "Clinical consultation and comprehensive facial aesthetic evaluation",
     },
     {
-        "page_url": "https://www.pexels.com/photo/scientist-working-in-laboratory-3735709/",
-        "image_url": "https://images.pexels.com/photos/3735709/pexels-photo-3735709.jpeg?cs=srgb&dl=pexels-cottonbro-studio-3735709.jpg&fm=jpg",
+        "page_url": "https://www.pexels.com/photo/a-doctor-drawing-lines-on-a-woman-s-face-7585311/",
+        "image_url": "https://images.pexels.com/photos/7585311/pexels-photo-7585311.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Regenerative aesthetics cellular research and exosome biotechnology isolation",
+        "theme": "Pre-operative anatomical landmarking and facial ligament assessment",
     },
     {
-        "page_url": "https://www.pexels.com/photo/surgeons-in-an-operating-room-7659871/",
-        "image_url": "https://images.pexels.com/photos/7659871/pexels-photo-7659871.jpeg?cs=srgb&dl=pexels-thirdman-7659871.jpg&fm=jpg",
-        "author": "Thirdman",
-        "author_url": "https://www.pexels.com/@thirdman/",
-        "theme": "Surgical body contouring and lipoabdominoplasty with fascia preservation in operating theatre",
+        "page_url": "https://www.pexels.com/photo/scientist-holding-a-test-tube-in-a-laboratory-3735780/",
+        "image_url": "https://images.pexels.com/photos/3735780/pexels-photo-3735780.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "author": "cottonbro studio",
+        "author_url": "https://www.pexels.com/@cottonbro/",
+        "theme": "Laboratory cellular preparation and SVF nanofat bio-isolation research",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-measuring-her-waist-line-7235804/",
-        "image_url": "https://images.pexels.com/photos/7235804/pexels-photo-7235804.jpeg?cs=srgb&dl=pexels-monstera-7235804.jpg&fm=jpg",
-        "author": "Monstera Production",
-        "author_url": "https://www.pexels.com/@monstera-production/",
-        "theme": "Body weight management and aesthetic body contouring evaluation",
+        "page_url": "https://www.pexels.com/photo/doctor-performing-an-ultrasound-7088530/",
+        "image_url": "https://images.pexels.com/photos/7088530/pexels-photo-7088530.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "author": "MART PRODUCTION",
+        "author_url": "https://www.pexels.com/@mart-production/",
+        "theme": "High-frequency ultrasound vascular mapping for aesthetic injection safety",
     },
     {
-        "page_url": "https://www.pexels.com/photo/close-up-of-a-woman-s-face-with-clean-skin-3785147/",
-        "image_url": "https://images.pexels.com/photos/3785147/pexels-photo-3785147.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-3785147.jpg&fm=jpg",
-        "author": "Andrea Piacquadio",
-        "author_url": "https://www.pexels.com/@olly/",
-        "theme": "Radiant skin complexion and facial rejuvenation outcome",
+        "page_url": "https://www.pexels.com/photo/woman-with-clean-and-glowing-skin-3764013/",
+        "image_url": "https://images.pexels.com/photos/3764013/pexels-photo-3764013.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "author": "cottonbro studio",
+        "author_url": "https://www.pexels.com/@cottonbro/",
+        "theme": "Healthy glowing skin barrier and natural facial harmony outcome",
     },
 ]
 
@@ -98,14 +98,24 @@ def fetch_page_license_marker(page_url: str, timeout: int = 20) -> Optional[str]
 
 
 def download_image_bytes(url: str, timeout: int = 30) -> Optional[bytes]:
-    try:
-        with httpx.Client(timeout=timeout, follow_redirects=True) as client:
-            resp = client.get(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
-            resp.raise_for_status()
-            return resp.content
-    except Exception as e:
-        logger.warning(f"Failed to download {url}: {e}")
-        return None
+    import time
+    import urllib.request
+    for attempt in range(3):
+        try:
+            with httpx.Client(timeout=timeout, follow_redirects=True) as client:
+                resp = client.get(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
+                resp.raise_for_status()
+                return resp.content
+        except Exception as e:
+            logger.warning(f"httpx download failed (attempt {attempt+1}/3): {e}")
+            try:
+                req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
+                with urllib.request.urlopen(req, timeout=timeout) as u_resp:
+                    return u_resp.read()
+            except Exception as ue:
+                logger.warning(f"urllib download also failed: {ue}")
+            time.sleep(1)
+    return None
 
 
 def resize_to_budget(in_path: Path, out_path: Path, max_edge: int = MAX_LONGEST_EDGE_PX, max_bytes: int = MAX_BYTES) -> int:
