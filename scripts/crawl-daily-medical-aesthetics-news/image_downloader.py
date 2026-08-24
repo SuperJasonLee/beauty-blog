@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-08-23"
+SLUG = "daily-medical-aesthetics-news-2026-08-24"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-cosmetologist-doing-a-consultation-for-a-patient-8376232/",
-        "image_url": "https://images.pexels.com/photos/8376232/pexels-photo-8376232.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-with-a-tablet-consulting-a-patient-5215016/",
+        "image_url": "https://images.pexels.com/photos/5215016/pexels-photo-5215016.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Clinical consultation and comprehensive facial aesthetic evaluation",
+        "theme": "Aesthetic physician conducting thorough clinical consultation and anatomical assessment",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-drawing-lines-on-a-woman-s-face-7585311/",
-        "image_url": "https://images.pexels.com/photos/7585311/pexels-photo-7585311.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-plastic-surgeon-measuring-the-patient-s-eyelids-by-using-a-caliper-7585310/",
+        "image_url": "https://images.pexels.com/photos/7585310/pexels-photo-7585310.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Pre-operative anatomical landmarking and facial ligament assessment",
+        "theme": "Pre-operative anatomical landmarking and facial biometric vector mapping",
     },
     {
-        "page_url": "https://www.pexels.com/photo/scientist-holding-a-test-tube-in-a-laboratory-3735780/",
-        "image_url": "https://images.pexels.com/photos/3735780/pexels-photo-3735780.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/surgeons-performing-surgery-in-operating-room-32828947/",
+        "image_url": "https://images.pexels.com/photos/32828947/pexels-photo-32828947.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "author": "Zeynep Özata",
+        "author_url": "https://www.pexels.com/@zeynep-ozata/",
+        "theme": "Minimally invasive endoscopic deep-plane SMAS dissection in advanced operating suite",
+    },
+    {
+        "page_url": "https://www.pexels.com/photo/cosmetologist-doing-a-laser-treatment-on-a-woman-s-face-7755511/",
+        "image_url": "https://images.pexels.com/photos/7755511/pexels-photo-7755511.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Laboratory cellular preparation and SVF nanofat bio-isolation research",
+        "theme": "Precision multimodal laser energy and periorbital dermal barrier rejuvenation",
     },
     {
-        "page_url": "https://www.pexels.com/photo/doctor-performing-an-ultrasound-7088530/",
-        "image_url": "https://images.pexels.com/photos/7088530/pexels-photo-7088530.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
-        "author": "MART PRODUCTION",
-        "author_url": "https://www.pexels.com/@mart-production/",
-        "theme": "High-frequency ultrasound vascular mapping for aesthetic injection safety",
-    },
-    {
-        "page_url": "https://www.pexels.com/photo/woman-with-clean-and-glowing-skin-3764013/",
-        "image_url": "https://images.pexels.com/photos/3764013/pexels-photo-3764013.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
-        "author": "cottonbro studio",
-        "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Healthy glowing skin barrier and natural facial harmony outcome",
+        "page_url": "https://www.pexels.com/photo/close-up-of-a-woman-s-face-with-clean-skin-3785147/",
+        "image_url": "https://images.pexels.com/photos/3785147/pexels-photo-3785147.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "author": "Andrea Piacquadio",
+        "author_url": "https://www.pexels.com/@olly/",
+        "theme": "Youthful facial contour balance and radiant skin texture after regenerative rejuvenation",
     },
 ]
 

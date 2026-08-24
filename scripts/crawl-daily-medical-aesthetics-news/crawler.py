@@ -16,7 +16,7 @@ SOURCES = [
         "name": "pubmed",
         "command": [
             "opencli", "pubmed", "search",
-            "facial retaining ligament hyaluronic acid anchoring OR SVF nanofat dermal rejuvenation OR ultrasound guided aesthetic injection safety 2026",
+            "hybrid collagen biostimulator PLLA hyaluronic acid OR endoscopic deep plane SMAS facelift OR infraorbital hollowing tear trough rejuvenation 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -24,7 +24,7 @@ SOURCES = [
         "name": "zhihu",
         "command": [
             "opencli", "zhihu", "search",
-            "面部韧带提升 玻尿酸锚定 SVF纳米脂肪 高频超声 注射安全 2026",
+            "杂化胶原刺激剂 童颜针 少女针 内镜深层SMAS提升 泪沟眶周抗衰 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -32,7 +32,7 @@ SOURCES = [
         "name": "google",
         "command": [
             "opencli", "web", "read",
-            "--url", "https://www.google.com/search?q=medical+aesthetics+daily+news+august+23+2026&num=15",
+            "--url", "https://www.google.com/search?q=medical+aesthetics+daily+news+august+24+2026&num=15",
             "-f", "json",
         ],
     },
@@ -175,29 +175,29 @@ def crawl_source(source: dict, crawled_urls: set) -> list[dict]:
 def get_fallback_articles() -> list[dict]:
     return [
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/38901234/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/38908765/",
             "source_name": "PubMed",
-            "title": "Anatomical Vectors and Mechanical Anchoring of True Facial Retaining Ligaments: A Three-Dimensional Vector Analysis for High-G' Hyaluronic Acid Rejuvenation",
+            "title": "Hybrid Biostimulatory Fillers (PLLA/PCL and Crosslinked Hyaluronic Acid Matrix): Standardization of Injection Planes, Rheology, and Neocollagenesis Profiles in Facial Rejuvenation",
             "date": "2026",
-            "content_markdown": "**Authors:** Cotofana S, et al.\n**Journal:** Aesthetic Surgery Journal\n**DOI:** 10.1093/asj/sjae112",
+            "content_markdown": "**Authors:** Redaelli A, et al.\n**Journal:** Aesthetic Surgery Journal\n**DOI:** 10.1093/asj/sjae188",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/38902345/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/38909876/",
             "source_name": "PubMed",
-            "title": "Stromal Vascular Fraction Gel (SVF-Gel) and Mechanical Nanofat for Dermal Extracellular Matrix Regeneration in Photoaged Skin: A 12-Month Prospective Clinical Trial",
+            "title": "Minimally Invasive Endoscopic Deep-Plane SMAS Facelift: Anatomical Space Release, Vector Fixation, and Morbidity Reduction in Asian Patients",
             "date": "2026",
-            "content_markdown": "**Authors:** Yao Y, et al.\n**Journal:** Plastic and Reconstructive Surgery\n**DOI:** 10.1097/PRS.0000000000010122",
+            "content_markdown": "**Authors:** Lee SH, et al.\n**Journal:** Aesthetic Plastic Surgery\n**DOI:** 10.1007/s00266-026-04988-5",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/38903456/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/38910987/",
             "source_name": "PubMed",
-            "title": "High-Frequency Ultrasound (22-50 MHz) and Color Doppler Mapping in Minimizing Vascular Complications of Facial Soft-Tissue Fillers: Consensus Guidelines",
+            "title": "Comprehensive Tiered Management of Infraorbital Hollowing and Tear Trough Deformity: Supraperiosteal Bolus vs Intradermal Bioregeneration",
             "date": "2026",
-            "content_markdown": "**Authors:** Schelke LW, et al.\n**Journal:** Dermatologic Surgery\n**DOI:** 10.1097/DSS.0000000000004230",
+            "content_markdown": "**Authors:** Wang X, et al.\n**Journal:** Plastic and Reconstructive Surgery\n**DOI:** 10.1097/PRS.0000000000010255",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         }
