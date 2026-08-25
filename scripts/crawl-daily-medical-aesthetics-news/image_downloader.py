@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-08-24"
+SLUG = "daily-medical-aesthetics-news-2026-08-25"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-with-a-tablet-consulting-a-patient-5215016/",
-        "image_url": "https://images.pexels.com/photos/5215016/pexels-photo-5215016.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-female-doctor-talking-to-her-patient-5214995/",
+        "image_url": "https://images.pexels.com/photos/5214995/pexels-photo-5214995.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Aesthetic physician conducting thorough clinical consultation and anatomical assessment",
+        "theme": "Aesthetic medicine physician performing comprehensive facial analysis and clinical consultation",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-plastic-surgeon-measuring-the-patient-s-eyelids-by-using-a-caliper-7585310/",
-        "image_url": "https://images.pexels.com/photos/7585310/pexels-photo-7585310.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/scientist-working-in-laboratory-3735709/",
+        "image_url": "https://images.pexels.com/photos/3735709/pexels-photo-3735709.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Pre-operative anatomical landmarking and facial biometric vector mapping",
+        "theme": "Biomedical research and recombinant collagen formulation testing in laboratory",
     },
     {
-        "page_url": "https://www.pexels.com/photo/surgeons-performing-surgery-in-operating-room-32828947/",
-        "image_url": "https://images.pexels.com/photos/32828947/pexels-photo-32828947.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
-        "author": "Zeynep Özata",
-        "author_url": "https://www.pexels.com/@zeynep-ozata/",
-        "theme": "Minimally invasive endoscopic deep-plane SMAS dissection in advanced operating suite",
-    },
-    {
-        "page_url": "https://www.pexels.com/photo/cosmetologist-doing-a-laser-treatment-on-a-woman-s-face-7755511/",
-        "image_url": "https://images.pexels.com/photos/7755511/pexels-photo-7755511.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-in-a-beauty-salon-3997993/",
+        "image_url": "https://images.pexels.com/photos/3997993/pexels-photo-3997993.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Precision multimodal laser energy and periorbital dermal barrier rejuvenation",
+        "theme": "Monopolar radiofrequency and focused ultrasound energy delivery for facial skin tightening",
     },
     {
-        "page_url": "https://www.pexels.com/photo/close-up-of-a-woman-s-face-with-clean-skin-3785147/",
-        "image_url": "https://images.pexels.com/photos/3785147/pexels-photo-3785147.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
-        "author": "Andrea Piacquadio",
-        "author_url": "https://www.pexels.com/@olly/",
-        "theme": "Youthful facial contour balance and radiant skin texture after regenerative rejuvenation",
+        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-forehead-7581590/",
+        "image_url": "https://images.pexels.com/photos/7581590/pexels-photo-7581590.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "author": "cottonbro studio",
+        "author_url": "https://www.pexels.com/@cottonbro/",
+        "theme": "High-precision micro-droplet neuromodulator injection for platysma and mandibular border definition",
+    },
+    {
+        "page_url": "https://www.pexels.com/photo/close-up-portrait-of-a-woman-with-bare-shoulders-3762879/",
+        "image_url": "https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "author": "cottonbro studio",
+        "author_url": "https://www.pexels.com/@cottonbro/",
+        "theme": "Firm sculpted jawline contour, elegant neckline, and youthful glowing complexion",
     },
 ]
 
