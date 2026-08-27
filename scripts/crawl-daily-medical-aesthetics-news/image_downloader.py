@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-08-26"
+SLUG = "daily-medical-aesthetics-news-2026-08-27"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -38,35 +38,35 @@ CURATED_CANDIDATES = [
         "image_url": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Aesthetic dermatologist explaining diagnostic evaluation and treatment options to patient in modern clinic",
+        "theme": "Aesthetic dermatologist conducting diagnostic evaluation and facial rejuvenation consultation in clinic",
     },
     {
-        "page_url": "https://www.pexels.com/photo/scientist-working-in-a-laboratory-3912953/",
-        "image_url": "https://images.pexels.com/photos/3912953/pexels-photo-3912953.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/close-up-photo-of-scientist-in-laboratory-3912944/",
+        "image_url": "https://images.pexels.com/photos/3912944/pexels-photo-3912944.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Chokniti Khongchum",
         "author_url": "https://www.pexels.com/@chokniti/",
-        "theme": "Biomedical researcher analyzing polynucleotides PN and PDRN cellular regenerative pathways in sterile lab",
+        "theme": "Biomedical researcher analyzing PLLA microparticle biostimulation and extracellular matrix neocollagenesis",
     },
     {
-        "page_url": "https://www.pexels.com/photo/close-up-of-cosmetic-laser-treatment-in-clinic-37078056/",
-        "image_url": "https://images.pexels.com/photos/37078056/pexels-photo-37078056.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
-        "author": "Kerim Eveyik",
-        "author_url": "https://www.pexels.com/@kerimeveyik/",
-        "theme": "Advanced dual-wavelength picosecond laser delivering targeted photoacoustic energy for pigment removal",
-    },
-    {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069453/",
-        "image_url": "https://images.pexels.com/photos/5069453/pexels-photo-5069453.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-getting-laser-treatment-on-her-face-5069432/",
+        "image_url": "https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Professional practitioner applying radiofrequency microneedling and bioactive cellular therapy",
+        "theme": "Practitioner administering microfocused ultrasound MFU-V and energy-based fascial tightening therapy",
     },
     {
-        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762871/",
-        "image_url": "https://images.pexels.com/photos/3762871/pexels-photo-3762871.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-holding-cosmetic-pipette-3785147/",
+        "image_url": "https://images.pexels.com/photos/3785147/pexels-photo-3785147.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Rejuvenated glowing complexion, refined skin texture, and youthful facial vitality",
+        "theme": "Application of recombinant human collagen peptides and supramolecular barrier repair formula",
+    },
+    {
+        "page_url": "https://www.pexels.com/photo/close-up-photo-of-woman-smiling-3762879/",
+        "image_url": "https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "author": "cottonbro studio",
+        "author_url": "https://www.pexels.com/@cottonbro/",
+        "theme": "Luminous, calm, and refined facial complexion following vascular laser and barrier stabilization",
     },
 ]
 
