@@ -16,7 +16,7 @@ SOURCES = [
         "name": "pubmed",
         "command": [
             "opencli", "pubmed", "search",
-            "poly-L-lactic acid collagen neocollagenesis OR microfocused ultrasound MFU-V SMAS OR recombinant collagen extracellular matrix OR pulsed dye laser rosacea 2026",
+            "picosecond laser melasma photoacoustic OR botulinum toxin masseter sBLA OR cryolipolysis body contouring paradoxical adipose hyperplasia OR exosome collagen XVII skin 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -24,7 +24,7 @@ SOURCES = [
         "name": "zhihu",
         "command": [
             "opencli", "zhihu", "search",
-            "PLLA童颜针 重组胶原蛋白 超声刀 MFU-V 脉冲染料激光 玫瑰痤疮 2026",
+            "皮秒激光 黄褐斑 肉毒素 咬肌肥大 冷冻溶脂 外泌体 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -32,7 +32,7 @@ SOURCES = [
         "name": "google",
         "command": [
             "opencli", "web", "read",
-            "--url", "https://www.google.com/search?q=medical+aesthetics+poly-L-lactic+acid+recombinant+collagen+ultrasound+august+2026&num=15",
+            "--url", "https://www.google.com/search?q=medical+aesthetics+picosecond+laser+botox+masseter+cryolipolysis+august+2026&num=15",
             "-f", "json",
         ],
     },

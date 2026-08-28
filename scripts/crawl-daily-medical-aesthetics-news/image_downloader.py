@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-08-27"
+SLUG = "daily-medical-aesthetics-news-2026-08-28"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -38,35 +38,35 @@ CURATED_CANDIDATES = [
         "image_url": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Aesthetic dermatologist conducting diagnostic evaluation and facial rejuvenation consultation in clinic",
-    },
-    {
-        "page_url": "https://www.pexels.com/photo/close-up-photo-of-scientist-in-laboratory-3912944/",
-        "image_url": "https://images.pexels.com/photos/3912944/pexels-photo-3912944.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
-        "author": "Chokniti Khongchum",
-        "author_url": "https://www.pexels.com/@chokniti/",
-        "theme": "Biomedical researcher analyzing PLLA microparticle biostimulation and extracellular matrix neocollagenesis",
+        "theme": "Aesthetic dermatologist conducting comprehensive diagnostic consultation and multi-modal treatment plan",
     },
     {
         "page_url": "https://www.pexels.com/photo/woman-getting-laser-treatment-on-her-face-5069432/",
         "image_url": "https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Practitioner administering microfocused ultrasound MFU-V and energy-based fascial tightening therapy",
+        "theme": "Practitioner delivering precision picosecond laser photoacoustic pulses for melasma pigment shattering",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-holding-cosmetic-pipette-3785147/",
-        "image_url": "https://images.pexels.com/photos/3785147/pexels-photo-3785147.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-forehead-7581590/",
+        "image_url": "https://images.pexels.com/photos/7581590/pexels-photo-7581590.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Application of recombinant human collagen peptides and supramolecular barrier repair formula",
+        "theme": "Physician performing precise intramuscular neuromodulator injection for lower-face contouring",
+    },
+    {
+        "page_url": "https://www.pexels.com/photo/unrecognizable-woman-getting-weight-loss-procedure-in-clinic-7772650/",
+        "image_url": "https://images.pexels.com/photos/7772650/pexels-photo-7772650.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "author": "Dmitriy Ganin",
+        "author_url": "https://www.pexels.com/photo/unrecognizable-woman-getting-weight-loss-procedure-in-clinic-7772650/",
+        "theme": "Clinical application of cryolipolysis dual-cup cooling device for non-invasive subcutaneous adipocyte reduction",
     },
     {
         "page_url": "https://www.pexels.com/photo/close-up-photo-of-woman-smiling-3762879/",
         "image_url": "https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Luminous, calm, and refined facial complexion following vascular laser and barrier stabilization",
+        "theme": "Flawless, refined, and firm skin tone after regenerative exosome conditioning and barrier repair",
     },
 ]
 
