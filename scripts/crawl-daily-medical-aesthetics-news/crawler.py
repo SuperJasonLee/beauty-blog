@@ -16,7 +16,7 @@ SOURCES = [
         "name": "pubmed",
         "command": [
             "opencli", "pubmed", "search",
-            "picosecond laser melasma photoacoustic OR botulinum toxin masseter sBLA OR cryolipolysis body contouring paradoxical adipose hyperplasia OR exosome collagen XVII skin 2026",
+            "radiofrequency microneedling acne scars OR poly-D,L-lactic acid PDLLA filler OR chemical peel glycolic salicylic acid 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -24,7 +24,7 @@ SOURCES = [
         "name": "zhihu",
         "command": [
             "opencli", "zhihu", "search",
-            "皮秒激光 黄褐斑 肉毒素 咬肌肥大 冷冻溶脂 外泌体 2026",
+            "黄金微针 射频微针 聚双旋乳酸 PDLLA 刷酸 化学剥脱 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -32,7 +32,7 @@ SOURCES = [
         "name": "google",
         "command": [
             "opencli", "web", "read",
-            "--url", "https://www.google.com/search?q=medical+aesthetics+picosecond+laser+botox+masseter+cryolipolysis+august+2026&num=15",
+            "--url", "https://www.google.com/search?q=medical+aesthetics+radiofrequency+microneedling+PDLLA+chemical+peel+august+2026&num=15",
             "-f", "json",
         ],
     },
