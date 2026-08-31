@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-08-29"
+SLUG = "daily-medical-aesthetics-news-2026-08-31"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-having-a-consultation-with-a-patient-5215017/",
-        "image_url": "https://images.pexels.com/photos/5215017/pexels-photo-5215017.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-explaining-a-diagnosis-to-her-patient-5214995/",
+        "image_url": "https://images.pexels.com/photos/5214995/pexels-photo-5214995.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Aesthetic physician conducting comprehensive consultation and personalized anti-aging treatment planning in modern clinic",
+        "theme": "Aesthetic physician conducting comprehensive facial structural assessment and treatment consultation in clinic",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-person-getting-a-facial-treatment-5069429/",
-        "image_url": "https://images.pexels.com/photos/5069429/pexels-photo-5069429.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/close-up-of-a-woman-getting-a-facial-treatment-5069432/",
+        "image_url": "https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Clinical practitioner delivering precision radiofrequency microneedling energy pulses to the facial dermis",
+        "theme": "Clinical practitioner administering targeted intradermal polynucleotide micro-injections for skin quality restoration",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-person-getting-a-facial-injection-5069430/",
-        "image_url": "https://images.pexels.com/photos/5069430/pexels-photo-5069430.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-getting-cosmetic-procedure-5069434/",
+        "image_url": "https://images.pexels.com/photos/5069434/pexels-photo-5069434.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Plastic surgeon performing deep periosteal micro-droplet injection of biostimulatory regenerative filler",
+        "theme": "Dermatologist applying non-invasive synchronous ultrasound energy transducer for mid-dermal neocollagenesis",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-lying-down-getting-facial-treatment-5069435/",
-        "image_url": "https://images.pexels.com/photos/5069435/pexels-photo-5069435.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
-        "author": "cottonbro studio",
-        "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Targeted energy-based plasma and fractional skin resurfacing for scar remodeling and collagen induction",
+        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-in-a-salon-3997993/",
+        "image_url": "https://images.pexels.com/photos/3997993/pexels-photo-3997993.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "author": "Andrea Piacquadio",
+        "author_url": "https://www.pexels.com/@olly/",
+        "theme": "Plastic surgeon performing delicate periorbital assessment for autologous SVF-gel micro-lipografting",
     },
     {
-        "page_url": "https://www.pexels.com/photo/close-up-portrait-of-a-beautiful-woman-smiling-3762871/",
-        "image_url": "https://images.pexels.com/photos/3762871/pexels-photo-3762871.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-and-natural-makeup-3762879/",
+        "image_url": "https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Patient displaying radiant, smooth, and refined skin texture following chemical peel and barrier recovery",
+        "theme": "Patient showcasing luminous, refined skin texture and clear vascular tone following evidence-based rejuvenation",
     },
 ]
 
