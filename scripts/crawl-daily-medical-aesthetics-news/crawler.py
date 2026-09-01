@@ -16,7 +16,7 @@ SOURCES = [
         "name": "pubmed",
         "command": [
             "opencli", "pubmed", "search",
-            "polynucleotide skin rejuvenation OR synchronous ultrasound parallel beam Sofwave OR SVF-gel nanofat facial rejuvenation 2026",
+            "recombinant human collagen aesthetic OR microfocused ultrasound Ultherapy Prime OR polycaprolactone filler OR Nd YAG Er YAG 4D laser 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -24,7 +24,7 @@ SOURCES = [
         "name": "zhihu",
         "command": [
             "opencli", "zhihu", "search",
-            "多核苷酸 PDRN PN 婴儿针 索夫波 Sofwave 脂肪胶 SVF-gel 2026",
+            "重组胶原蛋白 XVII型 聚己内酯 少女针 超声刀 Ultherapy Prime 4D激光 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -32,7 +32,7 @@ SOURCES = [
         "name": "google",
         "command": [
             "opencli", "web", "read",
-            "--url", "https://www.google.com/search?q=medical+aesthetics+polynucleotides+PN+PDRN+Sofwave+SVF-gel+august+2026&num=15",
+            "--url", "https://www.google.com/search?q=medical+aesthetics+recombinant+collagen+polycaprolactone+Ultherapy+Prime+september+2026&num=15",
             "-f", "json",
         ],
     },

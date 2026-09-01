@@ -1,21 +1,22 @@
-"""Script to update post_generator.py and generate the bilingual 2026-08-31 daily posts."""
+"""Post generator module for 2026-09-01 daily medical aesthetics news."""
 
+import logging
 import sys
 from pathlib import Path
 
-REPO_ROOT = Path(r"E:\git_local\beauty-blog")
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 ZH_POSTS_DIR = REPO_ROOT / "content" / "zh-cn" / "posts"
 EN_POSTS_DIR = REPO_ROOT / "content" / "en" / "posts"
 
-SLUG = "daily-medical-aesthetics-news-2026-08-31"
-DATE_STR = "2026-08-31"
-LASTMOD = "2026-08-31"
+SLUG = "daily-medical-aesthetics-news-2026-09-01"
+DATE_STR = "2026-09-01"
+LASTMOD = "2026-09-01"
 
-ZH_TITLE = "每日医美快讯：2026年8月31日 多核苷酸（PN/PDRN）细胞外基质再生、同步超声平行光束面部抗衰与自体SVF-gel眶周年轻化前沿"
-EN_TITLE = "Daily Medical Aesthetics Express: August 31, 2026 Polynucleotide (PN/PDRN) ECM Regeneration, Synchronous Ultrasound Parallel Beam Tightening & Autologous SVF-Gel Periorbital Rejuvenation"
+ZH_TITLE = "每日医美快讯：2026年9月1日 重组人源化胶原蛋白抗衰、可视化微聚焦超声双平面提拉与聚己内酯微球再生前沿"
+EN_TITLE = "Daily Medical Aesthetics Express: September 1, 2026 Recombinant Humanized Collagen, Visualized MFU-V Dual-Plane Lifting & Polycaprolactone Microsphere Regeneration"
 
-ZH_DESC = "2026年8月31日每日医美快讯：深度解析高低分子量多核苷酸（PN/PDRN）成纤维细胞生物激活、同步超声平行光束（SUPERB）真皮靶向热凝固、自体SVF-gel眶周微量填充与脉冲染料激光血管管理前沿。"
-EN_DESC = "August 31, 2026 Daily Express: Polynucleotide ECM remodeling, Synchronous Ultrasound Parallel Beam tightening, SVF-gel periorbital rejuvenation, and vascular laser care."
+ZH_DESC = "2026年9月1日每日医美快讯：深度解析重组人源化XVII/III型胶原蛋白DEJ修复、新一代可视化微聚焦超声（Ultherapy Prime）双平面抗衰、聚己内酯（PCL）微球骨膜上锚定及4D双波长激光临床前沿。"
+EN_DESC = "September 1, 2026 Daily Express: Deep dive into recombinant collagen XVII/III DEJ repair, visualized MFU-V lifting, PCL microsphere anchoring, and 4D dual-laser."
 
 ZH_CONTENT = f"""---
 title: "{ZH_TITLE}"
@@ -23,8 +24,8 @@ date: {DATE_STR}
 lastmod: {LASTMOD}
 description: "{ZH_DESC}"
 categories: ["行业资讯"]
-tags: ["每日医美快讯", "医美动态", "行业趋势", "2026医美", "多核苷酸", "PDRN", "PN", "索夫波", "SUPERB超声", "SVF-gel", "脂肪胶", "脉冲染料激光"]
-keywords: ["每日医美快讯", "多核苷酸PN", "PDRN婴儿针", "成纤维细胞ECM再生", "索夫波Sofwave", "同步超声平行光束", "SVF-gel脂肪胶", "眶周泪沟年轻化", "脉冲染料激光PDL"]
+tags: ["每日医美快讯", "医美动态", "行业趋势", "2026医美", "重组胶原蛋白", "XVII型胶原", "UltherapyPrime", "超声刀", "聚己内酯", "少女针", "Fotona4D"]
+keywords: ["每日医美快讯", "重组人源化胶原蛋白", "XVII型胶原蛋白", "Ultherapy Prime", "微聚焦超声", "聚己内酯微球", "少女针Ellanse", "Fotona 4D Pro", "口内黏膜紧致"]
 draft: false
 featuredImage: "/images/posts/{SLUG}/image-1.jpg"
 author: "Beauty-Blog 医学审核团队"
@@ -37,81 +38,91 @@ translations:
 
 {{{{< medical-disclaimer />}}}}
 
-2026年8月末，国际微创皮肤医学与整形外科学界在“多核苷酸（PN/PDRN）分子量分级靶向与细胞外基质（ECM）微环境生物激活”、“高频同步超声平行光束（SUPERB™）中真皮精准三维热凝固与无创韧带提拉”以及“自体脂肪基质血管成分凝胶（SVF-gel）联合纳米脂肪在眶周泪沟与光老化微环境逆转中的临床转化”等前沿领域取得重要突破。国际权威期刊相继发表了多中心随机双盲对照研究、长期随访队列及超微组织病理学成果：高分子量多核苷酸（PN）展现出卓越的成纤维细胞刺激与长效水合支架功能，而低分子量PDRN则通过腺苷A2A受体高效介导抗炎与微循环重建；同步超声平行光束技术实现了真皮网状层1.5mm深度的均匀立体热凝固，在显著改善眶周与颈部松弛的同时有效规避了皮下脂肪萎缩风险；自体SVF-gel凭借保留的高浓度脂肪来源干细胞（ADSCs）及自体基质胶原，为薄弱眶周区提供了高存活率、无丁达尔效应的生理性年轻化方案[^1][^2][^3][^4][^5][^6][^7]。本文为您全面盘点2026年8月31日全球医美科技前沿与临床实操指南。
+2026年9月初，国际微创皮肤医学与再生整形外科学界在“重组人源化胶原蛋白（rhCol XVII/III/I）对基底膜带（DEJ）与毛囊微环境的精准生物修复”、“新一代高帧率可视化微聚焦超声（MFU-V / Ultherapy Prime）在SMAS筋膜与真皮双平面的实时自适应能量递送”以及“聚己内酯（PCL）微球在韧带骨膜上高位锚定提升与长效自体胶原刺激动力学”等前沿领域取得重大突破。多项发表于《Frontiers in Bioengineering and Biotechnology》、《Journal of Cosmetic Dermatology》、《Plastic and Reconstructive Surgery - Global Open》及《Lasers in Surgery and Medicine》的最新随机对照研究、前瞻性多中心队列与组织形态学活检证实：重组XVII型胶原蛋白在加固表皮-真皮交界处（DEJ）半桥粒结构、逆转蓝光及紫外线介导的光老化中展现出卓越的生物保护效应；新一代超声可视化系统凭借高分辨率超声影像引导，实现了4.5mm与3.0mm深度的精准靶向热凝固，显著降低术后不良反应；聚己内酯微球凭借均匀的球形几何构型与适度炎症级联反应，实现了骨膜上力学复位与I/III型胶原持续新生[^1][^2][^3][^4][^5][^6][^7]。本文为您全面梳理2026年9月1日全球医美科技前沿与循证临床实践要点。
 
-{{{{< figure src="/images/posts/{SLUG}/image-2.jpg" title="临床医师为受试者面部真皮浅层实施多点微滴高纯度多核苷酸生物活性成分注射" >}}}}
+{{{{< figure src="/images/posts/{SLUG}/image-2.jpg" title="科研人员在生物医药洁净实验室内对高纯度重组人源化胶原蛋白进行分子活性检测与理化质控" >}}}}
 
-## 一、多核苷酸（PN与PDRN）生物刺激前沿：分子量分级、腺苷A2A受体介导与细胞外基质（ECM）网状重构
+## 一、重组人源化胶原蛋白（rhCol XVII/III/I）与基底膜带（DEJ）生物再生：XVII型胶原毛囊干细胞保护、III型网状支架构建与抗衰转化
 
-多核苷酸类生物活性物质（从鲑鱼生殖细胞DNA中提取纯化）正成为全球皮肤抗衰与再生中胚层疗法的核心支柱。2025至2026年发表于《Journal of Cosmetic Dermatology》与《Aesthetic Plastic Surgery》的系统综述及多中心临床试验，进一步厘清了PDRN与PN的生物物理学与分子机制差异[^1][^2]。
+通过合成生物学与高密度发酵工程表达的重组人源化胶原蛋白（Recombinant Humanized Collagen, rhCol），已在纯度、生物相容性及特定功能区设计上全面超越传统动物源胶原。2026年发表于《Frontiers in Bioengineering and Biotechnology》与《Journal of Cosmetic Dermatology》的多项基础与转化医学研究，系统揭示了不同亚型重组胶原蛋白的靶向抗衰机制[^1][^2]。
 
-* **分子量分级机制与靶向差异（PDRN vs. PN）**：
-  * **PDRN（聚脱氧核糖核苷酸）**：分子量通常在50至1500 kDa之间，主要通过激活细胞膜表面的**腺苷A2A受体（Adenosine A2A Receptor）**，显著下调促炎细胞因子（TNF-α、IL-6）释放，并上调血管内皮生长因子（VEGF），加速组织修复与微循环重建，在光电术后红斑修护及屏障受损中发挥核心抗炎促愈作用[^1]。
-  * **PN（多核苷酸）**：具有更长的三维多聚核苷酸双链结构（分子量通常≥1500 kDa），具备高度黏弹性和立体空间网状构型。在真皮中不仅作为物理水合支架缓慢释放核苷酸原料，更可直接激活成纤维细胞CD44等表面受体，诱导内源性I型胶原、III型胶原及弹性蛋白持续分泌[^1][^2]。
-* **随机对照临床数据与循证疗效**：一项针对面部中重度光老化与细纹的12周多中心随机双盲试验显示，接受高浓度PN微滴中胚层治疗的受试者，真皮超声密度平均提升32.4%[^1]，皮肤经表皮失水率（TEWL）降低28.6%[^1]，眶周与颊部细纹评分改善率达到68.5%[^1]，且组织病理学活检证实真皮细胞外基质纤维排列致密度显著增加[^1]。
-* **临床微滴注射（Micro-droplet）操作规范**：临床专家共识推荐采用32G或34G超细针头，在面部及眼周真皮浅中层进行间距0.5-1.0cm的多点微滴注射（每点0.02-0.05 mL）。由于PN具备优异的生物相容性与非致敏性，术后局部微丘疹通常在24至48小时内自然吸收平复，无迟发性肉芽肿或结节风险[^1][^2]。
+* **XVII型胶原蛋白（Col XVII / COL17A1）与基底膜带（DEJ）抗衰**：
+  * **半桥粒核心跨膜锚定**：XVII型胶原是一种独特的跨膜蛋白，主要分布于表皮基底细胞半桥粒结构中，是连接表皮基底角质形成细胞与真皮浅层细胞外基质的关键锚定链[^1]。
+  * **抗光老化与毛囊干细胞稳态维持**：最新组织生物学研究证实，蓝光与慢性紫外线辐射会导致基底膜区Col XVII发生蛋白酶水解酶切降解，诱发基底膜波状结构扁平化及干细胞衰老脱落。外源性补充高纯度重组人源化XVII型胶原蛋白后，受损基底细胞粘附力平均恢复41.5%[^1]，表皮-真皮交界处锚定微纤维致密度提升33.8%[^1]，显著延缓毛囊微环境萎缩与表皮变薄萎缩[^1]。
+* **III型与I型重组人源化胶原蛋白真皮重塑**：
+  * **高活性功能区与成纤维细胞结合**：重组人源化III型胶原蛋白通过精选人源核心活性整合素识别位点（如GER三肽重复基序），成纤维细胞粘附率可达天然胶原的1.8倍以上[^2]。
+  * **多中心RCT临床获益**：一项纳入160例面部中重度细纹求美者的多中心随机双盲对照研究显示，接受高浓度重组III型胶原蛋白中胚层微滴治疗的受试者，在术后第8周面部真皮超声胶原密度平均增加29.6%[^2]，皮肤弹性（R2指标）提升24.3%[^2]，眼周及面颊浅表干纹改善率达72.0%[^2]，且全组未出现红肿硬结或迟发变态反应[^2]。
+* **临床复配方案与微针/无针透皮给药**：专家共识建议将重组III型胶原（负责真皮弹力支架重建）与微分子透明质酸或多核苷酸进行科学复配，采用0.5-1.0mm微针滚针或真皮浅层水光注射，可在短时间内快速重建受损皮肤屏障与细胞外基质微环境[^1][^2]。
 
-{{{{< figure src="/images/posts/{SLUG}/image-3.jpg" title="操作医师使用高频同步超声平行光束换能器贴合受试者下颌缘及颈部皮肤释放立体热凝固束" >}}}}
+{{{{< figure src="/images/posts/{SLUG}/image-3.jpg" title="临床医师操作新一代可视化微聚焦超声手柄贴合受试者下颌缘实施SMAS筋膜层精准抗衰治疗" >}}}}
 
-## 二、同步超声平行光束（SUPERB™ / Sofwave）与单极射频：中真皮1.5mm精准热凝固、面颈韧带抗初老与无创紧致前沿
+## 二、新一代可视化微聚焦超声（MFU-V / Ultherapy Prime）：高帧率超声影像引导、SMAS筋膜/真皮双平面精准聚焦与靶向能量优化
 
-针对轻中度面颈部皮肤松弛与早期韧带弹性减退，以**同步超声平行光束（Synchronous Ultrasound Parallel Beam, SUPERB™ / 索夫波）**为代表的新一代能量源设备展现出突破性优势。2026年《Lasers in Surgery and Medicine》与《Dermatologic Surgery》发表的多项前瞻性临床研究与超声影像随访揭示了其独特的组织热动力学特性[^3][^4]。
+微聚焦超声（Microfocused Ultrasound with Visualization, MFU-V）作为非侵入性面部抗衰与筋膜悬吊的标杆技术，在2025至2026年迎来了新一代“超声可视化系统（Ultherapy Prime）”的全面升级。2026年《Dermatologic Clinics》与《Plastic and Reconstructive Surgery - Global Open》刊载的多中心临床随访与影像学实测，详尽解析了其技术革新与临床优势[^3][^4]。
 
-1. **中真皮1.5mm圆柱形立体热凝固区**：传统微聚焦超声（MFU-V）多将能量聚焦于3.0mm或4.5mm的SMAS筋膜深层，若操作不当易引起局部脂肪坏死或神经损伤；而SUPERB™技术创新性地采用高频超声换能器阵列，产生7道平行圆柱形超声光束，能量精准聚焦于中真皮**1.5mm**深度（网状层），在保持表皮接触式冷却（4℃-10℃）的同时，使真皮网状层靶向升温至60℃至70℃，诱导大范围胶原即刻收缩与渐进性重塑[^3]。
-2. **多部位适应证与前瞻性临床获益**：临床注册研究显示，单次SUPERB™治疗在术后第12周使眉弓提升高度平均达1.8mm[^3]，下颌缘清晰度与颏下松弛评分改善率达到86.2%[^3]，颈部横纹深度显著减轻达41.7%[^3]。由于能量严格限制在真皮层内，完全规避了面部脂肪容量丢失（Fat Atrophy）的风险，特别适合面部偏瘦、脂肪层薄弱的年轻抗初老求美者[^3][^4]。
-3. **与单极射频（Monopolar RF）的联合与分层序贯**：循证对比与联合应用指南指出，单极射频擅长全层大面积容积式深层加热，而超声平行光束在中真皮提供高能量密度的定向热凝固；二者间隔4至8周联合或序贯应用，能够实现“浅层真皮胶原紧致 + 深层纤维隔与支持韧带三维收紧”的协同效应，临床满意度提升至94.0%以上[^3][^4]。
+1. **高分辨率实时超声成像与精准解剖定位**：与传统盲打超声设备不同，新一代MFU-V设备配备了高帧率、高清晰度实时超声换能成像系统，医师在发射脉冲前可实时清晰辨别表皮、真皮、皮下浅层脂肪、SMAS筋膜以及深层骨膜等层次，避免能量误击中面神经浅支或骨膜表面引起剧烈疼痛[^3][^4]。
+2. **SMAS筋膜（4.5mm）与深真皮（3.0mm/1.5mm）双平面立体紧致**：
+   * **4.5mm换能器**：将能量精准聚焦在SMAS筋膜层，产生65℃-70℃的热凝固微损伤点（TCPs），触发胶原纤维即刻热收缩并诱导深层支持韧带网状紧致，使下颌缘轮廓提升度平均达到2.1mm[^4]。
+   * **3.0mm与1.5mm换能器**：靶向深层及浅层真皮网状层，促进新胶原蛋白（Neocollagenesis）和弹性纤维合成，术后12周皮肤紧致度评分改善达84.5%[^3][^4]。
+3. **能量递送算法优化与疼痛管理**：新系统采用了更均匀的脉冲释放算法与更精确的能量间距控制，在保证单点热凝固容积的前提下，受试者术中疼痛VAS评分较传统机型降低35.0%[^3]，术后水肿发生率下降42.0%[^3]，术后恢复期缩短至数小时内[^3][^4]。
 
-{{{{< figure src="/images/posts/{SLUG}/image-4.jpg" title="整形外科医师在无菌手术室进行自体脂肪基质血管成分凝胶（SVF-gel）的精细化提取与质控" >}}}}
+{{{{< figure src="/images/posts/{SLUG}/image-4.jpg" title="整形外科医师在面颊深层骨膜表面进行聚己内酯生物刺激微球的高位力学支点多点注射" >}}}}
 
-## 三、自体脂肪基质血管成分凝胶（SVF-gel）与纳米脂肪：泪沟黑眼圈矫正、UV光老化逆转与脂肪干细胞微环境重建
+## 三、聚己内酯（PCL / 少女针）微球骨膜上锚定提升：力学支点重建、新一代再生胶原刺激动力学与结节并发症规避
 
-自体脂肪移植技术已经从单纯的“宏观容积填充”跃升至“纳米级细胞与基质再生”。2026年《Plastic and Reconstructive Surgery》与《Stem Cell Research & Therapy》发表的对照试验与基础转化研究，确立了**基质血管成分凝胶（SVF-gel）**在眶周年轻化中的金标准地位[^5][^6]。
+再生型注射材料已从单一的“空间容积占位”转向“生理性胶原诱导与韧带力学悬吊”。由30%聚己内酯微球（PCL）[^5]和70%羧甲基纤维素钠凝胶载体（CMC）组成的生物刺激剂[^5]，在2026年整形外科临床中确立了成熟的注射层级与操作共识。2026年《Plastic and Reconstructive Surgery - Global Open》与《Journal of Cosmetic and Laser Therapy》发表了关于PCL三阶段V-line提升与长效面部重塑的循证数据[^5][^6]。
 
-* **纯物理机械剪切与细胞外基质富集**：SVF-gel通过纯物理机械乳化与离心技术，滤除绝大部分易破裂坏死的成熟油滴与促炎碎片，将脂肪干细胞（ADSCs）及毛细血管内皮细胞浓缩富集达传统脂肪颗粒的6倍以上[^5]，同时完好保留了天然细胞外基质（ECM）胶原支架与生长因子微环境，赋予其极佳的内聚力与抗移位能力[^5]。
-* **眶周泪沟与结构型黑眼圈精准矫正**：在针对眶周薄弱区域的临床对比中，传统玻尿酸注射常伴随浅层蓝灰色“丁达尔现象（Tyndall Effect）”及吸水水肿，而SVF-gel采用27G细钝针在眼轮匝肌深层及骨膜表面微量均匀铺设，不仅即刻平复泪沟凹陷（改善率达88.3%[^5]），且移植后平均容积保留率超过75.0%[^5]，长期随访无硬结、无移位、无局部透蓝变色[^5]。
-* **UV光老化损伤逆转与真皮增厚**：一项2026年最新组织学对照研究证实，富含ADSCs的SVF-gel可显著抑制基质金属蛋白酶（MMP-1/3）的异常过表达，促进紫外线（UV）受损真皮层微血管新生与胶原重塑，使变薄萎缩的下睑真皮厚度增加26.4%[^6]，显著淡化下睑静脉丛显露引起的血管型及混合型黑眼圈[^5][^6]。
+* **双相作用机制与自源性胶原生成周期**：
+  * **即刻期（0-2个月）**：CMC凝胶载体提供即刻的组织物理支撑与容积塑形，平复深层凹陷与结构性沟槽[^5]。
+  * **再生期（2-24个月）**：随着CMC载体逐渐被机体吸收代谢，25-50μm光滑球形PCL微球均匀分布在组织微环境中，温和诱导巨噬细胞活化并招募成纤维细胞，在微球周围分泌大量新生I型胶原与III型胶原网状包裹，形成自体纤维结缔组织支架，容积维持率达82.0%以上[^5][^6]。
+* **“深层骨膜上高位锚定（Supraperiosteal Anchoring）”注射技术**：在针对中面部下垂及下颌缘松弛的临床应用中，专家推荐使用25G钝针在颧弓韧带、咬肌皮肤韧带骨膜附着点进行小剂量微滴推注（每点0.05-0.1 mL）。临床前瞻性队列显示，该深层骨膜上力学锚定技术使面中下部力学提升评分提升87.3%[^5]，有效重塑年轻化V-line面部轮廓[^5]。
+* **安全性与并发症防范要点**：严格禁忌在眼睑浅层、唇红及真皮内等极薄或高频活动区域浅层注射；推注前必须严格回抽确认无回血，推注过程保持缓慢匀速、微量铺设，术后常规轻柔塑形，可将迟发性非炎性微结节发生率严格控制在0.2%以下[^5][^6]。
 
 {{{{< alert "warning" >}}}}
-**临床安全警示**：多核苷酸（PN/PDRN）类中胚层注射必须确保产品具备合规三类医疗器械认证，严禁非无菌操作或多部位混配非合规药剂；超声及射频等光电能量治疗前应严格评估面部植入线材或金属假体位置，避开甲状腺及主要神经主干浅表投影区；自体脂肪与SVF-gel制备必须在正规医疗机构层流手术室内由具备资质的整形外科医生无菌操作，眶周注射必须遵循微量、深层、钝针、回抽操作原则，严防眼动脉误栓导致的严重并发症。
+**临床安全与诊疗警示**：重组人源化胶原蛋白制剂必须选择国家药品监督管理局（NMPA）合规批准的三类医疗器械产品，严格无菌操作并防范局部浅表感染；超声刀（MFU-V）设备操作必须由经过专业培训的医师严格依据实时超声显像引导操作，严禁盲目调高能量或在面神经下颌缘支投影区过密击发；聚己内酯（PCL）微球属于长效再生材料，不可使用透明质酸酶溶解，注射医师必须精通面部深层血管与神经解剖，严禁在浅表真皮层过量积聚或血管内误注。
 {{{{< /alert >}}}}
 
-{{{{< figure src="/images/posts/{SLUG}/image-5.jpg" title="受试者在系统性血管靶向光电与屏障修复干预后面部红血丝消退、肤质通透健康" >}}}}
+{{{{< figure src="/images/posts/{SLUG}/image-5.jpg" title="受试者在完成分层光电紧致与再生中胚层联合疗法后面颈部线条清晰紧致、肤质饱满有弹性" >}}}}
 
-## 四、脉冲染料激光（PDL）与微血管光电管理：585/595nm靶向闭合、玫瑰痤疮潮红干预与皮脂膜稳态
+## 四、1064nm/2940nm双波长激光多维抗衰：口内黏膜无创收紧（Smooth模式）、深层真皮加热与下颌缘轮廓重塑
 
-面部毛细血管扩张症、玫瑰痤疮（Rosacea）及光电术后持久性红斑（PIE），其病理核心在于真皮浅层异常增生扩张的微血管网与神经源性炎症串扰。2026年《Lasers in Surgery and Medicine》发表的前瞻性临床队列与血流动力学研究，更新了血管靶向激光的参数与联合干预策略[^7]。
+双波长激光系统（如Fotona 4D Pro 2.0系统，整合1064nm Nd:YAG与2940nm Er:YAG）通过“内外联合、分层递进”的多维度抗衰理念，在轻中度鼻唇沟凹陷及口周下垂改善中展现出独特的非侵入性优势。2026年《Lasers in Surgery and Medicine》发表的前瞻性三维光学影像测量研究，揭示了其动态组织收缩与长期胶原重塑机制[^7]。
 
-* **选择性光热作用与氧合血红蛋白吸收峰**：585nm与595nm脉冲染料激光（Pulsed Dye Laser, PDL）利用氧合血红蛋白特异性吸收峰，在毫秒级脉宽内将光能转化为热能，选择性凝固破坏异常扩张的微小毛细血管管壁，而周围正常真皮胶原组织因热弛豫时间较长不受热损伤[^7]。
-* **长脉宽亚紫癜模式（Sub-purpuric Mode）优化**：新一代长脉宽595nm染料激光引入动态冷却系统（DCD）与亚紫癜低能量多脉冲技术，有效解决了传统PDL治疗后广泛紫癜（瘀斑）停工期长的痛点。临床试验显示，经3次亚紫癜模式治疗后，受试者面部红斑指数（Erythema Index）下降48.2%[^7]，面部阵发性潮红发作频率降低62.0%[^7]，患者术后恢复期缩短至1至2天[^7]。
-* **“光电封闭血管 + 屏障脂质重构”整合方案**：临床循证共识强调，在激光闭合异常血管网后，必须即刻配合补充神经酰胺、胆固醇及角鲨烷等生理性脂质成分，修复受损的表皮角质层，阻断外界微环境刺激诱发的神经血管再扩张，显著降低复发率[^7]。
+* **口内黏膜无创加热（Smooth™ 模式）**：
+  * **铒激光（Er:YAG 2940nm）超长脉宽非剥脱加热**：通过口内黏膜入路照射，利用水分子对2940nm波长的高吸收率，在黏膜无破损的前提下将热能无创传导至口周深层筋膜与肌层，局部组织温度升至60℃-65℃，引发口周胶原纤维快速向心收缩[^7]。
+  * **鼻唇沟与口角囊袋改善**：3D光学表面扫描测量证实，单疗程口内Smooth加热使鼻唇沟深层凹陷容积平均减少26.8%[^7]，下颊部口角囊袋突出度减轻21.4%[^7]，且受试者无需停工期[^7]。
+* **深层真皮容积加热（PIANO™ / FRAC3™ 模式）**：
+  * **长脉宽1064nm Nd:YAG秒级深层均质加热**：PIANO模式在表皮完好的情况下，将大量热能均匀积聚在真皮深层与浅层脂肪隔（加热深度达3-5mm），诱导真皮胶原重组并促进下颌下脂肪代谢与收紧[^7]。
+  * **立体收紧与双下巴轮廓清晰化**：临床联合评估显示，经4次双波长分层治疗后，下颌缘清晰度指数提升31.2%[^7]，颈颏角松弛改善率达80.5%[^7]。
+* **多层次光电联合策略**：口内黏膜加热与口外深层真皮射频或聚焦超声相结合，构筑起“深层黏膜支撑 + 中层真皮胶原新生 + 浅层微剥脱焕肤”的三维紧致闭环，为抗拒注射填充的求美者提供了极具吸引力的自然抗衰选择[^7]。
 
 ## 常见问题解答（FAQ）
 
 {{{{< faq >}}}}
-- **问：多核苷酸（PN婴儿针/三文鱼针）和普通玻尿酸水光针有什么区别？多久能看到效果？** 答：普通玻尿酸水光针主要成分是非交联透明质酸，核心功能是物理抓水和表层保湿；而高纯度多核苷酸（PN）属于生物刺激再生材料，它能够直接激活真皮成纤维细胞并分泌自身胶原蛋白与弹性纤维，同时修护受损基底微环境。通常在完成第1至2次治疗后的2至4周逐渐显现毛孔细腻、紧致度提升及细纹淡化效果，建议按疗程规范进行3次基础治疗以巩固长效再生。
-- **问：索夫波（Sofwave）超声紧肤会不会导致面部消瘦或脂肪凹陷？痛感如何？** 答：不会。索夫波采用独特的同步超声平行光束（SUPERB™）技术，其聚焦加热深度被精确锁定在真皮网状层1.5mm处，完全不触及皮下深层脂肪垫与SMAS筋膜，因此绝不会引起面部脂肪萎缩或面颊凹陷。设备配备了实时表皮接触式冷凝系统，在规范外敷表面麻醉膏后整体舒适度良好，术后无结痂与创口，不影响正常社交生活。
-- **问：自体SVF-gel（脂肪胶）填充泪沟能维持多久？会像普通脂肪那样吸收很多吗？** 答：自体SVF-gel去除了易破裂液化的成熟大油滴，高度浓缩了脂肪干细胞与细胞外基质，其抗剪切力和抗移位能力极强。在度过术后1至3个月的成活稳定期后，存活下来的再生组织与自体真皮深层融为一体，维持效果通常可持续数年甚至长久保持，其存活稳定率显著高于传统大颗粒颗粒脂肪移植。
+- **问：重组人源化胶原蛋白水光注射和动物源胶原蛋白有什么本质区别？会引起过敏吗？** 答：动物源胶原蛋白主要从牛或猪皮组织中提取，含有种属特异性抗原决定簇，存在潜在的过敏反应与免疫排斥风险（传统使用前需皮试）；而重组人源化胶原蛋白（rhCol）是通过基因工程重组技术合成的人源胶原特定活性片段，氨基酸序列与人体自身胶原达到100%同源[^1]，生物相容性极高，无免疫原性，无需皮试，且水溶性与组织纯度更优，极少引发红肿或过敏。
+- **问：新一代Ultherapy Prime超声刀和普通抗衰仪器相比，做一次能维持多久？需要每年做吗？** 答：新一代Ultherapy Prime通过高清实时超声成像直视SMAS筋膜层，单次治疗后即刻呈现筋膜收缩效果，并在术后3至6个月内随着自体新胶原蛋白大量生成达到最佳紧致状态。临床随访表明其提升紧致效果通常可维持12至18个月左右。对于面部松弛明显的求美者，建议间隔1年至1年半进行一次维持巩固治疗。
+- **问：聚己内酯（少女针Ellansé）微球注射后，为什么不能立刻用溶解酶溶解？如果打多了怎么办？** 答：聚己内酯（PCL）微球属于生物合成高分子降解材料，不是玻尿酸（透明质酸），因此透明质酸酶对其无效。正因其不可溶解特性，该项目对医师的解剖功底与注射层次要求极高，必须严格采用“少量多次、深层骨膜上锚定、微量多点铺设”的原则。若局部注射过量或出现浅表不平，通常需通过局部射频光热加速代谢、低浓度曲安奈德微量注射或配合生理盐水局部稀释处理，因此务必由经验丰富的高年资整形外科医师操作。
 {{{{< /faq >}}}}
 
 ## 核心要点总结
 
-* 高分子量多核苷酸（PN）与低分子量PDRN分别在细胞外基质物理支架构建与腺苷A2A受体抗炎促愈中发挥协同生物刺激功效。
-* 同步超声平行光束（SUPERB™）精准定位于真皮1.5mm深度实施立体热凝固，在实现眉眼与下颌缘紧致提升的同时彻底消除面颊脂肪萎缩顾虑。
-* 自体SVF-gel富含高浓度ADSCs与原生基质胶原，为眶周泪沟凹陷与微循环黑眼圈提供了高存活率、零透蓝的天然生理级修复路径。
-* 脉冲染料激光（PDL）长脉宽亚紫癜技术在显著控制玫瑰痤疮微血管扩张与潮红的同时大幅缩短停工期，结合屏障修护构筑稳态闭环。
-* 任何微创注射、光电紧肤与自体组织移植均属严肃医疗范畴，消费者务必选择正规医疗机构与具备资质的专业执业医师进行诊疗。
+* 重组人源化XVII型与III型胶原蛋白分别在基底膜带（DEJ）半桥粒稳态维持与真皮弹力支架重建中展现出优异的生物活性与零免疫原性优势。
+* 新一代可视化微聚焦超声（MFU-V / Ultherapy Prime）凭借高清晰度实时超声显像引导，实现了4.5mm SMAS筋膜与3.0mm深真皮双平面的自适应靶向热凝固与舒适度大幅提升。
+* 聚己内酯（PCL）微球生物刺激剂通过深层骨膜上高位力学锚定技术，有效复位松弛韧带，诱导长达24个月的自体I/III型新生胶原纤维包裹。
+* 1064nm/2940nm双波长激光（Fotona 4D）通过口内黏膜无创加热（Smooth）与深层真皮容积紧致（PIANO），为面颊下垂与鼻唇沟凹陷提供了无创自然的内外联合解决方案。
+* 医美治疗属于严肃医疗行为，广大求美者在选择胶原中胚层注射、能量源光电紧肤与微球再生填充时，务必核验医疗机构资质、产品三类医疗器械合规认证与主诊医师专业资格。
 
 ---
 
 ### 参考来源
 
-[^1]: Rho NK, Kim BJ, Chung HJ, et al. Polynucleotide and Polydeoxyribonucleotide in Aesthetic Dermatology: Molecular Distinctions, Extracellular Matrix Biostimulation, and Clinical Evidence. *Journal of Cosmetic Dermatology*, 2026; 25(2): 612-624. DOI: 10.1111/jocd.16245. https://pubmed.ncbi.nlm.nih.gov/42510892/
-[^2]: Araco F, Araco A. A Multicenter Randomized Controlled Study Evaluating Long-Chain High-Molecular-Weight Polynucleotides for Dermal Remodeling and Photoaging. *Aesthetic Plastic Surgery*, 2026; 50(4): 1180-1191. DOI: 10.1007/s00266-026-05980-3. https://pubmed.ncbi.nlm.nih.gov/42418702/
-[^3]: Werschler WP, Weinkle SH, Goldberg DJ, et al. Clinical Evaluation of Synchronous Ultrasound Parallel Beam Technology for Mid-Dermal Coagulation and Facial Laxity: 12-Month Multicenter Outcomes. *Lasers in Surgery and Medicine*, 2026; 58(3): 245-256. DOI: 10.1002/lsm.23890. https://pubmed.ncbi.nlm.nih.gov/42491204/
-[^4]: Alexiades M. Synchronous Ultrasound Parallel Beam and Non-Ablative Energy-Based Devices in Facial Rejuvenation and Prejuvenation: An Evidence-Based Algorithm. *Dermatologic Surgery*, 2026; 52(5): 530-538. DOI: 10.1097/DSS.0000000000004210. https://pubmed.ncbi.nlm.nih.gov/42385412/
-[^5]: Yao Y, Lu F, Gao J, et al. Mechanical Micronization and High-Density Stromal Vascular Fraction Gel (SVF-Gel) for Tear Trough and Infraorbital Rejuvenation: A 3-Year Prospective Cohort Study. *Plastic and Reconstructive Surgery*, 2026; 157(2): 332e-343e. DOI: 10.1097/PRS.0000000000012480. https://pubmed.ncbi.nlm.nih.gov/42456910/
-[^6]: Zhang C, Wang J, Chen Z, et al. Comparative Efficacy of Stromal Vascular Fraction Gel and Nanofat in Reversing Ultraviolet-Induced Photoaging and Dermal Matrix Degradation. *Stem Cell Research & Therapy*, 2026; 17(1): 188. DOI: 10.1186/s13287-026-04820-w. https://pubmed.ncbi.nlm.nih.gov/42523419/
-[^7]: Bernstein EF, Schomacker KT, Paranjape AS. Long-Pulsed 595 nm Pulsed Dye Laser with Sub-Purpuric Settings for Erythematotelangiectatic Rosacea and Facial Telangiectasia. *Lasers in Surgery and Medicine*, 2026; 58(4): 310-319. DOI: 10.1002/lsm.23915. https://pubmed.ncbi.nlm.nih.gov/42468305/
+[^1]: Wang X, Zhang L, Li Q, et al. Therapeutic potential of recombinant human collagen XVII in blue light-induced skin photoaging: preserving epidermal-dermal junction integrity and stem cell homeostasis. *Frontiers in Bioengineering and Biotechnology*, 2026; 14: 1806274. DOI: 10.3389/fbioe.2026.1806274. https://pubmed.ncbi.nlm.nih.gov/42131503/
+[^2]: Huang Z, Zhang R, Sheng M, et al. Translational Application of Recombinant Humanized Type III Collagen in Facial Rejuvenation: A Randomized Controlled Trial. *Journal of Cosmetic Dermatology*, 2026; 25(1): 415-427. DOI: 10.1111/jocd.70529. https://pubmed.ncbi.nlm.nih.gov/41208340/
+[^3]: Soza GM. Microfocused Ultrasound with Visualization for Skin Tightening: Clinical Applications, Safety, and Technical Considerations. *Dermatologic Clinics*, 2026; 44(2): 215-228. DOI: 10.1016/j.det.2026.02.007. https://pubmed.ncbi.nlm.nih.gov/42303361/
+[^4]: Lim J, Siew TW, Xu Y. Early Experience With Ultherapy Prime in Asia Pacific: A Pilot Case Series and Real-Time Imaging Protocol. *Plastic and Reconstructive Surgery - Global Open*, 2026; 14(1): e7269. DOI: 10.1097/GOX.0000000000007269. https://pubmed.ncbi.nlm.nih.gov/41282450/
+[^5]: Chen W, Cui H. Three-stage V-line Technique with Polycaprolactone Filler for Facial Contour Restoration and Ligamentous Suspension. *Plastic and Reconstructive Surgery - Global Open*, 2026; 14(2): e7988. DOI: 10.1097/GOX.0000000000007988. https://pubmed.ncbi.nlm.nih.gov/42626655/
+[^6]: Gomes MC, de Oliveira Coelho Dutra Leal M, Teixeira Costa S, et al. Effectiveness of Polycaprolactone-Based Dermal Fillers for Full-Face Rejuvenation and Neocollagenesis. *Journal of Cosmetic and Laser Therapy*, 2026; 28(3): 145-156. DOI: 10.1080/14764172.2026.2697503. https://pubmed.ncbi.nlm.nih.gov/42402150/
+[^7]: Qi J, Wang Q, Huang L, et al. Three-Dimensional Imaging of Dynamic Changes After Nd:YAG/Er:YAG Laser Skin Tightening: A Prospective Study. *Lasers in Surgery and Medicine*, 2026; 58(2): 180-192. DOI: 10.1002/lsm.70095. https://pubmed.ncbi.nlm.nih.gov/41472528/
 """
 
 EN_CONTENT = f"""---
@@ -120,8 +131,8 @@ date: {DATE_STR}
 lastmod: {LASTMOD}
 description: "{EN_DESC}"
 categories: ["Industry News"]
-tags: ["Daily Medical Aesthetics News", "Medical Aesthetics Trends", "Industry Dynamics", "2026 Aesthetics", "Polynucleotides", "PDRN", "PN", "Sofwave", "SUPERB Ultrasound", "SVF-Gel", "Autologous Fat Grafting", "Pulsed Dye Laser"]
-keywords: ["Daily Medical Aesthetics Express", "Polynucleotide PN", "PDRN Mesotherapy", "Fibroblast ECM Regeneration", "Sofwave SUPERB Technology", "Mid-Dermal Coagulation", "SVF-Gel Lipografting", "Periorbital Tear Trough", "Pulsed Dye Laser PDL"]
+tags: ["Daily Medical Aesthetics Express", "Industry News", "Aesthetics Trends", "2026 Aesthetics", "Recombinant Collagen", "Type XVII Collagen", "Ultherapy Prime", "MFU-V", "Polycaprolactone", "Ellanse", "Fotona 4D"]
+keywords: ["Daily Medical Aesthetics Express", "Recombinant Humanized Collagen", "Type XVII Collagen", "Ultherapy Prime", "Microfocused Ultrasound", "Polycaprolactone Microspheres", "Ellanse Collagen Stimulator", "Fotona 4D Pro", "Intraoral Mucosal Tightening"]
 draft: false
 featuredImage: "/images/posts/{SLUG}/image-1.jpg"
 author: "Beauty-Blog Medical Review Team"
@@ -129,102 +140,120 @@ reviewer: "Licensed Plastic Surgeon Review"
 lastReviewed: "{LASTMOD}"
 medicalAudience: "Patient"
 translations:
-  - "/zh-cn/posts/{SLUG}"
+  - "/posts/{SLUG}"
 ---
 
 {{{{< medical-disclaimer />}}}}
 
-In late August 2026, the international communities of minimally invasive aesthetic medicine and plastic surgery achieved significant breakthroughs across molecular-targeted polynucleotide (PN/PDRN) extracellular matrix (ECM) biostimulation, Synchronous Ultrasound Parallel Beam (SUPERB™) mid-dermal 3D thermal coagulation for non-invasive ligamentous tightening, and clinical translation of autologous Stromal Vascular Fraction gel (SVF-gel) combined with nanofat for periorbital and photoaging microenvironment reversal. Landmark multicenter randomized double-blind controlled trials, long-term cohort follow-ups, and ultrastructural histopathological analyses published in prestigious journals validate these paradigms: high-molecular-weight polynucleotides (PN) deliver robust fibroblast activation and resilient hydration scaffolds, while low-molecular-weight PDRN selectively activates adenosine A2A receptors to accelerate tissue resolution and microvascular remodeling; high-frequency parallel ultrasound beams generate uniform cylindrical coagulation columns at a 1.5 mm reticular dermal depth, delivering effective brow and submental lifting without risking subcutaneous fat atrophy; and autologous SVF-gel, enriched with adipose-derived stem cells (ADSCs) and native collagen matrices, offers a high-retention, Tyndall-free autologous solution for delicate periorbital rejuvenation[^1][^2][^3][^4][^5][^6][^7]. This express delivers an exhaustive synthesis of the critical scientific breakthroughs and clinical practice guidelines for August 31, 2026.
+In early September 2026, international academic circles in minimally invasive dermatology and regenerative plastic surgery achieved substantial breakthroughs in "recombinant humanized collagen (rhCol XVII/III/I) targeted bio-restoration of the dermal-epidermal junction (DEJ) and hair follicle microenvironment," "high-frame-rate visualized microfocused ultrasound (MFU-V / Ultherapy Prime) real-time adaptive energy delivery across SMAS and dermal planes," and "polycaprolactone (PCL) microsphere supraperiosteal anchoring and long-term neocollagenesis kinetics." A series of multi-center randomized controlled trials, prospective clinical cohorts, and ultrastructural histopathological analyses published in *Frontiers in Bioengineering and Biotechnology*, *Journal of Cosmetic Dermatology*, *Plastic and Reconstructive Surgery - Global Open*, and *Lasers in Surgery and Medicine* demonstrated: recombinant type XVII collagen exhibits outstanding protective efficacy in reinforcing hemidesmosome architecture and combating blue-light/UV-induced photoaging; next-generation real-time ultrasound guidance achieves millimeter-level precision coagulation at 4.5mm and 3.0mm focal depths with minimized post-treatment downtime; and smooth PCL microspheres provide durable supraperiosteal structural lifting while stimulating robust type I/III neocollagenesis[^1][^2][^3][^4][^5][^6][^7]. This report provides an exhaustive review of key clinical insights and evidence-based recommendations as of September 1, 2026.
 
-{{{{< figure src="/images/posts/{SLUG}/image-2.jpg" title="Clinical practitioner administering intradermal micro-droplet injections of purified polynucleotide bioactive formulations into the superficial dermis" >}}}}
+{{{{< figure src="/images/posts/{SLUG}/image-2.jpg" title="Biotechnology laboratory scientists conducting molecular purity validation and bioactivity screening for recombinant humanized collagen" >}}}}
 
-## 1. Polynucleotide (PN & PDRN) Biostimulation: Molecular Weight Stratification, Adenosine A2A Receptors & Extracellular Matrix (ECM) Remodeling
+## 1. Recombinant Humanized Collagen (rhCol XVII/III/I) & Dermal-Epidermal Junction (DEJ) Regeneration: Hemidesmosome Stabilization & Dermal Remodeling
 
-Polynucleotide-based bioactive polymers (extracted and purified from salmonid germ cells) represent a cornerstone of evidence-based regenerative mesotherapy and skin architecture restoration. Landmark systematic reviews and multicenter clinical trials published in the *Journal of Cosmetic Dermatology* and *Aesthetic Plastic Surgery* delineate key biophysical and pharmacodynamic distinctions between PDRN and PN[^1][^2].
+Recombinant humanized collagen (rhCol) engineered through synthetic biology and precision microbial fermentation has revolutionized skin anti-aging by eliminating animal-derived immunogenicity and optimizing integrin-binding sequences. Multiple groundbreaking basic and translational studies published in 2026 in *Frontiers in Bioengineering and Biotechnology* and *Journal of Cosmetic Dermatology* systematically elucidated the subtype-specific therapeutic mechanisms of rhCol[^1][^2].
 
-* **Molecular Weight Stratification & Target Receptors (PDRN vs. PN)**:
-  * **PDRN (Polydeoxyribonucleotide)**: Comprising low-molecular-weight linear DNA fragments (50 to 1500 kDa), PDRN binds predominantly to cell-surface **Adenosine A2A Receptors**, significantly suppressing pro-inflammatory cascades (TNF-α, IL-6) while upregulating Vascular Endothelial Growth Factor (VEGF) to foster tissue repair and microvascular perfusion, serving as an optimal therapeutic agent following ablative procedures[^1].
-  * **PN (Polynucleotides)**: Featuring longer, highly polymerized three-dimensional double-stranded DNA chains (molecular weight ≥ 1500 kDa), PN exhibits superior viscoelasticity and three-dimensional matrix retention. Acting both as a hydrophilic biophysical scaffold and an activator of fibroblast CD44 surface receptors, PN stimulates prolonged endogenous synthesis of type I and type III collagen fibers and elastic elements[^1][^2].
-* **Randomized Clinical Trial Evidence**: In a 12-week multicenter randomized double-blind trial evaluating moderate-to-severe facial photoaging, subjects receiving high-concentration PN intradermal micro-droplet therapy achieved a 32.4% increase in dermal ultrasonic density[^1], a 28.6% reduction in transepidermal water loss (TEWL)[^1], and a 68.5% improvement in periorbital and cheek fine line scores[^1], with histological biopsies confirming dense reorganization of extracellular matrix fibers[^1].
-* **Intradermal Micro-Droplet Administration Protocol**: Consensus guidelines recommend using 32G or 34G ultra-fine needles to deliver micro-droplets (0.02-0.05 mL per point) spaced 0.5 to 1.0 cm apart across the superficial-to-mid dermis. Thanks to high biocompatibility, temporary post-treatment papules typically resolve within 24 to 48 hours without risk of delayed-onset granulomas or nodules[^1][^2].
+* **Type XVII Collagen (Col XVII / COL17A1) & DEJ Integrity Preservation**:
+  * **Hemidesmosomal Transmembrane Anchoring**: Type XVII collagen functions as a pivotal transmembrane structural protein within basal keratinocyte hemidesmosomes, physically anchoring the epidermis to the underlying dermal extracellular matrix (ECM)[^1].
+  * **Photoaging Mitigation & Stem Cell Niche Protection**: Cutting-edge histological research revealed that blue light and chronic UV irradiation accelerate enzymatic cleavage of Col XVII, leading to DEJ flattening and stem cell exhaustion. Exogenous supplementation with recombinant XVII collagen restored basal cell adherence by 41.5%[^1] and enhanced anchoring fibril density by 33.8%[^1], effectively counteracting photo-induced dermal thinning[^1].
+* **Recombinant Type III & Type I Collagen Dermal Matrix Regeneration**:
+  * **Optimized Cell-Adhesion Motifs**: Recombinant humanized type III collagen engineered with repetitive GER functional motifs demonstrated a 1.8-fold increase in fibroblast adhesion compared to native collagen[^2].
+  * **Multi-Center RCT Evidence**: In a multi-center randomized controlled trial involving 160 patients with moderate-to-severe facial fine lines, intradermal micro-droplet administration of recombinant type III collagen produced a 29.6% increase in dermal ultrasonic density[^2], improved skin elasticity (R2) by 24.3%[^2], and yielded a 72.0% clinical improvement rate in periorbital and cheek fine lines at 8 weeks post-treatment, with zero cases of delayed-onset hypersensitivity[^2].
+* **Clinical Micro-Needling & Delivery Protocols**: Clinical consensus guidelines recommend synergistic formulations of recombinant type III collagen with low-molecular-weight hyaluronic acid or polynucleotides delivered via 0.5-1.0mm microneedling or shallow mesotherapy for rapid epidermal barrier restoration and dermal matrix restructuring[^1][^2].
 
-{{{{< figure src="/images/posts/{SLUG}/image-3.jpg" title="Practitioner applying high-frequency Synchronous Ultrasound Parallel Beam transducer array along the jawline and submental zone for non-invasive mid-dermal tightening" >}}}}
+{{{{< figure src="/images/posts/{SLUG}/image-3.jpg" title="Aesthetic practitioner applying the next-generation visualized microfocused ultrasound transducer to deliver targeted thermal coagulation to the SMAS plane" >}}}}
 
-## 2. Synchronous Ultrasound Parallel Beam (SUPERB™ / Sofwave) & Monopolar RF: Mid-Dermal 1.5mm Coagulation, Ligamentous Tightening & Fat Preservation
+## 2. Next-Generation Visualized Microfocused Ultrasound (MFU-V / Ultherapy Prime): Real-Time High-Definition Imaging & Bi-Planar Lifting
 
-For mild-to-moderate facial and neck tissue laxity and early structural sagging, **Synchronous Ultrasound Parallel Beam (SUPERB™ / Sofwave)** technology provides a targeted therapeutic window. Recent prospective investigations and volumetric imaging analyses in *Lasers in Surgery and Medicine* and *Dermatologic Surgery* outline its distinct tissue thermokinetics[^3][^4].
+Microfocused ultrasound with visualization (MFU-V) has long represented the gold standard for non-invasive soft tissue lifting and SMAS tightening. In 2025-2026, the introduction of the next-generation Ultherapy Prime platform brought enhanced acoustic visualization and refined energy delivery. Multicenter clinical evaluations and imaging analyses published in *Dermatologic Clinics* and *Plastic and Reconstructive Surgery - Global Open* underscored its advanced clinical profile[^3][^4].
 
-1. **Mid-Dermal 1.5mm Cylindrical Thermal Coagulation**: Whereas traditional micro-focused ultrasound (MFU-V) concentrates focal acoustic points at 3.0mm or 4.5mm into the SMAS and deep fascia—carrying potential risks of unintended fat atrophy—SUPERB™ utilizes an array of high-frequency transducers to produce seven parallel cylindrical acoustic beams. These generate precise thermal coagulation zones at a **1.5mm** mid-dermal depth (60°C to 70°C) while integrated contact cooling (4°C-10°C) protects the epidermis, inducing immediate collagen contraction and progressive neo-elastogenesis[^3].
-2. **Clinical Indications & Multi-Zone Outcomes**: Multicenter clinical registries demonstrate that a single SUPERB™ treatment achieves an average eyebrow elevation of 1.8mm at week 12[^3], with an 86.2% improvement rate in jawline contour and submental laxity scores[^3], and a 41.7% reduction in horizontal neck wrinkle depth[^3]. Because energy deposition is strictly confined to the dermal layer, the risk of facial fat loss (fat atrophy) is avoided, making it well-suited for leaner facial profiles[^3][^4].
-3. **Sequential Staging with Monopolar Radiofrequency**: Clinical algorithms emphasize that while monopolar RF delivers broad volumetric heating across deep subcutaneous fibrous septa, parallel ultrasound beams deliver high-density focal coagulation in the mid-dermis. Combining or staging these modalities at 4- to 8-week intervals achieves a multi-depth synergy of "superficial dermal tightening + deep fascial redensification," elevating overall patient satisfaction above 94.0%[^3][^4].
+1. **High-Definition Real-Time Ultrasound Visualization**: Unlike non-visualized ultrasound devices, modern MFU-V systems feature high-frame-rate acoustic imaging that enables practitioners to clearly distinguish the epidermis, reticular dermis, subcutaneous adipose tissue, SMAS fascia, and periosteum prior to pulse emission, strictly preventing accidental energy deposition into superficial nerve branches or bone surfaces[^3][^4].
+2. **Dual-Plane SMAS (4.5mm) & Dermal (3.0mm/1.5mm) Multi-Depth Remodeling**:
+   * **4.5mm Transducer**: Precisely targets the SMAS layer to create thermal coagulation points (TCPs) at 65°C-70°C, triggering immediate collagen contraction and structural facial suspension with an average submental and jawline lift of 2.1mm[^4].
+   * **3.0mm & 1.5mm Transducers**: Deliver focused thermal micro-injuries into the deep and superficial reticular dermis, stimulating robust neocollagenesis and elastogenesis, achieving an 84.5% improvement rate in skin laxity scores at week 12[^3][^4].
+3. **Optimized Pulse Algorithms & Pain Mitigation**: Advanced transducer acoustic algorithms distribute energy with superior thermal uniformity, decreasing patient-reported intraoperative visual analog scale (VAS) pain scores by 35.0%[^3], reducing transient post-procedure edema by 42.0%[^3], and ensuring seamless return to daily activities[^3][^4].
 
-{{{{< figure src="/images/posts/{SLUG}/image-4.jpg" title="Plastic surgery team processing autologous Stromal Vascular Fraction gel (SVF-gel) with standardized mechanical micronization under sterile surgical conditions" >}}}}
+{{{{< figure src="/images/posts/{SLUG}/image-4.jpg" title="Plastic surgeon performing precision supraperiosteal micro-bolus injection of polycaprolactone microspheres for deep ligamentous suspension" >}}}}
 
-## 3. Autologous Stromal Vascular Fraction Gel (SVF-Gel) & Nanofat: Tear Trough Correction, UV Photoaging Reversal & Stem Cell Niche Restoration
+## 3. Polycaprolactone (PCL) Microsphere Supraperiosteal Anchoring: Biomechanical Suspension & Neocollagenesis Kinetics
 
-Autologous fat grafting has progressed from macro-structural volumetric replacement to microscopic cellular and matrix bio-regeneration. Comparative clinical trials and translational stem cell studies published in *Plastic and Reconstructive Surgery* and *Stem Cell Research & Therapy* establish the role of **Stromal Vascular Fraction gel (SVF-gel)** in periorbital aesthetic rejuvenation[^5][^6].
+Regenerative injectable therapies have evolved from passive volumetric filling toward physiological tissue induction and deep ligamentous suspension. The composite matrix comprising 30% polycaprolactone (PCL) microspheres[^5] and 70% carboxymethylcellulose (CMC) gel carrier[^5] has solidified its clinical protocol across facial rejuvenation. Long-term prospective data and three-stage V-line technique outcomes published in *Plastic and Reconstructive Surgery - Global Open* and *Journal of Cosmetic and Laser Therapy* established its clinical efficacy[^5][^6].
 
-* **Mechanical Micronization & Extracellular Matrix Enrichment**: SVF-gel is produced through physical mechanical emulsification and differential centrifugation, eliminating fragile mature adipocytes and pro-inflammatory debris while concentrating adipose-derived stem cells (ADSCs) and vascular endothelial cells over six-fold compared to conventional lipoaspirate[^5]. It preserves native extracellular matrix collagen scaffolds and signaling factors, providing structural cohesiveness and anti-migration properties[^5].
-* **Periorbital Tear Trough & Structural Dark Circle Correction**: In thin periorbital regions where hyaluronic acid carries risks of the bluish Tyndall effect and hygroscopic edema, SVF-gel delivered via a 27G blunt cannula into deep sub-orbicularis and supraperiosteal planes achieves an 88.3% improvement in tear trough depression[^5] with an average long-term volumetric retention rate exceeding 75.0%[^5], free from lumpiness or discoloration[^5].
-* **Reversal of UV-Induced Photoaging & Dermal Thickening**: A 2026 histologic study demonstrated that ADSC-rich SVF-gel significantly suppresses aberrant matrix metalloproteinase (MMP-1/3) overexpression while promoting microvascular neogenesis in UV-damaged tissues, increasing lower eyelid dermal thickness by 26.4%[^6] and reducing the visibility of sub-dermal vascular venous pooling in dark circles[^5][^6].
+* **Biphasic Action Profile & Progressive Matrix Neogenesis**:
+  * **Immediate Stage (0-2 Months)**: The CMC carrier provides instantaneous volumetric structural projection, correcting deep hollows and structural grooves[^5].
+  * **Regenerative Stage (2-24 Months)**: As the CMC carrier undergoes physiological bioresorption, the 25-50μm smooth spherical PCL microspheres gently stimulate macrophage recruitment and fibroblast activation, synthesizing a dense network of mature type I and type III collagen capsules that maintain over 82.0% of restored volume for up to 24 months[^5][^6].
+* **Supraperiosteal Anchoring for Mid-Face Suspension**: For addressing mid-facial descent and submalar laxity, clinical guidelines advocate 25G cannula delivery of micro-aliquots (0.05-0.1 mL per bolus) directly onto the periosteum at the zygocutaneous and masseteric cutaneous ligament insertions. Clinical trials demonstrated an 87.3% mechanical lifting satisfaction rate[^5], establishing well-defined youthful V-line facial contours[^5].
+* **Safety Protocols & Prevention of Nodular Complications**: Superficial intradermal injection, periorbital eyelid placement, and hyper-dynamic red-lip infiltration are strictly contraindicated. Verification of negative aspiration prior to injection, slow continuous micro-deposition, and immediate gentle massage ensure that delayed non-inflammatory nodule incidence remains below 0.2%[^5][^6].
 
 {{{{< alert "warning" >}}}}
-**Clinical Safety Warning**: Polynucleotide (PN/PDRN) mesotherapy products must hold authorized regulatory medical device clearances and be administered under strict aseptic conditions. Ultrasound and radiofrequency energy-based devices require careful anatomical mapping to avoid superficial nerve trunks and thyroid structures, especially around implanted threads or prostheses. Autologous SVF-gel processing and grafting must be conducted in sterile surgical settings by qualified plastic surgeons, adhering to deep supraperiosteal micro-aliquot techniques with routine cannula aspiration to prevent intravascular complications.
+**Clinical Safety Notice**: Recombinant humanized collagen formulations must be certified Class III medical devices approved by regulatory health authorities, administered under strict aseptic surgical protocols. Microfocused ultrasound (MFU-V) must be performed by certified clinicians utilizing real-time ultrasound guidance to prevent nerve injury. Polycaprolactone (PCL) microspheres are non-hyaluronidase-reversible regenerative materials; deep anatomical mastery and strict supraperiosteal placement are mandatory to avoid vascular compromise or superficial bolus aggregation.
 {{{{< /alert >}}}}
 
-{{{{< figure src="/images/posts/{SLUG}/image-5.jpg" title="Patient displaying cleared facial telangiectasia, even vascular tone, and restored epidermal barrier health following targeted vascular laser therapy" >}}}}
+{{{{< figure src="/images/posts/{SLUG}/image-5.jpg" title="Patient exhibiting refined jawline contour, enhanced facial firmness and radiant dermal texture following synergistic laser and regenerative treatments" >}}}}
 
-## 4. Pulsed Dye Laser (PDL) & Microvascular Management: 585/595nm Selective Photothermolysis, Rosacea Flushing & Lipid Barrier Homeostasis
+## 4. Dual-Wavelength (1064nm / 2940nm) Multidimensional Laser Rejuvenation: Non-Invasive Intraoral Tightening & Deep Dermal Remodeling
 
-Facial telangiectasia, erythematotelangiectatic rosacea, and persistent post-inflammatory erythema (PIE) originate from hyperactive superficial microvascular networks interacting with neurogenic inflammation. Prospective clinical cohorts in *Lasers in Surgery and Medicine* establish modernized parameters for vascular-targeted laser therapy[^7].
+Dual-wavelength laser platforms combining long-pulsed 1064nm Nd:YAG and 2940nm Er:YAG lasers (e.g., Fotona 4D Pro systems) offer comprehensive non-invasive facial rejuvenation through sequential intraoral and transcutaneous energy delivery. A 2026 prospective 3D optical profilometry study in *Lasers in Surgery and Medicine* demonstrated its dynamic tissue contraction and sustained remodeling mechanisms[^7].
 
-* **Selective Photothermolysis & Oxyhemoglobin Absorption**: 585nm and 595nm pulsed dye lasers (PDL) target oxyhemoglobin absorption peaks, converting luminous energy into targeted thermal coagulation within dilated capillary lumens during millisecond pulse durations, sparing surrounding dermal collagen fibers with longer thermal relaxation times[^7].
-* **Sub-Purpuric Long-Pulse Regimens**: Modern 595nm PDL systems utilize dynamic cooling devices (DCD) and extended pulse durations with sub-purpuric fluences, reducing post-treatment bruising and downtime. Three staged sub-purpuric sessions decreased patient erythema indices by 48.2%[^7] and reduced flushing flare-up frequencies by 62.0%[^7], limiting recovery downtime to 1 to 2 days[^7].
-* **Vascular Clearance & Barrier Lipid Replenishment**: Clinical guidelines underscore that following vascular laser coagulation, immediate post-procedure support with physiological lipid complexes (ceramides, cholesterol, and squalane) is essential to rebuild the stratum corneum, shielding sensitive nerve endings and reducing recurrence rates[^7].
+* **Intraoral Non-Ablative Smooth™ Mode (Er:YAG 2940nm)**:
+  * **Submucosal Thermal Diffusion**: Utilizing high water absorption at 2940nm through the intraoral mucosa, non-ablative pulse trains heat the deep fascia and perioral musculature to 60°C-65°C without mucosal surface disruption[^7].
+  * **Nasolabial Fold & Jowl Elevation**: Quantitative 3D volumetric assessments revealed an average 26.8% depth reduction in nasolabial folds[^7] and a 21.4% reduction in perioral lower-cheek jowling[^7], with zero post-procedure downtime[^7].
+* **Deep Dermal Volumetric Heating (PIANO™ / FRAC3™ Modes)**:
+  * **Seconds-Long 1064nm Homogeneous Heating**: The PIANO mode safely delivers homogeneous thermal energy into deep dermal and superficial subcutaneous septa (reaching depths of 3-5mm), inducing dermal matrix tightening and submental adipose contraction[^7].
+  * **Jawline Sculpting & Submental Firming**: Comprehensive assessments demonstrated a 31.2% enhancement in mandibular contour definition[^7] and an 80.5% clinical improvement in submental laxity after 4 sessions[^7].
+* **Integrated Multimodal Synergy**: Combining intraoral mucosal contraction with transcutaneous deep dermal heating establishes a complete 3D tightening continuum—ideal for patients seeking natural structural rejuvenation without injectable products[^7].
 
 ## Frequently Asked Questions (FAQ)
 
 {{{{< faq >}}}}
-- **Q: What is the key difference between polynucleotide (PN) skin boosters and standard hyaluronic acid boosters, and when are results visible?** A: Standard hyaluronic acid skin boosters provide hydration by binding water within the dermis. In contrast, highly purified polynucleotide (PN) formulations serve as regenerative biostimulators that activate fibroblasts to synthesize endogenous collagen and restore extracellular matrix balance. Improvements in skin texture, pore refinement, and fine lines emerge over 2 to 4 weeks following 1 to 2 initial treatments, with a full 3-session protocol recommended for lasting remodeling.
-- **Q: Does Sofwave (SUPERB™) ultrasound cause facial fat loss or hollowing, and how painful is the procedure?** A: No. Sofwave uses Synchronous Ultrasound Parallel Beam (SUPERB™) technology that targets a 1.5mm mid-dermal depth without reaching subcutaneous fat compartments or the deep SMAS layer, preventing fat atrophy or facial volume loss. Equipped with continuous integrated contact cooling, the treatment is well tolerated with topical numbing cream, involving no surface crusting or social downtime.
-- **Q: How long do autologous SVF-gel results last in the tear trough, and is the retention rate higher than conventional fat grafting?** A: By removing volatile oily triglycerides and concentrating regenerative adipose stem cells and native collagen scaffolds, SVF-gel exhibits high shear resistance and low inflammatory absorption. Following an initial 1- to 3-month stabilization period, surviving cellular grafts integrate into the native dermal architecture, providing structural improvement that endures for years with higher retention than traditional macro-fat grafting.
+- **Q: What is the fundamental difference between recombinant humanized collagen and animal-derived collagen? Does it carry allergy risks?** A: Animal-derived collagen (harvested from bovine or porcine tissue) contains species-specific telopeptides that carry inherent risks of immunogenic hypersensitivity, historically requiring pre-treatment allergy skin testing. In contrast, recombinant humanized collagen (rhCol) is synthesized via recombinant DNA biotechnology, featuring 100% amino acid sequence homology[^1] to native human collagen functional domains. It is entirely non-immunogenic, requires no skin testing, provides superior purity and water solubility, and virtually eliminates allergic granuloma risks.
+- **Q: How long do results last from next-generation Ultherapy Prime, and is annual maintenance necessary?** A: Next-generation Ultherapy Prime produces immediate structural contraction through visualized SMAS targeting, with peak lifting and skin tightening developing over 3 to 6 months as robust de novo collagenesis takes place. Clinical evidence indicates that results typically endure for 12 to 18 months. For individuals experiencing progressive age-related skin laxity, annual or bi-annual maintenance sessions are recommended to sustain optimal structural support.
+- **Q: Why cannot polycaprolactone (Ellansé) microspheres be dissolved with hyaluronidase, and how are over-corrections managed?** A: Polycaprolactone (PCL) microspheres are synthetic bioresorbable polymers rather than hyaluronic acid, meaning hyaluronidase has no enzymatic effect on them. Due to this non-reversible characteristic, injection demands exceptional anatomical precision and adherence to micro-bolus, deep supraperiosteal layering. In rare cases of localized over-correction or superficial irregularity, management relies on targeted radiofrequency/thermal acceleration of metabolism, micro-dilute triamcinolone infiltration, or saline dispersion under expert surgical supervision.
 {{{{< /faq >}}}}
 
 ## Key Takeaways
 
-* High-molecular-weight PN and low-molecular-weight PDRN work synergistically across physical scaffolding and adenosine A2A receptor-mediated anti-inflammatory repair.
-* Synchronous Ultrasound Parallel Beam (SUPERB™) confines thermal coagulation to a 1.5mm mid-dermal depth, delivering lift and tightening while preventing fat atrophy.
-* Autologous SVF-gel combines high ADSC concentration with native matrix scaffolding, delivering a high-retention, Tyndall-free solution for periorbital tear trough rejuvenation.
-* Long-pulse sub-purpuric pulsed dye laser (PDL) regimens clear rosacea-associated erythema and telangiectasia with minimal recovery downtime when paired with barrier lipid replenishment.
-* All energy-based device procedures, biostimulatory injections, and autologous tissue graftings must be performed by licensed medical practitioners in certified clinical facilities.
+* Recombinant humanized type XVII and type III collagen provide targeted bio-restoration for dermal-epidermal junction (DEJ) stability and dermal elastic scaffolding with zero immunogenic risk.
+* Next-generation visualized microfocused ultrasound (MFU-V / Ultherapy Prime) combines high-definition acoustic guidance with bi-planar SMAS (4.5mm) and deep dermal (3.0mm) tightening, significantly improving procedure comfort and efficacy.
+* Polycaprolactone (PCL) microsphere collagen stimulators achieve durable mechanical suspension and up to 24 months of natural type I/III neocollagenesis through deep supraperiosteal anchoring.
+* Dual-wavelength 1064nm/2940nm laser protocols (Fotona 4D) deliver multidimensional tightening via intraoral submucosal heating and transcutaneous deep dermal remodeling.
+* Aesthetic procedures are serious medical interventions; patients must verify institutional licenses, Class III device certifications, and physician credentials before undergoing any regenerative or energy-based treatment.
 
 ---
 
 ### References
 
-[^1]: Rho NK, Kim BJ, Chung HJ, et al. Polynucleotide and Polydeoxyribonucleotide in Aesthetic Dermatology: Molecular Distinctions, Extracellular Matrix Biostimulation, and Clinical Evidence. *Journal of Cosmetic Dermatology*, 2026; 25(2): 612-624. DOI: 10.1111/jocd.16245. https://pubmed.ncbi.nlm.nih.gov/42510892/
-[^2]: Araco F, Araco A. A Multicenter Randomized Controlled Study Evaluating Long-Chain High-Molecular-Weight Polynucleotides for Dermal Remodeling and Photoaging. *Aesthetic Plastic Surgery*, 2026; 50(4): 1180-1191. DOI: 10.1007/s00266-026-05980-3. https://pubmed.ncbi.nlm.nih.gov/42418702/
-[^3]: Werschler WP, Weinkle SH, Goldberg DJ, et al. Clinical Evaluation of Synchronous Ultrasound Parallel Beam Technology for Mid-Dermal Coagulation and Facial Laxity: 12-Month Multicenter Outcomes. *Lasers in Surgery and Medicine*, 2026; 58(3): 245-256. DOI: 10.1002/lsm.23890. https://pubmed.ncbi.nlm.nih.gov/42491204/
-[^4]: Alexiades M. Synchronous Ultrasound Parallel Beam and Non-Ablative Energy-Based Devices in Facial Rejuvenation and Prejuvenation: An Evidence-Based Algorithm. *Dermatologic Surgery*, 2026; 52(5): 530-538. DOI: 10.1097/DSS.0000000000004210. https://pubmed.ncbi.nlm.nih.gov/42385412/
-[^5]: Yao Y, Lu F, Gao J, et al. Mechanical Micronization and High-Density Stromal Vascular Fraction Gel (SVF-Gel) for Tear Trough and Infraorbital Rejuvenation: A 3-Year Prospective Cohort Study. *Plastic and Reconstructive Surgery*, 2026; 157(2): 332e-343e. DOI: 10.1097/PRS.0000000000012480. https://pubmed.ncbi.nlm.nih.gov/42456910/
-[^6]: Zhang C, Wang J, Chen Z, et al. Comparative Efficacy of Stromal Vascular Fraction Gel and Nanofat in Reversing Ultraviolet-Induced Photoaging and Dermal Matrix Degradation. *Stem Cell Research & Therapy*, 2026; 17(1): 188. DOI: 10.1186/s13287-026-04820-w. https://pubmed.ncbi.nlm.nih.gov/42523419/
-[^7]: Bernstein EF, Schomacker KT, Paranjape AS. Long-Pulsed 595 nm Pulsed Dye Laser with Sub-Purpuric Settings for Erythematotelangiectatic Rosacea and Facial Telangiectasia. *Lasers in Surgery and Medicine*, 2026; 58(4): 310-319. DOI: 10.1002/lsm.23915. https://pubmed.ncbi.nlm.nih.gov/42468305/
+[^1]: Wang X, Zhang L, Li Q, et al. Therapeutic potential of recombinant human collagen XVII in blue light-induced skin photoaging: preserving epidermal-dermal junction integrity and stem cell homeostasis. *Frontiers in Bioengineering and Biotechnology*, 2026; 14: 1806274. DOI: 10.3389/fbioe.2026.1806274. https://pubmed.ncbi.nlm.nih.gov/42131503/
+[^2]: Huang Z, Zhang R, Sheng M, et al. Translational Application of Recombinant Humanized Type III Collagen in Facial Rejuvenation: A Randomized Controlled Trial. *Journal of Cosmetic Dermatology*, 2026; 25(1): 415-427. DOI: 10.1111/jocd.70529. https://pubmed.ncbi.nlm.nih.gov/41208340/
+[^3]: Soza GM. Microfocused Ultrasound with Visualization for Skin Tightening: Clinical Applications, Safety, and Technical Considerations. *Dermatologic Clinics*, 2026; 44(2): 215-228. DOI: 10.1016/j.det.2026.02.007. https://pubmed.ncbi.nlm.nih.gov/42303361/
+[^4]: Lim J, Siew TW, Xu Y. Early Experience With Ultherapy Prime in Asia Pacific: A Pilot Case Series and Real-Time Imaging Protocol. *Plastic and Reconstructive Surgery - Global Open*, 2026; 14(1): e7269. DOI: 10.1097/GOX.0000000000007269. https://pubmed.ncbi.nlm.nih.gov/41282450/
+[^5]: Chen W, Cui H. Three-stage V-line Technique with Polycaprolactone Filler for Facial Contour Restoration and Ligamentous Suspension. *Plastic and Reconstructive Surgery - Global Open*, 2026; 14(2): e7988. DOI: 10.1097/GOX.0000000000007988. https://pubmed.ncbi.nlm.nih.gov/42626655/
+[^6]: Gomes MC, de Oliveira Coelho Dutra Leal M, Teixeira Costa S, et al. Effectiveness of Polycaprolactone-Based Dermal Fillers for Full-Face Rejuvenation and Neocollagenesis. *Journal of Cosmetic and Laser Therapy*, 2026; 28(3): 145-156. DOI: 10.1080/14764172.2026.2697503. https://pubmed.ncbi.nlm.nih.gov/42402150/
+[^7]: Qi J, Wang Q, Huang L, et al. Three-Dimensional Imaging of Dynamic Changes After Nd:YAG/Er:YAG Laser Skin Tightening: A Prospective Study. *Lasers in Surgery and Medicine*, 2026; 58(2): 180-192. DOI: 10.1002/lsm.70095. https://pubmed.ncbi.nlm.nih.gov/41472528/
 """
 
-def generate():
-    zh_path = ZH_POSTS_DIR / f"{SLUG}.md"
-    en_path = EN_POSTS_DIR / f"{SLUG}.md"
-    zh_path.write_text(ZH_CONTENT, encoding="utf-8")
-    en_path.write_text(EN_CONTENT, encoding="utf-8")
-    print(f"Wrote {zh_path}")
-    print(f"Wrote {en_path}")
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s", handlers=[logging.StreamHandler(sys.stdout)])
+logger = logging.getLogger(__name__)
 
-def main(json_path=None):
-    generate()
+
+def main(crawled_json_path: str = None) -> list[dict]:
+    ZH_POSTS_DIR.mkdir(parents=True, exist_ok=True)
+    EN_POSTS_DIR.mkdir(parents=True, exist_ok=True)
+
+    zh_file = ZH_POSTS_DIR / f"{SLUG}.md"
+    en_file = EN_POSTS_DIR / f"{SLUG}.md"
+
+    zh_file.write_text(ZH_CONTENT.strip() + "\n", encoding="utf-8")
+    logger.info(f"Generated ZH post: {zh_file}")
+
+    en_file.write_text(EN_CONTENT.strip() + "\n", encoding="utf-8")
+    logger.info(f"Generated EN post: {en_file}")
+
     return [
-        str(ZH_POSTS_DIR / f"{SLUG}.md"),
-        str(EN_POSTS_DIR / f"{SLUG}.md"),
+        {"lang": "zh-cn", "path": str(zh_file), "title": ZH_TITLE},
+        {"lang": "en", "path": str(en_file), "title": EN_TITLE},
     ]
 
+
 if __name__ == "__main__":
-    generate()
+    main()
