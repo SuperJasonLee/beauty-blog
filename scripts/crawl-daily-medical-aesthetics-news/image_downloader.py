@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-09-01"
+SLUG = "daily-medical-aesthetics-news-2026-09-02"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-having-a-consultation-with-a-patient-5215017/",
-        "image_url": "https://images.pexels.com/photos/5215017/pexels-photo-5215017.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
-        "author": "Tima Miroshnichenko",
-        "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Aesthetic clinician conducting facial anatomy assessment and personalized anti-aging consultation",
-    },
-    {
-        "page_url": "https://www.pexels.com/photo/scientist-working-in-laboratory-3735709/",
-        "image_url": "https://images.pexels.com/photos/3735709/pexels-photo-3735709.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-explaining-a-diagnosis-to-a-patient-5215024/",
+        "image_url": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Biotechnological synthesis and molecular purity screening of recombinant humanized collagen XVII and III",
+        "theme": "Aesthetic physician conducting comprehensive facial structural evaluation and personalized anti-aging consultation",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-getting-laser-treatment-on-her-face-5069432/",
-        "image_url": "https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-scientist-looking-at-a-petri-dish-in-a-laboratory-3735770/",
+        "image_url": "https://images.pexels.com/photos/3735770/pexels-photo-3735770.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Clinician operating high-resolution visualization micro-focused ultrasound transducer for bi-planar lifting",
+        "theme": "Biotechnology scientist analyzing cellular secretome purity and stem cell-derived exosome vesicles in laboratory",
     },
     {
-        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-forehead-7581590/",
-        "image_url": "https://images.pexels.com/photos/7581590/pexels-photo-7581590.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-getting-laser-treatment-on-her-face-5069430/",
+        "image_url": "https://images.pexels.com/photos/5069430/pexels-photo-5069430.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Aesthetic physician administering precision supraperiosteal polycaprolactone microsphere filler injection",
+        "theme": "Dermatologist operating precision fractional picosecond laser with micro-lens array for skin tone and texture rejuvenation",
     },
     {
-        "page_url": "https://www.pexels.com/photo/close-up-portrait-of-a-beautiful-woman-smiling-3762871/",
-        "image_url": "https://images.pexels.com/photos/3762871/pexels-photo-3762871.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-face-7581585/",
+        "image_url": "https://images.pexels.com/photos/7581585/pexels-photo-7581585.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Patient displaying firm lower-facial contour and refined dermal elasticity following multimodal laser therapy",
+        "theme": "Aesthetic injector performing cannula-guided bio-remodeling injection targeting the superficial lateral cheek fat compartment",
+    },
+    {
+        "page_url": "https://www.pexels.com/photo/woman-holding-her-face-3762879/",
+        "image_url": "https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "author": "cottonbro studio",
+        "author_url": "https://www.pexels.com/@cottonbro/",
+        "theme": "Patient displaying firm lower-face contour and luminous skin texture following multimodal regenerative procedures",
     },
 ]
 
