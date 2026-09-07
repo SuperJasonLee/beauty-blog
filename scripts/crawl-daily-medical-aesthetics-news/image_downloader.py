@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-09-06"
+SLUG = "daily-medical-aesthetics-news-2026-09-07"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-explaining-a-diagnosis-to-her-patient-5215001/",
-        "image_url": "https://images.pexels.com/photos/5215001/pexels-photo-5215001.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-explaining-a-diagnosis-to-her-patient-5215008/",
+        "image_url": "https://images.pexels.com/photos/5215008/pexels-photo-5215008.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Aesthetic medicine specialist conducting thorough facial assessment and customized treatment consultation",
+        "theme": "Aesthetic medicine physician conducting comprehensive clinical evaluation and facial analysis",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069446/",
-        "image_url": "https://images.pexels.com/photos/5069446/pexels-photo-5069446.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069447/",
+        "image_url": "https://images.pexels.com/photos/5069447/pexels-photo-5069447.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Dermatologist administering non-ablative fractional laser and microfocused ultrasound treatment for tissue tightening",
+        "theme": "Dermatology practitioner administering targeted energy-based device treatment for tissue tightening",
     },
     {
-        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-face-7581582/",
-        "image_url": "https://images.pexels.com/photos/7581582/pexels-photo-7581582.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-face-7581586/",
+        "image_url": "https://images.pexels.com/photos/7581586/pexels-photo-7581586.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Clinician delivering micro-droplet intradermal mesotherapy with recombinant humanized type III collagen",
+        "theme": "Specialist administering micro-droplet injection of collagen stimulator into deep dermis",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-plastic-surgeon-measuring-the-patient-s-eyelids-by-using-a-caliper-7585308/",
-        "image_url": "https://images.pexels.com/photos/7585308/pexels-photo-7585308.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-plastic-surgeon-measuring-the-patient-s-eyelids-by-using-a-caliper-7585313/",
+        "image_url": "https://images.pexels.com/photos/7585313/pexels-photo-7585313.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Aesthetic injector evaluating precise anatomical vectors and soft-tissue depths for PDLLA biostimulator placement",
+        "theme": "Surgeon performing precise facial caliper measurements for retaining ligament anchoring vectors",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-smiling-with-clean-skin-3762878/",
-        "image_url": "https://images.pexels.com/photos/3762878/pexels-photo-3762878.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-with-clean-skin-smiling-3762876/",
+        "image_url": "https://images.pexels.com/photos/3762876/pexels-photo-3762876.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Client exhibiting radiant, smooth skin texture and naturally rejuvenated facial contour after multimodal therapy",
+        "theme": "Patient demonstrating clear, smooth, firm skin contour and radiant epidermal barrier after treatment",
     },
 ]
 
