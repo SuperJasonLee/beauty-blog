@@ -16,7 +16,7 @@ SOURCES = [
         "name": "pubmed",
         "command": [
             "opencli", "pubmed", "search",
-            "collagen XVII hair follicle 2026 OR unipolar radiofrequency skin laxity 2026 OR polycaprolactone facial filler 2026 OR vascular laser rosacea 2026",
+            "microbotox lower face 2026 OR radiofrequency microneedling extracellular vesicles 2026 OR nanofat stromal vascular fraction scar 2026 OR hyaluronic acid nasolabial folds 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -24,7 +24,7 @@ SOURCES = [
         "name": "zhihu",
         "command": [
             "opencli", "zhihu", "search",
-            "重组XVII型胶原蛋白 单极射频 聚己内酯 少女针 血管激光 2026",
+            "肉毒毒素 射频微针 外泌体 纳米脂肪 玻尿酸 鼻唇沟 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -32,7 +32,7 @@ SOURCES = [
         "name": "google",
         "command": [
             "opencli", "web", "read",
-            "--url", "https://www.google.com/search?q=collagen+XVII+unipolar+radiofrequency+polycaprolactone+vascular+laser+september+2026&num=15",
+            "--url", "https://www.google.com/search?q=microbotox+RF+microneedling+extracellular+vesicles+nanofat+hyaluronic+acid+september+2026&num=15",
             "-f", "json",
         ],
     },
