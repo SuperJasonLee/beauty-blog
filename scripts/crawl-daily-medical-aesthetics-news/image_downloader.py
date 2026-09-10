@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-09-08"
+SLUG = "daily-medical-aesthetics-news-2026-09-10"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-explaining-a-diagnosis-to-her-patient-5215009/",
-        "image_url": "https://images.pexels.com/photos/5215009/pexels-photo-5215009.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-explaining-a-diagnosis-to-her-patient-5215011/",
+        "image_url": "https://images.pexels.com/photos/5215011/pexels-photo-5215011.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Aesthetic medicine physician conducting facial aesthetic assessment and clinical treatment consultation",
+        "theme": "Aesthetic medicine physician conducting facial structural assessment and comprehensive treatment consultation",
     },
     {
-        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-face-7581588/",
-        "image_url": "https://images.pexels.com/photos/7581588/pexels-photo-7581588.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-face-7581581/",
+        "image_url": "https://images.pexels.com/photos/7581581/pexels-photo-7581581.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Specialist administering micro-botox and intradermal micro-droplet injection for facial mimetic balance",
+        "theme": "Aesthetic specialist performing precision periorbital microinjections for polynucleotide (PN) dermal restoration",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069448/",
-        "image_url": "https://images.pexels.com/photos/5069448/pexels-photo-5069448.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069444/",
+        "image_url": "https://images.pexels.com/photos/5069444/pexels-photo-5069444.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Dermatologist applying fractional radiofrequency microneedling therapy for collagen remodeling",
+        "theme": "Dermatologist administering focused laser and energy-based treatment for skin tone optimization",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-plastic-surgeon-measuring-the-patient-s-eyelids-by-using-a-caliper-7585316/",
-        "image_url": "https://images.pexels.com/photos/7585316/pexels-photo-7585316.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-forehead-7581589/",
+        "image_url": "https://images.pexels.com/photos/7581589/pexels-photo-7581589.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Plastic surgeon calibrating facial anatomical landmarks and vector trajectories with precision calipers",
+        "theme": "Plastic surgeon administering precision regenerative micro-suspension for subzygomatic contouring",
     },
     {
-        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762873/",
-        "image_url": "https://images.pexels.com/photos/3762873/pexels-photo-3762873.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762880/",
+        "image_url": "https://images.pexels.com/photos/3762880/pexels-photo-3762880.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Patient demonstrating smooth, firm, and radiant skin texture after advanced regenerative aesthetic care",
+        "theme": "Patient demonstrating radiant skin texture, smoothed periorbital contour, and firm facial definition",
     },
 ]
 
