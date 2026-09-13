@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-09-11"
+SLUG = "daily-medical-aesthetics-news-2026-09-13"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215002/",
-        "image_url": "https://images.pexels.com/photos/5215002/pexels-photo-5215002.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215003/",
+        "image_url": "https://images.pexels.com/photos/5215003/pexels-photo-5215003.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Aesthetic medicine physician conducting facial structural assessment and comprehensive treatment consultation",
+        "theme": "Aesthetic physician conducting clinical facial evaluation and personalized procedural planning with patient",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069443/",
-        "image_url": "https://images.pexels.com/photos/5069443/pexels-photo-5069443.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-face-7581583/",
+        "image_url": "https://images.pexels.com/photos/7581583/pexels-photo-7581583.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Cosmetologist and dermatologist administering facial microneedling treatment with recombinant collagen essence",
+        "theme": "Aesthetic injector administering precision long-acting peptide neuromodulator for facial dynamic rhytids",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215014/",
-        "image_url": "https://images.pexels.com/photos/5215014/pexels-photo-5215014.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069449/",
+        "image_url": "https://images.pexels.com/photos/5069449/pexels-photo-5069449.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "author": "cottonbro studio",
+        "author_url": "https://www.pexels.com/@cottonbro/",
+        "theme": "Laser specialist delivering non-ablative 1927nm fractional thulium laser treatment for melasma clearance",
+    },
+    {
+        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215013/",
+        "image_url": "https://images.pexels.com/photos/5215013/pexels-photo-5215013.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Medical laser specialist explaining vascular laser wavelength mechanics and clinical safety to patient",
+        "theme": "Physician demonstrating regenerative biological therapies and autologous PRF matrix micro-injection benefits",
     },
     {
-        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-face-7581591/",
-        "image_url": "https://images.pexels.com/photos/7581591/pexels-photo-7581591.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762882/",
+        "image_url": "https://images.pexels.com/photos/3762882/pexels-photo-3762882.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Plastic surgeon performing precision facial contouring and structural biostimulatory injection",
-    },
-    {
-        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762881/",
-        "image_url": "https://images.pexels.com/photos/3762881/pexels-photo-3762881.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
-        "author": "cottonbro studio",
-        "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Patient demonstrating clear glowing skin, defined facial contours, and radiant barrier recovery",
+        "theme": "Satisfied patient demonstrating restored dermal elastic bounce, radiant skin texture, and youthful neck contours",
     },
 ]
 
