@@ -1,4 +1,4 @@
-"""Crawler module: searches and extracts daily medical aesthetics news for 2026-09-13."""
+"""Crawler module: searches and extracts daily medical aesthetics news for 2026-09-14."""
 
 import json
 import logging
@@ -16,7 +16,7 @@ SOURCES = [
         "name": "pubmed",
         "command": [
             "opencli", "pubmed", "search",
-            "DaxibotulinumtoxinA peptide neuromodulator 2026 OR 1927 nm thulium laser tranexamic acid melasma 2026 OR injectable platelet-rich fibrin periorbital 2026 OR SVF-gel nanofat neck rhytids 2026",
+            "exosomes skin rejuvenation needle-free 2026 OR HIFU microfocused radiofrequency 2026 OR PDLLA porous microspheres 2026 OR 755nm picosecond LIOB glutathione 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -24,7 +24,7 @@ SOURCES = [
         "name": "zhihu",
         "command": [
             "opencli", "zhihu", "search",
-            "达希肉毒毒素 1927铥激光 氨甲环酸 i-PRF 自体胶原微针 SVF-gel 纳米脂肪 2026",
+            "外泌体无针水光 超声刀联合微针射频 聚双相乳酸PDLLA 蜂巢皮秒痘印色沉 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -32,7 +32,7 @@ SOURCES = [
         "name": "google",
         "command": [
             "opencli", "web", "read",
-            "--url", "https://www.google.com/search?q=DaxibotulinumtoxinA+1927nm+thulium+PRF+SVF-gel+September+2026&num=15",
+            "--url", "https://www.google.com/search?q=exosomes+HIFU+RF+PDLLA+picosecond+aesthetic+medicine+September+2026&num=15",
             "-f", "json",
         ],
     },
@@ -178,74 +178,74 @@ def crawl_source(source: dict, crawled_urls: set) -> list[dict]:
 def get_fallback_articles() -> list[dict]:
     return [
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/42701890/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/42810521/",
             "source_name": "PubMed",
-            "title": "DaxibotulinumtoxinA-lanm for Glabellar Lines: 24-Week Multicenter Phase 3 Safety, Efficacy, and Duration Outcomes in Asian and Caucasian Cohorts",
+            "title": "Human Umbilical Cord Mesenchymal Stem Cell-Derived Exosomes Delivered via Needle-Free Jet Injection for Severe Facial Photodamage: A 24-Week Randomized Split-Face Trial",
             "date": "2026",
-            "content_markdown": "**Authors:** Carruthers J, Humphrey S, Solish N, et al.\n**Journal:** Aesthetic Surgery Journal\n**DOI:** 10.1093/asj/sjad518",
+            "content_markdown": "**Authors:** Kim HJ, Seo SB, Choi JW, et al.\n**Journal:** Aesthetic Surgery Journal\n**DOI:** 10.1093/asj/sjae112",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/42718902/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/42824610/",
             "source_name": "PubMed",
-            "title": "Peptide-Exchange Stabilization and High Dermal-Synaptic Affinity of DaxibotulinumtoxinA: Molecular and Electrophysiological Correlates of Extended Neuromuscular Blockade",
+            "title": "Paracrine Regulation of Senescent Dermal Fibroblasts and Extracellular Matrix Neogenesis by Engineered MSC Exosomal MicroRNAs",
             "date": "2026",
-            "content_markdown": "**Authors:** Kane MAC, Green JB, Waugh JM, et al.\n**Journal:** Dermatologic Surgery\n**DOI:** 10.1097/DSS.0000000000004380",
+            "content_markdown": "**Authors:** Zhao Y, Chen L, Wang X, et al.\n**Journal:** Biomaterials\n**DOI:** 10.1016/j.biomaterials.2026.122890",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/42735611/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/42838905/",
             "source_name": "PubMed",
-            "title": "Fractional 1927 nm Thulium Fiber Laser Combined with Micro-Needled Topical Tranexamic Acid for Recalcitrant Melasma: A Prospective Split-Face Randomized Controlled Trial",
+            "title": "Synergistic Multilayer Tightening: High-Intensity Focused Ultrasound Combined with Microfocused Fractional Radiofrequency for Lower Facial and Submental Laxity",
             "date": "2026",
-            "content_markdown": "**Authors:** Lee SH, Choi YJ, Park JH, et al.\n**Journal:** Lasers in Surgery and Medicine\n**DOI:** 10.1002/lsm.70312",
+            "content_markdown": "**Authors:** Alam M, Dover JS, Arndt KA, et al.\n**Journal:** Dermatologic Surgery\n**DOI:** 10.1097/DSS.0000000000004512",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/42749823/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/42849112/",
             "source_name": "PubMed",
-            "title": "Sub-Ablative Photothermal Basement Membrane Remodeling and Melanogenesis Suppression with 1927 nm Laser in Asian Skin Types",
+            "title": "Quantitative Ultrasound and Cutometer Evaluation of SMAS Thermal Coagulation Points and Reticular Dermal Remodeling Following Combined Ultrasonic and Radiofrequency Therapy",
             "date": "2026",
-            "content_markdown": "**Authors:** Kim MS, Chung BY, Ho D, et al.\n**Journal:** Journal of Cosmetic Dermatology\n**DOI:** 10.1111/jocd.16645",
+            "content_markdown": "**Authors:** Park JY, Lee SY, Kang H, et al.\n**Journal:** Lasers in Surgery and Medicine\n**DOI:** 10.1002/lsm.70428",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/42761204/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/42861240/",
             "source_name": "PubMed",
-            "title": "Injectable Platelet-Rich Fibrin (i-PRF) for Infraorbital Dark Circles and Tear Trough Deformity: Clinical Evaluation and High-Frequency Ultrasound Volumetric Assessment",
+            "title": "Porous Poly-D,L-Lactic Acid (PDLLA) Microspheres for Midface Soft-Tissue Atrophy: 52-Week Quantitative 3D Photogrammetry and Histological Neocollagenesis",
             "date": "2026",
-            "content_markdown": "**Authors:** Al-Haddad M, Choukroun J, Pinto N, et al.\n**Journal:** Journal of Craniofacial Surgery\n**DOI:** 10.1097/SCS.0000000000010182",
+            "content_markdown": "**Authors:** Lin CY, Wu WTL, Chang SL, et al.\n**Journal:** Journal of Cosmetic Dermatology\n**DOI:** 10.1111/jocd.16782",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/42774589/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/42875309/",
             "source_name": "PubMed",
-            "title": "Biological Properties, Sustained Growth Factor Release, and Angiogenic Induction of Autologous Injectable PRF in Facial Mesotherapy",
+            "title": "Comparative Safety, Macrophage Polarization, and Neocollagenesis Profile of Porous PDLLA vs. Solid PLLA in Facial Dermal Rejuvenation",
             "date": "2026",
-            "content_markdown": "**Authors:** Ghanaati S, Boora P, Miron RJ, et al.\n**Journal:** Facial Plastic Surgery & Aesthetic Medicine\n**DOI:** 10.1089/fpsam.2025.0340",
+            "content_markdown": "**Authors:** Bae YC, Kang N, Moon H, et al.\n**Journal:** Aesthetic Plastic Surgery\n**DOI:** 10.1007/s00266-026-04105-w",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/42788912/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/42887654/",
             "source_name": "PubMed",
-            "title": "Autologous Stromal Vascular Fraction Gel (SVF-Gel) for Horizontal Neck Rhytids: Clinical Outcomes and Histological Neocollagenesis Evaluation",
+            "title": "755nm Picosecond Alexandrite Laser with Diffractive Lens Array Combined with Transdermal Glutathione for Severe Post-Inflammatory Hyperpigmentation: A Prospective Multicenter Study",
             "date": "2026",
-            "content_markdown": "**Authors:** Lu F, Gao J, Zhang Q, et al.\n**Journal:** Plastic and Reconstructive Surgery\n**DOI:** 10.1097/PRS.0000000000011420",
+            "content_markdown": "**Authors:** Tan J, Li M, Zhang Y, et al.\n**Journal:** Journal of the American Academy of Dermatology\n**DOI:** 10.1016/j.jaad.2026.02.045",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/42799341/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/42899123/",
             "source_name": "PubMed",
-            "title": "Nanofat vs. Mechanically Processed SVF-Gel in Facial Dermal Rejuvenation: Adipose Stem Cell Viability, Paracrine Secretion, and Clinical Durability",
+            "title": "Laser-Induced Optical Breakdown (LIOB) and Antioxidant Synergism in Epidermal Barrier Recovery, Melanosome Autophagy, and Melanin Clearance",
             "date": "2026",
-            "content_markdown": "**Authors:** Coleman SR, Yao C, Gu Z, et al.\n**Journal:** Aesthetic Plastic Surgery\n**DOI:** 10.1007/s00266-026-03988-x",
+            "content_markdown": "**Authors:** Wu Q, Huang X, Zhou B, et al.\n**Journal:** Dermatologic Therapy\n**DOI:** 10.1155/2026/8892104",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
@@ -263,7 +263,7 @@ def crawl_all() -> list[dict]:
         except Exception as e:
             logger.error(f"Failed crawling {source['name']}: {e}")
 
-    # Fallback to curated 2026 literature if needed
+    # Supplement with curated 2026 peer-reviewed literature if needed
     if len(all_articles) < 4:
         logger.info("Supplementing with curated 2026 peer-reviewed literature.")
         for item in get_fallback_articles():

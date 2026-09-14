@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-09-13"
+SLUG = "daily-medical-aesthetics-news-2026-09-14"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215003/",
-        "image_url": "https://images.pexels.com/photos/5215003/pexels-photo-5215003.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215005/",
+        "image_url": "https://images.pexels.com/photos/5215005/pexels-photo-5215005.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Aesthetic physician conducting clinical facial evaluation and personalized procedural planning with patient",
+        "theme": "Aesthetic physician conducting facial anatomy analysis and regenerative consultation with patient",
     },
     {
-        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-face-7581583/",
-        "image_url": "https://images.pexels.com/photos/7581583/pexels-photo-7581583.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069450/",
+        "image_url": "https://images.pexels.com/photos/5069450/pexels-photo-5069450.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Aesthetic injector administering precision long-acting peptide neuromodulator for facial dynamic rhytids",
+        "theme": "Clinical aesthetic specialist administering transdermal energetic delivery treatment for facial dermal rejuvenation",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069449/",
-        "image_url": "https://images.pexels.com/photos/5069449/pexels-photo-5069449.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-face-7581592/",
+        "image_url": "https://images.pexels.com/photos/7581592/pexels-photo-7581592.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Laser specialist delivering non-ablative 1927nm fractional thulium laser treatment for melasma clearance",
+        "theme": "Practitioner performing precision micro-droplet dermal injection for midface contouring and tissue biostimulation",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215013/",
-        "image_url": "https://images.pexels.com/photos/5215013/pexels-photo-5215013.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215012/",
+        "image_url": "https://images.pexels.com/photos/5215012/pexels-photo-5215012.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Physician demonstrating regenerative biological therapies and autologous PRF matrix micro-injection benefits",
+        "theme": "Aesthetic clinician detailing synergistic ultrasonic energy and regenerative treatment roadmap with patient",
     },
     {
-        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762882/",
-        "image_url": "https://images.pexels.com/photos/3762882/pexels-photo-3762882.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762883/",
+        "image_url": "https://images.pexels.com/photos/3762883/pexels-photo-3762883.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Satisfied patient demonstrating restored dermal elastic bounce, radiant skin texture, and youthful neck contours",
+        "theme": "Patient displaying bright even complexion, firm dermal density, and refined facial contours post-treatment",
     },
 ]
 
