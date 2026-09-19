@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-09-16"
+SLUG = "daily-medical-aesthetics-news-2026-09-19"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215004/",
-        "image_url": "https://images.pexels.com/photos/5215004/pexels-photo-5215004.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215000/",
+        "image_url": "https://images.pexels.com/photos/5215000/pexels-photo-5215000.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Senior aesthetic physician discussing facial rejuvenation and dermal structural plan with patient in clinical consultation",
+        "theme": "Senior aesthetic physician discussing personalized non-surgical facial rejuvenation and cellular regeneration protocol with patient in consultation room",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069438/",
-        "image_url": "https://images.pexels.com/photos/5069438/pexels-photo-5069438.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069440/",
+        "image_url": "https://images.pexels.com/photos/5069440/pexels-photo-5069440.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Dermatologist administering recombinant humanized collagen transdermal barrier repair treatment",
+        "theme": "Clinical dermatologist performing polynucleotide PDRN transdermal micro-droplet infusion for periorbital and sensitive barrier repair",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215015/",
-        "image_url": "https://images.pexels.com/photos/5215015/pexels-photo-5215015.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215006/",
+        "image_url": "https://images.pexels.com/photos/5215006/pexels-photo-5215006.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Clinical aesthetic specialist demonstrating dynamic monopolar radiofrequency skin tightening procedure",
+        "theme": "Specialist aesthetic clinician evaluating long-pulsed 1064nm Nd:YAG laser vascular settings and dynamic epidermal cooling parameters",
     },
     {
-        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-face-7581580/",
-        "image_url": "https://images.pexels.com/photos/7581580/pexels-photo-7581580.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-face-7581578/",
+        "image_url": "https://images.pexels.com/photos/7581578/pexels-photo-7581578.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Aesthetic practitioner performing precision deep dermal micro-cannula injection for structural facial contouring",
+        "theme": "Aesthetic injector administering highly purified recombinant core neurotoxin and cohesive polydense hyaluronic acid with precision micro-cannula",
     },
     {
-        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762884/",
-        "image_url": "https://images.pexels.com/photos/3762884/pexels-photo-3762884.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762885/",
+        "image_url": "https://images.pexels.com/photos/3762885/pexels-photo-3762885.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Smiling patient showing firm refined facial contours, tightened jawline, and revitalized skin texture post-treatment",
+        "theme": "Female patient demonstrating smooth refined skin texture, luminous skin tone, and dynamic facial expression without stiffness post-treatment",
     },
 ]
 
