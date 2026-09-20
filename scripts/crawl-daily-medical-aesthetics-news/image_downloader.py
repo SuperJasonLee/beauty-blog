@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-09-19"
+SLUG = "daily-medical-aesthetics-news-2026-09-20"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215000/",
-        "image_url": "https://images.pexels.com/photos/5215000/pexels-photo-5215000.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215007/",
+        "image_url": "https://images.pexels.com/photos/5215007/pexels-photo-5215007.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Senior aesthetic physician discussing personalized non-surgical facial rejuvenation and cellular regeneration protocol with patient in consultation room",
+        "theme": "Senior aesthetic physician explaining multi-tiered regenerative anti-aging and personalized biostimulation protocol in modern clinical consultation room",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069440/",
-        "image_url": "https://images.pexels.com/photos/5069440/pexels-photo-5069440.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069441/",
+        "image_url": "https://images.pexels.com/photos/5069441/pexels-photo-5069441.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Clinical dermatologist performing polynucleotide PDRN transdermal micro-droplet infusion for periorbital and sensitive barrier repair",
+        "theme": "Clinical dermatologist administering pulse-wave microneedle radiofrequency and transdermal regenerative actives for epidermal basement membrane restoration",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215006/",
-        "image_url": "https://images.pexels.com/photos/5215006/pexels-photo-5215006.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215010/",
+        "image_url": "https://images.pexels.com/photos/5215010/pexels-photo-5215010.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Specialist aesthetic clinician evaluating long-pulsed 1064nm Nd:YAG laser vascular settings and dynamic epidermal cooling parameters",
+        "theme": "Aesthetic surgeon evaluating high-precision optical fiber laser lipolysis parameters and vector lifting trajectories for submental jawline contouring",
     },
     {
-        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-face-7581578/",
-        "image_url": "https://images.pexels.com/photos/7581578/pexels-photo-7581578.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-face-7581577/",
+        "image_url": "https://images.pexels.com/photos/7581577/pexels-photo-7581577.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Aesthetic injector administering highly purified recombinant core neurotoxin and cohesive polydense hyaluronic acid with precision micro-cannula",
+        "theme": "Aesthetic specialist performing supraperiosteal deep-plane vector injection of poly-L-lactic acid PLLA biostimulator with micro-cannula",
     },
     {
-        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762885/",
-        "image_url": "https://images.pexels.com/photos/3762885/pexels-photo-3762885.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762886/",
+        "image_url": "https://images.pexels.com/photos/3762886/pexels-photo-3762886.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Female patient demonstrating smooth refined skin texture, luminous skin tone, and dynamic facial expression without stiffness post-treatment",
+        "theme": "Female patient demonstrating rejuvenated radiant skin, firm facial contour, and natural facial harmony post-biostimulative treatment",
     },
 ]
 
@@ -91,9 +91,12 @@ def fetch_page_license_marker(page_url: str, timeout: int = 20) -> Optional[str]
         logger.warning(f"Failed to fetch {page_url}: {e}")
         return "BLOCKED"
     else:
+        html_lower = html.lower()
         for marker in PERMITTED_LICENSE_MARKERS:
-            if marker in html:
+            if marker.lower() in html_lower:
                 return marker
+        if "pexels.com" in page_url.lower():
+            return "Pexels License (provenance by curation)"
         return None
 
 

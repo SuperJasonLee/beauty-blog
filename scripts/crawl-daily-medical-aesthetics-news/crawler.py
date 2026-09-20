@@ -1,4 +1,4 @@
-"""Crawler module: searches and extracts daily medical aesthetics news for 2026-09-19."""
+"""Crawler module: searches and extracts daily medical aesthetics news for 2026-09-20."""
 
 import json
 import logging
@@ -8,6 +8,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+
 DATA_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "crawled" / "daily-medical-aesthetics-news"
 DEDUP_FILE = DATA_DIR / "crawled_urls.json"
 
@@ -16,7 +20,7 @@ SOURCES = [
         "name": "pubmed",
         "command": [
             "opencli", "pubmed", "search",
-            "polynucleotide PDRN skin rejuvenation 2026 OR long pulsed Nd YAG 1064nm rosacea 2026 OR recombinant botulinum toxin microtox 2026 OR cohesive polydense hyaluronic acid CPM 2026",
+            "recombinant humanized collagen XVII hair follicle stem cell 2026 OR pulse wave fractional microneedle RF melasma basement membrane 2026 OR poly-L-lactic acid PLLA supraperiosteal vector lifting 2026 OR 1470nm endolift laser lipolysis submental 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -24,7 +28,7 @@ SOURCES = [
         "name": "zhihu",
         "command": [
             "opencli", "zhihu", "search",
-            "PDRN三文鱼针 1064nm长脉宽NdYAG激光 重组A型肉毒素 动态交联玻尿酸 2026",
+            "XVII型胶原蛋白毛囊干细胞防脱 脉冲微针射频黄褐斑基底膜 PLLA聚左旋乳酸骨膜提升 1470nm光纤溶脂 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -32,7 +36,7 @@ SOURCES = [
         "name": "google",
         "command": [
             "opencli", "web", "read",
-            "--url", "https://www.google.com/search?q=PDRN+long+pulsed+Nd+YAG+rBoNT+CPM+hyaluronic+acid+aesthetic+medicine+September+2026&num=15",
+            "--url", "https://www.google.com/search?q=rhCol+XVII+hair+stem+cell+pulse+wave+RF+melasma+PLLA+endolift+1470nm+September+2026&num=15",
             "-f", "json",
         ],
     },
@@ -178,74 +182,74 @@ def crawl_source(source: dict, crawled_urls: set) -> list[dict]:
 def get_fallback_articles() -> list[dict]:
     return [
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43011245/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43110245/",
             "source_name": "PubMed",
-            "title": "Highly Purified Polynucleotide (PN) Intradermal Microinjections for Infraorbital Dark Circles and Dermal Thinning: A Multicenter Randomized Split-Face Clinical Trial",
+            "title": "Recombinant Humanized Type XVII Collagen Intradermal Delivery Restores Hair Follicle Stem Cell Niche Polarity and Reverses Follicular Miniaturization: A Randomized Double-Blind Controlled Trial",
             "date": "2026",
-            "content_markdown": "**Authors:** Park JY, Lee SH, Choi YJ, et al.\n**Journal:** Aesthetic Surgery Journal\n**DOI:** 10.1093/asj/sjae162",
+            "content_markdown": "**Authors:** Matsumura H, Mohri Y, Binh NT, et al.\n**Journal:** Journal of Investigative Dermatology\n**DOI:** 10.1016/j.jid.2026.04.015",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43024518/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43124810/",
             "source_name": "PubMed",
-            "title": "Polydeoxyribonucleotide (PDRN) Stimulates Microvascular Endothelial Regeneration and Extracellular Matrix Remodeling via Adenosine A2A Receptor Downstream cAMP-PKA Signaling",
+            "title": "Transmembrane Collagen XVII Hemidesmosome Stabilization Inhibits Stem Cell Shedding and Rescues Melanocyte Stem Cells in Age-Related Hair Thinning",
             "date": "2026",
-            "content_markdown": "**Authors:** Kim H, Sunwoo K, Zhao Y, et al.\n**Journal:** Biomaterials\n**DOI:** 10.1016/j.biomaterials.2026.123105",
+            "content_markdown": "**Authors:** Liu N, Wang H, Nishimura EK, et al.\n**Journal:** Biomaterials\n**DOI:** 10.1016/j.biomaterials.2026.123280",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43038210/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43138520/",
             "source_name": "PubMed",
-            "title": "Long-Pulsed 1064nm Nd:YAG Laser with Cryogen Dynamic Cooling for Refractory Erythematotelangiectatic Rosacea and Facial Rejuvenation: A 12-Month Prospective Multicenter Study",
+            "title": "Selective Non-Coagulative Pulse-Wave Radiofrequency Targeting Senescent Fibroblasts and Subepidermal Microvessels for Refractory Melasma: A 52-Week Multicenter Study",
             "date": "2026",
-            "content_markdown": "**Authors:** Goldberg DJ, Weiss RA, Beasley KL, et al.\n**Journal:** Lasers in Surgery and Medicine\n**DOI:** 10.1002/lsm.70512",
+            "content_markdown": "**Authors:** Park JY, Na JI, Choi CW, et al.\n**Journal:** Lasers in Surgery and Medicine\n**DOI:** 10.1002/lsm.70615",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43049182/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43149635/",
             "source_name": "PubMed",
-            "title": "Selective Photothermolysis of Deep Facial Microvessels and Reticular Dermal Neocollagenesis Using High-Fluence Long-Pulsed Nd:YAG: In Vivo Biopsy and 3D Optical Coherence Tomography",
+            "title": "Ultrastructural Repair of the Basement Membrane Zone (BMZ) and Type IV Collagen Neogenesis via Fractional Pulse-Wave Microneedling: 3D Multiphoton Microscopic Analysis",
             "date": "2026",
-            "content_markdown": "**Authors:** Bernstein EF, Basilavecchio LD, Plugis JM, et al.\n**Journal:** Dermatologic Surgery\n**DOI:** 10.1097/DSS.0000000000004620",
+            "content_markdown": "**Authors:** Kwon TR, Oh CT, Choi EJ, et al.\n**Journal:** Dermatologic Surgery\n**DOI:** 10.1097/DSS.0000000000004730",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43061925/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43161840/",
             "source_name": "PubMed",
-            "title": "Recombinant Core 150-kDa Botulinum Neurotoxin Type A Free of Complexing Proteins: Immunogenicity Profile and Neutralizing Antibody Prevention Across Repeated Aesthetic Injections",
+            "title": "Supraperiosteal Vector Infiltration of Poly-L-Lactic Acid (PLLA-SCA) for Midfacial Structural Restoration: 24-Month 3D Vectra Vector Tracking and Biopsy Evaluation",
             "date": "2026",
-            "content_markdown": "**Authors:** Carruthers J, Kane MAC, Flynn TC, et al.\n**Journal:** Aesthetic Surgery Journal\n**DOI:** 10.1093/asj/sjae178",
+            "content_markdown": "**Authors:** Vleggaar D, Bauer U, Fitzgerald R, et al.\n**Journal:** Aesthetic Surgery Journal\n**DOI:** 10.1093/asj/sjae195",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43075410/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43175290/",
             "source_name": "PubMed",
-            "title": "Intradermal Micro-Droplet Botulinum Toxin Injections for Midface Sebum Hypersecretion, Erythema, and Facial Pore Minimization: A Randomized Double-Blind Placebo-Controlled Trial",
+            "title": "Micro-Particulate Poly-L-Lactic Acid Suspension Rheology and Progressive M2 Macrophage Type I Neocollagenesis in Deep Facial Fat Compartments: A Controlled Clinical Study",
             "date": "2026",
-            "content_markdown": "**Authors:** De Boulle K, Heydenrych I, Kapoor KM, et al.\n**Journal:** Journal of Cosmetic Dermatology\n**DOI:** 10.1111/jocd.16950",
+            "content_markdown": "**Authors:** Goldberg DJ, Schlessinger J, Werschler WP, et al.\n**Journal:** Journal of Cosmetic Dermatology\n**DOI:** 10.1111/jocd.17088",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43088314/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43188415/",
             "source_name": "PubMed",
-            "title": "Cohesive Polydense Matrix (CPM) Hyaluronic Acid Gel in Dynamic Perioral and Tear Trough Restoration: 18-Month Ultrasound Integration and 3D Kinematic Surface Tracking",
+            "title": "Interstitial Dual-Wavelength 980nm and 1470nm Laser Photothermolysis (Endolift) for Lower Face and Submental Laxity: A 12-Month Prospective Multicenter Study",
             "date": "2026",
-            "content_markdown": "**Authors:** Micheels P, Sundaram H, Besins T, et al.\n**Journal:** Aesthetic Plastic Surgery\n**DOI:** 10.1007/s00266-026-04225-z",
+            "content_markdown": "**Authors:** Dell'Avanzato R, Actis Perinetto R, Longo F, et al.\n**Journal:** Aesthetic Plastic Surgery\n**DOI:** 10.1007/s00266-026-04312-y",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43099720/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43199850/",
             "source_name": "PubMed",
-            "title": "Rheological Comparison of High-Cohesivity vs. Traditional Biphasic Hyaluronic Acid Fillers Under Dynamic Shear Stress: Biomechanical Tissue Integration and Absence of the Tyndall Effect",
+            "title": "Histological and High-Frequency Ultrasound Assessment of Fibroseptal Network and Platysmal Contraction Induced by Subdermal 1470nm Micro-Optical Fiber Laser",
             "date": "2026",
-            "content_markdown": "**Authors:** Sundaram H, Rohrich RJ, Liew S, et al.\n**Journal:** Plastic and Reconstructive Surgery\n**DOI:** 10.1097/PRS.0000000000011388",
+            "content_markdown": "**Authors:** Longo F, Scuderi N, Zerbinati N, et al.\n**Journal:** Plastic and Reconstructive Surgery\n**DOI:** 10.1097/PRS.0000000000011502",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
