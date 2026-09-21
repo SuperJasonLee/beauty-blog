@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-09-20"
+SLUG = "daily-medical-aesthetics-news-2026-09-21"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215007/",
-        "image_url": "https://images.pexels.com/photos/5215007/pexels-photo-5215007.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215018/",
+        "image_url": "https://images.pexels.com/photos/5215018/pexels-photo-5215018.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Senior aesthetic physician explaining multi-tiered regenerative anti-aging and personalized biostimulation protocol in modern clinical consultation room",
+        "theme": "Senior aesthetic dermatologist explaining recombinant collagen III hydrogel and non-invasive energy tightening protocols in clinical consultation",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069441/",
-        "image_url": "https://images.pexels.com/photos/5069441/pexels-photo-5069441.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069431/",
+        "image_url": "https://images.pexels.com/photos/5069431/pexels-photo-5069431.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Clinical dermatologist administering pulse-wave microneedle radiofrequency and transdermal regenerative actives for epidermal basement membrane restoration",
+        "theme": "Clinical practitioner performing diffractive lens array picosecond 755nm optical breakdown laser treatment for facial acne scar remodeling",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215010/",
-        "image_url": "https://images.pexels.com/photos/5215010/pexels-photo-5215010.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
-        "author": "Tima Miroshnichenko",
-        "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Aesthetic surgeon evaluating high-precision optical fiber laser lipolysis parameters and vector lifting trajectories for submental jawline contouring",
-    },
-    {
-        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-face-7581577/",
-        "image_url": "https://images.pexels.com/photos/7581577/pexels-photo-7581577.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069436/",
+        "image_url": "https://images.pexels.com/photos/5069436/pexels-photo-5069436.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Aesthetic specialist performing supraperiosteal deep-plane vector injection of poly-L-lactic acid PLLA biostimulator with micro-cannula",
+        "theme": "Aesthetic physician administering synchronized radiofrequency and facial muscle electromagnetic stimulation for SMAS and zygomatic muscle lifting",
     },
     {
-        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762886/",
-        "image_url": "https://images.pexels.com/photos/3762886/pexels-photo-3762886.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-face-7581579/",
+        "image_url": "https://images.pexels.com/photos/7581579/pexels-photo-7581579.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Female patient demonstrating rejuvenated radiant skin, firm facial contour, and natural facial harmony post-biostimulative treatment",
+        "theme": "Aesthetic surgeon performing deep supraperiosteal vector injection of polycaprolactone PCL microsphere collagen stimulator with micro-cannula",
+    },
+    {
+        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762870/",
+        "image_url": "https://images.pexels.com/photos/3762870/pexels-photo-3762870.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "author": "cottonbro studio",
+        "author_url": "https://www.pexels.com/@cottonbro/",
+        "theme": "Patient demonstrating smooth refined facial texture, sharp jawline contour, and natural facial balance after regenerative aesthetic procedures",
     },
 ]
 
