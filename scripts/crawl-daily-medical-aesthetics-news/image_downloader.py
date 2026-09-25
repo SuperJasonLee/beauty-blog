@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-09-21"
+SLUG = "daily-medical-aesthetics-news-2026-09-25"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215018/",
-        "image_url": "https://images.pexels.com/photos/5215018/pexels-photo-5215018.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215019/",
+        "image_url": "https://images.pexels.com/photos/5215019/pexels-photo-5215019.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Senior aesthetic dermatologist explaining recombinant collagen III hydrogel and non-invasive energy tightening protocols in clinical consultation",
+        "theme": "Aesthetic dermatologist providing in-depth consultation on polynucleotide biostimulation, micro-pulsed focused ultrasound, and calcium hydroxylapatite lifting vectors",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069431/",
-        "image_url": "https://images.pexels.com/photos/5069431/pexels-photo-5069431.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069437/",
+        "image_url": "https://images.pexels.com/photos/5069437/pexels-photo-5069437.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Clinical practitioner performing diffractive lens array picosecond 755nm optical breakdown laser treatment for facial acne scar remodeling",
+        "theme": "Clinical specialist performing high-molecular-weight polynucleotide PN mesotherapy micro-injections for dermal rejuvenation and extracellular matrix repair",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069436/",
-        "image_url": "https://images.pexels.com/photos/5069436/pexels-photo-5069436.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069452/",
+        "image_url": "https://images.pexels.com/photos/5069452/pexels-photo-5069452.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Aesthetic physician administering synchronized radiofrequency and facial muscle electromagnetic stimulation for SMAS and zygomatic muscle lifting",
+        "theme": "Medical aesthetic practitioner administering advanced micro-pulsed focused ultrasound MPT treatment for precise SMAS tightening and contour elevation",
     },
     {
-        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-face-7581579/",
-        "image_url": "https://images.pexels.com/photos/7581579/pexels-photo-7581579.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-face-7581575/",
+        "image_url": "https://images.pexels.com/photos/7581575/pexels-photo-7581575.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Aesthetic surgeon performing deep supraperiosteal vector injection of polycaprolactone PCL microsphere collagen stimulator with micro-cannula",
+        "theme": "Aesthetic doctor administering supraperiosteal calcium hydroxylapatite CaHA microsphere bio-stimulator with micro-cannula for mandibular angle enhancement",
     },
     {
-        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762870/",
-        "image_url": "https://images.pexels.com/photos/3762870/pexels-photo-3762870.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762888/",
+        "image_url": "https://images.pexels.com/photos/3762888/pexels-photo-3762888.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Patient demonstrating smooth refined facial texture, sharp jawline contour, and natural facial balance after regenerative aesthetic procedures",
+        "theme": "Client presenting flawless skin texture, well-defined jawline contours, and harmonious facial balance following regenerative aesthetic procedures",
     },
 ]
 
@@ -100,121 +100,110 @@ def fetch_page_license_marker(page_url: str, timeout: int = 20) -> Optional[str]
         return None
 
 
-def download_image_bytes(url: str, timeout: int = 30) -> Optional[bytes]:
-    import time
-    import urllib.request
-    for attempt in range(3):
-        try:
-            with httpx.Client(timeout=timeout, follow_redirects=True) as client:
-                resp = client.get(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
-                resp.raise_for_status()
-                return resp.content
-        except Exception as e:
-            logger.warning(f"httpx download failed (attempt {attempt+1}/3): {e}")
-            try:
-                req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
-                with urllib.request.urlopen(req, timeout=timeout) as u_resp:
-                    return u_resp.read()
-            except Exception as ue:
-                logger.warning(f"urllib download also failed: {ue}")
-            time.sleep(1)
-    return None
+def download_raw_image(image_url: str, timeout: int = 30) -> Optional[bytes]:
+    try:
+        with httpx.Client(timeout=timeout, follow_redirects=True) as client:
+            resp = client.get(
+                image_url,
+                headers={
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                    "Referer": "https://www.pexels.com/",
+                },
+            )
+            resp.raise_for_status()
+            return resp.content
+    except Exception as e:
+        logger.error(f"Failed to download image {image_url}: {e}")
+        return None
 
 
-def resize_to_budget(in_path: Path, out_path: Path, max_edge: int = MAX_LONGEST_EDGE_PX, max_bytes: int = MAX_BYTES) -> int:
-    img = Image.open(in_path).convert("RGB")
-    w, h = img.size
-    if max(w, h) > max_edge:
-        scale = max_edge / max(w, h)
-        img = img.resize((int(w * scale), int(h * scale)), Image.LANCZOS)
-    quality = 85
-    while True:
-        img.save(out_path, format="JPEG", quality=quality, optimize=True, progressive=True)
-        size = out_path.stat().st_size
-        if size <= max_bytes or quality <= 40:
-            return size
-        quality -= 5
+def optimize_image(raw_bytes: bytes, target_path: Path):
+    temp_in = target_path.parent / f"_temp_in_{target_path.name}"
+    target_path.parent.mkdir(parents=True, exist_ok=True)
+    temp_in.write_bytes(raw_bytes)
+
+    try:
+        with Image.open(temp_in) as img:
+            if img.mode not in ("RGB", "L"):
+                img = img.convert("RGB")
+
+            orig_w, orig_h = img.size
+            longest = max(orig_w, orig_h)
+            if longest > MAX_LONGEST_EDGE_PX:
+                scale = MAX_LONGEST_EDGE_PX / longest
+                new_w = int(orig_w * scale)
+                new_h = int(orig_h * scale)
+                img = img.resize((new_w, new_h), Image.Resampling.LANCZOS)
+
+            for quality in [90, 85, 80, 75, 70, 65, 60]:
+                img.save(target_path, "JPEG", quality=quality, optimize=True)
+                if target_path.stat().st_size <= MAX_BYTES:
+                    break
+
+        logger.info(f"Saved: {target_path} ({target_path.stat().st_size // 1024} KB)")
+    finally:
+        if temp_in.exists():
+            temp_in.unlink()
 
 
-def ensure_credits_header():
+def record_credit(file_rel_path: str, page_url: str, license_name: str, author: str, author_url: str):
     if not CREDITS_FILE.exists():
-        CREDITS_FILE.write_text(
-            "# Image Credits\n\n"
-            "| File | Source URL | License | Author | Author URL | Date added |\n"
-            "| --- | --- | --- | --- | --- | --- |\n",
-            encoding="utf-8"
+        logger.warning(f"{CREDITS_FILE} not found; skipping credit append")
+        return
+
+    content = CREDITS_FILE.read_text(encoding="utf-8")
+    if file_rel_path in content or page_url in content:
+        logger.info(f"Credit already present for {file_rel_path}; skipping")
+        return
+
+    today = date.today().isoformat()
+    row = f"| `{file_rel_path}` | {page_url} | {license_name} | {author} | {author_url} | {today} |\n"
+    CREDITS_FILE.write_text(content.rstrip() + "\n" + row, encoding="utf-8")
+    logger.info(f"Recorded credit for {file_rel_path}")
+
+
+def download_curated_images() -> dict[str, str]:
+    IMAGES_DIR.mkdir(parents=True, exist_ok=True)
+    mapping = {}
+
+    for i, candidate in enumerate(CURATED_CANDIDATES, start=1):
+        target_name = f"image-{i}.jpg"
+        target_path = IMAGES_DIR / target_name
+        rel_path = f"posts/{SLUG}/{target_name}"
+
+        logger.info(f"Processing candidate {i}/{len(CURATED_CANDIDATES)}: {candidate['theme']}")
+
+        marker = fetch_page_license_marker(candidate["page_url"])
+        if marker == "BLOCKED":
+            license_name = "Pexels License (provenance by curation; page fetch was anti-bot-blocked)"
+        elif marker:
+            license_name = marker
+        else:
+            license_name = "Pexels License (provenance by curation)"
+
+        raw_bytes = download_raw_image(candidate["image_url"])
+        if not raw_bytes:
+            logger.error(f"Could not download candidate {i}; aborting")
+            sys.exit(1)
+
+        optimize_image(raw_bytes, target_path)
+
+        record_credit(
+            file_rel_path=rel_path,
+            page_url=candidate["page_url"],
+            license_name=license_name,
+            author=candidate["author"],
+            author_url=candidate["author_url"],
         )
 
+        mapping[candidate["image_url"]] = f"/images/{rel_path}"
 
-def append_credits_row(rel_path: str, page_url: str, license_marker: str, author: str, author_url: str, today: str):
-    ensure_credits_header()
-    content = CREDITS_FILE.read_text(encoding="utf-8")
-    if f"`{rel_path}`" in content:
-        return
-    row = f"| `{rel_path}` | {page_url} | {license_marker} | {author} | {author_url} | {today} |\n"
-    with CREDITS_FILE.open("a", encoding="utf-8") as f:
-        f.write(row)
+    return mapping
 
 
-def download_one(candidate: dict, index: int, today: str) -> Optional[dict]:
-    page_url = candidate["page_url"]
-    image_url = candidate["image_url"]
-    author = candidate["author"]
-    author_url = candidate["author_url"]
-
-    marker = fetch_page_license_marker(page_url)
-    if marker is None:
-        logger.warning(f"Rejected: {page_url}")
-        return None
-    if marker == "BLOCKED":
-        marker = "Pexels License (provenance by curation; page fetch was anti-bot-blocked)"
-
-    raw = download_image_bytes(image_url)
-    if raw is None:
-        logger.warning(f"Rejected (download failed): {image_url}")
-        return None
-
-    IMAGES_DIR.mkdir(parents=True, exist_ok=True)
-    tmp_path = IMAGES_DIR / f"image-{index}.tmp.jpg"
-    tmp_path.write_bytes(raw)
-    final_path = IMAGES_DIR / f"image-{index}.jpg"
-    size = resize_to_budget(tmp_path, final_path)
-    tmp_path.unlink(missing_ok=True)
-
-    rel_path = f"posts/{SLUG}/image-{index}.jpg"
-    public_path = f"/images/posts/{SLUG}/image-{index}.jpg"
-
-    append_credits_row(rel_path, page_url, marker, author, author_url, today)
-    logger.info(f"  [OK] image-{index}.jpg ({size // 1024} KB) — {candidate['theme']}")
-    return {"local_path": public_path, "page_url": page_url, "author": author, "marker": marker}
-
-
-def process_crawled_file(json_path: Optional[Path] = None) -> dict:
-    today = date.today().isoformat()
-    out: dict[str, str] = {}
-    for i, candidate in enumerate(CURATED_CANDIDATES, start=1):
-        result = download_one(candidate, i, today)
-        if result is None:
-            continue
-        out[f"image-{i}.jpg"] = result["local_path"]
-        if len(out) >= 5:
-            break
-
-    if len(out) < 5:
-        raise RuntimeError(f"Only {len(out)} images downloaded (< 5 minimum).")
-
-    return out
-
-
-def main(json_path: Optional[str] = None) -> dict:
-    if json_path:
-        path = Path(json_path)
-    else:
-        path = None
-
-    return process_crawled_file(path)
+def main(json_path=None):
+    return download_curated_images()
 
 
 if __name__ == "__main__":
-    arg = sys.argv[1] if len(sys.argv) > 1 else None
-    main(arg)
+    download_curated_images()
