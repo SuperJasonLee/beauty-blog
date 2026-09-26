@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-09-25"
+SLUG = "daily-medical-aesthetics-news-2026-09-26"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215019/",
-        "image_url": "https://images.pexels.com/photos/5215019/pexels-photo-5215019.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215020/",
+        "image_url": "https://images.pexels.com/photos/5215020/pexels-photo-5215020.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Aesthetic dermatologist providing in-depth consultation on polynucleotide biostimulation, micro-pulsed focused ultrasound, and calcium hydroxylapatite lifting vectors",
+        "theme": "Dermatology specialist providing consultation on stem cell exosomes, pulsed-wave radiofrequency microneedling, PLLA neocollagenesis, and dual-wavelength laser vascular therapies",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069437/",
-        "image_url": "https://images.pexels.com/photos/5069437/pexels-photo-5069437.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069427/",
+        "image_url": "https://images.pexels.com/photos/5069427/pexels-photo-5069427.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Clinical specialist performing high-molecular-weight polynucleotide PN mesotherapy micro-injections for dermal rejuvenation and extracellular matrix repair",
+        "theme": "Clinical aesthetic specialist administering purified stem cell-derived exosome EV formulation via high-precision transdermal delivery for dermal matrix repair",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069452/",
-        "image_url": "https://images.pexels.com/photos/5069452/pexels-photo-5069452.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
-        "author": "cottonbro studio",
-        "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Medical aesthetic practitioner administering advanced micro-pulsed focused ultrasound MPT treatment for precise SMAS tightening and contour elevation",
+        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446680/",
+        "image_url": "https://images.pexels.com/photos/7446680/pexels-photo-7446680.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "author": "Gustavo Fring",
+        "author_url": "https://www.pexels.com/@gustavofring/",
+        "theme": "Aesthetic clinician operating pulsed-wave fractional radiofrequency microneedling system for basement membrane repair and rosacea microvascular revision",
     },
     {
-        "page_url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-face-7581575/",
-        "image_url": "https://images.pexels.com/photos/7581575/pexels-photo-7581575.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
-        "author": "cottonbro studio",
-        "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Aesthetic doctor administering supraperiosteal calcium hydroxylapatite CaHA microsphere bio-stimulator with micro-cannula for mandibular angle enhancement",
+        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586712/",
+        "image_url": "https://images.pexels.com/photos/4586712/pexels-photo-4586712.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "author": "Anna Shvets",
+        "author_url": "https://www.pexels.com/@shvetsa/",
+        "theme": "Injector performing subdermal vector fanning of poly-L-lactic acid PLLA-SCA microparticle suspension for long-term type I neocollagenesis and structural support",
     },
     {
-        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762888/",
-        "image_url": "https://images.pexels.com/photos/3762888/pexels-photo-3762888.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762869/",
+        "image_url": "https://images.pexels.com/photos/3762869/pexels-photo-3762869.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Client presenting flawless skin texture, well-defined jawline contours, and harmonious facial balance following regenerative aesthetic procedures",
+        "theme": "Female patient presenting luminous skin tone, refined pores, and rejuvenated facial contours following combination aesthetic regenerative procedures",
     },
 ]
 
