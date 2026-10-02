@@ -1,4 +1,4 @@
-"""Image downloader for daily medical aesthetics news."""
+"""Image downloader for daily medical aesthetics news for 2026-10-02."""
 
 import json
 import logging
@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-09-30"
+SLUG = "daily-medical-aesthetics-news-2026-10-02"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215022/",
-        "image_url": "https://images.pexels.com/photos/5215022/pexels-photo-5215022.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215023/",
+        "image_url": "https://images.pexels.com/photos/5215023/pexels-photo-5215023.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Clinical aesthetic dermatologist consulting with patient on recombinant type XVII collagen mesotherapy, ultrapulse CO2 laser scar revision, PCL-HA hybrid filler lifting, and HIFEM+RF body contouring",
+        "theme": "Clinical aesthetic dermatologist consulting with patient on rhFN matrix restoration, picosecond LIOB fractional laser, PDLLA-rhCol III porous microsphere injection, and 448kHz RET/CET fascial mobilization",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069433/",
-        "image_url": "https://images.pexels.com/photos/5069433/pexels-photo-5069433.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069426/",
+        "image_url": "https://images.pexels.com/photos/5069426/pexels-photo-5069426.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Aesthetic specialist performing precision mesotherapy micro-droplet delivery of recombinant humanized type XVII collagen (rhCol XVII) for basement membrane and DEJ hemidesmosome repair",
+        "theme": "Aesthetic clinician performing precision mesotherapy delivery of recombinant humanized fibronectin (rhFN) nanocomplex for basement membrane microvascular repair and integrin α5β1 activation",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446654/",
-        "image_url": "https://images.pexels.com/photos/7446654/pexels-photo-7446654.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446678/",
+        "image_url": "https://images.pexels.com/photos/7446678/pexels-photo-7446678.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Gustavo Fring",
         "author_url": "https://www.pexels.com/@gustavofring/",
-        "theme": "Laser surgeon administering ultrapulse fractional CO2 laser ablation combined with autologous platelet-rich fibrin (PRF) exosome membrane coverage for scar remodeling and rapid re-epithelialization",
+        "theme": "Laser specialist administering picosecond holographic fractional microbeam laser (1064nm) inducing intra-dermal optical breakdown (LIOB) for deep melasma and acoustic cavitation remodeling",
     },
     {
-        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586714/",
-        "image_url": "https://images.pexels.com/photos/4586714/pexels-photo-4586714.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586715/",
+        "image_url": "https://images.pexels.com/photos/4586715/pexels-photo-4586715.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Anna Shvets",
         "author_url": "https://www.pexels.com/@shvetsa/",
-        "theme": "Plastic surgeon performing deep supra-periosteal blunt cannula injection of polycaprolactone-hyaluronic acid (PCL-HA) hybrid scaffold for zygomatic and mandibular ligamentous vector lifting",
+        "theme": "Plastic surgeon performing deep supra-periosteal blunt cannula injection of poly-D,L-lactic acid (PDLLA) porous microspheres hybridized with recombinant type III collagen for midface vector projection",
     },
     {
-        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762867/",
-        "image_url": "https://images.pexels.com/photos/3762867/pexels-photo-3762867.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762868/",
+        "image_url": "https://images.pexels.com/photos/3762868/pexels-photo-3762868.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Patient exhibiting flawless dermal elasticity, defined mandibular contour, and rejuvenated facial architecture following multi-dimensional aesthetic combination therapies",
+        "theme": "Patient demonstrating restored skin microvascular health, lifted midface contour, and rejuvenated facial architecture following multi-dimensional non-invasive aesthetic treatments",
     },
 ]
 
