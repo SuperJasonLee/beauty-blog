@@ -1,4 +1,4 @@
-"""Image downloader for daily medical aesthetics news for 2026-10-03."""
+"""Image downloader for daily medical aesthetics news for 2026-10-08."""
 
 import json
 import logging
@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-10-03"
+SLUG = "daily-medical-aesthetics-news-2026-10-08"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215025/",
-        "image_url": "https://images.pexels.com/photos/5215025/pexels-photo-5215025.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215026/",
+        "image_url": "https://images.pexels.com/photos/5215026/pexels-photo-5215026.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Aesthetic physician consulting patient on engineered MSC-exosome therapy, dual-mode 755nm alexandrite laser, porous CaHA matrix, and MFU-V ultrasound with RF microneedling",
+        "theme": "Aesthetic physician consulting patient on engineered ADSC-exosome COL17A1 mRNA therapy, picosecond tri-wavelength laser, porous PCL-CMC hybrid matrix, and UHF impedance-adaptive RF microneedling",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069424/",
-        "image_url": "https://images.pexels.com/photos/5069424/pexels-photo-5069424.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069425/",
+        "image_url": "https://images.pexels.com/photos/5069425/pexels-photo-5069425.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Aesthetic clinician performing precision intradermal mesotherapy delivery of engineered CD44-targeting MSC-exosomes for dermal extracellular matrix restoration",
+        "theme": "Aesthetic clinician performing precision mesotherapy delivery of engineered dual-targeted ADSC-exosomes loaded with COL17A1 mRNA for DEJ basement membrane repair",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446677/",
-        "image_url": "https://images.pexels.com/photos/7446677/pexels-photo-7446677.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446675/",
+        "image_url": "https://images.pexels.com/photos/7446675/pexels-photo-7446675.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Gustavo Fring",
         "author_url": "https://www.pexels.com/@gustavofring/",
-        "theme": "Laser specialist administering dual-mode 755nm alexandrite laser treatment targeting epidermal-dermal pigmentary-vascular complexes and acoustic photorejuvenation",
+        "theme": "Laser specialist administering picosecond tri-wavelength (532/785/1064nm) laser for laser-induced optical breakdown and dermal papillary matrix remodeling",
     },
     {
-        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586717/",
-        "image_url": "https://images.pexels.com/photos/4586717/pexels-photo-4586717.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586718/",
+        "image_url": "https://images.pexels.com/photos/4586718/pexels-photo-4586718.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Anna Shvets",
         "author_url": "https://www.pexels.com/@shvetsa/",
-        "theme": "Aesthetic plastic surgeon performing deep supra-periosteal cannula injection of porous calcium hydroxyapatite (CaHA) microspheres hybridized with cohesive HA for midface vector lift",
+        "theme": "Aesthetic plastic surgeon performing deep supra-periosteal cannula injection of porous polycaprolactone (PCL) microspheres hybridized with CMC for midface vector lift",
     },
     {
-        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762866/",
-        "image_url": "https://images.pexels.com/photos/3762866/pexels-photo-3762866.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762865/",
+        "image_url": "https://images.pexels.com/photos/3762865/pexels-photo-3762865.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Patient exhibiting lifted jawline contours, restored dermal collagen density, and glowing complexional texture following multi-plane non-invasive rejuvenation",
+        "theme": "Patient exhibiting sharpened mandibular contours, restored dermal elasticity, and glowing complexion following multi-plane non-invasive rejuvenation",
     },
 ]
 
