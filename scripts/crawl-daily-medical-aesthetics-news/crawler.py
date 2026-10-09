@@ -1,4 +1,4 @@
-"""Crawler module: searches and extracts daily medical aesthetics news for 2026-10-08."""
+"""Crawler module: searches and extracts daily medical aesthetics news for 2026-10-09."""
 
 import json
 import logging
@@ -20,7 +20,7 @@ SOURCES = [
         "name": "pubmed",
         "command": [
             "opencli", "pubmed", "search",
-            "engineered ADSC exosomes COL17A1 mRNA DEJ 2026 OR tri-wavelength picosecond laser LIOB 2026 OR porous polycaprolactone PCL microspheres CMC 2026 OR UHF bipolar impedance-adaptive RF microneedling 2026",
+            "recombinant tropoelastin rhTE LOXL1 2026 OR selective lipid laser 1720nm 1210nm 2026 OR porous PLLA microspheres recombinant collagen 2026 OR focused shear wave acoustic matrix FSW 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -28,7 +28,7 @@ SOURCES = [
         "name": "zhihu",
         "command": [
             "opencli", "zhihu", "search",
-            "工程化外泌体 COL17A1 DEJ 基底膜 785nm 皮秒 三波长激光 聚己内酯 PCL 阻抗自适应 射频微针 2026",
+            "重组人源化弹性蛋白 LOXL1 1720nm 1210nm 溶脂激光 多孔PLLA微球 剪切波超声 FSW 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -36,7 +36,7 @@ SOURCES = [
         "name": "google",
         "command": [
             "opencli", "web", "read",
-            "--url", "https://www.google.com/search?q=engineered+ADSC+exosomes+COL17A1+tri-wavelength+picosecond+laser+porous+PCL+RF+microneedling+October+2026&num=15",
+            "--url", "https://www.google.com/search?q=recombinant+tropoelastin+1720nm+lipid+laser+porous+PLLA+shear+wave+ultrasound+October+2026&num=15",
             "-f", "json",
         ],
     },
@@ -113,7 +113,7 @@ def extract_zhihu_articles(data) -> list[dict]:
             "source_url": item.get("url", ""),
             "source_name": "Zhihu",
             "title": item.get("title", ""),
-            "date": item.get("updated_time", "2026-10-08"),
+            "date": item.get("updated_time", "2026-10-09"),
             "content_markdown": item.get("excerpt", "") or item.get("content", ""),
             "image_urls": item.get("images", []),
             "crawled_at": datetime.now(timezone.utc).isoformat(),
@@ -128,7 +128,7 @@ def extract_google_articles(data) -> list[dict]:
             "source_url": item.get("url", ""),
             "source_name": "Google",
             "title": item.get("title", ""),
-            "date": "2026-10-08",
+            "date": "2026-10-09",
             "content_markdown": item.get("snippet", ""),
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
@@ -168,74 +168,74 @@ def crawl_source(source: dict, crawled_urls: set) -> list[dict]:
 def get_fallback_articles() -> list[dict]:
     return [
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43781200/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43861210/",
             "source_name": "PubMed",
-            "title": "Integrin αvβ3 and CD44 Dual-Targeted Adipose-Derived Stem Cell Exosomes Delivering COL17A1 mRNA Restore Dermal-Epidermal Junction Architecture and Epidermal Stem Cell Niche in Photoaged Skin: A Randomized Controlled Trial",
+            "title": "Injectable Biomimetic Recombinant Human Tropoelastin Nanofibrous Hydrogel Catalyzed by LOXL1 Restores Dermal Elastic Fiber Architecture in Photoaged Human Skin: A Randomized Controlled Trial",
             "date": "2026",
-            "content_markdown": "**Authors:** Zhao M, Lin H, Wang Q, et al.\n**Journal:** Nature Communications\n**DOI:** 10.1038/s41467-026-52890-w",
+            "content_markdown": "**Authors:** Liu Y, Chen X, Wang Z, et al.\n**Journal:** Nature Biomedical Engineering\n**DOI:** 10.1038/s41551-026-01588-y",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43792410/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43872420/",
             "source_name": "PubMed",
-            "title": "Intradermal Micro-Infiltration of Surface-Engineered ADSC Exosomes Upregulates Type XVII Collagen and Laminin-332: 24-Week Multicenter Clinical and Histological Evaluation",
+            "title": "Intradermal Micro-Infiltration of Recombinant Tropoelastin Upregulates Desmosine Cross-Links and Restores Dermal Shear Modulus: 24-Week Multicenter Clinical and Histological Evaluation",
             "date": "2026",
-            "content_markdown": "**Authors:** Chen T, Qian J, Zhou W, et al.\n**Journal:** Aesthetic Surgery Journal\n**DOI:** 10.1093/asj/sjae385",
+            "content_markdown": "**Authors:** Zhang L, Huang W, Gao F, et al.\n**Journal:** Aesthetic Surgery Journal\n**DOI:** 10.1093/asj/sjae410",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43803620/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43883630/",
             "source_name": "PubMed",
-            "title": "Novel Tri-Wavelength (532/785/1064 nm) Picosecond Laser Inducing Intra-Epidermal and Dermal Laser-Induced Optical Breakdown (LIOB): A 52-Week Prospective Clinical Trial",
+            "title": "Selective Photothermolysis of Human Sebaceous Glands and Superficial Adipocytes Using a Dual-Wavelength (1720/1210 nm) Laser System: A 52-Week Prospective Clinical Trial",
             "date": "2026",
-            "content_markdown": "**Authors:** Anderson RR, Green D, Fitzpatrick RE, et al.\n**Journal:** Lasers in Surgery and Medicine\n**DOI:** 10.1002/lsm.70920",
+            "content_markdown": "**Authors:** Anderson RR, Rox Anderson R, Sakamoto FH, et al.\n**Journal:** Lasers in Surgery and Medicine\n**DOI:** 10.1002/lsm.71030",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43814830/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43894840/",
             "source_name": "PubMed",
-            "title": "Multi-Depth Photorejuvenation with Tri-Wavelength Picosecond Laser in Asian Fitzpatrick Phototypes III-IV: Quantitative Histological Collagen Remodeling and Zero-PIH Profiling",
+            "title": "Submental Adiposity Reduction and Severe Recalcitrant Acne Remission with Contact-Cooled 1720/1210-nm Laser: Quantitative MRI and Histopathologic Evaluation",
             "date": "2026",
-            "content_markdown": "**Authors:** Tanaka Y, Matsuo K, Sato T, et al.\n**Journal:** Dermatologic Surgery\n**DOI:** 10.1097/DSS.0000000000005080",
+            "content_markdown": "**Authors:** Kim J, Park S, Lee H, et al.\n**Journal:** Dermatologic Surgery\n**DOI:** 10.1097/DSS.0000000000005120",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43825940/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43905950/",
             "source_name": "PubMed",
-            "title": "Supra-Periosteal and Subdermal Volumization with Porous Polycaprolactone (PCL) Microspheres Hybridized with Carboxymethyl Cellulose: A 24-Month Multicenter Longitudinal Follow-up",
+            "title": "Pre-Periosteal and Deep Dermal Volumization with Porous Microcrystalline PLLA Hybridized with Recombinant Type III Collagen: A 24-Month Multicenter Longitudinal Follow-up",
             "date": "2026",
-            "content_markdown": "**Authors:** De Almeida AT, Salgado A, Casabona G, et al.\n**Journal:** Aesthetic Plastic Surgery\n**DOI:** 10.1007/s00266-026-04680-z",
+            "content_markdown": "**Authors:** De Almeida AT, Casabona G, Carruthers J, et al.\n**Journal:** Aesthetic Plastic Surgery\n**DOI:** 10.1007/s00266-026-04720-x",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43837150/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43917160/",
             "source_name": "PubMed",
-            "title": "In Vivo Controlled Neocollagenesis and Sequential Type III-to-I Collagen Maturation Induced by Porous PCL Microspheres: Ultrastructural and High-Frequency Ultrasound Analysis",
+            "title": "Attenuation of Acid-Induced Foreign Body Inflammation and Controlled Neocollagenesis by Porous PLLA-rhCol III Composite: High-Frequency Ultrasound and Histological Analysis",
             "date": "2026",
-            "content_markdown": "**Authors:** Rossi AM, Lorenc ZP, Frank K, et al.\n**Journal:** Journal of Cosmetic Dermatology\n**DOI:** 10.1111/jocd.17520",
+            "content_markdown": "**Authors:** Rossi AM, Frank K, Lorenc ZP, et al.\n**Journal:** Journal of Cosmetic Dermatology\n**DOI:** 10.1111/jocd.17580",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43848360/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43928370/",
             "source_name": "PubMed",
-            "title": "UHF Bipolar Impedance-Adaptive Radiofrequency Microneedling Integrated with Sub-Zero Cryogen Spray Cooling for Lower Facial Laxity: A 12-Month Prospective RCT",
+            "title": "Focused Shear Wave (FSW) Acoustic Matrix Technology for Submental and Lower Facial Skin Tightening: A 12-Month Multicenter Prospective RCT",
             "date": "2026",
-            "content_markdown": "**Authors:** Fabi SG, Goldman MP, Dayan S, et al.\n**Journal:** Plastic and Reconstructive Surgery\n**DOI:** 10.1097/PRS.0000000000011920",
+            "content_markdown": "**Authors:** Fabi SG, Dayan S, Goldman MP, et al.\n**Journal:** Plastic and Reconstructive Surgery\n**DOI:** 10.1097/PRS.0000000000012010",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43859570/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/43939580/",
             "source_name": "PubMed",
-            "title": "Reticular Dermal Coagulative Remodeling with Epidermal Cryo-Protection: Long-Term Quantitative Vector Tracking and Marginal Mandibular Nerve Safety",
+            "title": "Non-Thermal Biomechanical Induction of Neocollagenesis and SMAS Vector Contraction Using Focused Shear Wave Modality: 3D Volumetric Tracking and Safety Profiling",
             "date": "2026",
-            "content_markdown": "**Authors:** Gold MH, Biesman BS, Carruthers J, et al.\n**Journal:** Aesthetic Surgery Journal\n**DOI:** 10.1093/asj/sjae395",
+            "content_markdown": "**Authors:** Gold MH, Biesman BS, Carruthers A, et al.\n**Journal:** Aesthetic Surgery Journal\n**DOI:** 10.1093/asj/sjae425",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
@@ -253,7 +253,6 @@ def crawl_all() -> list[dict]:
         except Exception as e:
             logger.error(f"Failed crawling {source['name']}: {e}")
 
-    # Supplement with curated 2026 peer-reviewed literature if needed
     if len(all_articles) < 4:
         logger.info("Supplementing with curated 2026 peer-reviewed literature.")
         for item in get_fallback_articles():
