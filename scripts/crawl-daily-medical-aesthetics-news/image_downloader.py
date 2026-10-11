@@ -1,4 +1,4 @@
-"""Image downloader for daily medical aesthetics news for 2026-10-09."""
+"""Image downloader for daily medical aesthetics news for 2026-10-11."""
 
 import json
 import logging
@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-10-09"
+SLUG = "daily-medical-aesthetics-news-2026-10-11"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215027/",
-        "image_url": "https://images.pexels.com/photos/5215027/pexels-photo-5215027.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215028/",
+        "image_url": "https://images.pexels.com/photos/5215028/pexels-photo-5215028.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Aesthetic medicine physician consulting patient on recombinant tropoelastin hydrogel, dual-wavelength selective lipid laser, porous PLLA composite matrix, and focused shear wave contouring",
+        "theme": "Aesthetic physician consulting patient on recombinant collagen XVII microneedle delivery, 675nm collagen laser, silk fibroin-nHA hydrogel, and coaxial RF-plasma periorbital contouring",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069423/",
-        "image_url": "https://images.pexels.com/photos/5069423/pexels-photo-5069423.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069400/",
+        "image_url": "https://images.pexels.com/photos/5069400/pexels-photo-5069400.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Dermatologist administering intradermal micro-droplet infiltration of biomimetic recombinant tropoelastin for elastic fiber network renewal",
+        "theme": "Dermatologist administering dissolving microneedle array with recombinant type XVII collagen and alpha-Klotho nanovesicles for follicle stem cell niche rejuvenation",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446676/",
-        "image_url": "https://images.pexels.com/photos/7446676/pexels-photo-7446676.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446674/",
+        "image_url": "https://images.pexels.com/photos/7446674/pexels-photo-7446674.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Gustavo Fring",
         "author_url": "https://www.pexels.com/@gustavofring/",
-        "theme": "Laser specialist performing selective lipid photothermolysis with dual-wavelength 1720nm/1210nm system for submental fat reduction and sebaceous regulation",
+        "theme": "Laser specialist operating ultra-short pulsed 675nm red laser system for selective dermal collagen photothermolysis without epidermal melanin interference",
     },
     {
-        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586719/",
-        "image_url": "https://images.pexels.com/photos/4586719/pexels-photo-4586719.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586716/",
+        "image_url": "https://images.pexels.com/photos/4586716/pexels-photo-4586716.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Anna Shvets",
         "author_url": "https://www.pexels.com/@shvetsa/",
-        "theme": "Plastic surgeon performing deep pre-periosteal cannula delivery of porous microcrystalline PLLA hybridized with recombinant type III collagen",
+        "theme": "Aesthetic surgeon performing deep pre-periosteal blunt cannula delivery of biomimetic silk fibroin-nanohydroxyapatite composite hydrogel for midface volume anchorage",
     },
     {
-        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762863/",
-        "image_url": "https://images.pexels.com/photos/3762863/pexels-photo-3762863.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762861/",
+        "image_url": "https://images.pexels.com/photos/3762861/pexels-photo-3762861.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Patient demonstrating restored dermal elasticity, sculpted mandibular contour, and refined complexion following multi-modal rejuvenation",
+        "theme": "Patient demonstrating taut periorbital contours, dense hair follicle vitality, and refined dermal collagen elasticity following multi-modal rejuvenation",
     },
 ]
 
@@ -194,7 +194,7 @@ def download_curated_images() -> dict[str, str]:
             license_name=license_name,
             author=candidate["author"],
             author_url=candidate["author_url"],
-        )
+            )
 
         mapping[candidate["image_url"]] = f"/images/{rel_path}"
 
