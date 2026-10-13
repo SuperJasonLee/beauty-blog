@@ -1,4 +1,4 @@
-"""Image downloader for daily medical aesthetics news for 2026-10-11."""
+"""Image downloader for daily medical aesthetics news for 2026-10-13."""
 
 import json
 import logging
@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-10-11"
+SLUG = "daily-medical-aesthetics-news-2026-10-13"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215028/",
-        "image_url": "https://images.pexels.com/photos/5215028/pexels-photo-5215028.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215029/",
+        "image_url": "https://images.pexels.com/photos/5215029/pexels-photo-5215029.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Aesthetic physician consulting patient on recombinant collagen XVII microneedle delivery, 675nm collagen laser, silk fibroin-nHA hydrogel, and coaxial RF-plasma periorbital contouring",
+        "theme": "Aesthetic physician consulting patient on ADSC exosome mRNA delivery, titanium-sapphire femtosecond holographic laser, monodisperse PCL-rhFN hydrogel, and 4D vector radiofrequency lifting",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069400/",
-        "image_url": "https://images.pexels.com/photos/5069400/pexels-photo-5069400.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069399/",
+        "image_url": "https://images.pexels.com/photos/5069399/pexels-photo-5069399.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Dermatologist administering dissolving microneedle array with recombinant type XVII collagen and alpha-Klotho nanovesicles for follicle stem cell niche rejuvenation",
+        "theme": "Dermatologist administering sonodynamic transdermal delivery system with engineered ADSC-exosomes and collagen-encoding LNP-mRNA nanovesicles for dermal extracellular matrix senescence reversal",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446674/",
-        "image_url": "https://images.pexels.com/photos/7446674/pexels-photo-7446674.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446673/",
+        "image_url": "https://images.pexels.com/photos/7446673/pexels-photo-7446673.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Gustavo Fring",
         "author_url": "https://www.pexels.com/@gustavofring/",
-        "theme": "Laser specialist operating ultra-short pulsed 675nm red laser system for selective dermal collagen photothermolysis without epidermal melanin interference",
+        "theme": "Laser surgeon performing non-thermal laser-induced optical breakdown (LIOB) with dual-wavelength 730nm/1064nm femtosecond holographic array for recalcitrant melasma and dermal melanosis",
     },
     {
-        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586716/",
-        "image_url": "https://images.pexels.com/photos/4586716/pexels-photo-4586716.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586710/",
+        "image_url": "https://images.pexels.com/photos/4586710/pexels-photo-4586710.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Anna Shvets",
         "author_url": "https://www.pexels.com/@shvetsa/",
-        "theme": "Aesthetic surgeon performing deep pre-periosteal blunt cannula delivery of biomimetic silk fibroin-nanohydroxyapatite composite hydrogel for midface volume anchorage",
+        "theme": "Plastic surgeon administering deep pre-periosteal blunt cannula delivery of monodisperse microfluidic PCL microspheres with recombinant fibronectin hydrogel for midface osteomimetic volume restoration",
     },
     {
-        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762861/",
-        "image_url": "https://images.pexels.com/photos/3762861/pexels-photo-3762861.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762862/",
+        "image_url": "https://images.pexels.com/photos/3762862/pexels-photo-3762862.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Patient demonstrating taut periorbital contours, dense hair follicle vitality, and refined dermal collagen elasticity following multi-modal rejuvenation",
+        "theme": "Female patient demonstrating well-defined mandibular definition, radiant skin barrier restoration, and youthful midface vector elevation following multimodal aesthetic intervention",
     },
 ]
 
@@ -100,21 +100,28 @@ def fetch_page_license_marker(page_url: str, timeout: int = 20) -> Optional[str]
         return None
 
 
-def download_raw_image(image_url: str, timeout: int = 30) -> Optional[bytes]:
-    try:
-        with httpx.Client(timeout=timeout, follow_redirects=True) as client:
-            resp = client.get(
-                image_url,
-                headers={
-                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-                    "Referer": "https://www.pexels.com/",
-                },
-            )
-            resp.raise_for_status()
-            return resp.content
-    except Exception as e:
-        logger.error(f"Failed to download image {image_url}: {e}")
-        return None
+def download_raw_image(image_url: str, timeout: int = 30, retries: int = 4) -> Optional[bytes]:
+    import time
+    for attempt in range(1, retries + 1):
+        try:
+            with httpx.Client(timeout=timeout, follow_redirects=True) as client:
+                resp = client.get(
+                    image_url,
+                    headers={
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                        "Referer": "https://www.pexels.com/",
+                    },
+                )
+                resp.raise_for_status()
+                return resp.content
+        except Exception as e:
+            logger.warning(f"Download attempt {attempt}/{retries} failed for {image_url}: {e}")
+            if attempt < retries:
+                time.sleep(2)
+            else:
+                logger.error(f"Failed to download image after {retries} attempts: {image_url}")
+                return None
+    return None
 
 
 def optimize_image(raw_bytes: bytes, target_path: Path):
@@ -171,6 +178,11 @@ def download_curated_images() -> dict[str, str]:
         target_path = IMAGES_DIR / target_name
         rel_path = f"posts/{SLUG}/{target_name}"
 
+        if target_path.exists() and target_path.stat().st_size > 0:
+            logger.info(f"Target image already exists: {target_path}")
+            mapping[candidate["image_url"]] = f"/images/{rel_path}"
+            continue
+
         logger.info(f"Processing candidate {i}/{len(CURATED_CANDIDATES)}: {candidate['theme']}")
 
         marker = fetch_page_license_marker(candidate["page_url"])
@@ -194,7 +206,7 @@ def download_curated_images() -> dict[str, str]:
             license_name=license_name,
             author=candidate["author"],
             author_url=candidate["author_url"],
-            )
+        )
 
         mapping[candidate["image_url"]] = f"/images/{rel_path}"
 
