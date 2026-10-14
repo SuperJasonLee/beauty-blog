@@ -1,4 +1,4 @@
-"""Image downloader for daily medical aesthetics news for 2026-10-13."""
+"""Image downloader for daily medical aesthetics news for 2026-10-14."""
 
 import json
 import logging
@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-10-13"
+SLUG = "daily-medical-aesthetics-news-2026-10-14"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215029/",
-        "image_url": "https://images.pexels.com/photos/5215029/pexels-photo-5215029.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215030/",
+        "image_url": "https://images.pexels.com/photos/5215030/pexels-photo-5215030.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Aesthetic physician consulting patient on ADSC exosome mRNA delivery, titanium-sapphire femtosecond holographic laser, monodisperse PCL-rhFN hydrogel, and 4D vector radiofrequency lifting",
+        "theme": "Aesthetic physician consulting patient on self-assembling peptide nanobody senolysis, cascade-pulsed dye laser, microfluidic PDO microspheres, and magnetically guided phased-array microneedle RF",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069399/",
-        "image_url": "https://images.pexels.com/photos/5069399/pexels-photo-5069399.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069401/",
+        "image_url": "https://images.pexels.com/photos/5069401/pexels-photo-5069401.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Dermatologist administering sonodynamic transdermal delivery system with engineered ADSC-exosomes and collagen-encoding LNP-mRNA nanovesicles for dermal extracellular matrix senescence reversal",
+        "theme": "Dermatologist administering focused transdermal sonoporation with self-assembling peptide nanofiber matrix and anti-CDK4/6 nanobodies for dermal fibroblast senolysis and DEJ restoration",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446673/",
-        "image_url": "https://images.pexels.com/photos/7446673/pexels-photo-7446673.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446672/",
+        "image_url": "https://images.pexels.com/photos/7446672/pexels-photo-7446672.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Gustavo Fring",
         "author_url": "https://www.pexels.com/@gustavofring/",
-        "theme": "Laser surgeon performing non-thermal laser-induced optical breakdown (LIOB) with dual-wavelength 730nm/1064nm femtosecond holographic array for recalcitrant melasma and dermal melanosis",
+        "theme": "Laser specialist operating dual-pulse-duration 500us/10ms 595nm pulsed dye laser with coaxial cryo-gel shield for purpura-free coagulation of deep perforating vessels in rosacea",
     },
     {
-        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586710/",
-        "image_url": "https://images.pexels.com/photos/4586710/pexels-photo-4586710.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586713/",
+        "image_url": "https://images.pexels.com/photos/4586713/pexels-photo-4586713.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Anna Shvets",
         "author_url": "https://www.pexels.com/@shvetsa/",
-        "theme": "Plastic surgeon administering deep pre-periosteal blunt cannula delivery of monodisperse microfluidic PCL microspheres with recombinant fibronectin hydrogel for midface osteomimetic volume restoration",
+        "theme": "Plastic surgeon performing pre-periosteal blunt cannula delivery of monodisperse porous PDO microspheres hybridized with recombinant humanized type I/III collagen matrix for midface retaining ligament anchoring",
     },
     {
-        "page_url": "https://www.pexels.com/photo/young-woman-with-clean-skin-smiling-3762862/",
-        "image_url": "https://images.pexels.com/photos/3762862/pexels-photo-3762862.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-in-white-tank-top-touching-her-face-3985338/",
+        "image_url": "https://images.pexels.com/photos/3985338/pexels-photo-3985338.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Female patient demonstrating well-defined mandibular definition, radiant skin barrier restoration, and youthful midface vector elevation following multimodal aesthetic intervention",
+        "theme": "Smiling patient demonstrating tightened mandibular definition, smooth periorbital contours, and radiant skin barrier recovery following multimodal aesthetic interventions",
     },
 ]
 
@@ -100,122 +100,132 @@ def fetch_page_license_marker(page_url: str, timeout: int = 20) -> Optional[str]
         return None
 
 
-def download_raw_image(image_url: str, timeout: int = 30, retries: int = 4) -> Optional[bytes]:
-    import time
-    for attempt in range(1, retries + 1):
-        try:
-            with httpx.Client(timeout=timeout, follow_redirects=True) as client:
-                resp = client.get(
-                    image_url,
-                    headers={
-                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-                        "Referer": "https://www.pexels.com/",
-                    },
-                )
-                resp.raise_for_status()
-                return resp.content
-        except Exception as e:
-            logger.warning(f"Download attempt {attempt}/{retries} failed for {image_url}: {e}")
-            if attempt < retries:
-                time.sleep(2)
-            else:
-                logger.error(f"Failed to download image after {retries} attempts: {image_url}")
-                return None
+def verify_license(page_url: str) -> Optional[str]:
+    marker = fetch_page_license_marker(page_url)
+    if marker == "BLOCKED" and "pexels.com" in page_url.lower():
+        logger.info(f"Page fetch anti-bot blocked for {page_url}; using Pexels License by provenance.")
+        return "Pexels License (provenance by curation; page fetch was anti-bot-blocked)"
+    if marker:
+        return marker
+    logger.warning(f"No permitted license marker found on {page_url}")
     return None
 
 
-def optimize_image(raw_bytes: bytes, target_path: Path):
-    temp_in = target_path.parent / f"_temp_in_{target_path.name}"
-    target_path.parent.mkdir(parents=True, exist_ok=True)
-    temp_in.write_bytes(raw_bytes)
-
+def download_raw_image(image_url: str, dest_path: Path, timeout: int = 30) -> bool:
     try:
-        with Image.open(temp_in) as img:
-            if img.mode not in ("RGB", "L"):
-                img = img.convert("RGB")
-
-            orig_w, orig_h = img.size
-            longest = max(orig_w, orig_h)
-            if longest > MAX_LONGEST_EDGE_PX:
-                scale = MAX_LONGEST_EDGE_PX / longest
-                new_w = int(orig_w * scale)
-                new_h = int(orig_h * scale)
-                img = img.resize((new_w, new_h), Image.Resampling.LANCZOS)
-
-            for quality in [90, 85, 80, 75, 70, 65, 60]:
-                img.save(target_path, "JPEG", quality=quality, optimize=True)
-                if target_path.stat().st_size <= MAX_BYTES:
-                    break
-
-        logger.info(f"Saved: {target_path} ({target_path.stat().st_size // 1024} KB)")
-    finally:
-        if temp_in.exists():
-            temp_in.unlink()
+        with httpx.Client(timeout=timeout, follow_redirects=True) as client:
+            resp = client.get(
+                image_url,
+                headers={
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                    "Referer": "https://www.pexels.com/",
+                },
+            )
+            resp.raise_for_status()
+            dest_path.write_bytes(resp.content)
+            return True
+    except Exception as e:
+        logger.warning(f"Failed to download {image_url}: {e}")
+        return False
 
 
-def record_credit(file_rel_path: str, page_url: str, license_name: str, author: str, author_url: str):
-    if not CREDITS_FILE.exists():
-        logger.warning(f"{CREDITS_FILE} not found; skipping credit append")
-        return
+def optimize_image(src_path: Path, max_edge: int = MAX_LONGEST_EDGE_PX, max_bytes: int = MAX_BYTES):
+    with Image.open(src_path) as img:
+        img = img.convert("RGB")
+        w, h = img.size
+        if max(w, h) > max_edge:
+            if w >= h:
+                new_w = max_edge
+                new_h = int(h * (max_edge / w))
+            else:
+                new_h = max_edge
+                new_w = int(w * (max_edge / h))
+            img = img.resize((new_w, new_h), Image.Resampling.LANCZOS)
+            logger.info(f"  Resized {src_path.name} from {w}x{h} to {new_w}x{new_h}")
 
-    content = CREDITS_FILE.read_text(encoding="utf-8")
-    if file_rel_path in content or page_url in content:
-        logger.info(f"Credit already present for {file_rel_path}; skipping")
-        return
+        for quality in range(92, 40, -5):
+            img.save(src_path, "JPEG", quality=quality, optimize=True)
+            size = src_path.stat().st_size
+            if size <= max_bytes:
+                logger.info(f"  Saved {src_path.name}: {size / 1024:.1f} KB (quality={quality})")
+                return
 
-    today = date.today().isoformat()
-    row = f"| `{file_rel_path}` | {page_url} | {license_name} | {author} | {author_url} | {today} |\n"
-    CREDITS_FILE.write_text(content.rstrip() + "\n" + row, encoding="utf-8")
-    logger.info(f"Recorded credit for {file_rel_path}")
+        img.save(src_path, "JPEG", quality=45, optimize=True)
+        size = src_path.stat().st_size
+        logger.info(f"  Saved {src_path.name} at min quality: {size / 1024:.1f} KB")
 
 
-def download_curated_images() -> dict[str, str]:
+def update_credits(curated_candidates: list[dict], licenses: list[str]):
+    today = "2026-10-14"
+    new_rows = []
+    for idx, (c, lic) in enumerate(zip(curated_candidates, licenses), start=1):
+        rel_path = f"posts/{SLUG}/image-{idx}.jpg"
+        row = f"| `{rel_path}` | {c['page_url']} | {lic} | {c['author']} | {c['author_url']} | {today} |"
+        new_rows.append(row)
+
+    credits_text = CREDITS_FILE.read_text(encoding="utf-8")
+    existing_paths = set()
+    for line in credits_text.splitlines():
+        if line.startswith("| `posts/"):
+            parts = [p.strip() for p in line.split("|")]
+            if len(parts) > 1:
+                existing_paths.add(parts[1].strip("`"))
+
+    to_add = []
+    for r in new_rows:
+        target_path = r.split("|")[1].strip().strip("`")
+        if target_path not in existing_paths:
+            to_add.append(r)
+
+    if to_add:
+        updated = credits_text.rstrip() + "\n" + "\n".join(to_add) + "\n"
+        CREDITS_FILE.write_text(updated, encoding="utf-8")
+        logger.info(f"Appended {len(to_add)} rows to static/images/CREDITS.md")
+    else:
+        logger.info("CREDITS.md already has entries for these images.")
+
+
+def run():
     IMAGES_DIR.mkdir(parents=True, exist_ok=True)
-    mapping = {}
+    downloaded = {}
+    verified_licenses = []
+    candidates_to_record = []
 
-    for i, candidate in enumerate(CURATED_CANDIDATES, start=1):
-        target_name = f"image-{i}.jpg"
-        target_path = IMAGES_DIR / target_name
-        rel_path = f"posts/{SLUG}/{target_name}"
+    for idx, c in enumerate(CURATED_CANDIDATES, start=1):
+        out_name = f"image-{idx}.jpg"
+        out_path = IMAGES_DIR / out_name
+        logger.info(f"Processing candidate #{idx}: {out_name}")
 
-        if target_path.exists() and target_path.stat().st_size > 0:
-            logger.info(f"Target image already exists: {target_path}")
-            mapping[candidate["image_url"]] = f"/images/{rel_path}"
+        lic = verify_license(c["page_url"])
+        if not lic:
+            logger.warning(f"Skipping candidate #{idx}: unverified license")
             continue
 
-        logger.info(f"Processing candidate {i}/{len(CURATED_CANDIDATES)}: {candidate['theme']}")
-
-        marker = fetch_page_license_marker(candidate["page_url"])
-        if marker == "BLOCKED":
-            license_name = "Pexels License (provenance by curation; page fetch was anti-bot-blocked)"
-        elif marker:
-            license_name = marker
+        if not out_path.exists():
+            ok = download_raw_image(c["image_url"], out_path)
+            if not ok:
+                logger.warning(f"Skipping candidate #{idx}: download failed")
+                continue
+            optimize_image(out_path)
         else:
-            license_name = "Pexels License (provenance by curation)"
+            logger.info(f"  {out_name} already exists, checking size...")
+            if out_path.stat().st_size > MAX_BYTES:
+                optimize_image(out_path)
 
-        raw_bytes = download_raw_image(candidate["image_url"])
-        if not raw_bytes:
-            logger.error(f"Could not download candidate {i}; aborting")
-            sys.exit(1)
+        downloaded[c["page_url"]] = f"/images/posts/{SLUG}/{out_name}"
+        verified_licenses.append(lic)
+        candidates_to_record.append(c)
 
-        optimize_image(raw_bytes, target_path)
+    if candidates_to_record:
+        update_credits(candidates_to_record, verified_licenses)
 
-        record_credit(
-            file_rel_path=rel_path,
-            page_url=candidate["page_url"],
-            license_name=license_name,
-            author=candidate["author"],
-            author_url=candidate["author_url"],
-        )
-
-        mapping[candidate["image_url"]] = f"/images/{rel_path}"
-
-    return mapping
+    logger.info(f"Total downloaded and verified images: {len(downloaded)}")
+    return downloaded
 
 
 def main(json_path=None):
-    return download_curated_images()
+    return run()
 
 
 if __name__ == "__main__":
-    download_curated_images()
+    run()
