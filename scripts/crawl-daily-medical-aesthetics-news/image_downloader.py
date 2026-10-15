@@ -1,4 +1,4 @@
-"""Image downloader for daily medical aesthetics news for 2026-10-14."""
+"""Image downloader for daily medical aesthetics news for 2026-10-15."""
 
 import json
 import logging
@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-10-14"
+SLUG = "daily-medical-aesthetics-news-2026-10-15"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215030/",
-        "image_url": "https://images.pexels.com/photos/5215030/pexels-photo-5215030.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215031/",
+        "image_url": "https://images.pexels.com/photos/5215031/pexels-photo-5215031.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Aesthetic physician consulting patient on self-assembling peptide nanobody senolysis, cascade-pulsed dye laser, microfluidic PDO microspheres, and magnetically guided phased-array microneedle RF",
+        "theme": "Aesthetic physician consulting patient on sonodynamic anti-glycation delivery, 1726nm sebum-selective laser, microfluidic PLLA-PEG microspheres, and phase-shift cavitation micro-focused ultrasound",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069401/",
-        "image_url": "https://images.pexels.com/photos/5069401/pexels-photo-5069401.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069402/",
+        "image_url": "https://images.pexels.com/photos/5069402/pexels-photo-5069402.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Dermatologist administering focused transdermal sonoporation with self-assembling peptide nanofiber matrix and anti-CDK4/6 nanobodies for dermal fibroblast senolysis and DEJ restoration",
+        "theme": "Dermatologist administering focused transdermal sonodynamic rH-OPMC delivery to clear advanced glycation end-products and restore dermal elastic fibers",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446672/",
-        "image_url": "https://images.pexels.com/photos/7446672/pexels-photo-7446672.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446670/",
+        "image_url": "https://images.pexels.com/photos/7446670/pexels-photo-7446670.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Gustavo Fring",
         "author_url": "https://www.pexels.com/@gustavofring/",
-        "theme": "Laser specialist operating dual-pulse-duration 500us/10ms 595nm pulsed dye laser with coaxial cryo-gel shield for purpura-free coagulation of deep perforating vessels in rosacea",
+        "theme": "Laser specialist operating ultra-long-pulse 1726nm laser with dynamic cryogen cooling for selective thermal coagulation of sebaceous glands in nodulocystic acne",
     },
     {
-        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586713/",
-        "image_url": "https://images.pexels.com/photos/4586713/pexels-photo-4586713.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586721/",
+        "image_url": "https://images.pexels.com/photos/4586721/pexels-photo-4586721.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Anna Shvets",
         "author_url": "https://www.pexels.com/@shvetsa/",
-        "theme": "Plastic surgeon performing pre-periosteal blunt cannula delivery of monodisperse porous PDO microspheres hybridized with recombinant humanized type I/III collagen matrix for midface retaining ligament anchoring",
+        "theme": "Plastic surgeon performing deep dermal microdroplet injection of monodisperse porous PLLA-PEG microspheres in recombinant collagen XVII hydrogel matrix",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-in-white-tank-top-touching-her-face-3985338/",
-        "image_url": "https://images.pexels.com/photos/3985338/pexels-photo-3985338.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-in-white-tank-top-touching-her-face-3985337/",
+        "image_url": "https://images.pexels.com/photos/3985337/pexels-photo-3985337.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Smiling patient demonstrating tightened mandibular definition, smooth periorbital contours, and radiant skin barrier recovery following multimodal aesthetic interventions",
+        "theme": "Smiling patient demonstrating refined mandibular contour, tightened platysma band, smooth submental skin, and radiant elasticity following treatment",
     },
 ]
 
@@ -156,7 +156,7 @@ def optimize_image(src_path: Path, max_edge: int = MAX_LONGEST_EDGE_PX, max_byte
 
 
 def update_credits(curated_candidates: list[dict], licenses: list[str]):
-    today = "2026-10-14"
+    today = "2026-10-15"
     new_rows = []
     for idx, (c, lic) in enumerate(zip(curated_candidates, licenses), start=1):
         rel_path = f"posts/{SLUG}/image-{idx}.jpg"
