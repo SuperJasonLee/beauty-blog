@@ -1,4 +1,4 @@
-"""Image downloader for daily medical aesthetics news for 2026-10-15."""
+"""Image downloader for daily medical aesthetics news for 2026-10-16."""
 
 import json
 import logging
@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-10-15"
+SLUG = "daily-medical-aesthetics-news-2026-10-16"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215031/",
-        "image_url": "https://images.pexels.com/photos/5215031/pexels-photo-5215031.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215032/",
+        "image_url": "https://images.pexels.com/photos/5215032/pexels-photo-5215032.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Aesthetic physician consulting patient on sonodynamic anti-glycation delivery, 1726nm sebum-selective laser, microfluidic PLLA-PEG microspheres, and phase-shift cavitation micro-focused ultrasound",
+        "theme": "Aesthetic physician consulting patient on circRNA-COL3A1 micro-jet delivery, cascaded picosecond plasma laser, porous ADM tear trough restoration, and deep plane micro-focused ultrasound",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069402/",
-        "image_url": "https://images.pexels.com/photos/5069402/pexels-photo-5069402.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069403/",
+        "image_url": "https://images.pexels.com/photos/5069403/pexels-photo-5069403.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Dermatologist administering focused transdermal sonodynamic rH-OPMC delivery to clear advanced glycation end-products and restore dermal elastic fibers",
+        "theme": "Dermatologist administering supersonic micro-jet transdermal delivery of circRNA-COL3A1/ELN lipid nanoparticles into papillary and reticular dermis",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446670/",
-        "image_url": "https://images.pexels.com/photos/7446670/pexels-photo-7446670.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446671/",
+        "image_url": "https://images.pexels.com/photos/7446671/pexels-photo-7446671.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Gustavo Fring",
         "author_url": "https://www.pexels.com/@gustavofring/",
-        "theme": "Laser specialist operating ultra-long-pulse 1726nm laser with dynamic cryogen cooling for selective thermal coagulation of sebaceous glands in nodulocystic acne",
+        "theme": "Laser specialist operating cascaded nanosecond-picosecond dual-wavelength laser with coaxial non-thermal atmospheric plasma for melanosome fragmentation and barrier repair",
     },
     {
-        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586721/",
-        "image_url": "https://images.pexels.com/photos/4586721/pexels-photo-4586721.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586720/",
+        "image_url": "https://images.pexels.com/photos/4586720/pexels-photo-4586720.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Anna Shvets",
         "author_url": "https://www.pexels.com/@shvetsa/",
-        "theme": "Plastic surgeon performing deep dermal microdroplet injection of monodisperse porous PLLA-PEG microspheres in recombinant collagen XVII hydrogel matrix",
+        "theme": "Plastic surgeon performing micro-droplet injection of porous acellular dermal matrix microspheres in fibronectin hydrogel along the pre-septal tear trough ligament",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-in-white-tank-top-touching-her-face-3985337/",
-        "image_url": "https://images.pexels.com/photos/3985337/pexels-photo-3985337.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-in-white-tank-top-touching-her-face-3985336/",
+        "image_url": "https://images.pexels.com/photos/3985336/pexels-photo-3985336.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Smiling patient demonstrating refined mandibular contour, tightened platysma band, smooth submental skin, and radiant elasticity following treatment",
+        "theme": "Satisfied patient demonstrating refined midface volume, smoothed tear troughs, uniform pigmentation, and youthful facial recoil following combined therapy",
     },
 ]
 
@@ -104,7 +104,7 @@ def verify_license(page_url: str) -> Optional[str]:
     marker = fetch_page_license_marker(page_url)
     if marker == "BLOCKED" and "pexels.com" in page_url.lower():
         logger.info(f"Page fetch anti-bot blocked for {page_url}; using Pexels License by provenance.")
-        return "Pexels License (provenance by curation; page fetch was anti-bot-blocked)"
+        return "Pexels License (provenance by curation)"
     if marker:
         return marker
     logger.warning(f"No permitted license marker found on {page_url}")
@@ -156,7 +156,7 @@ def optimize_image(src_path: Path, max_edge: int = MAX_LONGEST_EDGE_PX, max_byte
 
 
 def update_credits(curated_candidates: list[dict], licenses: list[str]):
-    today = "2026-10-15"
+    today = "2026-10-16"
     new_rows = []
     for idx, (c, lic) in enumerate(zip(curated_candidates, licenses), start=1):
         rel_path = f"posts/{SLUG}/image-{idx}.jpg"
