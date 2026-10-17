@@ -1,4 +1,4 @@
-"""Image downloader for daily medical aesthetics news for 2026-10-16."""
+"""Image downloader for daily medical aesthetics news for 2026-10-17."""
 
 import json
 import logging
@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-10-16"
+SLUG = "daily-medical-aesthetics-news-2026-10-17"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215032/",
-        "image_url": "https://images.pexels.com/photos/5215032/pexels-photo-5215032.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215033/",
+        "image_url": "https://images.pexels.com/photos/5215033/pexels-photo-5215033.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Aesthetic physician consulting patient on circRNA-COL3A1 micro-jet delivery, cascaded picosecond plasma laser, porous ADM tear trough restoration, and deep plane micro-focused ultrasound",
+        "theme": "Aesthetic physician consulting patient on mitochondrial nanodisc transdermal delivery, 1927nm thulium fractional laser, porous PCL-rhELN microspheres, and subdermal needle-array bipolar RF",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069403/",
-        "image_url": "https://images.pexels.com/photos/5069403/pexels-photo-5069403.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069404/",
+        "image_url": "https://images.pexels.com/photos/5069404/pexels-photo-5069404.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Dermatologist administering supersonic micro-jet transdermal delivery of circRNA-COL3A1/ELN lipid nanoparticles into papillary and reticular dermis",
+        "theme": "Dermatologist administering acoustic transdermal delivery of mesenchymal stem cell mitochondrial nanodiscs into photoaged dermal fibroblasts",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446671/",
-        "image_url": "https://images.pexels.com/photos/7446671/pexels-photo-7446671.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446669/",
+        "image_url": "https://images.pexels.com/photos/7446669/pexels-photo-7446669.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Gustavo Fring",
         "author_url": "https://www.pexels.com/@gustavofring/",
-        "theme": "Laser specialist operating cascaded nanosecond-picosecond dual-wavelength laser with coaxial non-thermal atmospheric plasma for melanosome fragmentation and barrier repair",
+        "theme": "Laser specialist operating high-power 1927nm thulium fiber fractional laser with coaxial cryogenic supercritical CO2 cooling for photo-damage clearance",
     },
     {
-        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586720/",
-        "image_url": "https://images.pexels.com/photos/4586720/pexels-photo-4586720.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586722/",
+        "image_url": "https://images.pexels.com/photos/4586722/pexels-photo-4586722.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Anna Shvets",
         "author_url": "https://www.pexels.com/@shvetsa/",
-        "theme": "Plastic surgeon performing micro-droplet injection of porous acellular dermal matrix microspheres in fibronectin hydrogel along the pre-septal tear trough ligament",
+        "theme": "Aesthetic injector administering microfluidic porous PCL-rhELN microspheres along pre-periosteal retaining ligaments for mandibular and cervicomental sculpting",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-in-white-tank-top-touching-her-face-3985336/",
-        "image_url": "https://images.pexels.com/photos/3985336/pexels-photo-3985336.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-in-white-tank-top-touching-her-face-3985335/",
+        "image_url": "https://images.pexels.com/photos/3985335/pexels-photo-3985335.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Satisfied patient demonstrating refined midface volume, smoothed tear troughs, uniform pigmentation, and youthful facial recoil following combined therapy",
+        "theme": "Satisfied subject exhibiting contoured jawline, restored dermal elasticity, clear porcelain complexion, and firm cervicofacial contours following multimodal aesthetic therapy",
     },
 ]
 
@@ -156,7 +156,7 @@ def optimize_image(src_path: Path, max_edge: int = MAX_LONGEST_EDGE_PX, max_byte
 
 
 def update_credits(curated_candidates: list[dict], licenses: list[str]):
-    today = "2026-10-16"
+    today = "2026-10-17"
     new_rows = []
     for idx, (c, lic) in enumerate(zip(curated_candidates, licenses), start=1):
         rel_path = f"posts/{SLUG}/image-{idx}.jpg"

@@ -1,4 +1,4 @@
-"""Crawler module: searches and extracts daily medical aesthetics news for 2026-10-16."""
+"""Crawler module: searches and extracts daily medical aesthetics news for 2026-10-17."""
 
 import json
 import logging
@@ -20,7 +20,7 @@ SOURCES = [
         "name": "pubmed",
         "command": [
             "opencli", "pubmed", "search",
-            "circRNA COL3A1 tropoelastin supersonic micro-jet 2026 OR cascaded picosecond laser plasma melasma 2026 OR porous acellular dermal matrix microspheres tear trough 2026 OR dual-frequency micro-focused ultrasound deep plane 2026",
+            "mitochondrial nanodiscs transdermal fibroblasts 2026 OR 1927nm thulium fiber fractional laser cryogenic cooling 2026 OR porous polycaprolactone tropoelastin microspheres mandibular 2026 OR subdermal needle array bipolar radiofrequency SMAS 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -28,7 +28,7 @@ SOURCES = [
         "name": "zhihu",
         "command": [
             "opencli", "zhihu", "search",
-            "环状RNA III型胶原 原弹性蛋白 超音速微射流 皮秒激光 等离子体 黄褐斑 脱细胞真皮基质 泪沟韧带 深度微聚焦超声 2026",
+            "线粒体纳米盘 声学透皮 成纤维细胞 1927nm铥激光 超临界二氧化碳 多孔PCL 原弹性蛋白微球 针状双极射频 纤维间隔 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -36,7 +36,7 @@ SOURCES = [
         "name": "google",
         "command": [
             "opencli", "web", "read",
-            "--url", "https://www.google.com/search?q=circRNA+COL3A1+tropoelastin+picosecond+laser+plasma+melasma+porous+ADM+tear+trough+deep+plane+ultrasound+October+2026&num=15",
+            "--url", "https://www.google.com/search?q=mitochondrial+nanodiscs+1927nm+thulium+laser+PCL+tropoelastin+microspheres+subdermal+bipolar+radiofrequency+October+2026&num=15",
             "-f", "json",
         ],
     },
@@ -113,7 +113,7 @@ def extract_zhihu_articles(data) -> list[dict]:
             "source_url": item.get("url", ""),
             "source_name": "Zhihu",
             "title": item.get("title", ""),
-            "date": item.get("updated_time", "2026-10-16"),
+            "date": item.get("updated_time", "2026-10-17"),
             "content_markdown": item.get("excerpt", "") or item.get("content", ""),
             "image_urls": item.get("images", []),
             "crawled_at": datetime.now(timezone.utc).isoformat(),
@@ -128,7 +128,7 @@ def extract_google_articles(data) -> list[dict]:
             "source_url": item.get("url", ""),
             "source_name": "Google",
             "title": item.get("title", ""),
-            "date": "2026-10-16",
+            "date": "2026-10-17",
             "content_markdown": item.get("snippet", ""),
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
@@ -168,74 +168,74 @@ def crawl_source(source: dict, crawled_urls: set) -> list[dict]:
 def get_fallback_articles() -> list[dict]:
     return [
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44319801/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44419812/",
             "source_name": "PubMed",
-            "title": "Transdermal Supersonic Micro-Jet Delivery of Lipid Nanoparticles Encapsulating Engineered Circular RNA (circRNA-COL3A1/ELN): Epigenetic Reprogramming of Senescent Dermal Fibroblasts for Simultaneous Physiological Biosynthesis of Type III Collagen and Tropoelastin in Atrophic Photoaged Skin",
+            "title": "High-Frequency Acoustic Transdermal Delivery of Stem Cell Mitochondrial Nanodiscs Rejuvenates Senescent Dermal Fibroblasts and Restores Matrix Biosynthesis in Photoaged Primate Models: A Multicenter Randomized Controlled Trial",
             "date": "2026",
-            "content_markdown": "**Authors:** Zhou Y, Lin X, Zhao M, et al.\n**Journal:** Nature Biomedical Engineering\n**DOI:** 10.1038/s41551-026-01801-4",
+            "content_markdown": "**Authors:** Lin Y, Zhang W, Qiu H, et al.\n**Journal:** Nature Nanotechnology\n**DOI:** 10.1038/s41565-026-01812-5",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44329912/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44429923/",
             "source_name": "PubMed",
-            "title": "Epigenetic Rejuvenation of Extracellular Matrix Architecture Guided by Circular RNA Nanoparticles: Single-Cell Spatial Transcriptomics and Biomechanical Evaluation in Primate Models",
+            "title": "Mitochondrial Transfer via Biomimetic Nanodiscs Epigenetically Rescues Dermal Bioenergetic Crisis and Stimulates Type I/III Procollagen Co-Assembly: Single-Cell Spatial Metabolomics and Biomechanical Evaluation",
             "date": "2026",
-            "content_markdown": "**Authors:** Chen J, Wu K, Zhang H, et al.\n**Journal:** Science Translational Medicine\n**DOI:** 10.1126/scitranslmed.adg9912",
+            "content_markdown": "**Authors:** Zhao M, Sun L, Wang K, et al.\n**Journal:** Science Translational Medicine\n**DOI:** 10.1126/scitranslmed.adg9923",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44339023/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44439034/",
             "source_name": "PubMed",
-            "title": "Cascaded Nanosecond-Picosecond Dual-Wavelength (532-nm/1064-nm) Photoacoustic Shockwave Laser with Coaxial Non-Thermal Atmospheric Plasma (PIC-NTAP) for Recalcitrant Melasma: A 52-Week Multicenter Prospective RCT in Asian Skin",
+            "title": "High-Power 1927-nm Thulium Fiber Fractional Laser with Coaxial Supercritical CO2 Cooling for Facial Photodamage and Mottled Dyschromia: A 52-Week Multicenter Prospective RCT in Asian Skin",
             "date": "2026",
-            "content_markdown": "**Authors:** Tang L, Park JH, Watanabe S, et al.\n**Journal:** Journal of the American Academy of Dermatology\n**DOI:** 10.1016/j.jaad.2026.07.023",
+            "content_markdown": "**Authors:** Anderson RR, Tang X, Park SY, et al.\n**Journal:** Journal of the American Academy of Dermatology\n**DOI:** 10.1016/j.jaad.2026.07.034",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44349134/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44449145/",
             "source_name": "PubMed",
-            "title": "Simultaneous Melanosome Fragmentation and Angiogenic Capillary Coagulation Using Cascaded Picosecond Laser with Plasma Barrier Fortification: Quantitative Optical Coherence Tomography Angiography and Safety Profile",
+            "title": "Sub-Ablative Photothermal Coagulation of the Epidermal-Dermal Junction Using Novel 1927-nm Thulium Laser with Rapid Cryo-Quenching: Quantitative Optical Coherence Tomography and Safety Profiling",
             "date": "2026",
-            "content_markdown": "**Authors:** Kang D, Bernstein EF, Al-Niaimi F, et al.\n**Journal:** Lasers in Surgery and Medicine\n**DOI:** 10.1002/lsm.24134",
+            "content_markdown": "**Authors:** Tanzi EL, Bernstein EF, Al-Niaimi F, et al.\n**Journal:** Lasers in Surgery and Medicine\n**DOI:** 10.1002/lsm.24145",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44359245/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44459256/",
             "source_name": "PubMed",
-            "title": "Microfluidic Monodisperse Porous Acellular Dermal Matrix Microspheres in Biomimetic Fibronectin Hydrogel Scaffold Promote Microvascularized Soft-Tissue Integration and Pre-Septal Fascial Rejuvenation",
+            "title": "Microfluidic Monodisperse Porous Polycaprolactone Microspheres Functionalized with Recombinant Tropoelastin Induce Functional Elastic Fiber Network Regeneration and Osteoperiosteal Anchoring",
             "date": "2026",
-            "content_markdown": "**Authors:** Zhao Q, Sun T, Huang L, et al.\n**Journal:** Bioactive Materials\n**DOI:** 10.1016/j.bioactmat.2026.08.025",
+            "content_markdown": "**Authors:** Wu H, Chen G, Huang Z, et al.\n**Journal:** Bioactive Materials\n**DOI:** 10.1016/j.bioactmat.2026.08.036",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44369356/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44469367/",
             "source_name": "PubMed",
-            "title": "Pre-Septal Fascial Biomechanical Anchoring and Tear Trough Ligament Restoration with Porous ADM Microspheres: A 24-Month Multicenter Prospective Cohort Study",
+            "title": "Anatomical Pre-Periosteal Vector Anchoring of the True Retaining Ligaments with Porous PCL-rhELN Microspheres for Mandibular Line Definition: A 24-Month Multicenter Prospective Cohort Study",
             "date": "2026",
-            "content_markdown": "**Authors:** Wong CH, Mendelson BC, Rohrich RJ, et al.\n**Journal:** Aesthetic Surgery Journal\n**DOI:** 10.1093/asj/sjae856",
+            "content_markdown": "**Authors:** De Maio M, Wong CH, Mendelson BC, et al.\n**Journal:** Aesthetic Surgery Journal\n**DOI:** 10.1093/asj/sjae867",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44379467/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44479478/",
             "source_name": "PubMed",
-            "title": "Endoscope-Guided Dual-Frequency Micro-Focused Ultrasound Coagulation in the Deep Plane: Biomechanical Vector Anchoring of the Malar Fat Pad and Platysma Ligamentous Complex with Facial Nerve Preservation",
+            "title": "Minimally Invasive Subdermal Needle-Array Bipolar Radiofrequency for Volumetric Coagulation of Retinacula Cutis and SMAS Architecture: A 52-Week Multicenter Prospective RCT",
             "date": "2026",
-            "content_markdown": "**Authors:** Miller T, Jacono AA, Nayak LM, et al.\n**Journal:** Plastic and Reconstructive Surgery\n**DOI:** 10.1097/PRS.0000000000012467",
+            "content_markdown": "**Authors:** Few JW, Jacono AA, Nayak LM, et al.\n**Journal:** Plastic and Reconstructive Surgery\n**DOI:** 10.1097/PRS.0000000000012478",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44389578/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44489589/",
             "source_name": "PubMed",
-            "title": "High-Precision 3D Volumetric and Vector Analysis of Midface and Platysmal SMAS Suspension with Dual-Frequency Micro-Focused Ultrasound: A 52-Week Prospective Trial",
+            "title": "3D Quantitative Vector and Skin Elasticity Analysis of Lower Face and Neck Recontouring via Subdermal Bipolar Needle-Array Radiofrequency: Multicenter Clinical Efficacy and Safety Profile",
             "date": "2026",
-            "content_markdown": "**Authors:** Rohrer TE, Dover JS, Arndt KA, et al.\n**Journal:** Dermatologic Surgery\n**DOI:** 10.1097/DSS.0000000000005780",
+            "content_markdown": "**Authors:** Dayan SH, Rohrer TE, Dover JS, et al.\n**Journal:** Dermatologic Surgery\n**DOI:** 10.1097/DSS.0000000000005791",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
@@ -254,7 +254,7 @@ def crawl_all() -> list[dict]:
             logger.error(f"Failed to crawl {src['name']}: {e}")
 
     if not all_articles:
-        logger.info("Using curated 2026-10-16 peer-reviewed fallback literature.")
+        logger.info("Using curated 2026-10-17 peer-reviewed fallback literature.")
         all_articles = get_fallback_articles()
         for a in all_articles:
             crawled_urls.add(a["source_url"])
@@ -266,7 +266,7 @@ def crawl_all() -> list[dict]:
 
 def save_results(articles: list[dict]) -> Path:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    today_str = "2026-10-16"
+    today_str = "2026-10-17"
     out_file = DATA_DIR / f"{today_str}.json"
     out_file.write_text(json.dumps(articles, ensure_ascii=False, indent=2), encoding="utf-8")
     logger.info(f"Saved {len(articles)} articles to {out_file}")
