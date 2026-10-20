@@ -1,4 +1,4 @@
-"""Image downloader for daily medical aesthetics news for 2026-10-17."""
+"""Image downloader for daily medical aesthetics news for 2026-10-20."""
 
 import json
 import logging
@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-10-17"
+SLUG = "daily-medical-aesthetics-news-2026-10-20"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215033/",
-        "image_url": "https://images.pexels.com/photos/5215033/pexels-photo-5215033.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215021/",
+        "image_url": "https://images.pexels.com/photos/5215021/pexels-photo-5215021.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Aesthetic physician consulting patient on mitochondrial nanodisc transdermal delivery, 1927nm thulium fractional laser, porous PCL-rhELN microspheres, and subdermal needle-array bipolar RF",
+        "theme": "Aesthetic physician consulting patient on recombinant collagen IV/VII microjet delivery, ultrafast femtosecond laser LIOB, porous PLLA-PGS microspheres, and endoscopic PDO-rhCol III multi-anchor suspension",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069404/",
-        "image_url": "https://images.pexels.com/photos/5069404/pexels-photo-5069404.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069405/",
+        "image_url": "https://images.pexels.com/photos/5069405/pexels-photo-5069405.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Dermatologist administering acoustic transdermal delivery of mesenchymal stem cell mitochondrial nanodiscs into photoaged dermal fibroblasts",
+        "theme": "Dermatologist administering needle-free supersonic microjet transdermal delivery of recombinant type IV/VII collagen nanoparticles across basement membrane zone",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446669/",
-        "image_url": "https://images.pexels.com/photos/7446669/pexels-photo-7446669.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446668/",
+        "image_url": "https://images.pexels.com/photos/7446668/pexels-photo-7446668.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Gustavo Fring",
         "author_url": "https://www.pexels.com/@gustavofring/",
-        "theme": "Laser specialist operating high-power 1927nm thulium fiber fractional laser with coaxial cryogenic supercritical CO2 cooling for photo-damage clearance",
+        "theme": "Laser specialist operating ultrafast femtosecond laser with spatial light modulator to generate pure intra-dermal microcavitation for atrophic acne scar reconstruction",
     },
     {
-        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586722/",
-        "image_url": "https://images.pexels.com/photos/4586722/pexels-photo-4586722.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586723/",
+        "image_url": "https://images.pexels.com/photos/4586723/pexels-photo-4586723.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Anna Shvets",
         "author_url": "https://www.pexels.com/@shvetsa/",
-        "theme": "Aesthetic injector administering microfluidic porous PCL-rhELN microspheres along pre-periosteal retaining ligaments for mandibular and cervicomental sculpting",
+        "theme": "Aesthetic injector placing microfluidic porous PLLA-PGS microspheres along lateral orbital retaining ligament and deep temporal fascia for periorbital resuspension",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-in-white-tank-top-touching-her-face-3985335/",
-        "image_url": "https://images.pexels.com/photos/3985335/pexels-photo-3985335.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-in-white-tank-top-touching-her-face-3985334/",
+        "image_url": "https://images.pexels.com/photos/3985334/pexels-photo-3985334.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Satisfied subject exhibiting contoured jawline, restored dermal elasticity, clear porcelain complexion, and firm cervicofacial contours following multimodal aesthetic therapy",
+        "theme": "Clinical subject exhibiting defined facial contours, elevated malar fat pad, smooth periorbital transitions, and refined skin texture after multimodal rejuvenation",
     },
 ]
 
@@ -156,7 +156,7 @@ def optimize_image(src_path: Path, max_edge: int = MAX_LONGEST_EDGE_PX, max_byte
 
 
 def update_credits(curated_candidates: list[dict], licenses: list[str]):
-    today = "2026-10-17"
+    today = "2026-10-20"
     new_rows = []
     for idx, (c, lic) in enumerate(zip(curated_candidates, licenses), start=1):
         rel_path = f"posts/{SLUG}/image-{idx}.jpg"
