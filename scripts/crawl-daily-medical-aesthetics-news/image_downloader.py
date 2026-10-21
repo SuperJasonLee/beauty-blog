@@ -1,4 +1,4 @@
-"""Image downloader for daily medical aesthetics news for 2026-10-20."""
+"""Image downloader for daily medical aesthetics news for 2026-10-21."""
 
 import json
 import logging
@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-10-20"
+SLUG = "daily-medical-aesthetics-news-2026-10-21"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215021/",
-        "image_url": "https://images.pexels.com/photos/5215021/pexels-photo-5215021.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215034/",
+        "image_url": "https://images.pexels.com/photos/5215034/pexels-photo-5215034.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Aesthetic physician consulting patient on recombinant collagen IV/VII microjet delivery, ultrafast femtosecond laser LIOB, porous PLLA-PGS microspheres, and endoscopic PDO-rhCol III multi-anchor suspension",
+        "theme": "Aesthetic physician consulting patient on recombinant collagen XVII extracellular vesicle delivery, picosecond photoacoustic dual-modality shockwave melasma treatment, bioactive glass BMP-2 microspheres, and endoscopic sub-SMAS tension-band neck recontouring",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069405/",
-        "image_url": "https://images.pexels.com/photos/5069405/pexels-photo-5069405.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069406/",
+        "image_url": "https://images.pexels.com/photos/5069406/pexels-photo-5069406.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Dermatologist administering needle-free supersonic microjet transdermal delivery of recombinant type IV/VII collagen nanoparticles across basement membrane zone",
+        "theme": "Dermatology specialist administering targeted transdermal infusion of biomimetic extracellular vesicles conjugated with recombinant type XVII collagen across follicular infundibulum",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446668/",
-        "image_url": "https://images.pexels.com/photos/7446668/pexels-photo-7446668.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446667/",
+        "image_url": "https://images.pexels.com/photos/7446667/pexels-photo-7446667.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Gustavo Fring",
         "author_url": "https://www.pexels.com/@gustavofring/",
-        "theme": "Laser specialist operating ultrafast femtosecond laser with spatial light modulator to generate pure intra-dermal microcavitation for atrophic acne scar reconstruction",
+        "theme": "Laser physician operating dual-modality picosecond photoacoustic shockwave handpiece targeting deep dermal melanosomes and soothing mast cell neurovascular hyperreactivity",
     },
     {
-        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586723/",
-        "image_url": "https://images.pexels.com/photos/4586723/pexels-photo-4586723.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586724/",
+        "image_url": "https://images.pexels.com/photos/4586724/pexels-photo-4586724.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Anna Shvets",
         "author_url": "https://www.pexels.com/@shvetsa/",
-        "theme": "Aesthetic injector placing microfluidic porous PLLA-PGS microspheres along lateral orbital retaining ligament and deep temporal fascia for periorbital resuspension",
+        "theme": "Aesthetic injector performing deep subperiosteal placement of mesoporous bioactive glass-rhBMP-2/PLA microspheres in the pyriform aperture and anterior maxilla for bone support",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-in-white-tank-top-touching-her-face-3985334/",
-        "image_url": "https://images.pexels.com/photos/3985334/pexels-photo-3985334.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-in-white-tank-top-touching-her-face-3985333/",
+        "image_url": "https://images.pexels.com/photos/3985333/pexels-photo-3985333.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Clinical subject exhibiting defined facial contours, elevated malar fat pad, smooth periorbital transitions, and refined skin texture after multimodal rejuvenation",
+        "theme": "Clinical subject presenting sharply defined jawline and cervicomental angle, restored midfacial volume, uniform pigment tone, and dense hair follicle texture after multimodal aesthetic intervention",
     },
 ]
 
@@ -156,7 +156,7 @@ def optimize_image(src_path: Path, max_edge: int = MAX_LONGEST_EDGE_PX, max_byte
 
 
 def update_credits(curated_candidates: list[dict], licenses: list[str]):
-    today = "2026-10-20"
+    today = "2026-10-21"
     new_rows = []
     for idx, (c, lic) in enumerate(zip(curated_candidates, licenses), start=1):
         rel_path = f"posts/{SLUG}/image-{idx}.jpg"
