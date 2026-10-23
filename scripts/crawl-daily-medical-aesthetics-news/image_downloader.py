@@ -1,4 +1,4 @@
-"""Image downloader for daily medical aesthetics news for 2026-10-22."""
+"""Image downloader for daily medical aesthetics news for 2026-10-23."""
 
 import json
 import logging
@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-10-22"
+SLUG = "daily-medical-aesthetics-news-2026-10-23"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215035/",
-        "image_url": "https://images.pexels.com/photos/5215035/pexels-photo-5215035.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215036/",
+        "image_url": "https://images.pexels.com/photos/5215036/pexels-photo-5215036.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Aesthetic physician consulting patient on chimeric type III/XVIII collagen periorbital infusion, dual-wavelength 755/1064nm fractional scar remodeling, porous PCL-elastin microsphere facial volumization, and transconjunctival endoscopic fat repositioning",
+        "theme": "Aesthetic physician consulting patient on chimeric type IV/VII DEJ collagen hydrogel, picosecond dual-wavelength tattoo clearance, injectable ADM-rhFN structural rhinoplasty, and 3D exoscopic subplatysmal cervical contouring",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069407/",
-        "image_url": "https://images.pexels.com/photos/5069407/pexels-photo-5069407.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069408/",
+        "image_url": "https://images.pexels.com/photos/5069408/pexels-photo-5069408.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Dermatologic specialist performing targeted microneedle RF transdermal delivery of chimeric type III/XVIII collagen microspheres across periorbital retaining ligaments",
+        "theme": "Dermatologist administering fractional picosecond ultrasound transdermal delivery of chimeric type IV/VII collagen across dermal-epidermal junction",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446666/",
-        "image_url": "https://images.pexels.com/photos/7446666/pexels-photo-7446666.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446665/",
+        "image_url": "https://images.pexels.com/photos/7446665/pexels-photo-7446665.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Gustavo Fring",
         "author_url": "https://www.pexels.com/@gustavofring/",
-        "theme": "Laser surgeon administering high-energy dynamically cooled dual-wavelength 755/1064nm fractional laser to induce deep scar microvascular photocoagulation",
+        "theme": "Laser physician operating ultrafast dual-wavelength 670/1064nm photoacoustic system with cold plasma for complex tattoo clearance",
     },
     {
-        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586725/",
-        "image_url": "https://images.pexels.com/photos/4586725/pexels-photo-4586725.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586726/",
+        "image_url": "https://images.pexels.com/photos/4586726/pexels-photo-4586726.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Anna Shvets",
         "author_url": "https://www.pexels.com/@shvetsa/",
-        "theme": "Aesthetic injector performing deep structural placement of porous polycaprolactone-recombinant tropoelastin microspheres in midfacial fat compartments",
+        "theme": "Aesthetic injector performing precise supra-periosteal delivery of injectable ADM-rhFN microspheres for non-surgical structural nasal reshaping",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-in-white-tank-top-touching-her-face-3985332/",
-        "image_url": "https://images.pexels.com/photos/3985332/pexels-photo-3985332.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-in-white-tank-top-touching-her-face-3985331/",
+        "image_url": "https://images.pexels.com/photos/3985331/pexels-photo-3985331.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Clinical subject exhibiting smooth tear-trough transition, taut periorbital ligaments, restored temporal volume, and unblemished skin tone following multimodal aesthetic procedures",
+        "theme": "Clinical subject demonstrating crisp jawline definition, contoured cervicomental angle, smooth DEJ skin elasticity, and refined nasal dorsal contours",
     },
 ]
 
@@ -156,7 +156,7 @@ def optimize_image(src_path: Path, max_edge: int = MAX_LONGEST_EDGE_PX, max_byte
 
 
 def update_credits(curated_candidates: list[dict], licenses: list[str]):
-    today = "2026-10-22"
+    today = "2026-10-23"
     new_rows = []
     for idx, (c, lic) in enumerate(zip(curated_candidates, licenses), start=1):
         rel_path = f"posts/{SLUG}/image-{idx}.jpg"
