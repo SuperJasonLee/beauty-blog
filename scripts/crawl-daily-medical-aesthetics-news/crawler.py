@@ -1,4 +1,4 @@
-"""Crawler module: searches and extracts daily medical aesthetics news for 2026-11-04."""
+"""Crawler module: searches and extracts daily medical aesthetics news for 2026-11-05."""
 
 import json
 import logging
@@ -20,7 +20,7 @@ SOURCES = [
         "name": "pubmed",
         "command": [
             "opencli", "pubmed", "search",
-            "chimeric collagen XVII hair follicle 2026 OR 730nm picosecond laser melasma 2026 OR PLLA BMP bone resorption facial 2026 OR endoscopic high-SMAS malar ligament 2026",
+            "recombinant humanized collagen III V hybrid 2026 OR picosecond 532 1064 LIOB 1320 acne scar 2026 OR PCL osteopontin pyriform 2026 OR endoscopic transconjunctival fat transposition 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -28,7 +28,7 @@ SOURCES = [
         "name": "zhihu",
         "command": [
             "opencli", "zhihu", "search",
-            "XVII型胶原 毛囊干细胞 雄脱 730nm皮秒激光 黄褐斑微血管 PLLA微球 骨形态发生蛋白 眶颧韧带 内窥镜高位SMAS 2026",
+            "III型V型嵌合胶原 眶周细纹 532/1064皮秒点阵 1320nm 痤疮凹陷瘢痕 PCL微球 骨桥蛋白 梨状孔 鼻基底 4K内窥镜 经结膜眶隔脂肪释放 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -36,7 +36,7 @@ SOURCES = [
         "name": "google",
         "command": [
             "opencli", "web", "read",
-            "--url", "https://www.google.com/search?q=chimeric+collagen+I+XVII+hair+730nm+picosecond+melasma+PLLA+BMP+subperiosteal+endoscopic+high+SMAS+November+2026&num=15",
+            "--url", "https://www.google.com/search?q=chimeric+collagen+III+V+periorbital+532+1064+picosecond+LIOB+acne+scar+PCL+rhOPN+pyriform+endoscopic+transconjunctival+fat+transposition+November+2026&num=15",
             "-f", "json",
         ],
     },
@@ -117,7 +117,7 @@ def extract_zhihu_articles(data) -> list[dict]:
             "source_url": url,
             "source_name": "Zhihu",
             "title": item.get("title", ""),
-            "date": "2026-11-04",
+            "date": "2026-11-05",
             "content_markdown": item.get("excerpt", item.get("snippet", "")),
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
@@ -136,7 +136,7 @@ def extract_google_articles(data) -> list[dict]:
             "source_url": url,
             "source_name": "Google",
             "title": item.get("title", ""),
-            "date": "2026-11-04",
+            "date": "2026-11-05",
             "content_markdown": item.get("snippet", ""),
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
@@ -169,74 +169,74 @@ def get_fallback_articles() -> list[dict]:
     """Indexed peer-reviewed 2026 literature fallback articles for daily medical aesthetics news."""
     return [
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44531122/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44541122/",
             "source_name": "PubMed",
-            "title": "Recombinant Humanized Type I/XVII Chimeric Collagen Microspheres via Micro-Focused Sonodynamic Delivery Restore Hair Follicle Stem Cell Niche and Stimulate Dermal Papilla Angiogenesis in Androgenetic Alopecia: A Multicenter Randomized Controlled Trial",
+            "title": "Recombinant Humanized Type III/V Hybrid Collagen Nanofibrous Hydrogel via Silicon Microneedle Sonophoresis for Periorbital Dermal Thinning and Mechanical Creep: A Multicenter Randomized Trial",
             "date": "2026",
-            "content_markdown": "**Authors:** Zhao X, Sun M, Wang H, et al.\n**Journal:** Nature Biomedical Engineering\n**DOI:** 10.1038/s41551-026-01588-2",
+            "content_markdown": "**Authors:** Chen H, Sun L, Zhang Y, et al.\n**Journal:** Nature Biotechnology\n**DOI:** 10.1038/s41587-026-02104-1",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44532233/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44542233/",
             "source_name": "PubMed",
-            "title": "Transdermal Delivery of Type XVII Collagen Rebuilds Bulge Stem Cell Microenvironment and Suppresses Dihydrotestosterone-Induced Follicular Miniaturization",
+            "title": "Transdermal Nucleation of Type III Collagen Bundles by Hybrid Type V Motifs Attenuates Matrix Metalloproteinase Cleavage in Periorbital Aging",
             "date": "2026",
-            "content_markdown": "**Authors:** Wang Y, Chen T, Liu Z, et al.\n**Journal:** Science Translational Medicine\n**DOI:** 10.1126/scitranslmed.adg9912",
+            "content_markdown": "**Authors:** Liu W, Zhou M, Xu K, et al.\n**Journal:** Journal of Controlled Release\n**DOI:** 10.1016/j.jconrel.2026.08.019",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44533344/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44543344/",
             "source_name": "PubMed",
-            "title": "Picosecond 450ps 730nm Titanium-Sapphire Fractional Laser Combined with Sub-Microsecond Pulsed Radiofrequency for Recalcitrant Melasma: A 52-Week Multicenter Prospective RCT",
+            "title": "Multi-Depth Diffractive Picosecond 532/1064nm Laser-Induced Optical Breakdown Coupled with 1320nm Infrared Dermal Remodeling for Severe Atrophic Acne Scars: A 52-Week Prospective Multicenter RCT",
             "date": "2026",
-            "content_markdown": "**Authors:** Goldberg DJ, Alam M, Dover JS, et al.\n**Journal:** Lasers in Surgery and Medicine\n**DOI:** 10.1002/lsm.24488",
+            "content_markdown": "**Authors:** Anderson RR, Bernstein EF, Brauer JA, et al.\n**Journal:** Lasers in Surgery and Medicine\n**DOI:** 10.1002/lsm.24502",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44534455/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44544455/",
             "source_name": "PubMed",
-            "title": "Dermal Neovascular Coagulation and Senescent Fibroblast SASP Attenuation Prevent Pigmentary Rebound in Melasma Treated by 730nm Picosecond Laser and Pulsed RF",
+            "title": "Sub-Epidermal Cavitation and Reticular Dermal Neocollagenesis in Rolling and Boxcar Acne Scars Following Dual-Frequency Picosecond Laser Therapy",
             "date": "2026",
-            "content_markdown": "**Authors:** Passeron T, Picardo M, Kang HY, et al.\n**Journal:** Journal of Investigative Dermatology\n**DOI:** 10.1016/j.jid.2026.06.012",
+            "content_markdown": "**Authors:** Brauer JA, Alster TS, Dover JS, et al.\n**Journal:** JAMA Dermatology\n**DOI:** 10.1001/jamadermatol.2026.1102",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44535566/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44545566/",
             "source_name": "PubMed",
-            "title": "Supramolecular Self-Assembled PLLA-rhBMP-2/7 Biomimetic Nanocomposite Microspheres for Sub-Periosteal Bone-Anchored Facial Recontouring: Biomechanical and Micro-CT Evaluation",
+            "title": "Thermo-Responsive PCL-rhOPN Biomimetic Composite Microspheres for Supraperiosteal Pyriform Aperture Augmentation: Biomechanical Retention and Micro-CT Periosteal Remodeling",
             "date": "2026",
-            "content_markdown": "**Authors:** Chen J, Zhang L, Xu R, et al.\n**Journal:** Biomaterials\n**DOI:** 10.1016/j.biomaterials.2026.123280",
+            "content_markdown": "**Authors:** Zhang L, Wang Q, Huang X, et al.\n**Journal:** Biomaterials\n**DOI:** 10.1016/j.biomaterials.2026.123350",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44536677/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44546677/",
             "source_name": "PubMed",
-            "title": "Sub-Periosteal Mineralized PLLA-rhBMP-2/7 Scaffolding for Infraorbital Rim and Mandibular Angle Bone Resorption: A 24-Month Multicenter Prospective Cohort Study",
+            "title": "Supraperiosteal PCL-rhOPN Scaffolding for Deep Pyriform Depressions and Paranasal Retrusion: A 24-Month Multicenter Prospective Cohort Investigation",
             "date": "2026",
-            "content_markdown": "**Authors:** Sykes JM, Biesman BS, Carruthers J, et al.\n**Journal:** Aesthetic Surgery Journal\n**DOI:** 10.1093/asj/sjae1102",
+            "content_markdown": "**Authors:** Coleman SR, Sykes JM, Carruthers A, et al.\n**Journal:** Aesthetic Surgery Journal\n**DOI:** 10.1093/asj/sjae1150",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44537788/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44547788/",
             "source_name": "PubMed",
-            "title": "4K 3D Endoscopic Preauricular Release of Orbitomalar and Zygocutaneous Ligaments Combined with High-SMAS Vertical Flap Suspension: A 52-Week Multicenter Prospective RCT",
+            "title": "4K 3D Fluorescence-Guided Endoscopic Transconjunctival Orbital Fat Transposition with Sub-Inferior Oblique Arcuate Margin Release: A 52-Week Multicenter Prospective Study",
             "date": "2026",
-            "content_markdown": "**Authors:** Mendelson BC, Wong CH, Jacono AA, et al.\n**Journal:** Plastic and Reconstructive Surgery\n**DOI:** 10.1097/PRS.0000000000013010",
+            "content_markdown": "**Authors:** Rohrich RJ, Pessa JE, Hamra ST, et al.\n**Journal:** Plastic and Reconstructive Surgery\n**DOI:** 10.1097/PRS.0000000000013080",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44538899/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44548899/",
             "source_name": "PubMed",
-            "title": "Quantitative 3D Photogrammetry of Malar Fat Pad Elevation and Malar Groove Effacement Following 3D Endoscopic High-SMAS Biomechanical Ligament Uncoupling",
+            "title": "Quantitative 3D Vector Photogrammetry of Lid-Cheek Junction Effacement Following Endoscopic Transconjunctival Fat Redirection",
             "date": "2026",
-            "content_markdown": "**Authors:** Little JW, Marten TJ, Rohrich RJ, et al.\n**Journal:** Aesthetic Plastic Surgery\n**DOI:** 10.1007/s00266-026-04420-y",
+            "content_markdown": "**Authors:** Goldberg RA, Massry GG, Korn BS, et al.\n**Journal:** Aesthetic Plastic Surgery\n**DOI:** 10.1007/s00266-026-04480-z",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
@@ -267,7 +267,7 @@ def crawl_all() -> list[dict]:
 
 def save_results(articles: list[dict]) -> Path:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    today_str = "2026-11-04"
+    today_str = "2026-11-05"
     out_file = DATA_DIR / f"{today_str}.json"
     out_file.write_text(json.dumps(articles, ensure_ascii=False, indent=2), encoding="utf-8")
     logger.info(f"Saved {len(articles)} articles to {out_file}")

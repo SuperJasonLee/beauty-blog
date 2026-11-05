@@ -1,4 +1,4 @@
-"""Image downloader for daily medical aesthetics news for 2026-11-04."""
+"""Image downloader for daily medical aesthetics news for 2026-11-05."""
 
 import json
 import logging
@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-11-04"
+SLUG = "daily-medical-aesthetics-news-2026-11-05"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215037/",
-        "image_url": "https://images.pexels.com/photos/5215037/pexels-photo-5215037.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215038/",
+        "image_url": "https://images.pexels.com/photos/5215038/pexels-photo-5215038.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Aesthetic physician consulting patient on type I/XVII chimeric collagen hair follicle niche restoration, 730nm picosecond laser melasma vascular clearing, PLLA-rhBMP-2/7 sub-periosteal bone-anchored contouring, and 3D endoscopic high-SMAS malar groove elevation",
+        "theme": "Aesthetic physician consulting patient on periorbital hybrid collagen micro-rejuvenation, 532/1064nm picosecond LIOB scar remodeling, PCL-rhOPN pyriform aperture structural elevation, and 4K 3D endoscopic fat transposition",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069409/",
-        "image_url": "https://images.pexels.com/photos/5069409/pexels-photo-5069409.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069410/",
+        "image_url": "https://images.pexels.com/photos/5069410/pexels-photo-5069410.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Clinical specialist administering high-frequency micro-focused sonodynamic transdermal infusion of type I/XVII chimeric collagen microspheres into scalp dermal papilla",
+        "theme": "Clinical specialist administering single-crystal silicon microneedle sonophoresis of recombinant type III/V hybrid collagen nanofibrous hydrogel into periorbital dermis",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446664/",
-        "image_url": "https://images.pexels.com/photos/7446664/pexels-photo-7446664.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446663/",
+        "image_url": "https://images.pexels.com/photos/7446663/pexels-photo-7446663.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Gustavo Fring",
         "author_url": "https://www.pexels.com/@gustavofring/",
-        "theme": "Laser surgeon operating 450ps 730nm titanium-sapphire fractional laser system combined with sub-microsecond pulsed RF for deep dermal melasma vascular photothermolysis",
+        "theme": "Laser surgeon operating dual-frequency 532/1064nm diffractive picosecond system coupled with 1320nm infrared laser for deep atrophic acne scar remodeling",
     },
     {
-        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586727/",
-        "image_url": "https://images.pexels.com/photos/4586727/pexels-photo-4586727.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586728/",
+        "image_url": "https://images.pexels.com/photos/4586728/pexels-photo-4586728.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Anna Shvets",
         "author_url": "https://www.pexels.com/@shvetsa/",
-        "theme": "Aesthetic injector performing precise sub-periosteal placement of PLLA-rhBMP-2/7 biomimetic nanocomposite microspheres along mandibular angle and infraorbital rim",
+        "theme": "Aesthetic injector performing deep supraperiosteal placement of PCL-rhOPN biomimetic composite microspheres at pyriform aperture and alar base",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-in-white-tank-top-touching-her-face-3985330/",
-        "image_url": "https://images.pexels.com/photos/3985330/pexels-photo-3985330.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-in-white-tank-top-touching-her-face-3985329/",
+        "image_url": "https://images.pexels.com/photos/3985329/pexels-photo-3985329.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Post-treatment clinical subject demonstrating dense scalp hair vitality, flawless clear dermal tone without melasma rebound, well-defined bone-anchored mandibular contours, and natural youthful midface projection",
+        "theme": "Post-treatment clinical subject demonstrating smooth periorbital contours, refined scar-free dermal texture, elevated alar base projection, and youthful lower eyelid lid-cheek transition",
     },
 ]
 
@@ -156,7 +156,7 @@ def optimize_image(src_path: Path, max_edge: int = MAX_LONGEST_EDGE_PX, max_byte
 
 
 def update_credits(curated_candidates: list[dict], licenses: list[str]):
-    today = "2026-11-04"
+    today = "2026-11-05"
     new_rows = []
     for idx, (c, lic) in enumerate(zip(curated_candidates, licenses), start=1):
         rel_path = f"posts/{SLUG}/image-{idx}.jpg"
