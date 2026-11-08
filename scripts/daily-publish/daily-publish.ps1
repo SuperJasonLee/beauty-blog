@@ -45,11 +45,11 @@ if (Test-Path $DisabledFile) {
 }
 
 # ---------- Stage 1-4: Run pipeline ----------
-Log "Stage 1-4: Running crawl:eye-news..."
+Log "Stage 1-4: Running crawl:daily-medical-aesthetics-news..."
 $PipelineStart = Get-Date
 
 try {
-    Push-Location (Join-Path $ProjectRoot "scripts\crawl-eye-surgery-news")
+    Push-Location (Join-Path $ProjectRoot "scripts\crawl-daily-medical-aesthetics-news")
     & python run.py 2>&1 | Tee-Object -Append -FilePath $LogFile
     if ($LASTEXITCODE -ne 0) { throw "Pipeline exited with code $LASTEXITCODE" }
     $PipelineElapsed = ((Get-Date) - $PipelineStart).TotalSeconds

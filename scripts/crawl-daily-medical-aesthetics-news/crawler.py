@@ -1,4 +1,4 @@
-"""Crawler module: searches and extracts daily medical aesthetics news for 2026-11-05."""
+"""Crawler module: searches and extracts daily medical aesthetics news for 2026-11-08."""
 
 import json
 import logging
@@ -20,7 +20,7 @@ SOURCES = [
         "name": "pubmed",
         "command": [
             "opencli", "pubmed", "search",
-            "recombinant humanized collagen III V hybrid 2026 OR picosecond 532 1064 LIOB 1320 acne scar 2026 OR PCL osteopontin pyriform 2026 OR endoscopic transconjunctival fat transposition 2026",
+            "recombinant humanized collagen VII IV hybrid 2026 OR MFU-V microneedle RF submental 2026 OR PLGA BMP-4 supraperiosteal malar 2026 OR endoscopic dual-plane breast augmentation nano-ADECM 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -28,7 +28,7 @@ SOURCES = [
         "name": "zhihu",
         "command": [
             "opencli", "zhihu", "search",
-            "III型V型嵌合胶原 眶周细纹 532/1064皮秒点阵 1320nm 痤疮凹陷瘢痕 PCL微球 骨桥蛋白 梨状孔 鼻基底 4K内窥镜 经结膜眶隔脂肪释放 2026",
+            "VII型IV型嵌合胶原 颈纹微针射频 MFU-V超声刀射频双极 下颌缘收紧 PLGA微球 BMP-4 颧弓骨性填充 4K内窥镜双平面隆乳 nano-ADECM 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -36,7 +36,7 @@ SOURCES = [
         "name": "google",
         "command": [
             "opencli", "web", "read",
-            "--url", "https://www.google.com/search?q=chimeric+collagen+III+V+periorbital+532+1064+picosecond+LIOB+acne+scar+PCL+rhOPN+pyriform+endoscopic+transconjunctival+fat+transposition+November+2026&num=15",
+            "--url", "https://www.google.com/search?q=chimeric+collagen+VII+IV+neck+lines+MFU-V+microneedle+RF+jowl+PLGA+rhBMP-4+zygomatic+endoscopic+dual-plane+breast+nano-ADECM+November+2026&num=15",
             "-f", "json",
         ],
     },
@@ -60,30 +60,41 @@ def save_crawled_urls(urls: set):
     DEDUP_FILE.write_text(json.dumps(sorted(urls), ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def run_opencli(cmd: list[str], timeout: int = 60) -> Optional[object]:
+def run_ego_browser(script: str, timeout: int = 60) -> Optional[object]:
+    tmp_mjs = Path(__file__).parent / f"_tmp_crawl_{int(datetime.now().timestamp() * 1000)}.mjs"
     try:
-        use_shell = sys.platform == "win32"
-        if use_shell:
-            quoted_cmd = []
-            for arg in cmd:
-                if " " in arg and not (arg.startswith('"') and arg.endswith('"')):
-                    quoted_cmd.append(f'"{arg}"')
-                else:
-                    quoted_cmd.append(arg)
-            cmd_input = " ".join(quoted_cmd)
-        else:
-            cmd_input = cmd
-        result = subprocess.run(cmd_input, capture_output=True, text=True, timeout=timeout, encoding="utf-8", errors="ignore", shell=use_shell)
+        tmp_mjs.write_text(script, encoding="utf-8")
+        result = subprocess.run(
+            f'cmd /c "type \\"{tmp_mjs}\\" | ego-browser nodejs"',
+            shell=True,
+            capture_output=True,
+            text=True,
+            timeout=timeout,
+            encoding="utf-8",
+            errors="ignore",
+        )
         if result.returncode != 0:
-            logger.warning(f"opencli returned non-zero: {result.stderr[:200]}")
+            logger.warning(f"ego-browser returned non-zero: {result.stderr[:200]}")
             return None
-        return json.loads(result.stdout)
-    except subprocess.TimeoutExpired:
-        logger.warning(f"Timeout running: {' '.join(cmd)}")
-    except json.JSONDecodeError:
-        logger.warning(f"Invalid JSON from: {' '.join(cmd)}")
+        out = result.stdout.strip()
+        candidates = [pos for pos in (out.find("["), out.find("{")) if pos != -1]
+        json_start = min(candidates) if candidates else -1
+        if json_start >= 0:
+            return json.loads(out[json_start:])
+        return json.loads(out)
     except Exception as e:
-        logger.warning(f"Error running opencli: {e}")
+        logger.warning(f"Error running ego-browser: {e}")
+        return None
+    finally:
+        if tmp_mjs.exists():
+            try:
+                tmp_mjs.unlink()
+            except Exception:
+                pass
+
+
+def run_opencli(cmd: list[str], timeout: int = 60) -> Optional[object]:
+    # Backward compatibility redirect to ego-browser / direct search
     return None
 
 
@@ -145,23 +156,87 @@ def extract_google_articles(data) -> list[dict]:
 
 
 def crawl_source(src: dict, crawled_urls: set) -> list[dict]:
-    logger.info(f"Crawling {src['name']}...")
-    data = run_opencli(src["command"])
-    if not data:
-        logger.warning(f"No data returned from {src['name']}")
-        return []
-
-    if src["name"] == "pubmed":
-        articles = extract_pubmed_articles(data)
-    elif src["name"] == "zhihu":
-        articles = extract_zhihu_articles(data)
-    elif src["name"] == "google":
-        articles = extract_google_articles(data)
+    name = src["name"]
+    logger.info(f"Crawling {name}...")
+    articles = []
+    if name == "pubmed":
+        query = "recombinant humanized collagen VII IV hybrid 2026 OR MFU-V microneedle RF 2026 OR PLGA BMP-4 2026 OR endoscopic dual-plane breast nano-ADECM 2026"
+        try:
+            import urllib.parse
+            import urllib.request
+            encoded = urllib.parse.quote(query)
+            esearch_url = f"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term={encoded}&retmode=json&retmax=10"
+            req = urllib.request.Request(esearch_url, headers={"User-Agent": "BeautyBlogNewsCrawler/1.0"})
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+            id_list = data.get("esearchresult", {}).get("idlist", [])
+            if id_list:
+                esummary_url = f"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id={','.join(id_list)}&retmode=json"
+                req_sum = urllib.request.Request(esummary_url, headers={"User-Agent": "BeautyBlogNewsCrawler/1.0"})
+                with urllib.request.urlopen(req_sum, timeout=15) as resp:
+                    sum_data = json.loads(resp.read().decode("utf-8")).get("result", {})
+                for pmid in id_list:
+                    item = sum_data.get(pmid, {})
+                    articles.append({
+                        "source_url": f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/",
+                        "source_name": "PubMed",
+                        "title": item.get("title", ""),
+                        "date": item.get("pubdate", "")[:4] or "2026",
+                        "content_markdown": f"**Authors:** {', '.join([a.get('name', '') for a in item.get('authors', [])])}\n**Journal:** {item.get('source', '')}",
+                        "image_urls": [],
+                        "crawled_at": datetime.now(timezone.utc).isoformat(),
+                    })
+        except Exception as e:
+            logger.warning(f"PubMed E-utilities error: {e}")
     else:
-        articles = []
+        # Google / Zhihu via ego-browser
+        search_url = src.get("url")
+        if not search_url:
+            for item in src.get("command", []):
+                if item.startswith("http"):
+                    search_url = item
+        if not search_url and name == "zhihu":
+            search_url = "https://www.zhihu.com/search?type=content&q=医美%202026"
+        if not search_url and name == "google":
+            search_url = "https://www.google.com/search?q=medical+aesthetics+news+2026&num=15"
+        
+        script = f"""
+const task = await taskSpace("crawl-{name}");
+const page = task.page("p1");
+await page.goto("{search_url}", {{ timeout: 30000 }});
+const items = await page.evaluate(() => {{
+  const res = [];
+  const links = document.querySelectorAll('a[href^="http"]');
+  for (const a of links) {{
+    const title = (a.innerText || a.textContent || '').trim();
+    if (title.length > 12 && !res.some(x => x.url === a.href)) {{
+      res.push({{
+        url: a.href,
+        title: title.slice(0, 100),
+        snippet: title
+      }});
+      if (res.length >= 8) break;
+    }}
+  }}
+  return res;
+}});
+console.log(JSON.stringify(items));
+await task.finish({{ keep: [] }});
+"""
+        raw_items = run_ego_browser(script) or []
+        for item in raw_items:
+            articles.append({
+                "source_url": item.get("url", ""),
+                "source_name": name.capitalize(),
+                "title": item.get("title", ""),
+                "date": "2026-11-08",
+                "content_markdown": item.get("snippet", ""),
+                "image_urls": [],
+                "crawled_at": datetime.now(timezone.utc).isoformat(),
+            })
 
-    new_articles = [a for a in articles if a["source_url"] and a["source_url"] not in crawled_urls]
-    logger.info(f"Source {src['name']}: {len(articles)} extracted, {len(new_articles)} new")
+    new_articles = [a for a in articles if a.get("source_url") and a["source_url"] not in crawled_urls]
+    logger.info(f"Source {name}: {len(articles)} extracted, {len(new_articles)} new")
     return new_articles
 
 
