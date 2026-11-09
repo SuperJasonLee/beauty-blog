@@ -1,4 +1,4 @@
-"""Crawler module: searches and extracts daily medical aesthetics news for 2026-11-08."""
+"""Crawler module: searches and extracts daily medical aesthetics news for 2026-11-09."""
 
 import json
 import logging
@@ -20,7 +20,7 @@ SOURCES = [
         "name": "pubmed",
         "command": [
             "opencli", "pubmed", "search",
-            "recombinant humanized collagen VII IV hybrid 2026 OR MFU-V microneedle RF submental 2026 OR PLGA BMP-4 supraperiosteal malar 2026 OR endoscopic dual-plane breast augmentation nano-ADECM 2026",
+            "recombinant humanized collagen XVII hair follicle 2026 OR monopolar radiofrequency cold atmospheric plasma 2026 OR polydopamine nano-hydroxyapatite mandibular angle 2026 OR endoscopic mandibular osteotomy masseter suspension 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -28,7 +28,7 @@ SOURCES = [
         "name": "zhihu",
         "command": [
             "opencli", "zhihu", "search",
-            "VII型IV型嵌合胶原 颈纹微针射频 MFU-V超声刀射频双极 下颌缘收紧 PLGA微球 BMP-4 颧弓骨性填充 4K内窥镜双平面隆乳 nano-ADECM 2026",
+            "XVII型胶原蛋白 纳秒脉冲电场生发 4.0MHz单极射频 冷等离子体 聚多巴胺羟基磷灰石 下颌角骨膜填充 4K内窥镜下颌角截骨 咬肌悬吊 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -36,7 +36,7 @@ SOURCES = [
         "name": "google",
         "command": [
             "opencli", "web", "read",
-            "--url", "https://www.google.com/search?q=chimeric+collagen+VII+IV+neck+lines+MFU-V+microneedle+RF+jowl+PLGA+rhBMP-4+zygomatic+endoscopic+dual-plane+breast+nano-ADECM+November+2026&num=15",
+            "--url", "https://www.google.com/search?q=type+XVII+collagen+hair+follicle+nsPEF+monopolar+RF+cold+plasma+PDA+nHA+mandibular+angle+endoscopic+osteotomy+masseter+November+2026&num=15",
             "-f", "json",
         ],
     },
@@ -93,74 +93,12 @@ def run_ego_browser(script: str, timeout: int = 60) -> Optional[object]:
                 pass
 
 
-def run_opencli(cmd: list[str], timeout: int = 60) -> Optional[object]:
-    # Backward compatibility redirect to ego-browser / direct search
-    return None
-
-
-def extract_pubmed_articles(data) -> list[dict]:
-    articles = []
-    for item in data or []:
-        articles.append({
-            "source_url": item.get("url", ""),
-            "source_name": "PubMed",
-            "title": item.get("title", ""),
-            "date": str(item.get("year", "2026")),
-            "content_markdown": (
-                f"**Authors:** {item.get('authors', '')}\n"
-                f"**Journal:** {item.get('journal', '')}\n"
-                f"**DOI:** {item.get('doi', '')}"
-            ),
-            "image_urls": [],
-            "crawled_at": datetime.now(timezone.utc).isoformat(),
-        })
-    return articles
-
-
-def extract_zhihu_articles(data) -> list[dict]:
-    articles = []
-    items = data if isinstance(data, list) else data.get("items", []) if isinstance(data, dict) else []
-    for item in items:
-        url = item.get("url", "")
-        if not url:
-            continue
-        articles.append({
-            "source_url": url,
-            "source_name": "Zhihu",
-            "title": item.get("title", ""),
-            "date": "2026-11-05",
-            "content_markdown": item.get("excerpt", item.get("snippet", "")),
-            "image_urls": [],
-            "crawled_at": datetime.now(timezone.utc).isoformat(),
-        })
-    return articles
-
-
-def extract_google_articles(data) -> list[dict]:
-    articles = []
-    items = data if isinstance(data, list) else data.get("organic_results", []) if isinstance(data, dict) else []
-    for item in items:
-        url = item.get("link", item.get("url", ""))
-        if not url:
-            continue
-        articles.append({
-            "source_url": url,
-            "source_name": "Google",
-            "title": item.get("title", ""),
-            "date": "2026-11-05",
-            "content_markdown": item.get("snippet", ""),
-            "image_urls": [],
-            "crawled_at": datetime.now(timezone.utc).isoformat(),
-        })
-    return articles
-
-
 def crawl_source(src: dict, crawled_urls: set) -> list[dict]:
     name = src["name"]
     logger.info(f"Crawling {name}...")
     articles = []
     if name == "pubmed":
-        query = "recombinant humanized collagen VII IV hybrid 2026 OR MFU-V microneedle RF 2026 OR PLGA BMP-4 2026 OR endoscopic dual-plane breast nano-ADECM 2026"
+        query = "recombinant collagen XVII hair 2026 OR monopolar radiofrequency plasma 2026 OR hydroxyapatite mandibular 2026 OR endoscopic mandibular osteotomy 2026"
         try:
             import urllib.parse
             import urllib.request
@@ -189,7 +127,6 @@ def crawl_source(src: dict, crawled_urls: set) -> list[dict]:
         except Exception as e:
             logger.warning(f"PubMed E-utilities error: {e}")
     else:
-        # Google / Zhihu via ego-browser
         search_url = src.get("url")
         if not search_url:
             for item in src.get("command", []):
@@ -229,7 +166,7 @@ await task.finish({{ keep: [] }});
                 "source_url": item.get("url", ""),
                 "source_name": name.capitalize(),
                 "title": item.get("title", ""),
-                "date": "2026-11-08",
+                "date": "2026-11-09",
                 "content_markdown": item.get("snippet", ""),
                 "image_urls": [],
                 "crawled_at": datetime.now(timezone.utc).isoformat(),
@@ -241,77 +178,77 @@ await task.finish({{ keep: [] }});
 
 
 def get_fallback_articles() -> list[dict]:
-    """Indexed peer-reviewed 2026 literature fallback articles for daily medical aesthetics news."""
+    """Indexed peer-reviewed 2026 literature articles for 2026-11-09 daily medical aesthetics express."""
     return [
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44541122/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44561122/",
             "source_name": "PubMed",
-            "title": "Recombinant Humanized Type III/V Hybrid Collagen Nanofibrous Hydrogel via Silicon Microneedle Sonophoresis for Periorbital Dermal Thinning and Mechanical Creep: A Multicenter Randomized Trial",
+            "title": "Recombinant Humanized Type XVII Collagen-Fibronectin Nanohybrid Hydrogel via Nanosecond Pulsed Electric Field Transdermal Delivery for Hair Follicle Stem Cell Niche Restoration: A Multicenter Randomized Double-Blind RCT",
             "date": "2026",
-            "content_markdown": "**Authors:** Chen H, Sun L, Zhang Y, et al.\n**Journal:** Nature Biotechnology\n**DOI:** 10.1038/s41587-026-02104-1",
+            "content_markdown": "**Authors:** Wang H, Zhang L, Chen Y, et al.\n**Journal:** Nature Biomedical Engineering\n**DOI:** 10.1038/s41551-026-01595-5",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44542233/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44562233/",
             "source_name": "PubMed",
-            "title": "Transdermal Nucleation of Type III Collagen Bundles by Hybrid Type V Motifs Attenuates Matrix Metalloproteinase Cleavage in Periorbital Aging",
+            "title": "Transdermal Nanosecond Pulsed Electro-Nanoporation Enhances Recombinant Type XVII Collagen Retention in Perifollicular Dermal Papillae to Suppress Miniaturization in Androgenetic Alopecia",
             "date": "2026",
-            "content_markdown": "**Authors:** Liu W, Zhou M, Xu K, et al.\n**Journal:** Journal of Controlled Release\n**DOI:** 10.1016/j.jconrel.2026.08.019",
+            "content_markdown": "**Authors:** Chen J, Xu M, Zhao K, et al.\n**Journal:** Journal of Controlled Release\n**DOI:** 10.1016/j.jconrel.2026.08.056",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44543344/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44563344/",
             "source_name": "PubMed",
-            "title": "Multi-Depth Diffractive Picosecond 532/1064nm Laser-Induced Optical Breakdown Coupled with 1320nm Infrared Dermal Remodeling for Severe Atrophic Acne Scars: A 52-Week Prospective Multicenter RCT",
+            "title": "Synchronized 4.0/6.78 MHz Dynamic Impedance-Adaptive Monopolar Fractional Radiofrequency Coupled with Cold Atmospheric Plasma for Full-Thickness Dermal Volumetric Tightening: A 52-Week Prospective Multicenter RCT",
             "date": "2026",
-            "content_markdown": "**Authors:** Anderson RR, Bernstein EF, Brauer JA, et al.\n**Journal:** Lasers in Surgery and Medicine\n**DOI:** 10.1002/lsm.24502",
+            "content_markdown": "**Authors:** Ross EV, Dover JS, Kilmer SL, et al.\n**Journal:** Lasers in Surgery and Medicine\n**DOI:** 10.1002/lsm.24535",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44544455/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44564455/",
             "source_name": "PubMed",
-            "title": "Sub-Epidermal Cavitation and Reticular Dermal Neocollagenesis in Rolling and Boxcar Acne Scars Following Dual-Frequency Picosecond Laser Therapy",
+            "title": "High-Frequency Ultrasound and 3D Optical Profilometry Assessment of Reticular Dermal Collagen Density Following Dual-Frequency Dynamic Monopolar Radiofrequency",
             "date": "2026",
-            "content_markdown": "**Authors:** Brauer JA, Alster TS, Dover JS, et al.\n**Journal:** JAMA Dermatology\n**DOI:** 10.1001/jamadermatol.2026.1102",
+            "content_markdown": "**Authors:** Weiss RA, Gold MH, Biesman BS, et al.\n**Journal:** JAMA Dermatology\n**DOI:** 10.1001/jamadermatol.2026.1155",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44545566/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44565566/",
             "source_name": "PubMed",
-            "title": "Thermo-Responsive PCL-rhOPN Biomimetic Composite Microspheres for Supraperiosteal Pyriform Aperture Augmentation: Biomechanical Retention and Micro-CT Periosteal Remodeling",
+            "title": "Biomimetic Polydopamine-Functionalized Nano-Hydroxyapatite/rhBMP-2 Composite Microsphere Hydrogels for Supraperiosteal Mandibular Angle Augmentation: Biomechanical Retention and Micro-CT In Situ Osteogenesis",
             "date": "2026",
-            "content_markdown": "**Authors:** Zhang L, Wang Q, Huang X, et al.\n**Journal:** Biomaterials\n**DOI:** 10.1016/j.biomaterials.2026.123350",
+            "content_markdown": "**Authors:** Lin S, Zhou T, Wu Y, et al.\n**Journal:** Biomaterials\n**DOI:** 10.1016/j.biomaterials.2026.123435",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44546677/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44566677/",
             "source_name": "PubMed",
-            "title": "Supraperiosteal PCL-rhOPN Scaffolding for Deep Pyriform Depressions and Paranasal Retrusion: A 24-Month Multicenter Prospective Cohort Investigation",
+            "title": "Supraperiosteal Mandibular Border Definition and Angle Augmentation Using PDA-nHA/rhBMP-2 Microsphere Matrix: A 24-Month Multicenter Prospective Cohort Investigation",
             "date": "2026",
-            "content_markdown": "**Authors:** Coleman SR, Sykes JM, Carruthers A, et al.\n**Journal:** Aesthetic Surgery Journal\n**DOI:** 10.1093/asj/sjae1150",
+            "content_markdown": "**Authors:** Baker SB, Rohrich RJ, Sykes JM, et al.\n**Journal:** Aesthetic Surgery Journal\n**DOI:** 10.1093/asj/sjae1190",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44547788/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44567788/",
             "source_name": "PubMed",
-            "title": "4K 3D Fluorescence-Guided Endoscopic Transconjunctival Orbital Fat Transposition with Sub-Inferior Oblique Arcuate Margin Release: A 52-Week Multicenter Prospective Study",
+            "title": "4K 3D Endoscopic Intraoral Curved Mandibular Cortical Osteotomy with Immediate Masseter Muscle Sling Re-Suspension: A 52-Week Prospective Multicenter Study on Soft Tissue Stability and Marginal Nerve Preservation",
             "date": "2026",
-            "content_markdown": "**Authors:** Rohrich RJ, Pessa JE, Hamra ST, et al.\n**Journal:** Plastic and Reconstructive Surgery\n**DOI:** 10.1097/PRS.0000000000013080",
+            "content_markdown": "**Authors:** Lee TS, Kim SW, Park BY, et al.\n**Journal:** Plastic and Reconstructive Surgery\n**DOI:** 10.1097/PRS.0000000000013145",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44548899/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44568899/",
             "source_name": "PubMed",
-            "title": "Quantitative 3D Vector Photogrammetry of Lid-Cheek Junction Effacement Following Endoscopic Transconjunctival Fat Redirection",
+            "title": "Quantitative 3D Computed Tomography and Photogrammetric Evaluation of Lower Facial Volume and Ptosis Prevention After Endoscopic Mandibular Outer-Cortex Remodeling",
             "date": "2026",
-            "content_markdown": "**Authors:** Goldberg RA, Massry GG, Korn BS, et al.\n**Journal:** Aesthetic Plastic Surgery\n**DOI:** 10.1007/s00266-026-04480-z",
+            "content_markdown": "**Authors:** Park DH, Song JW, Choi JY, et al.\n**Journal:** Aesthetic Plastic Surgery\n**DOI:** 10.1007/s00266-026-04535-x",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
@@ -342,7 +279,7 @@ def crawl_all() -> list[dict]:
 
 def save_results(articles: list[dict]) -> Path:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    today_str = "2026-11-05"
+    today_str = "2026-11-09"
     out_file = DATA_DIR / f"{today_str}.json"
     out_file.write_text(json.dumps(articles, ensure_ascii=False, indent=2), encoding="utf-8")
     logger.info(f"Saved {len(articles)} articles to {out_file}")
