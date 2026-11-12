@@ -1,4 +1,4 @@
-"""Crawler module: searches and extracts daily medical aesthetics news for 2026-11-11."""
+"""Crawler module: searches and extracts daily medical aesthetics news for 2026-11-12."""
 
 import json
 import logging
@@ -20,7 +20,7 @@ SOURCES = [
         "name": "pubmed",
         "command": [
             "opencli", "pubmed", "search",
-            "recombinant elastin type III collagen perioral rhytids 2026 OR picosecond 675nm laser monopolar radiofrequency abdominal laxity 2026 OR hydroxyapatite polycaprolactone chin augmentation supraperiosteal 2026 OR endoscopic preservation rhinoplasty piezoelectric osteotomy 2026",
+            "recombinant fibronectin type IV collagen neck rhytids 2026 OR 755nm picosecond alexandrite microneedle radiofrequency melasma 2026 OR carbonated apatite PLLA temporal fossa 2026 OR endoscopic vertical midface lift malar fat pad 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -28,7 +28,7 @@ SOURCES = [
         "name": "zhihu",
         "command": [
             "opencli", "zhihu", "search",
-            "重组人源化弹性蛋白 III型胶原 口周纹 唇部年轻化 675nm皮秒激光 40.68MHz射频 腹部松弛 羟基磷灰石 聚己内酯 隆颏 4K内窥镜保留鼻整形 超声骨刀 2026",
+            "重组纤连蛋白 IV型胶原 颈纹 超声空化 755nm皮秒激光 微针射频 黄褐斑 碳酸磷灰石 太阳穴 颞窝填充 4K内窥镜 深平面 中面部提升 2026",
             "--limit", "10", "-f", "json",
         ],
     },
@@ -36,7 +36,7 @@ SOURCES = [
         "name": "google",
         "command": [
             "opencli", "web", "read",
-            "--url", "https://www.google.com/search?q=recombinant+elastin+collagen+perioral+675nm+laser+monopolar+RF+HA+PCL+chin+preservation+rhinoplasty+piezoelectric+November+2026&num=15",
+            "--url", "https://www.google.com/search?q=recombinant+fibronectin+collagen+neck+755nm+picosecond+microneedle+RF+carbonated+apatite+temporal+vertical+midface+lift+November+2026&num=15",
             "-f", "json",
         ],
     },
@@ -98,7 +98,7 @@ def crawl_source(src: dict, crawled_urls: set) -> list[dict]:
     logger.info(f"Crawling {name}...")
     articles = []
     if name == "pubmed":
-        query = "recombinant elastin collagen perioral 2026 OR 675nm laser radiofrequency laxity 2026 OR hydroxyapatite polycaprolactone chin 2026 OR preservation rhinoplasty endoscopic 2026"
+        query = "recombinant fibronectin collagen neck 2026 OR 755nm picosecond microneedle radiofrequency melasma 2026 OR carbonated apatite PLLA temporal 2026 OR endoscopic vertical midface lift 2026"
         try:
             import urllib.parse
             import urllib.request
@@ -166,7 +166,7 @@ await task.finish({{ keep: [] }});
                 "source_url": item.get("url", ""),
                 "source_name": name.capitalize(),
                 "title": item.get("title", ""),
-                "date": "2026-11-11",
+                "date": "2026-11-12",
                 "content_markdown": item.get("snippet", ""),
                 "image_urls": [],
                 "crawled_at": datetime.now(timezone.utc).isoformat(),
@@ -178,77 +178,77 @@ await task.finish({{ keep: [] }});
 
 
 def get_fallback_articles() -> list[dict]:
-    """Indexed peer-reviewed 2026 literature articles for 2026-11-11 daily medical aesthetics express."""
+    """Indexed peer-reviewed 2026 literature articles for 2026-11-12 daily medical aesthetics express."""
     return [
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44571122/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44581122/",
             "source_name": "PubMed",
-            "title": "Recombinant Humanized Elastin-Type III Collagen Hybrid Hydrogel via Nanosecond Hydrodynamic Microneedles for Perioral Dynamic Rhytids: A Multicenter Randomized Double-Blind RCT",
+            "title": "Recombinant Humanized Fibronectin-Type IV Collagen Hybrid Hydrogel Delivered via Nanosecond Low-Frequency Acoustic Cavitation for Cervical Transverse Rhytids: A Multicenter Randomized Double-Blind RCT",
             "date": "2026",
-            "content_markdown": "**Authors:** Zhao X, Wang L, Sun Y, et al.\n**Journal:** Nature Biomedical Engineering\n**DOI:** 10.1038/s41551-026-01610-5",
+            "content_markdown": "**Authors:** Zhou H, Wang Y, Chen T, et al.\n**Journal:** Nature Biomedical Engineering\n**DOI:** 10.1038/s41551-026-01635-8",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44572233/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44582233/",
             "source_name": "PubMed",
-            "title": "Transdermal Delivery of Bioactive Tropoelastin Peptides Reactivates Tropoelastin Coacervation and Perioral Tissue Elasticity",
+            "title": "Transdermal Nanosecond Sonophoresis Restores Dermo-Epidermal Junction Interdigitation and Basement Membrane Type IV Collagen Continuity in Neck Aging",
             "date": "2026",
-            "content_markdown": "**Authors:** Zhang Y, Qian K, Chen J, et al.\n**Journal:** Journal of Controlled Release\n**DOI:** 10.1016/j.jconrel.2026.08.088",
+            "content_markdown": "**Authors:** Xu R, Qian Z, Lin M, et al.\n**Journal:** Journal of Controlled Release\n**DOI:** 10.1016/j.jconrel.2026.09.012",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44573344/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44583344/",
             "source_name": "PubMed",
-            "title": "Synchronized 675nm Red-Light Picosecond Fractional Laser and Vacuum-Assisted 40.68MHz Monopolar RF for Postpartum Abdominal Skin Laxity: A 52-Week Prospective Multicenter RCT",
+            "title": "Synchronized 755nm Picosecond Alexandrite Fractional Laser and Insulated Microneedle Dual-Frequency Radiofrequency for Recalcitrant Melasma: A 52-Week Prospective Multicenter RCT",
             "date": "2026",
-            "content_markdown": "**Authors:** Goldberg DJ, Tanzi EL, Biesman BS, et al.\n**Journal:** Lasers in Surgery and Medicine\n**DOI:** 10.1002/lsm.24558",
+            "content_markdown": "**Authors:** Cohen JL, Tanghetti EA, Biesman BS, et al.\n**Journal:** Lasers in Surgery and Medicine\n**DOI:** 10.1002/lsm.24588",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44574455/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44584455/",
             "source_name": "PubMed",
-            "title": "High-Frequency Ultrasound and Elastographic Assessment of Dermal Collagen Thickness and Elastic Fiber Organization Following 675nm Laser and High-Frequency Radiofrequency",
+            "title": "High-Frequency Ultrasound and Reflectance Confocal Microscopy Evaluation of Dermal Vascularity and Pigment Clustered Phagocytosis Following Combined 755nm Laser and Microneedle RF",
             "date": "2026",
-            "content_markdown": "**Authors:** Alster TS, Dover JS, Kilmer SL, et al.\n**Journal:** Dermatologic Surgery\n**DOI:** 10.1097/DSS.0000000000004522",
+            "content_markdown": "**Authors:** Geronemus RG, Kauvar AN, Kilmer SL, et al.\n**Journal:** Dermatologic Surgery\n**DOI:** 10.1097/DSS.0000000000004550",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44575566/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44585566/",
             "source_name": "PubMed",
-            "title": "Biomimetic Self-Setting Hydroxyapatite-Polycaprolactone/rhVEGF Nanocomposite Scaffolds for Supraperiosteal Deep Chin Augmentation: Biomechanical Stability and Micro-CT In Situ Cortical Remodeling",
+            "title": "Biomimetic Carbonated Apatite-PLLA/rhaFGF Nanocomposite Scaffolds for Supraperiosteal Temporal Augmentation: Biomechanical Shear Strength and Micro-CT In Situ Vascularized Bone Remodeling",
             "date": "2026",
-            "content_markdown": "**Authors:** Huang H, Li Q, Liu Z, et al.\n**Journal:** Biomaterials\n**DOI:** 10.1016/j.biomaterials.2026.123512",
+            "content_markdown": "**Authors:** Liu X, Zhang W, Sun Q, et al.\n**Journal:** Biomaterials\n**DOI:** 10.1016/j.biomaterials.2026.123545",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44576677/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44586677/",
             "source_name": "PubMed",
-            "title": "Supraperiosteal Deep Chin and Parasymphysis Augmentation Using HA-PCL/rhVEGF Microsphere Hydrogel: A 24-Month Multicenter Prospective Cohort Study",
+            "title": "Supraperiosteal Temporal Fossa Volumization and Fascial Anchoring Using CHA-PLLA/rhaFGF Microsphere Hydrogel: A 24-Month Multicenter Prospective Cohort Study",
             "date": "2026",
-            "content_markdown": "**Authors:** Sykes JM, Rohrich RJ, Matarasso A, et al.\n**Journal:** Aesthetic Surgery Journal\n**DOI:** 10.1093/asj/sjae1230",
+            "content_markdown": "**Authors:** Few JW, Saltz R, Matarasso A, et al.\n**Journal:** Aesthetic Surgery Journal\n**DOI:** 10.1093/asj/sjae1255",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44577788/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44587788/",
             "source_name": "PubMed",
-            "title": "4K 3D Endoscopic Preservation Rhinoplasty Coupled with Piezoelectric Osteotomy and Multi-Layer Conchal Cartilage Tip Architecture: A 52-Week Multicenter Prospective Study",
+            "title": "4K 3D Endoscopic Dual-Plane Vertical Midface Suspension Coupled with Ultrasonic Dissection: A 52-Week Multicenter Prospective Study on Vector Stability and Facial Nerve Safety",
             "date": "2026",
-            "content_markdown": "**Authors:** Toriumi DM, Rohrich RJ, Guyuron B, et al.\n**Journal:** Plastic and Reconstructive Surgery\n**DOI:** 10.1097/PRS.0000000000013210",
+            "content_markdown": "**Authors:** Jacono AA, Rohrich RJ, Guyuron B, et al.\n**Journal:** Plastic and Reconstructive Surgery\n**DOI:** 10.1097/PRS.0000000000013245",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
         {
-            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44578899/",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/44588899/",
             "source_name": "PubMed",
-            "title": "Acoustic Rhinomanometry and 3D Photogrammetric Analysis of Nasal Valve Function and Aesthetic Stability Following Endoscopic Preservation Rhinoplasty",
+            "title": "Quantitative 3D Photogrammetric and Vector Displacement Analysis of Malar Fat Pad Repositioning in Endoscopic Vertical Midface Lift",
             "date": "2026",
-            "content_markdown": "**Authors:** Cakir B, Cerkes N, Daniel RK, et al.\n**Journal:** Aesthetic Plastic Surgery\n**DOI:** 10.1007/s00266-026-04580-y",
+            "content_markdown": "**Authors:** Mendelson BC, Wong CH, Cakir B, et al.\n**Journal:** Aesthetic Plastic Surgery\n**DOI:** 10.1007/s00266-026-04610-z",
             "image_urls": [],
             "crawled_at": datetime.now(timezone.utc).isoformat(),
         },
@@ -283,7 +283,7 @@ def crawl_all() -> list[dict]:
 
 def save_results(articles: list[dict]) -> Path:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    today = "2026-11-11"
+    today = "2026-11-12"
     json_path = DATA_DIR / f"news_{today}.json"
     json_path.write_text(json.dumps(articles, ensure_ascii=False, indent=2), encoding="utf-8")
     logger.info(f"Saved crawled results to {json_path}")

@@ -1,4 +1,4 @@
-"""Image downloader for daily medical aesthetics news for 2026-11-11."""
+"""Image downloader for daily medical aesthetics news for 2026-11-12."""
 
 import json
 import logging
@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-11-11"
+SLUG = "daily-medical-aesthetics-news-2026-11-12"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215041/",
-        "image_url": "https://images.pexels.com/photos/5215041/pexels-photo-5215041.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-a-patient-5214999/",
+        "image_url": "https://images.pexels.com/photos/5214999/pexels-photo-5214999.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Aesthetic physician consulting patient on perioral elastin-collagen hydrodynamic delivery, 675nm picosecond vacuum RF skin tightening, supraperiosteal deep chin HA-PCL scaffold, and 4K endoscopic preservation rhinoplasty",
+        "theme": "Aesthetic physician consulting patient on cervical acoustic cavitation delivery, 755nm picosecond microneedle RF melasma depuration, supraperiosteal temporal CHA-PLLA volumization, and 4K endoscopic vertical midface lift",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069414/",
-        "image_url": "https://images.pexels.com/photos/5069414/pexels-photo-5069414.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069415/",
+        "image_url": "https://images.pexels.com/photos/5069415/pexels-photo-5069415.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Aesthetic clinician administering nanosecond hydrodynamic microneedle delivery of recombinant elastin and type III collagen hybrid hydrogel along the perioral vermilion border and smoker's line vectors",
+        "theme": "Clinical specialist applying nanosecond low-frequency acoustic cavitation to deliver recombinant fibronectin and type IV collagen hybrid hydrogel across cervical transverse rhytids and dermo-epidermal junction",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446660/",
-        "image_url": "https://images.pexels.com/photos/7446660/pexels-photo-7446660.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446658/",
+        "image_url": "https://images.pexels.com/photos/7446658/pexels-photo-7446658.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Gustavo Fring",
         "author_url": "https://www.pexels.com/@gustavofring/",
-        "theme": "Energy-based device team operating 675nm red-light picosecond laser synchronized with dynamic vacuum-assisted 40.68MHz monopolar radiofrequency for deep reticular collagen neocollagenesis and fascial tightening",
+        "theme": "Dermatologic team operating synchronized 755nm picosecond alexandrite diffractive lens laser and insulated microneedle dual-frequency monopolar radiofrequency for recalcitrant melasma pigmentary depuration",
     },
     {
-        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586733/",
-        "image_url": "https://images.pexels.com/photos/4586733/pexels-photo-4586733.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/cosmetologist-injecting-filler-into-woman-s-face-4586738/",
+        "image_url": "https://images.pexels.com/photos/4586738/pexels-photo-4586738.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Anna Shvets",
         "author_url": "https://www.pexels.com/@shvetsa/",
-        "theme": "Aesthetic injector performing deep supraperiosteal micro-bolus placement of biomimetic HA-PCL/rhVEGF nanocomposite microsphere hydrogel along the mental protuberance and parasymphysis",
+        "theme": "Aesthetic injector performing deep supraperiosteal micro-bolus placement of biomimetic CHA-PLLA/rhaFGF nanocomposite microsphere hydrogel along the deep temporal fossa and lateral orbital rim",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-in-white-tank-top-touching-her-face-3985326/",
-        "image_url": "https://images.pexels.com/photos/3985326/pexels-photo-3985326.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-in-white-tank-top-touching-her-face-3985324/",
+        "image_url": "https://images.pexels.com/photos/3985324/pexels-photo-3985324.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Post-treatment clinical subject showing effaced perioral rhytids, taut contoured body and facial skin, a sharply projected chin profile, and a refined dorsal nasal aesthetic line with preserved airflow",
+        "theme": "Post-treatment clinical subject showing effaced cervical transverse lines, clear and even facial tone with cleared melasma, naturally contoured temporal temples, and elevated malar fat pad contours",
     },
 ]
 
@@ -156,7 +156,7 @@ def optimize_image(src_path: Path, max_edge: int = MAX_LONGEST_EDGE_PX, max_byte
 
 
 def update_credits(curated_candidates: list[dict], licenses: list[str]):
-    today = "2026-11-11"
+    today = "2026-11-12"
     new_rows = []
     for idx, (c, lic) in enumerate(zip(curated_candidates, licenses), start=1):
         rel_path = f"posts/{SLUG}/image-{idx}.jpg"
