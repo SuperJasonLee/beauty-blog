@@ -1,4 +1,4 @@
-"""Image downloader for daily medical aesthetics news for 2026-11-12."""
+"""Image downloader for daily medical aesthetics news for 2026-11-15."""
 
 import json
 import logging
@@ -12,7 +12,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-11-12"
+SLUG = "daily-medical-aesthetics-news-2026-11-15"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +34,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-a-patient-5214999/",
-        "image_url": "https://images.pexels.com/photos/5214999/pexels-photo-5214999.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215042/",
+        "image_url": "https://images.pexels.com/photos/5215042/pexels-photo-5215042.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Tima Miroshnichenko",
         "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Aesthetic physician consulting patient on cervical acoustic cavitation delivery, 755nm picosecond microneedle RF melasma depuration, supraperiosteal temporal CHA-PLLA volumization, and 4K endoscopic vertical midface lift",
+        "theme": "Aesthetic physician consulting patient on periorbital microjet rhCOL17 delivery, 1064nm picosecond steatoblepharon reduction, supraperiosteal pyriform Mg-HA volumization, and 4K endoscopic sub-SMAS buccal fat suspension",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069415/",
-        "image_url": "https://images.pexels.com/photos/5069415/pexels-photo-5069415.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069416/",
+        "image_url": "https://images.pexels.com/photos/5069416/pexels-photo-5069416.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Clinical specialist applying nanosecond low-frequency acoustic cavitation to deliver recombinant fibronectin and type IV collagen hybrid hydrogel across cervical transverse rhytids and dermo-epidermal junction",
+        "theme": "Clinical specialist delivering recombinant humanized XVII collagen and laminin-511 hybrid nanopeptide hydrogel via pulsed microjet across periorbital lateral canthal rhytids",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446658/",
-        "image_url": "https://images.pexels.com/photos/7446658/pexels-photo-7446658.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446657/",
+        "image_url": "https://images.pexels.com/photos/7446657/pexels-photo-7446657.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Gustavo Fring",
         "author_url": "https://www.pexels.com/@gustavofring/",
-        "theme": "Dermatologic team operating synchronized 755nm picosecond alexandrite diffractive lens laser and insulated microneedle dual-frequency monopolar radiofrequency for recalcitrant melasma pigmentary depuration",
+        "theme": "Dermatologist performing synchronized 1064nm/532nm picosecond acoustic lattice laser and 40.68MHz monopolar dielectric radiofrequency treatment for lower eyelid steatoblepharon and orbital septal tightening",
     },
     {
-        "page_url": "https://www.pexels.com/photo/cosmetologist-injecting-filler-into-woman-s-face-4586738/",
-        "image_url": "https://images.pexels.com/photos/4586738/pexels-photo-4586738.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586739/",
+        "image_url": "https://images.pexels.com/photos/4586739/pexels-photo-4586739.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "Anna Shvets",
         "author_url": "https://www.pexels.com/@shvetsa/",
-        "theme": "Aesthetic injector performing deep supraperiosteal micro-bolus placement of biomimetic CHA-PLLA/rhaFGF nanocomposite microsphere hydrogel along the deep temporal fossa and lateral orbital rim",
+        "theme": "Aesthetic injector performing deep supraperiosteal placement of biomimetic Mg-HA/PCL/rhBMP-2 microsphere hydrogel along the pyriform aperture rim and alar base",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-in-white-tank-top-touching-her-face-3985324/",
-        "image_url": "https://images.pexels.com/photos/3985324/pexels-photo-3985324.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "page_url": "https://www.pexels.com/photo/woman-in-white-tank-top-touching-her-face-3985323/",
+        "image_url": "https://images.pexels.com/photos/3985323/pexels-photo-3985323.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
         "author": "cottonbro studio",
         "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Post-treatment clinical subject showing effaced cervical transverse lines, clear and even facial tone with cleared melasma, naturally contoured temporal temples, and elevated malar fat pad contours",
+        "theme": "Post-treatment clinical subject displaying smoothed lateral canthal lines, firm and flat lower eyelid contours without bulging fat pads, projected alar base, and sharp lifted lower mandibular jawline",
     },
 ]
 
@@ -156,7 +156,7 @@ def optimize_image(src_path: Path, max_edge: int = MAX_LONGEST_EDGE_PX, max_byte
 
 
 def update_credits(curated_candidates: list[dict], licenses: list[str]):
-    today = "2026-11-12"
+    today = "2026-11-15"
     new_rows = []
     for idx, (c, lic) in enumerate(zip(curated_candidates, licenses), start=1):
         rel_path = f"posts/{SLUG}/image-{idx}.jpg"
