@@ -1,10 +1,7 @@
-"""Image downloader for daily medical aesthetics news for 2026-11-15."""
+"""Image downloader for daily medical aesthetics news for 2026-11-18."""
 
-import json
 import logging
-import subprocess
 import sys
-from datetime import date
 from pathlib import Path
 from typing import Optional
 
@@ -12,7 +9,7 @@ import httpx
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SLUG = "daily-medical-aesthetics-news-2026-11-15"
+SLUG = "daily-medical-aesthetics-news-2026-11-18"
 IMAGES_DIR = REPO_ROOT / "static" / "images" / "posts" / SLUG
 CREDITS_FILE = REPO_ROOT / "static" / "images" / "CREDITS.md"
 
@@ -34,39 +31,39 @@ MAX_BYTES = 300 * 1024
 
 CURATED_CANDIDATES = [
     {
-        "page_url": "https://www.pexels.com/photo/a-doctor-talking-to-her-patient-5215042/",
-        "image_url": "https://images.pexels.com/photos/5215042/pexels-photo-5215042.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
-        "author": "Tima Miroshnichenko",
-        "author_url": "https://www.pexels.com/@tima-miroshnichenko/",
-        "theme": "Aesthetic physician consulting patient on periorbital microjet rhCOL17 delivery, 1064nm picosecond steatoblepharon reduction, supraperiosteal pyriform Mg-HA volumization, and 4K endoscopic sub-SMAS buccal fat suspension",
+        "page_url": "https://www.pexels.com/photo/treatment-room-in-a-private-clinic-16571735/",
+        "image_url": "https://images.pexels.com/photos/16571735/pexels-photo-16571735.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "author": "zandatsu",
+        "author_url": "https://www.pexels.com/@zandatsu/",
+        "theme": "Modern medical aesthetics clinic suite equipped for multimodal injectable, energy-based, and surgical facial rejuvenation",
     },
     {
-        "page_url": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-in-a-clinic-5069416/",
-        "image_url": "https://images.pexels.com/photos/5069416/pexels-photo-5069416.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
-        "author": "cottonbro studio",
-        "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Clinical specialist delivering recombinant humanized XVII collagen and laminin-511 hybrid nanopeptide hydrogel via pulsed microjet across periorbital lateral canthal rhytids",
+        "page_url": "https://www.pexels.com/photo/mixing-ingredients-of-cosmetic-with-pipette-16100839/",
+        "image_url": "https://images.pexels.com/photos/16100839/pexels-photo-16100839.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "author": "Fernando Serrano",
+        "author_url": "https://www.pexels.com/@fernando-serrano-89809820/",
+        "theme": "Precision formulation of injectable poly-L-lactic acid (PLLA) biomaterial microspheres and extracellular matrix scaffolds",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-7446657/",
-        "image_url": "https://images.pexels.com/photos/7446657/pexels-photo-7446657.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
-        "author": "Gustavo Fring",
-        "author_url": "https://www.pexels.com/@gustavofring/",
-        "theme": "Dermatologist performing synchronized 1064nm/532nm picosecond acoustic lattice laser and 40.68MHz monopolar dielectric radiofrequency treatment for lower eyelid steatoblepharon and orbital septal tightening",
+        "page_url": "https://www.pexels.com/photo/doctors-looking-at-patient-on-bed-in-operating-room-7108264/",
+        "image_url": "https://images.pexels.com/photos/7108264/pexels-photo-7108264.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "author": "Pavel Danilyuk",
+        "author_url": "https://www.pexels.com/@pavel-danilyuk/",
+        "theme": "Dermatologic team preparing fractional 1064-nm Nd:YAG laser and topical exosome adjunctive skin rejuvenation",
     },
     {
-        "page_url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-injecting-filler-into-woman-s-face-4586739/",
-        "image_url": "https://images.pexels.com/photos/4586739/pexels-photo-4586739.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
-        "author": "Anna Shvets",
-        "author_url": "https://www.pexels.com/@shvetsa/",
-        "theme": "Aesthetic injector performing deep supraperiosteal placement of biomimetic Mg-HA/PCL/rhBMP-2 microsphere hydrogel along the pyriform aperture rim and alar base",
+        "page_url": "https://www.pexels.com/photo/middle-aged-woman-receiving-cosmetic-facial-injection-29648624/",
+        "image_url": "https://images.pexels.com/photos/29648624/pexels-photo-29648624.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "author": "Reborn Filmes",
+        "author_url": "https://www.pexels.com/@rebornfilmes/",
+        "theme": "Clinician administering biomimetic hyaluronic acid injectable gel integrated into a multimodal facial skin quality plan",
     },
     {
-        "page_url": "https://www.pexels.com/photo/woman-in-white-tank-top-touching-her-face-3985323/",
-        "image_url": "https://images.pexels.com/photos/3985323/pexels-photo-3985323.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
-        "author": "cottonbro studio",
-        "author_url": "https://www.pexels.com/@cottonbro/",
-        "theme": "Post-treatment clinical subject displaying smoothed lateral canthal lines, firm and flat lower eyelid contours without bulging fat pads, projected alar base, and sharp lifted lower mandibular jawline",
+        "page_url": "https://www.pexels.com/photo/a-doctor-checking-his-patient-7108173/",
+        "image_url": "https://images.pexels.com/photos/7108173/pexels-photo-7108173.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1600",
+        "author": "Pavel Danilyuk",
+        "author_url": "https://www.pexels.com/@pavel-danilyuk/",
+        "theme": "Facial plastic surgeon performing preoperative anatomical assessment for preservation facelift, eyelid, and rhinoplasty planning",
     },
 ]
 
@@ -156,7 +153,7 @@ def optimize_image(src_path: Path, max_edge: int = MAX_LONGEST_EDGE_PX, max_byte
 
 
 def update_credits(curated_candidates: list[dict], licenses: list[str]):
-    today = "2026-11-15"
+    today = "2026-11-18"
     new_rows = []
     for idx, (c, lic) in enumerate(zip(curated_candidates, licenses), start=1):
         rel_path = f"posts/{SLUG}/image-{idx}.jpg"
